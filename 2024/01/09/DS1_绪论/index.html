@@ -1,0 +1,343 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>绪论 | DS | ZERO</title><meta name="keywords" content="数据结构"><meta name="author" content="zero"><meta name="copyright" content="zero"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数据结构的基本概念 数据 信息的载体，是描述客观事物属性的数、字符以及所有能输入到计算机中并被计算机程序识别和处理的符号的集合 例如：整数、实数、字符串  数据元素 数据的基本单位，通常作为一个整体进行考虑和处理 例如：一本书的目录信息  数据项&#x2F;数据域 构成数据元素的不可分割的最小单位 例如：书目信息的每一项  数据对象 性质相同的数据元素的集合，是数据的一个子集 例如，整数数据对象是集合 N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="绪论 | DS">
+<meta property="og:url" content="https://zerooo.top/2024/01/09/DS1_%E7%BB%AA%E8%AE%BA/index.html">
+<meta property="og:site_name" content="ZERO">
+<meta property="og:description" content="数据结构的基本概念 数据 信息的载体，是描述客观事物属性的数、字符以及所有能输入到计算机中并被计算机程序识别和处理的符号的集合 例如：整数、实数、字符串  数据元素 数据的基本单位，通常作为一个整体进行考虑和处理 例如：一本书的目录信息  数据项&#x2F;数据域 构成数据元素的不可分割的最小单位 例如：书目信息的每一项  数据对象 性质相同的数据元素的集合，是数据的一个子集 例如，整数数据对象是集合 N">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg">
+<meta property="article:published_time" content="2024-01-09T02:17:07.000Z">
+<meta property="article:modified_time" content="2024-01-10T02:00:53.510Z">
+<meta property="article:author" content="zero">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg"><link rel="shortcut icon" href="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/favicon.png"><link rel="canonical" href="https://zerooo.top/2024/01/09/DS1_%E7%BB%AA%E8%AE%BA/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '绪论 | DS',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-10 10:00:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/catalog.css?1"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">绪论 | DS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-09T02:17:07.000Z" title="发表于 2024-01-09 10:17:07">2024-01-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-10T02:00:53.510Z" title="更新于 2024-01-10 10:00:53">2024-01-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="绪论 | DS"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="数据结构的基本概念"><a href="#数据结构的基本概念" class="headerlink" title="数据结构的基本概念"></a>数据结构的基本概念</h2><ul>
+<li><p>数据</p>
+<p>信息的载体，是描述客观事物属性的数、字符以及所有能输入到计算机中并被计算机程序识别和处理的符号的集合</p>
+<p>例如：整数、实数、字符串</p>
+</li>
+<li><p>数据元素</p>
+<p>数据的基本单位，通常作为一个整体进行考虑和处理</p>
+<p>例如：一本书的目录信息</p>
+</li>
+<li><p>数据项/数据域</p>
+<p>构成数据元素的不可分割的最小单位</p>
+<p>例如：书目信息的每一项</p>
+</li>
+<li><p>数据对象</p>
+<p><strong>性质相同</strong>的数据元素的集合，是数据的一个子集</p>
+<p>例如，整数数据对象是集合 N = {0, ±1, ±2, ……}</p>
+</li>
+<li><p>数据类型</p>
+<p>一个值的集合和定义在此集合上的一组操作的总称</p>
+<p>分为：</p>
+<p>1）原子类型：其值不可再分的数据类型</p>
+<p>2）结构类型：其值可以再分解为若干成分（分量）的数据类型</p>
+<p>3）抽象数据类型：抽象数据组织及与之相关的操作</p>
+</li>
+<li><p>抽象数据类型 ADT (Abstract Data Type)</p>
+<p>可以看作一些数据对象以及附加在这些数据对象上的操作的集合</p>
+<p>重在对功能的描述而不关心具体的实现</p>
+</li>
+<li><p>数据结构</p>
+<p>相互之间存在一种或多种特定关系的数据元素的集合</p>
+<p>二元组 (D, S) 表示：D 是数据元素的有限集，S 是 D 上关系的有限集</p>
+<p>三要素：逻辑结构、存储结构/物理结构/映像、数据的运算</p>
+</li>
+<li><p>逻辑结构</p>
+<p>数据元素之间的逻辑关系</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231017130042091.png" width="600px"/></dev>
+
+
+</li>
+</ul>
+<blockquote>
+<p>严蔚敏：由于高级程序设计语言中的数组类型也有随机存取的特性，因此通常都用数组来描述数据结构中的顺序存储结构</p>
+</blockquote>
+<ul>
+<li><p>存储结构/物理结构</p>
+<p>数据结构在计算机中的表示（映像）</p>
+<p>包括：数据元素的表示、关系的表示</p>
+<p>分为：</p>
+<ol>
+<li><p>顺序存储</p>
+<p>逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来体现</p>
+<p>优点：可随机存取；存储密度大，每个元素占用最少的存储空间</p>
+<p>缺点：只能使用相邻的一整块存储单元，因此可能产生较多的外部碎片；增删元素不方便</p>
+</li>
+<li><p>链式存储</p>
+<p>借助指示元素地址的指针来表示元素之间的逻辑关系</p>
+<p>优点：不会出现碎片现象，能充分利用所有存储单元；增删元素方便</p>
+<p>缺点：每个元素因存储指针而占用额外的存储空间；只能顺序存取</p>
+</li>
+<li><p>索引存储</p>
+<p>在存储元素信息的同时，还建立附加的索引表</p>
+<p>优点：检索速度快</p>
+<p>缺点：附加的索引表额外占用空间；增删元素也要修改索引表，因而会花费较多的时间</p>
+</li>
+<li><p>散列存储/哈希存储</p>
+<p>根据元素的关键字直接计算出该元素的存储地址</p>
+<p>散列是算法，散列存储方法本质上是顺序存储方法的拓展，散列表本质上是顺序表的拓展</p>
+<p>优点：检索、增加和删除结点的操作都很快</p>
+<p>缺点：可能出现冲突，而解决冲突会增加时间和空间开销</p>
+</li>
+</ol>
+</li>
+<li><p>数据的逻辑结构独立于其存储结构 √</p>
+<p>数据的存储结构独立于其逻辑结构 ×</p>
+<p>数据的存储结构是逻辑结构在计算机上的映射</p>
+</li>
+<li><p>逻辑结构 vs 数据结构</p>
+<p>逻辑结构：有序表</p>
+<p>数据结构：顺序表（线性表的顺序存储）、单链表（线性表的链式存储）、循环队列（环状顺序队列）</p>
+<p>可根据 <u>是否可以使用多种存储结构进行存储</u> 进行区分</p>
+</li>
+<li><p>数据的运算</p>
+<p>包括：运算的定义、实现</p>
+<p>运算的定义针对逻辑结构，指出运算的功能；运算的实现针对存储结构，指出运算的具体操作步骤</p>
+</li>
+<li><p>随机访问 vs 顺序访问</p>
+<p>随机访问/直接访问：访问某记录所需的时间与该记录所在的位置无关</p>
+<p>顺序访问：按记录的逻辑顺序进行读、写操作的存取</p>
+<blockquote>
+<p>访问 = 存取 = 读 + 写</p>
+</blockquote>
+<blockquote>
+<p>随机访问，random access，翻译为“随意访问”可能会更贴切一点</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="算法和算法评价"><a href="#算法和算法评价" class="headerlink" title="算法和算法评价"></a>算法和算法评价</h2><ul>
+<li><p>算法 Algorithm</p>
+<p>对特定问题求解步骤的一种描述，是指令的有限序列，其中每条指令表示一个或多个操作</p>
+<p>由基本运算及规定的运算顺序所构成的完整的解题步骤</p>
+<p>按照要求设计好的有限确切的计算序列</p>
+</li>
+<li><p>算法特性</p>
+<p>有穷性：有限步、每一步有限时间</p>
+<p>确定性：每一步有确定定义，无二义性，相同输入只能得到相同的输出</p>
+<p>可行性：算法中描述的所有操作可通过已实现的基本操作/纸笔进行有限次运算后完成</p>
+<p>输入：0 或多个</p>
+<p>输出：1 或多个</p>
+</li>
+<li><p>“好”的算法——算法设计目标</p>
+<p>正确性、可读性、健壮性、高效率、低存储量</p>
+</li>
+<li><p>算法效率的度量</p>
+<ol>
+<li><p>语句频度</p>
+<p>该语句在算法中被重复执行的次数</p>
+<p>算法中所有语句的频度之和记为 $T(n)$，其中 $n$ 为该算法问题的规模</p>
+</li>
+<li><p>时间复杂度</p>
+<p>主要分析 $T(n)$ 的数量级</p>
+<p>算法中基本运算（最深层循环内的语句）的频度与 $T(n)$ 同数量级，因此通常采用算法中基本运算的频度 $f(n)$ 来分析算法的时间复杂度，因此算法的时间复杂度记为 $T(n)=O(f(n))$</p>
+<p>算法的时间复杂度不仅依赖于问题的规模 $n$，也取决于待输入数据的性质，因此就有了最坏、最好、平均时间复杂度</p>
+<blockquote>
+<p>一般总是考虑最坏时间复杂度</p>
+</blockquote>
+</li>
+<li><p>空间复杂度：算法消耗的存储空间，记 $S(n)=O(g(n))$</p>
+<p>存储空间：除本身所用的指令、常数、变量和输入数据外，还需要一些对数据进行操作的工作单元和存储为实现算法所需的一些信息的辅助空间</p>
+<p>原地工作：算法所需的辅助空间为常量，即 $O(1)$</p>
+</li>
+</ol>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2024/01/09/DS1_%E7%BB%AA%E8%AE%BA/">https://zerooo.top/2024/01/09/DS1_%E7%BB%AA%E8%AE%BA/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/01/09/%E5%8C%97%E5%A4%A7%E8%82%96%E8%87%BB%E3%80%8A%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8%E3%80%8B%E7%AC%94%E8%AE%B0-BTC/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">北大肖臻《区块链技术与应用》笔记 - BTC</div></div></a></div><div class="next-post pull-right"><a href="/2024/01/06/CO7_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">输入输出系统 | CO</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-10</div><div class="title">线性表 | DS</div></div></a></div><div><a href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-11</div><div class="title">栈、队列和数组 | DS</div></div></a></div><div><a href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-12</div><div class="title">树 | DS</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">数据结构的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%97%E6%B3%95%E8%AF%84%E4%BB%B7"><span class="toc-number">2.</span> <span class="toc-text">算法和算法评价</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树 | DS"/></a><div class="content"><a class="title" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS">树 | DS</a><time datetime="2024-01-12T01:14:08.000Z" title="发表于 2024-01-12 09:14:08">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用算法模板"/></a><div class="content"><a class="title" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板">常用算法模板</a><time datetime="2024-01-11T09:50:08.000Z" title="发表于 2024-01-11 17:50:08">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="栈、队列和数组 | DS"/></a><div class="content"><a class="title" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS">栈、队列和数组 | DS</a><time datetime="2024-01-11T01:16:04.000Z" title="发表于 2024-01-11 09:16:04">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线性表 | DS"/></a><div class="content"><a class="title" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS">线性表 | DS</a><time datetime="2024-01-10T01:34:05.000Z" title="发表于 2024-01-10 09:34:05">2024-01-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/09/%E5%8C%97%E5%A4%A7%E8%82%96%E8%87%BB%E3%80%8A%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8%E3%80%8B%E7%AC%94%E8%AE%B0-BTC/" title="北大肖臻《区块链技术与应用》笔记 - BTC"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="北大肖臻《区块链技术与应用》笔记 - BTC"/></a><div class="content"><a class="title" href="/2024/01/09/%E5%8C%97%E5%A4%A7%E8%82%96%E8%87%BB%E3%80%8A%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8%E3%80%8B%E7%AC%94%E8%AE%B0-BTC/" title="北大肖臻《区块链技术与应用》笔记 - BTC">北大肖臻《区块链技术与应用》笔记 - BTC</a><time datetime="2024-01-09T14:23:52.000Z" title="发表于 2024-01-09 22:23:52">2024-01-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><script src="/js/catalog.js?1"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
