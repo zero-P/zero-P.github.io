@@ -168,9 +168,8 @@
 </li>
 <li><p>二进制 → 八进制/十六进制</p>
 <p>例 1111000010.01101B → 1702.32Q，3C2.68H</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/Uzlr9meILO5sEOq.png" width="450px"/></dev>
-
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/Gp6V6dYUeXaMSnk.png" width="430px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/Uzlr9meILO5sEOq.png" width="450px"/>&lt;/dev&gt;</p>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/Gp6V6dYUeXaMSnk.png" width="430px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>八进制/十六进制 → 二进制</p>
 <p>将每位改为 3 位或 4 位二进制数即可</p>
@@ -184,7 +183,7 @@
 <li><p>十进制 → 任意进制</p>
 <p>整数部分采用除基取余法，小数部分采用乘基取整法</p>
 <p>例 123.6875D → 1111011.1011B</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/RVUc2J9tVmwvfuj.png" width="500px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/RVUc2J9tVmwvfuj.png" width="500px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>计算机中，整数可以连续表示，但小数是离散的，所以并不是每个十进制小数都可以准确地用二进制表示，但任意一个二进制小数都可以用十进制小数表示</p>
 </li>
@@ -198,7 +197,7 @@
 <p>有权码，权值从高到低依次为 8、4、2、1</p>
 <p>例 8D → 1000B，9D → 1001B</p>
 <p>若两个 8421 码之和大于 9D，则要加 6D 修正（1010B 到 1111B 这 6 个为无效码），并向高位进位</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/WrDlDWoHAqcbcsP.png" width="300px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/WrDlDWoHAqcbcsP.png" width="300px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>余 3 码</p>
 <p>无权码，在 8421 码的基础上加 0011B 形成的</p>
@@ -219,8 +218,7 @@
 <h3 id="定点数的编码表示"><a href="#定点数的编码表示" class="headerlink" title="定点数的编码表示"></a>定点数的编码表示</h3><p>根据小数点的位置是否固定，在计算机中有两种数据格式：定点表示（固定）和浮点表示（不固定）</p>
 <p>在现代计算机中，通常用定点补码表示整数，用定点原码小数表示浮点数的小数部分，用移码表示浮点数的阶码部分</p>
 <h4 id="机器数的定点表示"><a href="#机器数的定点表示" class="headerlink" title="机器数的定点表示"></a>机器数的定点表示</h4><p>定点表示法用来表示定点小数和定点整数</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230801102800401.png" width="550px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230801102800401.png" width="550px"/>&lt;/dev&gt;</p>
 <ul>
 <li><p>定点小数</p>
 <p>小数点在有效数值部分最高位之前</p>
@@ -279,29 +277,25 @@
 <li>与原码和移码相比，补码运算规则比较简单，且符号位可以和数值位一起参与运算</li>
 <li>与原码和反码相比，补码比原码和反码多表示一个最小负数</li>
 </ol>
-<h2 id="运算方法和运算电路"><a href="#运算方法和运算电路" class="headerlink" title="运算方法和运算电路"></a>运算方法和运算电路</h2><h3 id="基本运算部件"><a href="#基本运算部件" class="headerlink" title="基本运算部件"></a>基本运算部件</h3><h4 id="一位全加器-FA"><a href="#一位全加器-FA" class="headerlink" title="一位全加器 FA"></a>一位全加器 FA</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230618205822636.png" width="600px"/></dev>
-
+<h2 id="运算方法和运算电路"><a href="#运算方法和运算电路" class="headerlink" title="运算方法和运算电路"></a>运算方法和运算电路</h2><h3 id="基本运算部件"><a href="#基本运算部件" class="headerlink" title="基本运算部件"></a>基本运算部件</h3><h4 id="一位全加器-FA"><a href="#一位全加器-FA" class="headerlink" title="一位全加器 FA"></a>一位全加器 FA</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230618205822636.png" width="600px"/>&lt;/dev&gt;</p>
 <p>和表达式：$S_i = A_i \oplus B_i \oplus C_{i-1}$</p>
 <p>进位表达式：$C_i = A_i B_i+\left(A_i \oplus B_i\right) C_{i-1}$</p>
 <p>当 $A_i$ 与 $B_i$ 都为 $1$ 时，即有进位信号产生，故称 $A_i B_i$ 为进位产生函数（本地进位）</p>
 <p>当 $A_i \oplus B_i = 1$ 时，第 $i-1$ 位的进位信号 $C_{i-1}$ 才可通过本位向高位传送，故称 $A_i \oplus B_i$ 为进位传递函数（进位传递条件）</p>
 <h4 id="串行进位加法器"><a href="#串行进位加法器" class="headerlink" title="串行进位加法器"></a>串行进位加法器</h4><p>把 $n$ 个全加器相连可得到 $n$ 位加法器，称为串行进位加法器</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230618211746036.png" width="500px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230618211746036.png" width="500px"/>&lt;/dev&gt;</p>
 <p>串行进位又称行波进位，每级进位直接依赖于前一级的进位，即进位信号是逐级形成的</p>
 <p>串行进位加法器的最长运算时间主要是由进位信号的传递时间决定的，位数越多延迟时间就越长，而全加器本身的求和延迟只为次要因素，所以加快进位产生和提高传递速度是关键</p>
 <h4 id="全先行进位加法器"><a href="#全先行进位加法器" class="headerlink" title="全先行进位加法器"></a>全先行进位加法器</h4><p>令 $G_i = A_i B_i，$$P_i = A_i \oplus B_i$，全加器的进位表达式为 $C_i = G_i + P_i C_{i-1}$</p>
 <p>$\begin{aligned} &amp; C_1=G_1+P_1 C_0 \ &amp; C_2=G_2+P_2 C_1=G_2+P_2 G_1+P_2 P_1 C_0 \ &amp; C_3=G_3+P_3 C_2=G_3+P_3 G_2+P_3 P_2 G_1+P_3 P_2 P_1 C_0 \ &amp; C_4=G_4+P_4 C_3=G_4+P_4 G_3+P_4 P_3 G_2+P_4 P_3 P_2 G_1+P_4 P_3 P_2 P_1 C_0 \ &amp;……\end{aligned}$</p>
 <p>可以看出 $C_i$ 仅与 $A_i$、$B_i$ 以及 $C_0$ 有关，各级间的进位没有依赖关系，只要 $A_1 \sim A_n$、$B_1 \sim B_n$ 和 $C_0$ 同时到达，就可几乎同时形成 $C_1 \sim C_n$，并且同时生成各位的和</p>
 <p>实现上述逻辑表达式的电路称为先行进位（也称超前进位）部件，简称 CLA 部件。通过这种进位方式实现的加法器称为全先行进位加法器。因为各个进位是并行产生的，所以是一种并行加法器</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230618215431144.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230618215431144.png" width="600px"/>&lt;/dev&gt;</p>
 <p>这种进位方式快速，与位数无关</p>
 <p>随着加法器位数的增加，$C_i$ 的逻辑表达式会变得越来越长，这会使电路结构变得很复杂，因此当位数较多时采用全先行进位是不现实的</p>
 <h4 id="单级先行进位加法器"><a href="#单级先行进位加法器" class="headerlink" title="单级先行进位加法器"></a>单级先行进位加法器</h4><p>组内并行、组间串行</p>
 <p>以 16 位加法器为例，可分为 4 组，每组 4 位</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/20210706185554.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/20210706185554.png" width="700px"/>&lt;/dev&gt;</p>
 <h4 id="多级先行进位加法器"><a href="#多级先行进位加法器" class="headerlink" title="多级先行进位加法器"></a>多级先行进位加法器</h4><p>组内并行、组间并行</p>
 <p>16 位单级先行进位加法器第 1 小组的进位输出可写为：</p>
 <p>$C_4=G_4+P_4 G_3+P_4 P_3 G_2+P_4 P_3 P_2 G_1+P_4 P_3 P_2 P_1 C_0=G_1^<em>+P_1^</em> C_0$</p>
@@ -313,20 +307,17 @@
 <p>第 1 组内产生 $G_1^<em>$、$P_1^</em>$、$C_3$、$C_2$、$C_1$，不产生 $C_4$<br>第 2 组内产生 $G_2^<em>$、$P_2^</em>$、$C_7$、$C_6$、$C_5$，不产生 $C_8$<br>第 3 组内产生 $G_3^<em>$、$P_3^</em>$、$C_{11}$、$C_{10}$、$C_9$，不产生 $C_{12}$<br>第 4 组内产生 $G_4^<em>$、$P_4^</em>$、$C_{15}$、$C_{14}$、$C_{13}$，不产生 $C_{16}$</p>
 <p>实现上述逻辑表达式的电路称为成组先行进位电路(BCLA)</p>
 <p>16 位的两级先行进位加法器可由 4 个 BCLA 加法器和 1 个 CLA 电路构成：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/20210706185701.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/20210706185701.png" width="700px"/>&lt;/dev&gt;</p>
 <p>这种方法可以扩展到多于两级的先行进位加法器</p>
 <h4 id="带标志加法器"><a href="#带标志加法器" class="headerlink" title="带标志加法器"></a>带标志加法器</h4><p>在无符号数加法器的基础上增加相应的逻辑门电路，使得加法器生成相应的标志信息，进行带符号数的加减法运算</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230622112443356.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230622112443356.png" width="700px"/>&lt;/dev&gt;</p>
 <blockquote>
 <p>图 b 是为了说明如何从加法运算结果中获得标志信息，因而使用全加器简化了加法电路，实际电路一定使用多级先行进位方式</p>
 </blockquote>
 <p>溢出标志 $OF=C_n \oplus C_{n-1}$；符号标志 $SF=F_{n-1}$（结果 $F$ 的最高位）；零标志 $ZF=1$ 当且仅当 $F=0$；进位/借位标志 $CF=C_{out} \oplus C_{in}$</p>
 <h4 id="算术逻辑单元-ALU"><a href="#算术逻辑单元-ALU" class="headerlink" title="算术逻辑单元 ALU"></a>算术逻辑单元 ALU</h4><p>ALU 能进行多种算术运算和逻辑运算，也可实现左移或右移的移位操作</p>
 <p>由于四则运算最终都能归结为加法运算，因此 ALU 的核心是带标志加法器</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230622114207771.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230622114207771.png" width="700px"/>&lt;/dev&gt;</p>
 <p>$ALU_{op}$ 是操作控制端，用来决定 ALU 所执行的处理功能，其位数决定了操作的种类</p>
 <p>MUX 是多路选择开关/多路选择器，它从多个输入信号中选择一个送到输出端</p>
 <h3 id="定点数的移位运算"><a href="#定点数的移位运算" class="headerlink" title="定点数的移位运算"></a>定点数的移位运算</h3><p>根据操作对象的不同，可分为：</p>
@@ -334,9 +325,8 @@
 <li>算术移位（对象是有符号数）</li>
 <li>逻辑移位（对象是逻辑代码，可视为无符号数）</li>
 </ol>
-<h4 id="算术移位"><a href="#算术移位" class="headerlink" title="算术移位"></a>算术移位</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/sdfohuisdfoiesoh.png" width="380px"/></dev>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/mYJAK3QRe5MCmqA.png" width="400px"/></dev>
-
+<h4 id="算术移位"><a href="#算术移位" class="headerlink" title="算术移位"></a>算术移位</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/sdfohuisdfoiesoh.png" width="380px"/>&lt;/dev&gt;</p>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/mYJAK3QRe5MCmqA.png" width="400px"/>&lt;/dev&gt;</p>
 <p><strong>单符号位不参与</strong>；<strong>双符号位的高位符号位不参与</strong>，低符号位参与移位用以判断溢出</p>
 <p>对于正数，左移高位丢 1，结果出错；右移低位丢 1，影响精度</p>
 <p>对于负数原码，左移高位丢 1，结果出错；右移低位丢 1，影响精度</p>
@@ -346,8 +336,7 @@
 <h4 id="逻辑移位"><a href="#逻辑移位" class="headerlink" title="逻辑移位"></a>逻辑移位</h4><p>将操作数视为无符号数</p>
 <p>逻辑左移时，高位移丢，低位补 0；逻辑右移时，低位移丢，高位补 0</p>
 <h4 id="循环移位"><a href="#循环移位" class="headerlink" title="循环移位"></a>循环移位</h4><p>分为带进位标志位 CF 的循环移位（大循环）和不带进位标志位的循环移位（小循环）</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/EGNM0lIStqMi7ir.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/EGNM0lIStqMi7ir.png" width="600px"/>&lt;/dev&gt;</p>
 <p>特别适合将数据的低字节数据和高字节数据互换</p>
 <h3 id="定点数的加减运算"><a href="#定点数的加减运算" class="headerlink" title="定点数的加减运算"></a>定点数的加减运算</h3><p>在运算过程中不用考虑对应的定点数是小数还是整数，只需关心它们的符号位和数值位</p>
 <h4 id="补码定点数加减"><a href="#补码定点数加减" class="headerlink" title="补码定点数加减"></a>补码定点数加减</h4><ul>
@@ -359,8 +348,7 @@
 <p>结果亦为补码</p>
 </li>
 <li><p>运算电路</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230622151616011.png" width="500px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230622151616011.png" width="500px"/>&lt;/dev&gt;</p>
 <p>该电路同时也能实现无符号数的加减运算（无符号数也是按照补码加减法规则计算，只是对计算结果的解释不同）</p>
 <p>$CF=C_{out} \oplus Sub$，做加法时 CF = 1 表示有进位/有溢出，做减法时 CF = 1 表示有借位</p>
 <p>溢出标志 OF 和符号标志 SF 对无符号数运算没有意义</p>
@@ -396,8 +384,7 @@
 <blockquote>
 <p>运算时注意机器字长，当左边出现溢出时，将溢出位丢弃</p>
 </blockquote>
-<h3 id="定点数的乘除运算"><a href="#定点数的乘除运算" class="headerlink" title="定点数的乘除运算"></a>定点数的乘除运算</h3><h3 id="C-语言中的整数类型及类型转换"><a href="#C-语言中的整数类型及类型转换" class="headerlink" title="C 语言中的整数类型及类型转换"></a>C 语言中的整数类型及类型转换</h3><h4 id="标准整数类型长度"><a href="#标准整数类型长度" class="headerlink" title="标准整数类型长度"></a>标准整数类型长度</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/WgMILf8rl7kzkwO.png" width="400px"/></dev>
-
+<h3 id="定点数的乘除运算"><a href="#定点数的乘除运算" class="headerlink" title="定点数的乘除运算"></a>定点数的乘除运算</h3><h3 id="C-语言中的整数类型及类型转换"><a href="#C-语言中的整数类型及类型转换" class="headerlink" title="C 语言中的整数类型及类型转换"></a>C 语言中的整数类型及类型转换</h3><h4 id="标准整数类型长度"><a href="#标准整数类型长度" class="headerlink" title="标准整数类型长度"></a>标准整数类型长度</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/WgMILf8rl7kzkwO.png" width="400px"/>&lt;/dev&gt;</p>
 <p><strong>char 类型为 8 位无符号整数</strong></p>
 <h4 id="有符号数和无符号数的转换"><a href="#有符号数和无符号数的转换" class="headerlink" title="有符号数和无符号数的转换"></a>有符号数和无符号数的转换</h4><p>强制类型转换的结果保持位值不变，仅改变了解释这些位的方式</p>
 <h4 id="不同字长整数之间的转换"><a href="#不同字长整数之间的转换" class="headerlink" title="不同字长整数之间的转换"></a>不同字长整数之间的转换</h4><p>长 → 短：高位部分直接截断，低位直接赋值</p>
@@ -409,8 +396,7 @@
 <blockquote>
 <p>以低字节为字地址 = 小端方式<br>个人推测：字地址 = 低地址</p>
 </blockquote>
-<h4 id="边界对齐"><a href="#边界对齐" class="headerlink" title="边界对齐"></a>边界对齐</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/rpEZB6gmZTVRzLO.png" width="600px"/></dev>
-
+<h4 id="边界对齐"><a href="#边界对齐" class="headerlink" title="边界对齐"></a>边界对齐</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/rpEZB6gmZTVRzLO.png" width="600px"/>&lt;/dev&gt;</p>
 <p>对于按字节寻址、机器字长为 32 位的计算机，数据以边界对齐存放，半字地址一定是 2 的整数倍，字地址一定是 4 的整数倍</p>
 <p>数据不按边界对齐方式存储时，可以充分利用存储空间，但半字长或字长的指令或数据可能存储在两个存储字中，此时需要两次访存，并且对高低字节的位置进行调整、连接之后才能得到所要的指令或数据，从而影响指令执行效率</p>
 <h2 id="浮点数的表示和运算"><a href="#浮点数的表示和运算" class="headerlink" title="浮点数的表示和运算"></a>浮点数的表示和运算</h2><h3 id="浮点数的表示"><a href="#浮点数的表示" class="headerlink" title="浮点数的表示"></a>浮点数的表示</h3><h4 id="浮点数的格式"><a href="#浮点数的格式" class="headerlink" title="浮点数的格式"></a>浮点数的格式</h4><ul>
@@ -423,12 +409,11 @@
 <p>阶码的位数反映表示范围，尾数的位数反映精度</p>
 </li>
 <li><p>浮点数的一般格式</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/8iKDnhNMZFL1xtQ.png" width="400px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/8iKDnhNMZFL1xtQ.png" width="400px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>浮点数的表示范围</p>
 <p>关于原点对称：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/N1cGEOqkxTLVelL.png" width="400px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/N1cGEOqkxTLVelL.png" width="400px"/>&lt;/dev&gt;</p>
 <p>正上溢和负上溢统称上溢，一旦发生上溢，必须中断运算操作进行溢出处理</p>
 <p>正下溢和负下溢统称下溢，发生数据下溢时，浮点数值趋于零，计算机仅将其当作机器零处理</p>
 </li>
@@ -472,24 +457,20 @@
 </blockquote>
 </li>
 </ul>
-<h4 id="IEEE-754-标准"><a href="#IEEE-754-标准" class="headerlink" title="IEEE 754 标准"></a>IEEE 754 标准</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/fXsiUW3xSNmW0q5.png" width="500px"/></dev>
-
+<h4 id="IEEE-754-标准"><a href="#IEEE-754-标准" class="headerlink" title="IEEE 754 标准"></a>IEEE 754 标准</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/fXsiUW3xSNmW0q5.png" width="500px"/>&lt;/dev&gt;</p>
 <p>IEEE 754 标准规定常用的浮点数格式有短浮点数（单精度、float 型）、长浮点数（双精度、double 型）、临时浮点数，其基数隐含为 2</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230802105029558.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230802105029558.png" width="600px"/>&lt;/dev&gt;</p>
 <p>为打包更多的数据位，尾数 M 采取隐藏位策略的原码表示，隐藏了规格化原码数值最高位的 1（临时浮点数除外）。此 1 隐藏前是 $2^{-1}$，隐藏后作为 $2^0$</p>
 <p>阶码的移码偏置值规定为 $2^{n-1}-1$（$n$ 为阶码位数）。如此，阶码从小到大为 11…1B、00…0B、……、11…10B，其中 11…1B 用来表示无穷大和 NaN，00…0B 用来表示非规格化数和 0（此时尾数隐藏位变为 0）</p>
 <blockquote>
 <p>引入无穷大数的目的是，在计算过程出现异常的情况下使得程序能继续进行下去</p>
 </blockquote>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/GM6ZdaFP5vBI2qh.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/GM6ZdaFP5vBI2qh.png" width="700px"/>&lt;/dev&gt;</p>
 <blockquote>
 <p>0 有 +0 和 -0，符号取决于数符 $S$，一般情况下 +0 和 -0 等效</p>
 </blockquote>
 <p>当 $1 \leq E \leq 2^n-2$ 时，真值等于 $(-1)^s×1.M×2^{E-(2^{n-1}-1)}$</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230614221346741.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230614221346741.png" width="600px"/>&lt;/dev&gt;</p>
 <h4 id="定点-vs-浮点"><a href="#定点-vs-浮点" class="headerlink" title="定点 vs 浮点"></a>定点 vs 浮点</h4><p>数值的表示范围（字长相同时）：浮点 $\gg$ 定点</p>
 <p>精度（字长相同时）：浮点不如定点</p>
 <p>可表示的数据个数（字长相同时）：可表示的数据个数取决于编码所采用的位数，对于相同位数的定点数和浮点数来说，可表示的数据应该一样多（有时可能由于一个值有两个或多个编码对应，编码个数会有少量差异）</p>

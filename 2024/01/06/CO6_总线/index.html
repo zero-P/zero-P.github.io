@@ -254,13 +254,11 @@
 <li>同步总线</li>
 <li>异步总线</li>
 </ul>
-<h3 id="系统总线的结构"><a href="#系统总线的结构" class="headerlink" title="系统总线的结构"></a>系统总线的结构</h3><h4 id="单总线结构"><a href="#单总线结构" class="headerlink" title="单总线结构"></a>单总线结构</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/D3WeLqJwzZn1jvp.png" width="450px"/></dev>
-
+<h3 id="系统总线的结构"><a href="#系统总线的结构" class="headerlink" title="系统总线的结构"></a>系统总线的结构</h3><h4 id="单总线结构"><a href="#单总线结构" class="headerlink" title="单总线结构"></a>单总线结构</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/D3WeLqJwzZn1jvp.png" width="450px"/>&lt;/dev&gt;</p>
 <p>CPU、主存、I/O 设备（通过 I/O 接口）都连接在<strong>一组</strong>系统总线上（单总线并不是指只有一根信号线），允许 I/O 设备之间、I/O 设备和 CPU 之间、CPU 和主存之间或 I/O 设备与主存之间直接交换信息</p>
 <p>优点：结构简单，成本低，易于接入新的设备</p>
 <p>缺点：带宽低、负载重，多个部件只能争用唯一的总线，且不支持并发传送操作</p>
-<h4 id="双总线结构"><a href="#双总线结构" class="headerlink" title="双总线结构"></a>双总线结构</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/lKPKL0uNFhUKkvB.png" width="430px"/></dev>
-
+<h4 id="双总线结构"><a href="#双总线结构" class="headerlink" title="双总线结构"></a>双总线结构</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/lKPKL0uNFhUKkvB.png" width="430px"/>&lt;/dev&gt;</p>
 <p>有两条总线：</p>
 <ol>
 <li>主存总线：用于 CPU、主存和通道之间进行数据传送</li>
@@ -268,9 +266,7 @@
 </ol>
 <p>优点：将低速 I/O 设备从单总线上分离出来，实现存储器总线和 I/O 总线分离；支持猝发传输</p>
 <p>缺点：需要增加通道等硬件设备</p>
-<h4 id="三总线结构"><a href="#三总线结构" class="headerlink" title="三总线结构"></a>三总线结构</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231114144623266.png" width="450px"/></dev>
-
-
+<h4 id="三总线结构"><a href="#三总线结构" class="headerlink" title="三总线结构"></a>三总线结构</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231114144623266.png" width="450px"/>&lt;/dev&gt;</p>
 <p>在计算机系统各部件之间采用 3 条各自独立的总线来构成信息通路：</p>
 <ol>
 <li><p>主存总线</p>
@@ -285,14 +281,12 @@
 </ol>
 <p>优点：提高了 I/O 设备的性能，使其更快地响应命令，提高系统吞吐量</p>
 <p>缺点：系统工作效率较低（<strong>同一时刻只有一个总线工作</strong>）</p>
-<h4 id="四总线结构"><a href="#四总线结构" class="headerlink" title="四总线结构"></a>四总线结构</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/wsoCZKFDA8yuvZc.png" width="600px"/></dev>
-
+<h4 id="四总线结构"><a href="#四总线结构" class="headerlink" title="四总线结构"></a>四总线结构</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/wsoCZKFDA8yuvZc.png" width="600px"/>&lt;/dev&gt;</p>
 <p><strong>桥接器</strong>：各总线之间须通过桥接器相连，其具有流量交换、数据缓冲、串并行转换和控制功能</p>
 <p>靠近 CPU 的总线速度较快</p>
 <p>每级总线的设计遵循总线标准</p>
 <h3 id="常见的总线标准"><a href="#常见的总线标准" class="headerlink" title="常见的总线标准"></a>常见的总线标准</h3><p>总线标准是国际上公布或推荐的互连各个模块的标准，是把各种不同的模块组成计算机系统时必须遵守的规范。按总线标准设计的接口可视为通用接口，在接口的两端，任何一方只需根据总线标准的要求完成自身方面的功能要求，而无须了解对方接口的要求</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/1DoJuSP8iXecUCu.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/1DoJuSP8iXecUCu.png" width="700px"/>&lt;/dev&gt;</p>
 <p>不同的总线标准之间的主要区别是总线宽度、带宽、时钟频率、寻址能力、是否支持突发传送等</p>
 <h4 id="系统总线"><a href="#系统总线" class="headerlink" title="系统总线"></a>系统总线</h4><p>通常与 CPU 直接相连，用于连接 CPU 与北桥芯片、或 CPU 与主存等</p>
 <ul>
@@ -316,33 +310,31 @@
 <ul>
 <li><p>VESA (Video Electronics Standards Association, 视频电子标准协会)（<strong>并行</strong>）</p>
 <p>32 位的局部总线，是针对多媒体 PC 要求高速传送活动图像的大量数据而推出的</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3565_1.png" width="450px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3565_1.png" width="450px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>PCI (Peripheral Component Interconnect, 外部设备互连)（<strong>并行</strong>）</p>
 <p>高性能的 32 位或 64 位总线，专为高度集成的外围部件、扩充插板和处理器/存储器系统设计的互连机制</p>
 <p>不依附于某个具体的处理器，是与处理器时钟频率无关的高速外围总线，支持即插即用，支持突发传送</p>
 <p>早期也用来作为系统总线</p>
 <p>目前常用的 PCI 适配器有显卡、声卡、网卡等</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3567_1.png" width="250px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3567_1.png" width="250px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>AGP (Accelerated Graphics Port, 加速图形接口)（<strong>并行</strong>）</p>
 <p>视频接口标准，基于 PCI 2.1 版规范并进行扩充修改而成</p>
 <p>专用于连接主存和图形存储器，用于传输视频和三维图形数据</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3569_1.png" width="250px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3569_1.png" width="250px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>PCI-E (PCI-Express)（<strong>串行</strong>）</p>
 <p>点对点串行局部总线，支持双向传输模式，可运行全双工模式，支持热插拔</p>
 <p>是最新的总线接口标准，它将全面取代现行的 PCI 和 AGP</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3571_1.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3571_1.png" width="600px"/>&lt;/dev&gt;</p>
 </li>
 </ul>
 <h4 id="设备总线"><a href="#设备总线" class="headerlink" title="设备总线"></a>设备总线</h4><p>用于设备和设备控制器之间互连的接口标准</p>
 <ul>
 <li><p>USB (Universal Serial Bus, 通用串行总线)（<strong>串行</strong>）</p>
 <p>① 即插即用；② 热插拔；③ 连接能力很强（菊花链）；④ 有很好的扩充性，可使用 USB 集线器链式连接 127 个外设；⑤ 高速传输，速率可达 480Mb/s</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3581_1.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3581_1.png" width="700px"/>&lt;/dev&gt;</p>
 <p>差模信号：根据 2、3 的压差来确定 <strong>1bit</strong> 数据，差模信号的抗干扰能力很强，因此工作频率可以很高</p>
 <p>注意：<strong>USB 每次只能传输 1bit 数据</strong></p>
 <blockquote>
@@ -351,20 +343,19 @@
 </li>
 <li><p>PCMCIA (Personal Computer Memory Card International Association)（<strong>并行</strong>）</p>
 <p>广泛应用于笔记本电脑的一种接口标准，是一个用于扩展功能的小型插槽，即插即用</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3579_1.png" width="300px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3579_1.png" width="300px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>IDE (Integrated Drive Electronics, 集成设备电路)（<strong>并行</strong>）</p>
 <p>更准确地称为 ATA，是一种 IDE 接口磁盘驱动器接口类型，硬盘和光驱通过 IDE 接口与主板连接</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3583_1.png" width="250px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3583_1.png" width="250px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>SCSI (Small Computer System Interface, 小型计算机系统接口)（<strong>并行</strong>）</p>
 <p>用于计算机和智能设备之间（硬盘、软驱、光驱、打印机、扫描仪等）系统级接口的独立处理器标准</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3577_1.png" width="200px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3577_1.png" width="200px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>SATA (Serial Advanced Technology Attachment, 串行高级技术附件)（<strong>串行</strong>）</p>
 <p>串行 ATA，负责主板和大容量存储设备（如硬盘及光盘驱动器）之间的数据传输</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3585_1.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3585_1.png" width="600px"/>&lt;/dev&gt;</p>
 </li>
 </ul>
 <blockquote>
@@ -374,8 +365,7 @@
 <ul>
 <li><p>RS-232C（<strong>串行</strong>）</p>
 <p>应用于串行<strong>二进制</strong>交换的数据终端设备(DTE)和数据通信设备(DCE)之间的标准接口</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3575_1.png" width="200px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3575_1.png" width="200px"/>&lt;/dev&gt;</p>
 </li>
 </ul>
 <hr>
@@ -459,8 +449,7 @@
 <p>同步控制既可用于 CPU 控制，又可用于高速的外部设备控制</p>
 <hr>
 <p>读命令（假设 CPU 作为主设备，某个输入设备作为从设备）：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3553_1.png" width="500px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3553_1.png" width="500px"/>&lt;/dev&gt;</p>
 <p>CPU 在 T1 时刻的上升沿给出地址信息</p>
 <p>CPU 在 T2 的上升沿给出读命令（低电平有效），与地址信息相符合的输入设备按命令进行一系列的内部操作，且必须在 T3 的上升沿来之前将 CPU 所需的数据送到数据总线上</p>
 <p>CPU 在 T3 内将数据线上的信息传送到其内部寄存器中</p>
@@ -476,20 +465,17 @@
 <p>根据“请求”和“回答”信号的撤销是否互锁，异步定时方式又分为以下 3 种类型：</p>
 <ol>
 <li><p>不互锁方式（速度最快，可靠性最差）</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3555_1.png" width="200px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3555_1.png" width="200px"/>&lt;/dev&gt;</p>
 <p>主设备发出“请求”信号后，不必等到接到从设备的“回答”信号，而是经在过一段时间自动撤销“请求”信号</p>
 <p>从设备在接到“请求”信号后，发出“回答”信号，并经过一段时间后自动撤销“回答”信号，不存在互锁关系</p>
 </li>
 <li><p>半互锁方式</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3557_1.png" width="200px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3557_1.png" width="200px"/>&lt;/dev&gt;</p>
 <p>主设备发出“请求”信号后，必须在接到从设备的“回答”信号后，才撤销“请求”信号，有互锁的关系</p>
 <p>从设备在接到“请求”信号后，发出“回答”信号，但不必等待获知主设备的“请求”信号已经撤销，而是隔段时间后自动撤销“回答”信号，不存在互锁关系</p>
 </li>
 <li><p>全互锁方式（最可靠，速度最慢）</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3559_1.png" width="200px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3559_1.png" width="200px"/>&lt;/dev&gt;</p>
 <p>主设备发出“请求”信号后，必须在从设备“回答”后才撤销“请求”信号</p>
 <p>从设备发出“回答”信号后，必须在获知主设备“请求”信号已撤销后，再撤销其“回答”信号，双方存在互锁关系</p>
 </li>
@@ -508,8 +494,7 @@
 <p>通过在异步总线中引入时钟信号，其就绪和应答等信号都在时钟的上升沿或下降沿有效，而不受其他时间的信号干扰。握手信号的采样由同步时钟控制</p>
 <p>在统一时钟的基础上，增加一个“等待”响应(反馈)信号 $\overline{WAIT}$，用来使总线控制器等待从设备准备好数据，再发送给主设备</p>
 <p>读命令：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3561_1.png" width="500px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3561_1.png" width="500px"/>&lt;/dev&gt;</p>
 <p>PCI 总线就是一种半同步总线，它的所有时间都在时钟下降沿同步，总线设备在时钟开始的上升沿采样总线信号</p>
 <h4 id="分离式通信"><a href="#分离式通信" class="headerlink" title="分离式通信"></a>分离式通信</h4><p>分离事务通信是总线复用的一种。将一个总线传输周期分成两个子周期：</p>
 <ol>

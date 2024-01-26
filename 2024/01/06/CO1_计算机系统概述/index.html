@@ -295,7 +295,7 @@
 <li><p>CPU 区分数据和指令的依据：指令周期的不同阶段</p>
 </li>
 <li><p>典型的冯·诺依曼计算机结构</p>
-  <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20221128195847080.png" width="520px"/></dev>
+<p>  <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20221128195847080.png" width="520px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>冯·诺依曼结构计算机中数据采用二进制编码表示的主要原因</p>
 <p>  二进制运算规则简单</p>
@@ -303,8 +303,7 @@
 <p>  便于用逻辑门电路实现算术运算</p>
 </li>
 </ul>
-<h4 id="现代计算机组织结构"><a href="#现代计算机组织结构" class="headerlink" title="现代计算机组织结构"></a>现代计算机组织结构</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20221128200439507.png" width="520px"/></dev>
-
+<h4 id="现代计算机组织结构"><a href="#现代计算机组织结构" class="headerlink" title="现代计算机组织结构"></a>现代计算机组织结构</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20221128200439507.png" width="520px"/>&lt;/dev&gt;</p>
 <p>以<strong>存储器</strong>为中心，使 I/O 操作尽可能绕过 CPU，直接在 I/O 设备和存储器之间完成，以提高系统的整体运行效率</p>
 <h4 id="计算机的功能部件"><a href="#计算机的功能部件" class="headerlink" title="计算机的功能部件"></a>计算机的功能部件</h4><p>传统冯·诺依曼计算机与现代计算机的结构虽然有所不同，但功能部件是一致的</p>
 <ul>
@@ -320,8 +319,7 @@
 <p>  计算机的存储部件，用来存放程序和数据</p>
 <ol>
 <li><p>主存储器/主存/内存储器/内存</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/onzxpD8Td2UpMjp.png" width="350px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/onzxpD8Td2UpMjp.png" width="350px"/>&lt;/dev&gt;</p>
 <p>CPU 能够直接访问，也可以和高速缓冲存储器 Cache 及辅助存储器交换数据</p>
 <p>工作方式：按存储单元的地址进行存取（按地址存取）</p>
 <p>特点：容量较小、存取速度较快、每位价格较高</p>
@@ -361,14 +359,11 @@
 </ul>
 <blockquote>
 <p>一般运算器和控制器集成到同一个芯片上，称为中央处理器 CPU</p>
-</blockquote>
-<blockquote>
 <p>CPU 和主存共同构成主机，除主机外的其他硬件装置（外存、I/O 设备等）统称为外部设备，简称外设</p>
 </blockquote>
 <hr>
 <p>冯·诺依曼结构的模型机：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/RbFRwo27PWWMEek.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/RbFRwo27PWWMEek.png" width="600px"/>&lt;/dev&gt;</p>
 <p>图中从控制器送出的虚线就是控制信号，它可以：控制如何修改 PC 以得到下一条指令的地址、控制 ALU 执行什么运算、控制主存是进行读操作还是写操作（读/写控制信号）</p>
 <p>CPU 和主存之间通过一组总线（地址、控制和数据 3 组信号线）相连。MAR 中的地址信息会直接送到地址线上，用于指向读/写操作的主存存储单元；控制线中有读/写信号线，指出数据是从 CPU 写入主存还是从主存读出到 CPU，根据是读操作还是写操作来控制是将 MDR 中的数据直接送到数据线上还是将数据线上的数据接收到 MDR 中</p>
 <h3 id="计算机软件"><a href="#计算机软件" class="headerlink" title="计算机软件"></a>计算机软件</h3><h4 id="系统软件和应用软件"><a href="#系统软件和应用软件" class="headerlink" title="系统软件和应用软件"></a>系统软件和应用软件</h4><ul>
@@ -399,8 +394,7 @@
 </li>
 </ul>
 <hr>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/SlULudCmKwYROoC.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/SlULudCmKwYROoC.png" width="600px"/>&lt;/dev&gt;</p>
 <p>翻译程序：</p>
 <ol>
 <li><p>编译程序/编译器（高级 → 机器/汇编）</p>
@@ -414,16 +408,14 @@
 <h4 id="软件和硬件的逻辑功能等价性"><a href="#软件和硬件的逻辑功能等价性" class="headerlink" title="软件和硬件的逻辑功能等价性"></a>软件和硬件的逻辑功能等价性</h4><p>对某一功能来说，既可由硬件实现又可由软件实现，从用户的角度看，它们在功能上是等价的。这一等价性被称为软、硬件逻辑功能的等价性</p>
 <p>硬件实现的往往是最基本的算术和逻辑运算功能，而其他功能大多通过软件的扩充得以实现</p>
 <p>软件和硬件功能界面的划分是由设计目标、性能价格比、技术水平等综合因素决定的</p>
-<h3 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h3><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/kIgBcxjX0VL8ndv.png" width="800px"/></dev>
-
+<h3 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h3><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/kIgBcxjX0VL8ndv.png" width="800px"/>&lt;/dev&gt;</p>
 <p>上层实现对下层的功能扩展，下层是实现上层的基础</p>
 <p>在高级语言层之上，还可以有应用程序层，它由解决实际问题的处理程序组成</p>
 <p>虚拟机器只对该层的观察者存在，对于某层的观察者来说，只能通过该层的语言来了解和使用计算机，而不必关心下层是如何工作的</p>
 <p>软/硬件交界面就是指令集体系结构 ISA，ISA 定义了一台计算机可以执行的所有指令的集合，每条指令规定了计算机执行什么操作，以及所处理的操作数存放的地址空间和操作数类型。ISA 是指软件能感知到的部分，也称软件可见部分</p>
 <p>软/硬件交界面的划分也不是绝对的：随着超大规模集成电路的不断发展，部分软件功能将由硬件实现</p>
 <h3 id="计算机系统的工作原理"><a href="#计算机系统的工作原理" class="headerlink" title="计算机系统的工作原理"></a>计算机系统的工作原理</h3><h4 id="“存储程序”工作方式"><a href="#“存储程序”工作方式" class="headerlink" title="“存储程序”工作方式"></a>“存储程序”工作方式</h4><h4 id="从源程序到可执行文件"><a href="#从源程序到可执行文件" class="headerlink" title="从源程序到可执行文件"></a>从源程序到可执行文件</h4><p>以 UNIX 系统中的 GCC 编译器程序为例：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/R4Z5ems4XOPa7by.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/R4Z5ems4XOPa7by.png" width="700px"/>&lt;/dev&gt;</p>
 <p>预处理阶段：cpp 对源程序中以字符 # 开头的命令进行处理</p>
 <p>编译阶段：ccl 对预处理后的源程序进行编译，生成一个汇编语言源程序</p>
 <p>汇编阶段：as 将汇编语言源程序翻译成机器语言指令，并把这些指令打包成一个称为可重定位目标文件的二进制文件</p>
@@ -434,9 +426,7 @@
 <p><strong>汇编程序</strong>：也是一种翻译程序，它把汇编语言源程序翻译为机器语言程序</p>
 <p>在 UNIX 系统中通过 shell 命令行解释器运行可执行文件 hello：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">unix&gt; </span><span class="language-bash">./hello</span></span><br><span class="line">hello, world!</span><br><span class="line"><span class="meta prompt_">unix&gt;</span></span><br></pre></td></tr></table></figure>
-
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230623104933155.png" width="700px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230623104933155.png" width="700px"/>&lt;/dev&gt;</p>
 <p>① shell 程序将用户从键盘输入的每个字符逐一读入 CPU 寄存器</p>
 <p>② 然后保存到主存中，在主存的缓冲区形成字符串“./hello”</p>
 <p>③ 接收到 Enter 键时，shell 调出操作系统内核程序，由内核来加载磁盘上的可执行文件 hello 到主存中</p>
@@ -444,8 +434,6 @@
 <p>⑤ 将 CPU 寄存器中的字符送到显示器</p>
 <blockquote>
 <p>程序的执行过程就是数据在 CPU、主存和 I/O 设备之间流动的过程，所有数据的流动都是通过总线、I/O 接口等进行的</p>
-</blockquote>
-<blockquote>
 <p>在程序的执行过程中，必须依靠操作系统的支持，特别是在涉及对键盘、磁盘等外设的操作时，用户程序不能直接访问这些底层硬件，需要依靠操作系统内核来完成</p>
 </blockquote>
 <h4 id="指令执行过程的描述"><a href="#指令执行过程的描述" class="headerlink" title="指令执行过程的描述"></a>指令执行过程的描述</h4><p>以取数指令（送至运算器的 ACC 中）为例：</p>

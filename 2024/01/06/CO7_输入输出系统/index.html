@@ -168,14 +168,12 @@
 <p>I/O 硬件：包括外部设备、I/O 接口、I/O 总线等。通过设备控制器控制 I/O 设备的具体动作以及与主机（总线）相连</p>
 </li>
 <li><p>I/O 接口</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/y8LseZnZZsc0Ywc.png" width="500px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/y8LseZnZZsc0Ywc.png" width="500px"/>&lt;/dev&gt;</p>
 <p>现在的 I/O 接口（芯片）也会被集成在南桥芯片内部</p>
 </li>
 <li><p>I/O 指令</p>
 <p>为了反映 CPU 与 I/O 设备交互的特点，I/O 指令与普通指令格式略有不同，其操作码指明了 CPU 要对 I/O 接口做什么，命令码指明了 I/O 接口要对设备做什么</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/jBBBBlKDN8nJVOZ.png" width="500px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/jBBBBlKDN8nJVOZ.png" width="500px"/>&lt;/dev&gt;</p>
 <p>指令系统的一部分，机器指令的一类</p>
 <p>属于特权指令，只能在操作系统内核的底层 I/O 软件中使用</p>
 <p><strong>I/O 指令实现的数据传送通常发生在通用寄存器和 I/O 端口之间</strong></p>
@@ -209,8 +207,6 @@
 <p>显示存储器(VRAM)/刷新存储器：为了不断提高刷新图像的信号，必须把一帧图像信息存储在刷新存储器中。其存储容量由图像分辨率和灰度级决定，分辨率越高，灰度级越多，刷新存储器容量越大</p>
 <blockquote>
 <p>VRAM 最低容量 = 分辨率 × 灰度级位数<br>VRAM 最低带宽 = 分辨率 × 灰度级位数 × 帧频</p>
-</blockquote>
-<blockquote>
 <p>现代计算机中，显存除了作为当前显示帧的缓存，还会用于保存即将渲染的图像数据<br>集成显卡计算机中，通常分配一片内存作为显存</p>
 </blockquote>
 </li>
@@ -240,8 +236,7 @@
 </blockquote>
 <h4 id="外部存储设备（辅存）"><a href="#外部存储设备（辅存）" class="headerlink" title="外部存储设备（辅存）"></a>外部存储设备（辅存）</h4><h5 id="磁表面存储器"><a href="#磁表面存储器" class="headerlink" title="磁表面存储器"></a>磁表面存储器</h5><p>磁表面存储：把某些磁性材料薄涂在金属铝或塑料表面上作为载磁体来存储信息</p>
 <p>磁记录原理：磁头和磁性记录介质相对运动时，通过电磁转换完成读/写操作</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/AQjDqP8CpMhb3Wl.png" width="400px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/AQjDqP8CpMhb3Wl.png" width="400px"/>&lt;/dev&gt;</p>
 <p>编码方法：按某种方案（规律），把一连串的二进制信息变换成存储介质磁层中一个磁化翻转状态的序列，并使读/写控制电路容易、可靠地实现转换</p>
 <p>磁记录方式：通常采用调频制 FM 和改进型调频制 MFM</p>
 <p>优点：</p>
@@ -296,9 +291,8 @@
 <p>CPU 通过接口中的命令寄存器向外设发出 I/O 命令、有关控制信息和响应信号</p>
 </li>
 </ul>
-<h3 id="I-O-接口的基本结构"><a href="#I-O-接口的基本结构" class="headerlink" title="I/O 接口的基本结构"></a>I/O 接口的基本结构</h3><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/opZe3zFYp74DQp3.png" width="500px"/></dev>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230628224534886.png" width="600px"/></dev>
-
+<h3 id="I-O-接口的基本结构"><a href="#I-O-接口的基本结构" class="headerlink" title="I/O 接口的基本结构"></a>I/O 接口的基本结构</h3><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/opZe3zFYp74DQp3.png" width="500px"/>&lt;/dev&gt;</p>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230628224534886.png" width="600px"/>&lt;/dev&gt;</p>
 <ul>
 <li><p>内部接口</p>
 <p>通过系统总线与内存、CPU 相连</p>
@@ -374,8 +368,7 @@
 <h3 id="I-O-端口的编址方式"><a href="#I-O-端口的编址方式" class="headerlink" title="I/O 端口的编址方式"></a>I/O 端口的编址方式</h3><p>有与存储器统一编址和独立编址两种</p>
 <p>也可以说是 I/O 设备编址</p>
 <h4 id="统一编址"><a href="#统一编址" class="headerlink" title="统一编址"></a>统一编址</h4><p>又称存储器映射方式，指把 I/O 端口当作存储器的单元进行地址分配</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/tyx1uVs1bkeiLvL.png" width="250px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/tyx1uVs1bkeiLvL.png" width="250px"/>&lt;/dev&gt;</p>
 <p>CPU 不需要设置专门的 I/O 指令，用统一的访存指令就可访问 I/O 端口</p>
 <p>靠不同的地址码区分内存和 I/O 设备，I/O 地址要求相对固定在地址的某部分</p>
 <p>RISC 机器常用（不是说 CISC 不能用啊）</p>
@@ -391,8 +384,7 @@
 <li>外设寻址时间长，导致执行速度较慢（地址位数多，地址译码速度慢）</li>
 </ol>
 <h4 id="独立编址"><a href="#独立编址" class="headerlink" title="独立编址"></a>独立编址</h4><p>又称 I/O 映射方式，I/O 端口的地址空间与主存地址空间是两个独立的地址空间</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/IpdGZK8TSZD13AZ.png" width="250px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/IpdGZK8TSZD13AZ.png" width="250px"/>&lt;/dev&gt;</p>
 <p>无法从地址码的形式上区分内存和 I/O 端口（I/O 端口地址和主存地址可能相同），需要设置专门的 I/O 指令访问 I/O 端口，靠不同的指令区分内存和 I/O 设备</p>
 <p>优点：</p>
 <ol>

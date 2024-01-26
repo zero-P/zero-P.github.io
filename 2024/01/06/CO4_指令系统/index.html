@@ -239,8 +239,7 @@
 </ul>
 <hr>
 <p>根据指令中操作数地址码的数目不同，可将指令分为以下几种格式：</p>
-<h4 id="零地址指令"><a href="#零地址指令" class="headerlink" title="零地址指令"></a>零地址指令</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3331_1.png" width="80px"/></dev>
-
+<h4 id="零地址指令"><a href="#零地址指令" class="headerlink" title="零地址指令"></a>零地址指令</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3331_1.png" width="80px"/>&lt;/dev&gt;</p>
 <ol>
 <li><p>不需要操作数的指令，如空操作、停机、关中断等</p>
 </li>
@@ -250,8 +249,7 @@
 <p>硬堆栈：只需在取指时访存 1 次</p>
 </li>
 </ol>
-<h4 id="一地址指令"><a href="#一地址指令" class="headerlink" title="一地址指令"></a>一地址指令</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3333_1.png" width="400px"/></dev>
-
+<h4 id="一地址指令"><a href="#一地址指令" class="headerlink" title="一地址指令"></a>一地址指令</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3333_1.png" width="400px"/>&lt;/dev&gt;</p>
 <ol>
 <li><p>只需要单操作数，如加 1、减 1、取反、求补等</p>
 <p>指令含义：OP(A1) → A1</p>
@@ -262,18 +260,15 @@
 <p>完成一条指令需要 2 次访存：取指 → 读 A1</p>
 </li>
 </ol>
-<h4 id="二地址指令"><a href="#二地址指令" class="headerlink" title="二地址指令"></a>二地址指令</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3335_1.png" width="400px"/></dev>
-
+<h4 id="二地址指令"><a href="#二地址指令" class="headerlink" title="二地址指令"></a>二地址指令</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3335_1.png" width="400px"/>&lt;/dev&gt;</p>
 <p>对于常用的算术和逻辑运算指令，往往要求使用两个操作数，需分别给出目的操作数和源操作数的地址，其中目的操作数地址还用于保存本次的运算结果</p>
 <p>指令含义：(A1)OP(A2) → A1</p>
 <p>完成一条指令需要访存 4 次：取指 → 读 A1 + 读 A2 → 写 A1</p>
-<h4 id="三地址指令"><a href="#三地址指令" class="headerlink" title="三地址指令"></a>三地址指令</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3337_1.png" width="400px"/></dev>
-
+<h4 id="三地址指令"><a href="#三地址指令" class="headerlink" title="三地址指令"></a>三地址指令</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3337_1.png" width="400px"/>&lt;/dev&gt;</p>
 <p>常用于需要两个操作数的算术运算、逻辑运算相关指令</p>
 <p>指令含义：(A1)OP(A2) → A3</p>
 <p>完成一条指令需要访存 4 次：取指 → 读 A1 + 读 A2 → 写 A3</p>
-<h4 id="四地址指令"><a href="#四地址指令" class="headerlink" title="四地址指令"></a>四地址指令</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3339_1.png" width="400px"/></dev>
-
+<h4 id="四地址指令"><a href="#四地址指令" class="headerlink" title="四地址指令"></a>四地址指令</h4><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3339_1.png" width="400px"/>&lt;/dev&gt;</p>
 <p>指令含义：(A1)OP(A2) → A3，A4 = 下一条将要执行指令的地址</p>
 <p>完成一条指令需要访存 4 次：取指 → 读 A1 + 读 A2 → 写 A3</p>
 <h3 id="扩展操作码指令格式"><a href="#扩展操作码指令格式" class="headerlink" title="扩展操作码指令格式"></a>扩展操作码指令格式</h3><ul>
@@ -291,11 +286,10 @@
 <p>通常情况下，对使用频率较高的指令，分配较短的操作码；对使用频率较低的指令，分配较长的操作码，从而尽可能减少指令译码和分析的时间</p>
 </li>
 <li><p>扩展操作码例一</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230721214738217.png" width="500px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230721214738217.png" width="500px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>扩展操作码例二</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3357_1.png" width="800px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3357_1.png" width="800px"/>&lt;/dev&gt;</p>
 <p>设单个地址码长度为 $n$，上一层留出 $m$ 种状态，下一层可扩展出 $m × 2^n$ 种状态</p>
 </li>
 </ul>
@@ -341,8 +335,7 @@
 <p>寻找操作数的地址（把操作数的形式地址转换成操作数的有效地址的过程）</p>
 <p>如何在指令中表示一个操作数的地址、如何用这种表示得到操作数或怎样计算出操作数的地址</p>
 <p>指令格式：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3373_1.png" width="480px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3373_1.png" width="480px"/>&lt;/dev&gt;</p>
 <p>为区别各种方式，通常在指令中设一个字段，用来指明属于哪种寻址方式</p>
 </li>
 </ol>
@@ -386,8 +379,7 @@
 <p>在早期的计算机中常常作为主要的寻址方式</p>
 <h4 id="间接寻址"><a href="#间接寻址" class="headerlink" title="间接寻址"></a>间接寻址</h4><p>形式地址 A 指出操作数有效地址 EA 所在的存储单元的地址，即 EA = (A)，有效地址由形式地址间接提供</p>
 <p>可以是一次间接寻址，也可以是多次间接寻址：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3375_1.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3375_1.png" width="600px"/>&lt;/dev&gt;</p>
 <p>主存字第一位为 1 时，表示取出的仍不是操作数的地址，即多次间址；主存字第一位为 0 时，表示取得的是操作数的地址</p>
 <p>优点：</p>
 <ol>
@@ -428,8 +420,7 @@
 </ol>
 <h5 id="基址寻址"><a href="#基址寻址" class="headerlink" title="基址寻址"></a>基址寻址</h5><p>EA = (BR) + A，使用基址寄存器提供基准地址（主存），指令字中的形式地址 A 给出相对偏移量</p>
 <p>基址寄存器 BR (Base Address Register)：专用（隐式）、通用（显式）</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230724114420247.png" width="800px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230724114420247.png" width="800px"/>&lt;/dev&gt;</p>
 <blockquote>
 <p>注意看指令格式</p>
 </blockquote>
@@ -473,11 +464,10 @@
 <hr>
 <ul>
 <li><p>数据寻址方式示意图</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3377_1.png" width="700px"/></dev>
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3377_1.png" width="700px"/>&lt;/dev&gt;</p>
 </li>
 <li><p>基本的数据寻址方式分析</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231206161300388.png" width="900px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231206161300388.png" width="900px"/>&lt;/dev&gt;</p>
 <p>隐含寻址、立即寻址、寄存器寻址访存次数为 0，获取操作数速度比较快。其中隐含寻址获取操作数速度最快，立即寻址次之，寄存器寻址再次之。立即寻址的指令执行时间最短</p>
 <p>寄存器间接一次寻址取操作数速度接近直接寻址</p>
 </li>
@@ -491,8 +481,7 @@
 <p>浮点寄存器栈和多媒体扩展寄存器组属于 IA-32 的浮点处理架构。前者用于浮点运算器 FPU，后者用于 SSE 架构（由多媒体扩展 MMX 技术发展而来，采用单指令多数据 SIMD 技术）</p>
 </blockquote>
 <p>定点寄存器组中共有 8 个通用寄存器 GPR (General Purpose Register)、2 个专用寄存器、6 个段寄存器</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230725101846552.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230725101846552.png" width="600px"/>&lt;/dev&gt;</p>
 <h5 id="通用寄存器"><a href="#通用寄存器" class="headerlink" title="通用寄存器"></a>通用寄存器</h5><p>用于存放操作数（包括源操作数、目的操作数、中间结果）和各种地址信息等</p>
 <p>为了向后兼容，EAX、EBX、ECX、EDX 的高两位字节和低两位字节可以独立使用（E 为 Extend，表示 32 位的寄存器），而低两位字节又可分别作为两个 8 位寄存器</p>
 <p>BP/EBP 和 SP/ESP 分别是帧指针寄存器和栈指针寄存器，分别用来指向<strong>当前过程</strong>的栈帧的底部和顶部</p>
@@ -510,8 +499,7 @@
 </li>
 <li><p>状态标志寄存器</p>
 <p>主要用于记录机器的状态和控制信息</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230726173618612.png" width="800px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230726173618612.png" width="800px"/>&lt;/dev&gt;</p>
 <p>0~11 位中的 9 个标志位是从最早的 8086 微处理器延续下来，它们按功能可以分为 6 个条件标志和 3 个控制标志</p>
 <p>条件标志用来存放运行的状态信息，由硬件自动设定。条件标志有时也称为条件码</p>
 <p>控制标志由软件设定，用于中断响应、串操作和单步执行等</p>
@@ -575,23 +563,22 @@
 <blockquote>
 <p>由于 32 或 64 位体系结构都是由 16 位扩展而来，因此用 word（字）表示 16 位</p>
 </blockquote>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230724220210988.png" width="800px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230724220210988.png" width="800px"/>&lt;/dev&gt;</p>
 <blockquote>
 <p>mov 指令用于在内存和寄存器之间或者寄存器之间移动数据<br>lea 指令用于将一个内存地址（非其所指内容）或运算结果加载到目的寄存器</p>
 </blockquote>
 <h4 id="常用指令（Intel-格式）"><a href="#常用指令（Intel-格式）" class="headerlink" title="常用指令（Intel 格式）"></a>常用指令（Intel 格式）</h4><p>常用标记：</p>
 <ul>
-<li><p><strong>\&lt;reg&gt;</strong> 表示任意寄存器，若其后带有数字，则指定其位数</p>
-<p>\&lt;reg32&gt; 表示 32 位寄存器（eax、ebx、ecx、edx、esi、edi、esp、ebp）</p>
-<p>\&lt;reg16&gt; 表示 16 位寄存器（ax、bx、cx、dx）</p>
-<p>\&lt;reg8&gt; 表示 8 位寄存器（ah、al、bh、bl、ch、cl、dh、dl）</p>
+<li><p><strong>\<reg\></strong> 表示任意寄存器，若其后带有数字，则指定其位数</p>
+<p>\<reg32\> 表示 32 位寄存器（eax、ebx、ecx、edx、esi、edi、esp、ebp）</p>
+<p>\<reg16\> 表示 16 位寄存器（ax、bx、cx、dx）</p>
+<p>\<reg8\> 表示 8 位寄存器（ah、al、bh、bl、ch、cl、dh、dl）</p>
 </li>
-<li><p><strong>\&lt;mem&gt;</strong> 表示内存地址</p>
+<li><p><strong>\<mem\></strong> 表示内存地址</p>
 <p>如 <code>[eax]</code>、<code>[var + 4]</code>、<code>dword ptr [eax + ebx]</code></p>
 </li>
-<li><p><strong>\&lt;con&gt;</strong> 表示常数</p>
-<p>\&lt;con8&gt; 表示 8 位常数，\&lt;con16&gt; 表示 16 位常数，\&lt;con32&gt; 表示 32 位常数</p>
+<li><p><strong>\<con\></strong> 表示常数</p>
+<p>\<con8\> 表示 8 位常数，\<con16\> 表示 16 位常数，\<con32\> 表示 32 位常数</p>
 </li>
 </ul>
 <p>x86 中的指令机器码长度为 1 字节</p>
@@ -600,7 +587,6 @@
 <li><p>mov 指令</p>
 <p>将第二个操作数（寄存器的内容/内存中的内容/常数值）复制到第一个操作数（寄存器/内存），但不能直接从内存复制到内存</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mov &lt;reg&gt;, &lt;reg&gt;</span><br><span class="line">mov &lt;reg&gt;, &lt;mem&gt;</span><br><span class="line">mov &lt;mem&gt;, &lt;reg&gt;</span><br><span class="line">mov &lt;reg&gt;, &lt;con&gt;</span><br><span class="line">mov &lt;mem&gt;, &lt;con&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov eax, ebx           #将ebx值复制到eax</span><br><span class="line">mov byte ptr [var], 5  #将5保存到var值指示的内存地址的一字节中</span><br></pre></td></tr></table></figure>
 </li>
@@ -608,7 +594,6 @@
 <p>将操作数压入内存的栈，常用于函数调用</p>
 <p>ESP 是栈顶，压栈前先将 ESP 值减 4（栈增长方向与内存地址增长方向相反），然后将操作数压入 ESP 指示的地址</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">push &lt;reg32&gt;</span><br><span class="line">push &lt;mem&gt;</span><br><span class="line">push &lt;con32&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">push eax    #将eax值压栈</span><br><span class="line">push [var]  #将var值指示的内存地址的4字节值压栈</span><br></pre></td></tr></table></figure>
 </li>
@@ -616,28 +601,22 @@
 <p>执行出栈操作</p>
 <p>出栈前先将 ESP 指示的地址中的内容出栈，然后将 ESP 值加 4</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pop edi    #弹出栈顶元素送到edi</span><br><span class="line">pop [ebx]  #弹出栈顶元素送到ebx指示的内存地址的4字节中</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h5 id="算术和逻辑运算指令"><a href="#算术和逻辑运算指令" class="headerlink" title="算术和逻辑运算指令"></a>算术和逻辑运算指令</h5><ul>
 <li><p>add/sub 指令</p>
 <p>结果保存到第一个操作数中</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">add &lt;reg&gt;, &lt;reg&gt; / sub &lt;reg&gt;, &lt;reg&gt;</span><br><span class="line">add &lt;reg&gt;, &lt;mem&gt; / sub &lt;reg&gt;, &lt;mem&gt;</span><br><span class="line">add &lt;mem&gt;, &lt;reg&gt; / sub &lt;mem&gt;, &lt;reg&gt;</span><br><span class="line">add &lt;reg&gt;, &lt;con&gt; / sub &lt;reg&gt;, &lt;con&gt;</span><br><span class="line">add &lt;mem&gt;, &lt;con&gt; / sub &lt;mem&gt;, &lt;con&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sub eax, 10             #eax ← eax - 10</span><br><span class="line">add byte ptr [var], 10  #var值指示的内存地址的一字节值与10相加，并将结果保存在var值指示的内存地址的字节中</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>AT&amp;T：<code>sub source，destination</code>，destination ← destination - source</p>
-</blockquote>
-<blockquote>
 <p>adc 带进位加法，在求和运算时再多加上 CF 标志位；sbb 带借位减法，减法运算时再多减去 CF 标志位</p>
 </blockquote>
 </li>
 <li><p>inc/dec 指令</p>
 <p>自加 1/自减 1</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">inc &lt;reg&gt; / dec &lt;reg&gt;</span><br><span class="line">inc &lt;mem&gt; / dec &lt;mem&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dec eax              #eax值自减1</span><br><span class="line">inc dword ptr [var]  #var值指示的内存地址的4字节值自加1</span><br></pre></td></tr></table></figure>
 </li>
@@ -646,10 +625,8 @@
 <p>有两种格式：① 两个操作数，将两个操作数相乘，将结果保存在第一个操作数中；② 三个操作数，将第二个操作数和第三个操作数相乘，将结果保存在第一个操作数中</p>
 <p>两种格式的<strong>第一个操作数都必须为寄存器</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">imul &lt;reg32&gt;, &lt;reg32&gt;</span><br><span class="line">imul &lt;reg32&gt;, &lt;mem&gt;</span><br><span class="line">imul &lt;reg32&gt;, &lt;reg32&gt;, &lt;con&gt;</span><br><span class="line">imul &lt;reg32&gt;, &lt;mem&gt;, &lt;con&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">imul eax, [var]    #eax ← eax * [var]</span><br><span class="line">imul esi, edi, 25  #esi ← edi * 25</span><br></pre></td></tr></table></figure>
-
 <p>乘法操作结果可能溢出，则编译器置溢出标志 OF = 1，以使 CPU 调出溢出异常处理程序</p>
 </li>
 <li><p>idiv 指令</p>
@@ -657,7 +634,6 @@
 <p>只有一个操作数，代表除数，被除数为 edx:eax 中的内容（64 位整数）</p>
 <p>操作结果有两部分：商和余数。商送到 eax，余数送到 edx</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">idiv &lt;reg32&gt;</span><br><span class="line">idiv &lt;mem&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">idiv ebx</span><br><span class="line">idiv dword ptr [var]</span><br></pre></td></tr></table></figure>
 </li>
@@ -665,21 +641,18 @@
 <p>逻辑与/逻辑或/逻辑异或操作指令，用于操作数的位操作</p>
 <p>操作结果放在第一个操作数中</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">and &lt;reg&gt;, &lt;reg&gt; / or &lt;reg&gt; &lt;reg&gt; / xor &lt;reg&gt;, &lt;reg&gt;</span><br><span class="line">and &lt;reg&gt;, &lt;mem&gt; / or &lt;reg&gt; &lt;mem&gt; / xor &lt;reg&gt;, &lt;mem&gt;</span><br><span class="line">and &lt;mem&gt;, &lt;reg&gt; / or &lt;mem&gt; &lt;reg&gt; / xor &lt;mem&gt;, &lt;reg&gt;</span><br><span class="line">and &lt;reg&gt;, &lt;con&gt; / or &lt;reg&gt; &lt;con&gt; / xor &lt;reg&gt;, &lt;con&gt;</span><br><span class="line">and &lt;mem&gt;, &lt;con&gt; / or &lt;mem&gt; &lt;con&gt; / xor &lt;mem&gt;, &lt;con&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">and eax, 0fH  #将eax中的前28位置0,最后4位保持不变</span><br><span class="line">xor edx, edx  #将eax中的内容全部置0</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>not 指令</p>
 <p>位翻转指令，将操作数中的每一位翻转（0→1、1→0）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">not &lt;reg&gt;</span><br><span class="line">not &lt;mem&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">not byte ptr [var]  #将var值指示的内存地址的一字节的所有位翻转</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>neg 指令</p>
 <p>取负指令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">neg &lt;reg&gt;</span><br><span class="line">neg &lt;mem&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">neg eax  #eax ← -eax</span><br></pre></td></tr></table></figure>
 </li>
@@ -687,28 +660,23 @@
 <p>逻辑移位指令，shl 逻辑左移，shr 逻辑右移</p>
 <p>第一个操作数表示被操作数，第二个操作数指示移位的位数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">shl &lt;reg&gt;, &lt;con8&gt; / shr &lt;reg&gt;, &lt;con8&gt;</span><br><span class="line">shl &lt;mem&gt;, &lt;con8&gt; / shr &lt;mem&gt;, &lt;con8&gt;</span><br><span class="line">shl &lt;reg&gt;, &lt;cl&gt; / shr &lt;reg&gt;, &lt;cl&gt;</span><br><span class="line">shl &lt;mem&gt;, &lt;cl&gt; / shr &lt;mem&gt;, &lt;cl&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shl eax, 1   #将eax值左移1位</span><br><span class="line">shr ebx, cl  #将ebx值右移n位(n为cl中的值)</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h5 id="控制流指令"><a href="#控制流指令" class="headerlink" title="控制流指令"></a>控制流指令</h5><p>x86 处理器中的程序计数器为 IP。IP 寄存器不能直接操作，但可以用控制流指令更新</p>
 <p>通常用标签(label)指示程序中的指令地址。在 x86 汇编代码中，可在任何指令之前加入标签，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">       mov esi, [ebp+8]</span><br><span class="line">begin: xor ecx, ecx</span><br><span class="line">       mov eax, [esi]</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>jmp 指令</p>
 <p>控制 IP 转移到 label 所指示的地址（从 label 中取出指令执行）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmp &lt;label&gt;</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmp begin  #跳转到begin标记的指令执行</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>jcondition 指令</p>
 <p>条件转移指令，依据 CPU 状态字中的一系列条件状态（ZF 和 SF）转移</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">je &lt;label&gt;   #jump when equal</span><br><span class="line">jne &lt;label&gt;  #jump when not equal</span><br><span class="line">jz &lt;label&gt;   #jump when last result zero</span><br><span class="line">#signed</span><br><span class="line">jg &lt;label&gt;   #jump when greater than</span><br><span class="line">jge &lt;label&gt;  #jump when greater than or equal to</span><br><span class="line">jl &lt;label&gt;   #jump when less than</span><br><span class="line">jle &lt;label&gt;  #jump when less than or equal to</span><br><span class="line">#unsigned</span><br><span class="line">ja &lt;label&gt;   #jump when above</span><br><span class="line">jae &lt;label&gt;  #jump when above or equal to</span><br><span class="line">jb &lt;label&gt;   #jump when below</span><br><span class="line">jbe &lt;label&gt;  #jump when below or equal to</span><br></pre></td></tr></table></figure>
-
 <p>举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmp eax, ebx</span><br><span class="line">jle done      #如果eax的值小于等于ebx值,跳转到done指示的指令执行,否则执行下一条指令</span><br></pre></td></tr></table></figure>
 </li>
@@ -716,14 +684,12 @@
 <p>cmp 指令用于比较两个操作数的值；test 指令对两个操作数进行逐位与运算</p>
 <p>这两类指令都不保存操作结果，仅根据运算结果设置 CPU 状态字中的条件码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmp &lt;reg&gt;, &lt;reg&gt; / test &lt;reg&gt;, &lt;reg&gt;</span><br><span class="line">cmp &lt;reg&gt;, &lt;mem&gt; / test &lt;reg&gt;, &lt;mem&gt;</span><br><span class="line">cmp &lt;mem&gt;, &lt;reg&gt; / test &lt;mem&gt;, &lt;reg&gt;</span><br><span class="line">cmp &lt;reg&gt;, &lt;con&gt; / test &lt;reg&gt;, &lt;con&gt;</span><br></pre></td></tr></table></figure>
-
 <p>cmp 和 test 指令通常和 jcondition 指令搭配使用，举例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmp dword ptr [var], 10  #将var指示的主存地址的4字节内容与10比较</span><br><span class="line">jne loop                 #如果相等则继续顺序执行,否则跳转到loop处执行</span><br><span class="line">test eax, eax            #测试eax是否为零</span><br><span class="line">jz xxxx                  #为零则置标志ZF为1,跳转到xxxx处执行</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>call/ret 指令</p>
 <p>分别用于实现子程序（过程、函数等）的调用及返回，都属于无条件转移指令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">call &lt;label&gt;</span><br><span class="line">ret</span><br></pre></td></tr></table></figure>
-
 <p>call 指令先将位于其下条指令的地址入栈（作为返回地址），然后无条件转移到由标签指示的指令</p>
 <p>与其他简单的跳转指令不同，call 指令保存调用之前的地址信息（当 call 指令结束后，返回调用之前的地址）</p>
 <p>ret 指令实现子程序的返回机制：ret 指令弹出栈中保存的返回地址（相当于 pop 指令），并送到 EIP 寄存器（段内或段间调用时）和 CS 寄存器（仅段间调用），即无条件转移到返回地址执行</p>
@@ -764,8 +730,7 @@
 <p>栈从高地址向低地址增长</p>
 </li>
 <li><p>过程调用过程中栈和栈帧的变化</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230726170916998.png" width="800px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230726170916998.png" width="800px"/>&lt;/dev&gt;</p>
 <p>在过程 P 中遇到一个函数调用：</p>
 <ol>
 <li>首先，P 确定是否需要将某些调用者保存寄存器（如 EAX、ECX 和 EDX）保存到自己的栈中</li>
@@ -787,30 +752,23 @@
 </li>
 <li><p>简单的 C 语言程序对应的过程调用的机器级实现</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">caller</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> temp1 = <span class="number">125</span>;</span><br><span class="line">    <span class="type">int</span> temp2 = <span class="number">80</span>;</span><br><span class="line">    <span class="type">int</span> sum = add(temp1, temp2);</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>经 GCC 编译后，caller 过程（不包含 add 过程）对应的代码如下（设 P 调用 caller）：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">caller:</span><br><span class="line">pushl %ebp             #P栈底指针值压栈</span><br><span class="line">movl  %esp, %ebp       #当前栈顶作为caller栈底</span><br><span class="line">subl  $24, %esp        #移动栈顶指针,为caller参数分配24字节空间(6个双字)</span><br><span class="line">movl  $125, -12(%ebp)  #125→M[R[ebp]-12],保存局部变量temp1值到栈帧</span><br><span class="line">movl  $80, -8(%ebp)    #80→M[R[ebp]-8],保存局部变量temp2值到栈帧</span><br><span class="line">movl  -8(%ebp), %eax   #M[R[ebp]-8]→R[eax],add入口参数temp2值复制到eax</span><br><span class="line">mov   %eax, 4(%esp)    #R[eax]→M[R[esp]+4],保存add入口参数temp2值到栈帧(从eax)</span><br><span class="line">movl  -12(%ebp), %eax  #M[R[ebp]-12]→R[eax],add入口参数temp1值复制到eax</span><br><span class="line">movl  %eax, (%esp)     #R[eax]→M[R[esp]],保存add入口参数temp2值到栈帧(从eax)</span><br><span class="line">call  add              #把返回地址(即第12行指令地址)压栈,调用add,并将add返回值保存在eax中</span><br><span class="line">movl  %eax, -4(%ebp)   #R[eax]→M[R[ebp]-4],add返回值送局部变量sum并保存到栈帧</span><br><span class="line">movl  -4(%ebp), %eax   #M[R[ebp]-4]→R[eax],sum作为caller返回值保存到eax</span><br><span class="line">leave</span><br><span class="line">ret</span><br></pre></td></tr></table></figure>
-
 <p>执行第 4 行后 ESP 所指位置如下图所示：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231108155526835.png" width="500px"/></dev>
-
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231108155526835.png" width="500px"/>&lt;/dev&gt;</p>
 </li>
 </ul>
 <p>  caller 栈帧用到的空间占 4 (P 的 EBP 值) + 12 (3 个局部变量) + 8 (add 的 2 个入口参数) + 4 (call 指令设置的 add 调用结束后的返回地址) = 28 字节，但栈帧共有 4 + 24 + 4 = 32 字节（一开始为 caller 参数分配的 24 字节空间只用了 20 字节），有 4 字节空间被浪费。这是因为 GCC 为保证数据的严格对齐而规定每个函数的栈帧大小必须是 16 字节的倍数</p>
 <p>  执行 ret 指令之前，应将当前栈帧释放，并恢复旧 ESP 的值。leave 指令实现了这个功能，它相当于以下两条指令的功能：</p>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">movl %ebp, %esp  #使esp指向当前ebp的位置</span><br><span class="line">popl %ebp        #弹出当前esp所指位置的内容(P的栈底)并保存到ebp,同时esp也指向了P的栈顶(P设置的返回地址)</span><br></pre></td></tr></table></figure>
-
 <p>  编译器不一定要使用 leave 指令，也可通过 pop 执行和对 ESP 的内容做加法来实现退栈操作</p>
 <p>  add 过程经 GCC 编译并进行链接后，对应的代码如下：</p>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">8048469:55         push %ebp</span><br><span class="line">804846a:89 e5      mov  %esp, %ebp</span><br><span class="line">804846c:8b 45 0c   mov  0xc(%ebp), %eax</span><br><span class="line">804846f:8b 55 08   mov  0x8(%ebp), %edx</span><br><span class="line">8048472:8d 04 02   lea  (%edx, %eax, 1), %eax  #R[edx]+R[eax]*1→eax</span><br><span class="line">8048475:5d         pop  %ebp</span><br><span class="line">8048476:c3         ret</span><br></pre></td></tr></table></figure>
-
 <p>  add 过程没有用到任何被调用者保存寄存器，没有局部变量，此外，add 是一个被调用过程，并且不再调用其他过程，即它是一个叶子过程，因而也没有入口参数和返回地址要保存，因此，add 的栈帧中除了要保存 caller 的 EBP 以外，无须保留任何信息</p>
 <p>  通常一个过程对应的机器级代码都有三个部分：</p>
 <ol>
 <li><p>准备阶段（最简单的准备阶段代码段）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">push %ebp</span><br><span class="line">mov  %esp, %ebp</span><br></pre></td></tr></table></figure>
-
 <p>通过将当前栈指针 ESP 传送到 EBP 来完成将 EBP 指向当前栈帧底部的任务</p>
 </li>
 <li><p>过程体</p>
@@ -819,17 +777,14 @@
 </li>
 <li><p>结束阶段</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">leave</span><br><span class="line">ret</span><br></pre></td></tr></table></figure>
-
 <p>或</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov %ebp, %esp  #EBP和ESP已重合时可省,比如这里的add过程,整个过程体阶段没有压栈操作</span><br><span class="line">pop %ebp</span><br><span class="line">ret</span><br></pre></td></tr></table></figure>
-
 <p>add 的 EBP 和 ESP 都指向保存有 caller EBP 值的单元，因此通过 pop 并将出栈值保存到 EBP 可以实现恢复 EBP 在 caller 过程中的值，并在栈中退出 add 过程的栈帧，同时执行到 ret 指令时 ESP 已指向返回地址</p>
 </li>
 </ol>
 <hr>
 <p>C 语言有 9 种流程控制语句，分成三类：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230726182013259.png" width="400px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230726182013259.png" width="400px"/>&lt;/dev&gt;</p>
 <h3 id="选择语句的机器级表示"><a href="#选择语句的机器级表示" class="headerlink" title="选择语句的机器级表示"></a>选择语句的机器级表示</h3><ul>
 <li><p>编译器通过条件码（标志位）设置指令和各类转移指令来实现程序中的选择结构语句</p>
 </li>
@@ -845,17 +800,13 @@
 <li><p>if 语句</p>
 <p>if ~ (then)、if ~ (then) ~ else 语句通用形式：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (cond_expr)</span><br><span class="line">    then_statement</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    else_statement</span><br></pre></td></tr></table></figure>
-
 <p>编译后得到的对应汇编代码可以有如下两种不同的结构：</p>
-<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230726182518610.png" width="600px"/></dev>
-
+<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230726182518610.png" width="600px"/>&lt;/dev&gt;</p>
 <p>对于下面的 C 语言函数：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">get_lowaddr_content</span><span class="params">(<span class="type">int</span> *p1, <span class="type">int</span> *p2)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (p1 &gt; p2)</span><br><span class="line">        <span class="keyword">return</span> *p2;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> *p1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>已知形式参数 p1 和 p2 对应的实参已被压入调用函数的栈帧，p1 和 p2 对应实参的存储地址分别为 R[ebp] + 8、R[ebp] + 12。返回结果存放在 EAX 中</p>
 <p>则上述函数体对应的汇编代码为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">movl 8(%ebp), %eax   #R[eax]←M[R[ebp]+8],即R[eax]=p1</span><br><span class="line">movl 12(%ebp), %edx  #R[edx]←M[R[ebp]+12],即R[edx]=p2</span><br><span class="line">cmpl %edx, %eax      #比较p1和p2,即根据p1-p2的结果置标志(右-左)</span><br><span class="line">jbe  .L1             #若pl&lt;=p2,则转标记L1处执行</span><br><span class="line">movl (%edx), %eax    #R[eax]←M[R[edx]],即R[eax]=M[p2]</span><br><span class="line">jmp  .L2             #无条件跳转到标记L2执行</span><br><span class="line">.L1:</span><br><span class="line">movl (%eax), %eax    #R[eax]←M[R[eax]],即R[eax]=M[p1]</span><br><span class="line">.L2:</span><br></pre></td></tr></table></figure>
-
 <p>p1 和 p2 是指针型参数，故在 32 位机中的长度后缀是 l</p>
 <p>比较指令 cmpl 的两个操作数都应来自寄存器 ，故应先将 p1 和 p2 对应的实参从栈中取到通用寄存器</p>
 </li>
@@ -863,28 +814,20 @@
 <h3 id="循环语句的机器级表示"><a href="#循环语句的机器级表示" class="headerlink" title="循环语句的机器级表示"></a>循环语句的机器级表示</h3><p>C 语言循环结构有三种：while、do ~ while、for，大多数编译程序将这三种循环结构都转换为 do ~ while 形式来产生机器级代码</p>
 <h4 id="do-while"><a href="#do-while" class="headerlink" title="do ~ while"></a>do ~ while</h4><p>C 语言形式：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    loop_body_statement</span><br><span class="line">&#125; <span class="keyword">while</span> (cond_expr);</span><br></pre></td></tr></table></figure>
-
 <p>更接近于机器级语言的低级行为描述结构：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">loop:</span><br><span class="line">	loop_body_statement</span><br><span class="line">	c = cond_expr;</span><br><span class="line">	if (c) goto loop;</span><br></pre></td></tr></table></figure>
-
 <h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><p>C 语言形式：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (cond_expr)</span><br><span class="line">    loop_body_statement</span><br></pre></td></tr></table></figure>
-
 <p>更接近于机器级语言的低级行为描述结构：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">c = cond_expr;</span><br><span class="line">if (!c) goto done;</span><br><span class="line">loop:</span><br><span class="line">	loop_body_statement</span><br><span class="line">	c = cond_expr;</span><br><span class="line">	if (c) goto loop;</span><br><span class="line">done:</span><br></pre></td></tr></table></figure>
-
 <h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><p>C 语言形式：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (begin_expr; cond_expr; update_expr)</span><br><span class="line">    loop_body_statement</span><br></pre></td></tr></table></figure>
-
 <p>更接近于机器级语言的低级行为描述结构：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">begin_expr;</span><br><span class="line">c = cond_expr;</span><br><span class="line">if (!c) goto done;</span><br><span class="line">loop:</span><br><span class="line">	loop_body_statement</span><br><span class="line">	update_expr;</span><br><span class="line">	c = cond_expr;</span><br><span class="line">	if (c) goto loop;</span><br><span class="line">done:</span><br></pre></td></tr></table></figure>
-
 <h4 id="汇编代码示例"><a href="#汇编代码示例" class="headerlink" title="汇编代码示例"></a>汇编代码示例</h4><p>使用 for 循环写的自然数求和的函数：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">nsum_for</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">        result += i;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>根据上述对应 for 循环的低级行为描述结构，不难写出上述过程对应的汇编表示：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">movl 8(%ebp), %ecx  #R[ecx]←M[R[ebp]+8],即R[ecx]=n</span><br><span class="line">movl $0, eax        #R[eax]←0,即result=0</span><br><span class="line">movl $1, edx        #R[edx]←1,即i=l</span><br><span class="line">cmp  %ecx, %edx     #Compare R[ecx]:R[edx],即比较i:n</span><br><span class="line">jg   .L2            #If greater，转跳到L2执行</span><br><span class="line">.L1:                #1OOP:</span><br><span class="line">addl %edx, %eax     #R[eax]←R[eax]+R[edx],即result+=i</span><br><span class="line">addl $1, %edx       #R[edx]←R[edx]+1,即i++</span><br><span class="line">cmpl %ecx, %edx     #比较%ecx和%edx,即比较i:n</span><br><span class="line">jle  .L1            #If less or equal,转跳到L1执行</span><br><span class="line">.L2:</span><br></pre></td></tr></table></figure>
-
 <p>n 对应实参已被压入调用函数的栈帧，其对应的存储地址为 R[ebp] + 8，过程 nsum_for 中非静态局部变量 i 和 result 被分别分配到寄存器 EDX 和 EAX 中，返回参数在 EAX 中</p>
 <h2 id="CISC-和-RISC-的基本概念"><a href="#CISC-和-RISC-的基本概念" class="headerlink" title="CISC 和 RISC 的基本概念"></a>CISC 和 RISC 的基本概念</h2><p>指令系统朝两个截然不同的方向发展：</p>
 <ol>
@@ -926,8 +869,7 @@
 <p>为了规整指令格式，使指令具有相同的长度，规定只有 Load/Store 指令才能访问内存。而运算指令不能直接访问内存，只能从寄存器取数进行运算，运算的结果也只能送到寄存器</p>
 <p>因为寄存器编号较短，而主存地址位数较长，通过某种方式可使运算指令和访存指令的长度一致</p>
 <p>这种装入/存储型风格的指令系统的最大特点是，指令格式规整，指令长度一致，一般为 32 位。由于只有 Load/Store 指令才能访问内存，程序中可能会包含许多装入指令和存储指令，与ー般通用寄存器型指令风格相比，其程序长度会更长</p>
-<h3 id="CISC-vs-RISC"><a href="#CISC-vs-RISC" class="headerlink" title="CISC vs RISC"></a>CISC vs RISC</h3><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3387_1.png" width="850px"/></dev>
-
+<h3 id="CISC-vs-RISC"><a href="#CISC-vs-RISC" class="headerlink" title="CISC vs RISC"></a>CISC vs RISC</h3><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3387_1.png" width="850px"/>&lt;/dev&gt;</p>
 <p>RISC <strong>必然采用</strong>流水线技术；CISC 无此强制要求，但为了提高指令执行速度，<strong>往往也采用</strong>流水线技术</p>
 <p>RISC 主要优点（和 CISC 相比）：</p>
 <ol>
