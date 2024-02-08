@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>计算机系统概述 | CO | ZERO</title><meta name="keywords" content="计算机组成原理"><meta name="author" content="zero"><meta name="copyright" content="zero"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="计算机发展历程本节内容已从大纲删除 计算机硬件的发展计算机的四代变化 第一代计算机 —— 电子管时代 逻辑元件采用电子管 使用机器语言进行编程 主存使用延迟线或磁鼓存储信息，容量极小 体积庞大，成本高 运算速度较低，一般只有几千次到几万次每秒  第二代计算机 —— 晶体管时代 逻辑元件采用晶体管 软件开始使用高级语言，如 FORTRAN，有了操作系统的雏形 主存使用磁芯存储器 运算速度提升到几万次">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>计算机系统概述 | CO | ZERO</title><meta name="keywords" content="计算机组成原理"><meta name="author" content="zero"><meta name="copyright" content="zero"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="计算机发展历程 本节内容已从大纲删除  计算机硬件的发展  计算机的四代变化   第一代计算机 —— 电子管时代 逻辑元件采用电子管 使用机器语言进行编程 主存使用延迟线或磁鼓存储信息，容量极小 体积庞大，成本高 运算速度较低，一般只有几千次到几万次每秒   第二代计算机 —— 晶体管时代 逻辑元件采用晶体管 软件开始使用高级语言，如 FORTRAN，有了操作系统的雏形 主存使用磁芯存储器 运算">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机系统概述 | CO">
 <meta property="og:url" content="https://zerooo.top/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/index.html">
 <meta property="og:site_name" content="ZERO">
-<meta property="og:description" content="计算机发展历程本节内容已从大纲删除 计算机硬件的发展计算机的四代变化 第一代计算机 —— 电子管时代 逻辑元件采用电子管 使用机器语言进行编程 主存使用延迟线或磁鼓存储信息，容量极小 体积庞大，成本高 运算速度较低，一般只有几千次到几万次每秒  第二代计算机 —— 晶体管时代 逻辑元件采用晶体管 软件开始使用高级语言，如 FORTRAN，有了操作系统的雏形 主存使用磁芯存储器 运算速度提升到几万次">
+<meta property="og:description" content="计算机发展历程 本节内容已从大纲删除  计算机硬件的发展  计算机的四代变化   第一代计算机 —— 电子管时代 逻辑元件采用电子管 使用机器语言进行编程 主存使用延迟线或磁鼓存储信息，容量极小 体积庞大，成本高 运算速度较低，一般只有几千次到几万次每秒   第二代计算机 —— 晶体管时代 逻辑元件采用晶体管 软件开始使用高级语言，如 FORTRAN，有了操作系统的雏形 主存使用磁芯存储器 运算">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg">
 <meta property="article:published_time" content="2024-01-06T01:32:52.000Z">
@@ -151,212 +151,268 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机系统概述 | CO</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-06T01:32:52.000Z" title="发表于 2024-01-06 09:32:52">2024-01-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-09T12:59:15.584Z" title="更新于 2024-01-09 20:59:15">2024-01-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算机系统概述 | CO"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="计算机发展历程"><a href="#计算机发展历程" class="headerlink" title="计算机发展历程"></a>计算机发展历程</h2><p>本节内容已从大纲删除</p>
-<h3 id="计算机硬件的发展"><a href="#计算机硬件的发展" class="headerlink" title="计算机硬件的发展"></a>计算机硬件的发展</h3><h4 id="计算机的四代变化"><a href="#计算机的四代变化" class="headerlink" title="计算机的四代变化"></a>计算机的四代变化</h4><ul>
-<li><p>第一代计算机 —— 电子管时代</p>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机系统概述 | CO</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-06T01:32:52.000Z" title="发表于 2024-01-06 09:32:52">2024-01-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-09T12:59:15.584Z" title="更新于 2024-01-09 20:59:15">2024-01-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算机系统概述 | CO"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="计算机发展历程"><a class="markdownIt-Anchor" href="#计算机发展历程"></a> 计算机发展历程</h2>
+<p>本节内容已从大纲删除</p>
+<h3 id="计算机硬件的发展"><a class="markdownIt-Anchor" href="#计算机硬件的发展"></a> 计算机硬件的发展</h3>
+<h4 id="计算机的四代变化"><a class="markdownIt-Anchor" href="#计算机的四代变化"></a> 计算机的四代变化</h4>
+<ul>
+<li>
+<p>第一代计算机 —— 电子管时代</p>
 <p>逻辑元件采用电子管</p>
 <p>使用机器语言进行编程</p>
 <p>主存使用延迟线或磁鼓存储信息，容量极小</p>
 <p>体积庞大，成本高</p>
 <p>运算速度较低，一般只有几千次到几万次每秒</p>
 </li>
-<li><p>第二代计算机 —— 晶体管时代</p>
+<li>
+<p>第二代计算机 —— 晶体管时代</p>
 <p>逻辑元件采用晶体管</p>
 <p>软件开始使用高级语言，如 FORTRAN，有了操作系统的雏形</p>
 <p>主存使用磁芯存储器</p>
 <p>运算速度提升到几万次到几十万次每秒</p>
 </li>
-<li><p>第三代计算机 —— 中小规模集成电路时代</p>
+<li>
+<p>第三代计算机 —— 中小规模集成电路时代</p>
 <p>逻辑元件采用中小规模集成电路</p>
 <p>高级语言发展迅速，操作系统也进一步发展，开始有了分时操作系统</p>
 <p>半导体存储器开始取代磁芯存储器</p>
 </li>
-<li><p>第四代计算机 —— 超大规模集成电路时代</p>
+<li>
+<p>第四代计算机 —— 超大规模集成电路时代</p>
 <p>逻辑元件采用大规模集成电路和超大规模集成电路，产生了微处理器</p>
 <p>诸如并行、流水线、高速缓存和虚拟存储器等概念用在了这代计算机中</p>
 </li>
-<li><p>第五代计算机 —— 智能计算机</p>
+<li>
+<p>第五代计算机 —— 智能计算机</p>
 <p>具备人工智能</p>
 <p>运算速度极快</p>
 <p>软件系统能够处理知识信息</p>
 <p>神经网络计算机是智能计算机的重要代表</p>
 </li>
-<li><p>第六代计算机 —— 生物计算机与量子计算机</p>
+<li>
+<p>第六代计算机 —— 生物计算机与量子计算机</p>
 <p>未来计算机发展的方向和趋势</p>
 </li>
 </ul>
 <blockquote>
 <p>1~4 代都采用冯·诺依曼体系结构（控制器、存储器、运算器、输入输出设备）</p>
 </blockquote>
-<h4 id="计算机元件的更新换代"><a href="#计算机元件的更新换代" class="headerlink" title="计算机元件的更新换代"></a>计算机元件的更新换代</h4><ul>
-<li><p>摩尔定律</p>
+<h4 id="计算机元件的更新换代"><a class="markdownIt-Anchor" href="#计算机元件的更新换代"></a> 计算机元件的更新换代</h4>
+<ul>
+<li>
+<p>摩尔定律</p>
 <p>当价格不变时，集成电路上可容纳的晶体管数约每 18 个月翻一番，性能也将提升一倍</p>
 </li>
-<li><p>半导体存储器的发展</p>
+<li>
+<p>半导体存储器的发展</p>
 <p>至今半导体存储器发展了 11 代：单芯片 1 KB → 4 KB → 16 KB → …… → 1 GB（4 倍增长）</p>
 </li>
-<li><p>微处理器的发展</p>
+<li>
+<p>微处理器的发展</p>
 <p>第一个微处理器 Intel 4004，经历 Intel 8008（8 位）、Intel 8086（16 位）、Intel 80386（32 位）、Pentium（32 位）、Pentium Ⅲ（64 位）、Pentium 4（64 位）、Core i7（64 位）等。这里的 32 位、64 位指的是机器字长</p>
 <p>微型计算机的发展以微处理器的技术为标志</p>
 </li>
-<li><p>系列机</p>
+<li>
+<p>系列机</p>
 <p>具有基本相同的体系结构，使用相同基本指令系统的多个不同型号的计算机组成的一个产品系列。其基本特性是，指令系统向后兼容（指时间上向后兼容，即新机器兼容使用以前机器的指令系统）</p>
 </li>
 </ul>
-<h3 id="计算机软件的发展"><a href="#计算机软件的发展" class="headerlink" title="计算机软件的发展"></a>计算机软件的发展</h3><p>计算机语言的发展经历了面向机器的机器语言和汇编语言、面向问题的高级语言</p>
+<h3 id="计算机软件的发展"><a class="markdownIt-Anchor" href="#计算机软件的发展"></a> 计算机软件的发展</h3>
+<p>计算机语言的发展经历了面向机器的机器语言和汇编语言、面向问题的高级语言</p>
 <p>高级语言的发展经历了从科学计算和工程计算的 FORTRAN、结构化程序设计的 PASCAL 到面向对象的 C++ 和适应网络环境的 Java</p>
-<h3 id="计算机的分类与发展方向"><a href="#计算机的分类与发展方向" class="headerlink" title="计算机的分类与发展方向"></a>计算机的分类与发展方向</h3><ul>
-<li><p>按能够处理信号分类</p>
+<h3 id="计算机的分类与发展方向"><a class="markdownIt-Anchor" href="#计算机的分类与发展方向"></a> 计算机的分类与发展方向</h3>
+<ul>
+<li>
+<p>按能够处理信号分类</p>
 <ol>
-<li><p>数字计算机数字计算机只能处理离散信号</p>
+<li>
+<p>数字计算机数字计算机只能处理离散信号</p>
 <p>其按用途又可分为：专用计算机、通用计算机</p>
 <p>通用计算机又可分为巨型机、大型机、中型机、小型机、微型机和单片机 6 类。它们的体积、功耗、性能、数据存储量、指令系统的复杂程度和价格依次递减</p>
 </li>
-<li><p>电子模拟计算机</p>
+<li>
+<p>电子模拟计算机</p>
 <p>处理连续信号</p>
 </li>
 </ol>
 </li>
-<li><p>按指令和数据流分类</p>
+<li>
+<p>按指令和数据流分类</p>
 <ol>
-<li><p>单指令流和单数据流系统 SISD</p>
+<li>
+<p>单指令流和单数据流系统 SISD</p>
 <p>即冯·诺伊曼体系结构</p>
 </li>
-<li><p>单指令流和多数据流系统 SIMD</p>
+<li>
+<p>单指令流和多数据流系统 SIMD</p>
 <p>包括阵列处理器和向量处理器系统</p>
 </li>
-<li><p>多指令流和单数据流系统 MISD</p>
+<li>
+<p>多指令流和单数据流系统 MISD</p>
 <p>不存在</p>
 </li>
-<li><p>多指令流和多数据流系统 MIMD</p>
+<li>
+<p>多指令流和多数据流系统 MIMD</p>
 <p>包括多处理器和多计算机系统</p>
 </li>
 </ol>
 </li>
-<li><p>计算机的发展趋势 —— 向“两极”分化</p>
-<p>  微型机向更微型化、网格化、高性能、多用途方向发展</p>
-<p>  巨型机向更巨型化、超高速、并行处理、智能化方向发展</p>
+<li>
+<p>计算机的发展趋势 —— 向“两极”分化</p>
+<p>微型机向更微型化、网格化、高性能、多用途方向发展</p>
+<p>巨型机向更巨型化、超高速、并行处理、智能化方向发展</p>
 </li>
 </ul>
-<h2 id="计算机系统层次结构"><a href="#计算机系统层次结构" class="headerlink" title="计算机系统层次结构"></a>计算机系统层次结构</h2><h3 id="计算机系统的组成"><a href="#计算机系统的组成" class="headerlink" title="计算机系统的组成"></a>计算机系统的组成</h3><ul>
-<li><p>计算机系统 = 硬件系统 + 软件系统</p>
+<h2 id="计算机系统层次结构"><a class="markdownIt-Anchor" href="#计算机系统层次结构"></a> 计算机系统层次结构</h2>
+<h3 id="计算机系统的组成"><a class="markdownIt-Anchor" href="#计算机系统的组成"></a> 计算机系统的组成</h3>
+<ul>
+<li>
+<p>计算机系统 = 硬件系统 + 软件系统</p>
 </li>
-<li><p>硬件 vs 软件</p>
-<p>  硬件和软件具有<strong>逻辑上</strong>的等效性</p>
-<p>  硬件实现具有更高的执行速度</p>
-<p>  软件实现具有更好的灵活性</p>
-<p>  执行频繁、硬件实现代价不是很高的功能通常由硬件实现</p>
+<li>
+<p>硬件 vs 软件</p>
+<p>硬件和软件具有<strong>逻辑上</strong>的等效性</p>
+<p>硬件实现具有更高的执行速度</p>
+<p>软件实现具有更好的灵活性</p>
+<p>执行频繁、硬件实现代价不是很高的功能通常由硬件实现</p>
 </li>
-<li><p>硬件能执行的只能是机器语言（二进制编码）</p>
+<li>
+<p>硬件能执行的只能是机器语言（二进制编码）</p>
 </li>
-<li><p>固件</p>
-<p>  将程序固定在 ROM 中组成的部件</p>
-<p>  是软硬件结合的产物，性能指标介于硬件和软件之间</p>
-<p>  执行速度快于软件，灵活性优于硬件，算是吸取了软硬件各自的优点</p>
-<p>  目前操作系统已实现了部分固化（把软件永恒地存储于只读存储器中）</p>
+<li>
+<p>固件</p>
+<p>将程序固定在 ROM 中组成的部件</p>
+<p>是软硬件结合的产物，性能指标介于硬件和软件之间</p>
+<p>执行速度快于软件，灵活性优于硬件，算是吸取了软硬件各自的优点</p>
+<p>目前操作系统已实现了部分固化（把软件永恒地存储于只读存储器中）</p>
 </li>
-<li><p>计算机体系结构 vs 计算机组成</p>
-<p>  计算机体系结构是指机器语言或汇编语言程序员所看得到的传统机器的属性，包括指令集、数据类型、存储器寻址技术等，大都属于抽象的属性</p>
-<p>  计算机组成是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节</p>
-<p>  例如，指令系统属于结构的问题，但指令的实现即如何取指令、分析指令、取操作数、如何运算等都属于组成的问题</p>
+<li>
+<p>计算机体系结构 vs 计算机组成</p>
+<p>计算机体系结构是指机器语言或汇编语言程序员所看得到的传统机器的属性，包括指令集、数据类型、存储器寻址技术等，大都属于抽象的属性</p>
+<p>计算机组成是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节</p>
+<p>例如，指令系统属于结构的问题，但指令的实现即如何取指令、分析指令、取操作数、如何运算等都属于组成的问题</p>
 </li>
 </ul>
-<h3 id="计算机硬件"><a href="#计算机硬件" class="headerlink" title="计算机硬件"></a>计算机硬件</h3><h4 id="冯·诺依曼机"><a href="#冯·诺依曼机" class="headerlink" title="冯·诺依曼机"></a>冯·诺依曼机</h4><ul>
-<li><p>“存储程序”思想</p>
-<p>  将事先编制好的程序和原始数据送入主存后才能执行，一旦程序被启动执行，就无须操作人员的干预，计算机会自动逐条执行指令，直至程序执行结束</p>
-<p>  目前绝大多数现代计算机仍遵循冯·诺伊曼的“存储程序”思想</p>
+<h3 id="计算机硬件"><a class="markdownIt-Anchor" href="#计算机硬件"></a> 计算机硬件</h3>
+<h4 id="冯诺依曼机"><a class="markdownIt-Anchor" href="#冯诺依曼机"></a> 冯·诺依曼机</h4>
+<ul>
+<li>
+<p>“存储程序”思想</p>
+<p>将事先编制好的程序和原始数据送入主存后才能执行，一旦程序被启动执行，就无须操作人员的干预，计算机会自动逐条执行指令，直至程序执行结束</p>
+<p>目前绝大多数现代计算机仍遵循冯·诺伊曼的“存储程序”思想</p>
 </li>
-<li><p>冯·诺依曼机</p>
-<p>  以“存储程序”思想为基础的各类计算机统称为冯·诺依曼机</p>
+<li>
+<p>冯·诺依曼机</p>
+<p>以“存储程序”思想为基础的各类计算机统称为冯·诺依曼机</p>
 </li>
-<li><p>冯·诺伊曼机特点</p>
+<li>
+<p>冯·诺伊曼机特点</p>
 <ol>
-<li><p>采用“存储程序”的工作方式</p>
+<li>
+<p>采用“存储程序”的工作方式</p>
 </li>
-<li><p><strong>基本工作方式</strong>是控制流驱动方式</p>
+<li>
+<p><strong>基本工作方式</strong>是控制流驱动方式</p>
 </li>
-<li><p>计算机硬件系统五大部件：运算器、存储器、控制器、输入设备、输出设备</p>
+<li>
+<p>计算机硬件系统五大部件：运算器、存储器、控制器、输入设备、输出设备</p>
 </li>
-<li><p>指令和数据以同等地位存储在存储器中，并可按地址寻访（形式上没有区别，但计算机应能区分它们）</p>
+<li>
+<p>指令和数据以同等地位存储在存储器中，并可按地址寻访（形式上没有区别，但计算机应能区分它们）</p>
 </li>
-<li><p>指令和数据均用二进制代码表示</p>
+<li>
+<p>指令和数据均用二进制代码表示</p>
 <p>指令由操作码和地址码组成。操作码指出操作的类型，地址码指出操作数的地址</p>
 </li>
-<li><p>指令在存储器内按顺序存放</p>
+<li>
+<p>指令在存储器内按顺序存放</p>
 <p>通常指令是顺序执行的，当然在特定条件下也可根据运算结果或设定的条件改变执行顺序</p>
 </li>
-<li><p>以运算器为中心，输入/输出设备通过运算器与存储器传送数据</p>
+<li>
+<p>以运算器为中心，输入/输出设备通过运算器与存储器传送数据</p>
 </li>
 </ol>
 </li>
-<li><p>硬件系统五大部件也可以划分为两大部分：控制部件和执行部件</p>
-<p>  控制器就是控制部件，而运算器、存储器和外围设备相对控制器而言就是执行部件</p>
+<li>
+<p>硬件系统五大部件也可以划分为两大部分：控制部件和执行部件</p>
+<p>控制器就是控制部件，而运算器、存储器和外围设备相对控制器而言就是执行部件</p>
 </li>
-<li><p>CPU 区分数据和指令的依据：指令周期的不同阶段</p>
+<li>
+<p>CPU 区分数据和指令的依据：指令周期的不同阶段</p>
 </li>
-<li><p>典型的冯·诺依曼计算机结构</p>
+<li>
+<p>典型的冯·诺依曼计算机结构</p>
   <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20221128195847080.png" width="520px"/></dev>
 </li>
-<li><p>冯·诺依曼结构计算机中数据采用二进制编码表示的主要原因</p>
-<p>  二进制运算规则简单</p>
-<p>  制造两个稳态的物理器件较容易</p>
-<p>  便于用逻辑门电路实现算术运算</p>
+<li>
+<p>冯·诺依曼结构计算机中数据采用二进制编码表示的主要原因</p>
+<p>二进制运算规则简单</p>
+<p>制造两个稳态的物理器件较容易</p>
+<p>便于用逻辑门电路实现算术运算</p>
 </li>
 </ul>
-<h4 id="现代计算机组织结构"><a href="#现代计算机组织结构" class="headerlink" title="现代计算机组织结构"></a>现代计算机组织结构</h4><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20221128200439507.png" width="520px"/></dev>
-
+<h4 id="现代计算机组织结构"><a class="markdownIt-Anchor" href="#现代计算机组织结构"></a> 现代计算机组织结构</h4>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20221128200439507.png" width="520px"/></dev>
 <p>以<strong>存储器</strong>为中心，使 I/O 操作尽可能绕过 CPU，直接在 I/O 设备和存储器之间完成，以提高系统的整体运行效率</p>
-<h4 id="计算机的功能部件"><a href="#计算机的功能部件" class="headerlink" title="计算机的功能部件"></a>计算机的功能部件</h4><p>传统冯·诺依曼计算机与现代计算机的结构虽然有所不同，但功能部件是一致的</p>
+<h4 id="计算机的功能部件"><a class="markdownIt-Anchor" href="#计算机的功能部件"></a> 计算机的功能部件</h4>
+<p>传统冯·诺依曼计算机与现代计算机的结构虽然有所不同，但功能部件是一致的</p>
 <ul>
-<li><p>输入设备</p>
-<p>  将程序和数据以机器所能识别和接受的信息形式输入计算机</p>
-<p>  如：键盘、鼠标、扫描仪、摄像机等</p>
+<li>
+<p>输入设备</p>
+<p>将程序和数据以机器所能识别和接受的信息形式输入计算机</p>
+<p>如：键盘、鼠标、扫描仪、摄像机等</p>
 </li>
-<li><p>输出设备</p>
-<p>  将计算机处理的结果以人们所能接受的形式或其他系统所要求的信息形式输出</p>
-<p>  如：显示器、打印机等</p>
+<li>
+<p>输出设备</p>
+<p>将计算机处理的结果以人们所能接受的形式或其他系统所要求的信息形式输出</p>
+<p>如：显示器、打印机等</p>
 </li>
-<li><p>存储器</p>
-<p>  计算机的存储部件，用来存放程序和数据</p>
+<li>
+<p>存储器</p>
+<p>计算机的存储部件，用来存放程序和数据</p>
 <ol>
-<li><p>主存储器/主存/内存储器/内存</p>
+<li>
+<p>主存储器/主存/内存储器/内存</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/onzxpD8Td2UpMjp.png" width="350px"/></dev>
-
 <p>CPU 能够直接访问，也可以和高速缓冲存储器 Cache 及辅助存储器交换数据</p>
 <p>工作方式：按存储单元的地址进行存取（按地址存取）</p>
 <p>特点：容量较小、存取速度较快、每位价格较高</p>
 <p>存储体由许多存储单元组成，每个存储单元包含若干存储元件，每个存储元件存储一位二进制。因此存储单元可存储一串二进制代码，称这串代码为<strong>存储字</strong>，存储字的位数为<strong>存储字长</strong>，存储字长可以是 1B 或是字节的偶数倍</p>
-<p>MAR 用于寻址，其位数/长度对应存储单元的个数（如 MAR 为 10 位，则有 $2^{10}$ 个存储单元）。MAR 的长度和 PC 的长度相等</p>
+<p>MAR 用于寻址，其位数/长度对应存储单元的个数（如 MAR 为 10 位，则有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>10</mn></msup></mrow><annotation encoding="application/x-tex">2^{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span> 个存储单元）。MAR 的长度和 PC 的长度相等</p>
 <p>MDR 的位数和存储字长相等</p>
 <p>MAR 和 MDR 理论上属于主存，但现代计算机绝大多数集成于 CPU 中</p>
 </li>
-<li><p>辅助存储器/辅存/外存储器/外存</p>
+<li>
+<p>辅助存储器/辅存/外存储器/外存</p>
 <p>帮助主存记忆更多的信息（主存的后援存储器），用来存放当前暂时不用的程序和数据，以及一些需要永久性保存的信息</p>
 <p>特点：容量较大、存取速度较慢、每位价格较低</p>
 <p>辅存中的信息必须调入主存后才能为 CPU 访问</p>
 </li>
-<li><p>相联存储器</p>
+<li>
+<p>相联存储器</p>
 <p>既可以按地址寻址，又可以按内容（通常是某些字段）寻址</p>
 <p>为与传统存储器区别，又称按内容寻址的存储器</p>
 <p>基本原理：把存储单元所存内容的某一部分作为检索项（即关键字项）去检索该存储器，并将存储器中与该检索项符合的存储单元内容进行读出或写入</p>
 <p>价格较为昂贵，一般用来制作 TLB、相联 Cache 等</p>
+</li>
+</ol>
 <blockquote>
 <p>CPU 存取速度：寄存器 ＞ Cache ＞ 内存</p>
 </blockquote>
 </li>
-</ol>
+<li>
+<p>运算器</p>
+<p>计算机的执行部件，用于进行算术运算（加、减、乘、除）和逻辑运算（与、或、非、异或、比较、移位等）</p>
+<p>核心是算术逻辑单元 ALU (Arithmetic and Logical Unit)</p>
+<p>包含若干通用寄存器，用于暂存操作数和中间结果，如累加器 ACC、乘商寄存器 MQ、操作数寄存器 X、变址寄存器 IX、基址寄存器 BR 等（前 3 个必备）</p>
+<p>还有程序状态寄存器/标志寄存器 PSW，用于存放 ALU 运算得到的一些标志信息或处理机的状态信息，如结果是否溢出、有无产生进位或错位、结果是否为负等</p>
 </li>
-<li><p>运算器</p>
-<p>  计算机的执行部件，用于进行算术运算（加、减、乘、除）和逻辑运算（与、或、非、异或、比较、移位等）</p>
-<p>  核心是算术逻辑单元 ALU (Arithmetic and Logical Unit)</p>
-<p>  包含若干通用寄存器，用于暂存操作数和中间结果，如累加器 ACC、乘商寄存器 MQ、操作数寄存器 X、变址寄存器 IX、基址寄存器 BR 等（前 3 个必备）</p>
-<p>  还有程序状态寄存器/标志寄存器 PSW，用于存放 ALU 运算得到的一些标志信息或处理机的状态信息，如结果是否溢出、有无产生进位或错位、结果是否为负等</p>
-</li>
-<li><p>控制器</p>
-<p>  计算机的指挥中心，由其“指挥”各部件自动协调地进行工作</p>
-<p>  由程序计数器 PC、指令寄存器 IR 和控制单元 CU 组成</p>
-<p>  PC 存放当前欲执行指令的地址，可自动加 “1” 以形成下一条指令的地址，与主存的 MAR 之间有一条直接通路</p>
-<p>  IR 存放当前指令，其内容来自 MDR。指令中的操作码 OP(IR) 送至 CU，用以分析指令并发出各种微操作指令序列；地址码 Ad(IR) 送往 MAR，用以取操作数</p>
+<li>
+<p>控制器</p>
+<p>计算机的指挥中心，由其“指挥”各部件自动协调地进行工作</p>
+<p>由程序计数器 PC、指令寄存器 IR 和控制单元 CU 组成</p>
+<p>PC 存放当前欲执行指令的地址，可自动加 “1” 以形成下一条指令的地址，与主存的 MAR 之间有一条直接通路</p>
+<p>IR 存放当前指令，其内容来自 MDR。指令中的操作码 OP(IR) 送至 CU，用以分析指令并发出各种微操作指令序列；地址码 Ad(IR) 送往 MAR，用以取操作数</p>
 </li>
 </ul>
 <blockquote>
@@ -365,14 +421,16 @@
 <blockquote>
 <p>CPU 和主存共同构成主机，除主机外的其他硬件装置（外存、I/O 设备等）统称为外部设备，简称外设</p>
 </blockquote>
-<hr>
+<hr />
 <p>冯·诺依曼结构的模型机：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/RbFRwo27PWWMEek.png" width="600px"/></dev>
-
 <p>图中从控制器送出的虚线就是控制信号，它可以：控制如何修改 PC 以得到下一条指令的地址、控制 ALU 执行什么运算、控制主存是进行读操作还是写操作（读/写控制信号）</p>
 <p>CPU 和主存之间通过一组总线（地址、控制和数据 3 组信号线）相连。MAR 中的地址信息会直接送到地址线上，用于指向读/写操作的主存存储单元；控制线中有读/写信号线，指出数据是从 CPU 写入主存还是从主存读出到 CPU，根据是读操作还是写操作来控制是将 MDR 中的数据直接送到数据线上还是将数据线上的数据接收到 MDR 中</p>
-<h3 id="计算机软件"><a href="#计算机软件" class="headerlink" title="计算机软件"></a>计算机软件</h3><h4 id="系统软件和应用软件"><a href="#系统软件和应用软件" class="headerlink" title="系统软件和应用软件"></a>系统软件和应用软件</h4><ul>
-<li><p>系统软件</p>
+<h3 id="计算机软件"><a class="markdownIt-Anchor" href="#计算机软件"></a> 计算机软件</h3>
+<h4 id="系统软件和应用软件"><a class="markdownIt-Anchor" href="#系统软件和应用软件"></a> 系统软件和应用软件</h4>
+<ul>
+<li>
+<p>系统软件</p>
 <p>一组保证计算机系统高效、正确运行的基础软件，通常作为系统资源提供给用户使用</p>
 <p>主要有：操作系统 OS、<strong>数据库管理系统</strong> DBMS、语言处理程序、分布式软件系统、网络软件系统、标准库程序、服务性程序等</p>
 <blockquote>
@@ -381,49 +439,59 @@
 <p>数据库系统 DBS：一般由数据库、数据库管理系统（及其开发工具）、数据库应用系统 DBAS 和 数据库管理员 DBA 构成</p>
 </blockquote>
 </li>
-<li><p>应用软件</p>
+<li>
+<p>应用软件</p>
 <p>指用户为解决某个应用领域中的各类问题而编制的程序</p>
 <p>如各种科学计算类程序、工程设计类程序、数据统计与处理程序等</p>
 </li>
 </ul>
-<h4 id="三个级别的语言"><a href="#三个级别的语言" class="headerlink" title="三个级别的语言"></a>三个级别的语言</h4><ul>
-<li><p>机器语言/二进制代码语言</p>
+<h4 id="三个级别的语言"><a class="markdownIt-Anchor" href="#三个级别的语言"></a> 三个级别的语言</h4>
+<ul>
+<li>
+<p>机器语言/二进制代码语言</p>
 <p>计算机唯一可以直接识别和执行的语言</p>
 </li>
-<li><p>汇编语言</p>
+<li>
+<p>汇编语言</p>
 <p>用英文单词或其缩写代替二进制的指令代码</p>
 </li>
-<li><p>高级语言</p>
+<li>
+<p>高级语言</p>
 <p>为方便程序设计人员写出解决问题的处理方案和解题过程的程序</p>
 <p>机器语言和汇编语言与机器指令对应，而高级语言不与指令直接对应，具有较好的可移植性</p>
 </li>
 </ul>
-<hr>
+<hr />
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/SlULudCmKwYROoC.png" width="600px"/></dev>
-
 <p>翻译程序：</p>
 <ol>
-<li><p>编译程序/编译器（高级 → 机器/汇编）</p>
+<li>
+<p>编译程序/编译器（高级 → 机器/汇编）</p>
 </li>
-<li><p>汇编程序/汇编器（汇编 → 机器）</p>
+<li>
+<p>汇编程序/汇编器（汇编 → 机器）</p>
 </li>
-<li><p>解释程序/解释器（高级 → 机器）</p>
+<li>
+<p>解释程序/解释器（高级 → 机器）</p>
 <p>将源程序中的语句按执行顺序逐条翻译成机器指令并立即执行（翻译一句执行一句，不会生成目标程序），一般速度较编译程序慢</p>
 </li>
 </ol>
-<h4 id="软件和硬件的逻辑功能等价性"><a href="#软件和硬件的逻辑功能等价性" class="headerlink" title="软件和硬件的逻辑功能等价性"></a>软件和硬件的逻辑功能等价性</h4><p>对某一功能来说，既可由硬件实现又可由软件实现，从用户的角度看，它们在功能上是等价的。这一等价性被称为软、硬件逻辑功能的等价性</p>
+<h4 id="软件和硬件的逻辑功能等价性"><a class="markdownIt-Anchor" href="#软件和硬件的逻辑功能等价性"></a> 软件和硬件的逻辑功能等价性</h4>
+<p>对某一功能来说，既可由硬件实现又可由软件实现，从用户的角度看，它们在功能上是等价的。这一等价性被称为软、硬件逻辑功能的等价性</p>
 <p>硬件实现的往往是最基本的算术和逻辑运算功能，而其他功能大多通过软件的扩充得以实现</p>
 <p>软件和硬件功能界面的划分是由设计目标、性能价格比、技术水平等综合因素决定的</p>
-<h3 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h3><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/kIgBcxjX0VL8ndv.png" width="800px"/></dev>
-
+<h3 id="计算机系统的层次结构"><a class="markdownIt-Anchor" href="#计算机系统的层次结构"></a> 计算机系统的层次结构</h3>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/kIgBcxjX0VL8ndv.png" width="800px"/></dev>
 <p>上层实现对下层的功能扩展，下层是实现上层的基础</p>
 <p>在高级语言层之上，还可以有应用程序层，它由解决实际问题的处理程序组成</p>
 <p>虚拟机器只对该层的观察者存在，对于某层的观察者来说，只能通过该层的语言来了解和使用计算机，而不必关心下层是如何工作的</p>
 <p>软/硬件交界面就是指令集体系结构 ISA，ISA 定义了一台计算机可以执行的所有指令的集合，每条指令规定了计算机执行什么操作，以及所处理的操作数存放的地址空间和操作数类型。ISA 是指软件能感知到的部分，也称软件可见部分</p>
 <p>软/硬件交界面的划分也不是绝对的：随着超大规模集成电路的不断发展，部分软件功能将由硬件实现</p>
-<h3 id="计算机系统的工作原理"><a href="#计算机系统的工作原理" class="headerlink" title="计算机系统的工作原理"></a>计算机系统的工作原理</h3><h4 id="“存储程序”工作方式"><a href="#“存储程序”工作方式" class="headerlink" title="“存储程序”工作方式"></a>“存储程序”工作方式</h4><h4 id="从源程序到可执行文件"><a href="#从源程序到可执行文件" class="headerlink" title="从源程序到可执行文件"></a>从源程序到可执行文件</h4><p>以 UNIX 系统中的 GCC 编译器程序为例：</p>
+<h3 id="计算机系统的工作原理"><a class="markdownIt-Anchor" href="#计算机系统的工作原理"></a> 计算机系统的工作原理</h3>
+<h4 id="存储程序工作方式"><a class="markdownIt-Anchor" href="#存储程序工作方式"></a> “存储程序”工作方式</h4>
+<h4 id="从源程序到可执行文件"><a class="markdownIt-Anchor" href="#从源程序到可执行文件"></a> 从源程序到可执行文件</h4>
+<p>以 UNIX 系统中的 GCC 编译器程序为例：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/R4Z5ems4XOPa7by.png" width="700px"/></dev>
-
 <p>预处理阶段：cpp 对源程序中以字符 # 开头的命令进行处理</p>
 <p>编译阶段：ccl 对预处理后的源程序进行编译，生成一个汇编语言源程序</p>
 <p>汇编阶段：as 将汇编语言源程序翻译成机器语言指令，并把这些指令打包成一个称为可重定位目标文件的二进制文件</p>
@@ -434,9 +502,7 @@
 <p><strong>汇编程序</strong>：也是一种翻译程序，它把汇编语言源程序翻译为机器语言程序</p>
 <p>在 UNIX 系统中通过 shell 命令行解释器运行可执行文件 hello：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">unix&gt; </span><span class="language-bash">./hello</span></span><br><span class="line">hello, world!</span><br><span class="line"><span class="meta prompt_">unix&gt;</span></span><br></pre></td></tr></table></figure>
-
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230623104933155.png" width="700px"/></dev>
-
 <p>① shell 程序将用户从键盘输入的每个字符逐一读入 CPU 寄存器</p>
 <p>② 然后保存到主存中，在主存的缓冲区形成字符串“./hello”</p>
 <p>③ 接收到 Enter 键时，shell 调出操作系统内核程序，由内核来加载磁盘上的可执行文件 hello 到主存中</p>
@@ -448,53 +514,69 @@
 <blockquote>
 <p>在程序的执行过程中，必须依靠操作系统的支持，特别是在涉及对键盘、磁盘等外设的操作时，用户程序不能直接访问这些底层硬件，需要依靠操作系统内核来完成</p>
 </blockquote>
-<h4 id="指令执行过程的描述"><a href="#指令执行过程的描述" class="headerlink" title="指令执行过程的描述"></a>指令执行过程的描述</h4><p>以取数指令（送至运算器的 ACC 中）为例：</p>
+<h4 id="指令执行过程的描述"><a class="markdownIt-Anchor" href="#指令执行过程的描述"></a> 指令执行过程的描述</h4>
+<p>以取数指令（送至运算器的 ACC 中）为例：</p>
 <ol>
-<li><p>取指令：(PC) → MAR → M → MDR → IR</p>
+<li>
+<p>取指令：(PC) → MAR → M → MDR → IR</p>
 <p>根据 PC 取指令到 IR：将 PC 内容送 MAR，MAR 内容直接送地址线，同时 CU 将读信号送读/写信号线，主存根据地址线上的地址和读信号，从指定存储单元读出指令，送到数据线上，MDR 从数据线接收指令信息，并传送到 IR 中</p>
 </li>
-<li><p>分析指令：OP(IR) → CU</p>
+<li>
+<p>分析指令：OP(IR) → CU</p>
 <p>指令译码并送出控制信号：CU 根据 IR 中指令的操作码，生成相应的控制信号，送到不同的执行部件</p>
 <p>在本例中，IR 中是取数指令，因此读控制信号被送到总线的控制线上</p>
 </li>
-<li><p>执行指令：Ad(IR) → MAR → M → MDR → ACC</p>
+<li>
+<p>执行指令：Ad(IR) → MAR → M → MDR → ACC</p>
 <p>取数操作：将 IR 中指令的地址码送 MAR，MAR 内容地址线，同时控制线将读信号送读/写信号线，从主存读出操作数，并通过数据线送 MDR，再传送到 ACC 中</p>
 </li>
 </ol>
 <p>每取完一条指令，(PC) + 1 → PC</p>
-<h2 id="计算机性能指标"><a href="#计算机性能指标" class="headerlink" title="计算机性能指标"></a>计算机性能指标</h2><h3 id="字长"><a href="#字长" class="headerlink" title="字长"></a>字长</h3><ul>
-<li><p>机器字长</p>
+<h2 id="计算机性能指标"><a class="markdownIt-Anchor" href="#计算机性能指标"></a> 计算机性能指标</h2>
+<h3 id="字长"><a class="markdownIt-Anchor" href="#字长"></a> 字长</h3>
+<ul>
+<li>
+<p>机器字长</p>
 <p>计算机进行一次整数运算（即定点整数运算）所能处理的二进制数据的位数</p>
 <p>通常与 CPU 的寄存器位数、加法器有关，一般等于内部寄存器的大小，通常选定为字节的整数倍</p>
 <p>机器字长越长，数的表示范围越大、计算精度越高</p>
 </li>
-<li><p>存储字长</p>
+<li>
+<p>存储字长</p>
 <p>一个存储单元中的二进制代码的位数，等于 MDR 的位数</p>
 </li>
-<li><p>数据字长</p>
+<li>
+<p>数据字长</p>
 <p>数据总线一次能并行传送信息的位数（数据通路带宽），可以不等于 MDR 的位数</p>
 </li>
-<li><p>指令字长</p>
+<li>
+<p>指令字长</p>
 <p>一个指令字中包含的二进制代码的位数。一般取存储字长的整数倍</p>
 <p>单字长指令：指令字长度等于机器字长的指令。类似的还有半字长指令、双字长指令</p>
 </li>
 </ul>
-<h3 id="数据通路带宽"><a href="#数据通路带宽" class="headerlink" title="数据通路带宽"></a>数据通路带宽</h3><p><strong>外部</strong>数据总线一次所能并行传送信息的位数</p>
+<h3 id="数据通路带宽"><a class="markdownIt-Anchor" href="#数据通路带宽"></a> 数据通路带宽</h3>
+<p><strong>外部</strong>数据总线一次所能并行传送信息的位数</p>
 <p>外部数据总线宽度与 CPU 内部的数据总线宽度（内部寄存器的大小）有可能不同</p>
 <p>数据通路：各个子系统通过数据总线连接形成的数据传送路径</p>
-<h3 id="主存容量"><a href="#主存容量" class="headerlink" title="主存容量"></a>主存容量</h3><p>主存储器所能存储信息的最大容量</p>
-<p>通常以字节来衡量，也可用字数 × 字长来表示（如 512K × 16 位）。其中，字数（存储单元个数）= $2^{MAR位数}$，MAR 的位数反映可寻址范围的最大值；字长为 MDR 位数，即存储字长</p>
-<h3 id="运算速度"><a href="#运算速度" class="headerlink" title="运算速度"></a>运算速度</h3><ul>
-<li><p>吞吐量</p>
+<h3 id="主存容量"><a class="markdownIt-Anchor" href="#主存容量"></a> 主存容量</h3>
+<p>主存储器所能存储信息的最大容量</p>
+<p>通常以字节来衡量，也可用字数 × 字长来表示（如 512K × 16 位）。其中，字数（存储单元个数）= <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>M</mi><mi>A</mi><mi>R</mi><mtext>位数</mtext></mrow></msup></mrow><annotation encoding="application/x-tex">2^{MAR位数}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span><span class="mord mathnormal mtight">A</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mord cjk_fallback mtight">位</span><span class="mord cjk_fallback mtight">数</span></span></span></span></span></span></span></span></span></span></span></span>，MAR 的位数反映可寻址范围的最大值；字长为 MDR 位数，即存储字长</p>
+<h3 id="运算速度"><a class="markdownIt-Anchor" href="#运算速度"></a> 运算速度</h3>
+<ul>
+<li>
+<p>吞吐量</p>
 <p>系统在单位时间内处理请求的数量</p>
 <p>主要取决于<strong>主存的存取周期</strong></p>
 <p>优化数据通路可以有效提高吞吐量</p>
 </li>
-<li><p>响应时间</p>
+<li>
+<p>响应时间</p>
 <p>从用户发出一个请求，到系统对该请求作出响应并获得所需结果的等待时间，是计算机完成一项任务所需的总时间</p>
 <p>通常包括 CPU 执行时间（运行一个程序所花费时间）和等待时间（用于磁盘访问、存储器访问、I/O 操作、操作系统开销等时间）</p>
 </li>
-<li><p>主频（CPU 时钟频率）</p>
+<li>
+<p>主频（CPU 时钟频率）</p>
 <p>机器内部主时钟的频率（CPU 内数字脉冲信号振荡的速度）</p>
 <p>CPU 的一切操作都是在系统时钟的控制下按节拍有序进行的</p>
 <p>通常以 Hz 为单位，常见 CPU 主频有 1.8 GHz、2.4 GHz、2.8 GHz</p>
@@ -502,41 +584,47 @@
 <p>为了节省功耗或临时提升性能，当今的处理器可以调整时钟频率。例如，Intel Core i7 处理器可以临时将时钟频率提高 10%，Intel 称之为涡轮增压模式(Turbo mode)</p>
 <p>主频并不是性能的体现，也不能直接代表运算速度，在一定情况下很可能会出现主频较高的 CPU 实际运算速度较低的现象</p>
 </li>
-<li><p>CPU 时钟周期</p>
+<li>
+<p>CPU 时钟周期</p>
 <p>通常为节拍脉冲或 T 周期，即主频的倒数</p>
 <p>CPU 中最小的基本时间计量单位，执行指令的每个动作至少需要一个时钟周期</p>
 </li>
-<li><p>CPI (Clock cycles Per Instruction)</p>
+<li>
+<p>CPI (Clock cycles Per Instruction)</p>
 <p>执行一条指令所需的时钟周期数</p>
 <p>不同指令需要的时间可能不同。因此对于一个程序或一台机器来说，其 CPI 指该程序或该机器指令集中的全部指令执行所需的平均时钟周期数</p>
 <p>有些处理器在每个时钟周期是可以对多条指令取指并执行的，所以 CPI 可能小于 1，因而有些设计者反过来用 IPC (Instruction Per Clock cycle)来代替 CPI</p>
 <p>系统结构、指令集、计算机组织会影响 CPI。时钟频率不会影响 CPI，但可加快指令的执行速度</p>
 <p>理想情况下，单周期 CPU 和基本流水线 CPU 的 CPI 为 1</p>
 </li>
-<li><p>CPU 执行时间</p>
+<li>
+<p>CPU 执行时间</p>
 <p>运行一个程序所花费时间</p>
-<p>CPU 执行时间 = $\frac{\text{CPU 时钟周期数}}{\text{主频}}$ = $\frac{\text{指令条数 } \times \text{ CPI}}{\text{主频}}$</p>
+<p>CPU 执行时间 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>CPU 时钟周期数</mtext><mtext>主频</mtext></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{CPU 时钟周期数}}{\text{主频}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">主频</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">CPU </span><span class="mord cjk_fallback mtight">时钟周期数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mtext>指令条数 </mtext><mo>×</mo><mtext> CPI</mtext></mrow><mtext>主频</mtext></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{指令条数 } \times \text{ CPI}}{\text{主频}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">主频</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">指令条数</span><span class="mord mtight"> </span></span><span class="mbin mtight">×</span><span class="mord text mtight"><span class="mord mtight"> CPI</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>上式表明，CPU 性能取决于三个要素：主频、CPI、指令条数。三者相互制约</p>
 </li>
-<li><p>每秒百万条指令 MIPS (Million Instruction Per Second)</p>
+<li>
+<p>每秒百万条指令 MIPS (Million Instruction Per Second)</p>
 <p>即每秒执行多少百万条指令</p>
-<p>MIPS = $\frac{\text{指令条数}}{\text{执行时间 }\times 10^6}$ = $\frac{\text{主频}}{\text{CPI }\times 10^6}$</p>
+<p>MIPS = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>指令条数</mtext><mrow><mtext>执行时间 </mtext><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{指令条数}}{\text{执行时间 }\times 10^6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">执行时间</span><span class="mord mtight"> </span></span><span class="mbin mtight">×</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">指令条数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>主频</mtext><mrow><mtext>CPI </mtext><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{主频}}{\text{CPI }\times 10^6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">CPI </span></span><span class="mbin mtight">×</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">主频</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>MIPS 对不同机器进行性能比较是有缺陷的，因为不同机器的指令集不同，指令的功能也就不同，比如在机器 M1 上某条指令的功能也许在机器 M2 上要用多条指令来完成。即使在同一台计算机上，不同程序也会有不同的 MIPS</p>
 </li>
-<li><p>MFLOPS (Mega Floating-point Operations Per Second)</p>
-<p>每秒执行多少百万次浮点运算，MFLOPS = $\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^6}$</p>
+<li>
+<p>MFLOPS (Mega Floating-point Operations Per Second)</p>
+<p>每秒执行多少百万次浮点运算，MFLOPS = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>浮点操作次数</mtext><mrow><mtext>执行时间 </mtext><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">执行时间</span><span class="mord mtight"> </span></span><span class="mbin mtight">×</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">浮点操作次数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>GFLOPS (Giga Floating-point Operations Per Second)</p>
-<p>每秒执行多少十亿次浮点运算，GFLOPS = $\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^9}$</p>
+<p>每秒执行多少十亿次浮点运算，GFLOPS = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>浮点操作次数</mtext><mrow><mtext>执行时间 </mtext><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^9}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">执行时间</span><span class="mord mtight"> </span></span><span class="mbin mtight">×</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">浮点操作次数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>TFLOPS (Tera Floating-point Operations Per Second)</p>
-<p>每秒执行多少万亿次浮点运算，TFLOPS = $\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^{12}}$</p>
+<p>每秒执行多少万亿次浮点运算，TFLOPS = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>浮点操作次数</mtext><mrow><mtext>执行时间 </mtext><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>12</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^{12}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">执行时间</span><span class="mord mtight"> </span></span><span class="mbin mtight">×</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">浮点操作次数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>PFLOPS (Peta Floating-point Operations Per Second)</p>
-<p>每秒执行多少千万亿次浮点运算，PFLOPS = $\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^{15}}$</p>
+<p>每秒执行多少千万亿次浮点运算，PFLOPS = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>浮点操作次数</mtext><mrow><mtext>执行时间 </mtext><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>15</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^{15}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">执行时间</span><span class="mord mtight"> </span></span><span class="mbin mtight">×</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">浮点操作次数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>EFLOPS (Exa Floating-point Operations Per Second)</p>
-<p>每秒执行多少百亿亿次浮点运算，EFLOPS = $\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^{18}}$</p>
+<p>每秒执行多少百亿亿次浮点运算，EFLOPS = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>浮点操作次数</mtext><mrow><mtext>执行时间 </mtext><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>18</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^{18}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">执行时间</span><span class="mord mtight"> </span></span><span class="mbin mtight">×</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">浮点操作次数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>ZFLOPS (Zetta Floating-point Operations Per Second)</p>
-<p>每秒执行多少十万京次浮点运算，ZFLOPS = $\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^{21}}$</p>
+<p>每秒执行多少十万京次浮点运算，ZFLOPS = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>浮点操作次数</mtext><mrow><mtext>执行时间 </mtext><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>21</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{浮点操作次数}}{\text{执行时间 }\times10^{21}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">执行时间</span><span class="mord mtight"> </span></span><span class="mbin mtight">×</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">浮点操作次数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 </li>
-<li><p>基准程序(Benchmarks)</p>
+<li>
+<p>基准程序(Benchmarks)</p>
 <p>专门用来进行性能评价的一组程序</p>
 <p>通过在不同机器上运行相同的基准程序来比较在不同机器上的运行时间，从而评测其性能</p>
 <p>对于不同的应用场合，应该选择不同的基准程序</p>
@@ -546,7 +634,7 @@
 <blockquote>
 <p>提高主频、扩大主存容量等硬件上的优化对性能的提升是有限度的。采用并行处理技术是当前实现高性能计算的重要途径</p>
 </blockquote>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">https://zerooo.top/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/01/06/CO2_%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数据的表示与运算 | CO</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/01/06/CO7_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/" title="输入输出系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">输入输出系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO2_%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97/" title="数据的表示与运算 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">数据的表示与运算 | CO</div></div></a></div><div><a href="/2024/01/06/CO6_%E6%80%BB%E7%BA%BF/" title="总线 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">总线 | CO</div></div></a></div><div><a href="/2024/01/06/CO3_%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" title="存储系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">存储系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO4_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" title="指令系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">指令系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO5_%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" title="中央处理器 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">中央处理器 | CO</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">计算机发展历程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">1.1.</span> <span class="toc-text">计算机硬件的发展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%9B%9B%E4%BB%A3%E5%8F%98%E5%8C%96"><span class="toc-number">1.1.1.</span> <span class="toc-text">计算机的四代变化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%83%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%96%B0%E6%8D%A2%E4%BB%A3"><span class="toc-number">1.1.2.</span> <span class="toc-text">计算机元件的更新换代</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">1.2.</span> <span class="toc-text">计算机软件的发展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%88%86%E7%B1%BB%E4%B8%8E%E5%8F%91%E5%B1%95%E6%96%B9%E5%90%91"><span class="toc-number">1.3.</span> <span class="toc-text">计算机的分类与发展方向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">计算机系统层次结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">2.1.</span> <span class="toc-text">计算机系统的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">计算机硬件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%AF%C2%B7%E8%AF%BA%E4%BE%9D%E6%9B%BC%E6%9C%BA"><span class="toc-number">2.2.1.</span> <span class="toc-text">冯·诺依曼机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%B0%E4%BB%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.2.</span> <span class="toc-text">现代计算机组织结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%9F%E8%83%BD%E9%83%A8%E4%BB%B6"><span class="toc-number">2.2.3.</span> <span class="toc-text">计算机的功能部件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">计算机软件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.3.1.</span> <span class="toc-text">系统软件和应用软件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E7%BA%A7%E5%88%AB%E7%9A%84%E8%AF%AD%E8%A8%80"><span class="toc-number">2.3.2.</span> <span class="toc-text">三个级别的语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%92%8C%E7%A1%AC%E4%BB%B6%E7%9A%84%E9%80%BB%E8%BE%91%E5%8A%9F%E8%83%BD%E7%AD%89%E4%BB%B7%E6%80%A7"><span class="toc-number">2.3.3.</span> <span class="toc-text">软件和硬件的逻辑功能等价性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">2.4.</span> <span class="toc-text">计算机系统的层次结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">2.5.</span> <span class="toc-text">计算机系统的工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%9C%E5%AD%98%E5%82%A8%E7%A8%8B%E5%BA%8F%E2%80%9D%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-number">2.5.1.</span> <span class="toc-text">“存储程序”工作方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E6%BA%90%E7%A8%8B%E5%BA%8F%E5%88%B0%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="toc-number">2.5.2.</span> <span class="toc-text">从源程序到可执行文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.5.3.</span> <span class="toc-text">指令执行过程的描述</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text">计算机性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E9%95%BF"><span class="toc-number">3.1.</span> <span class="toc-text">字长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E5%B8%A6%E5%AE%BD"><span class="toc-number">3.2.</span> <span class="toc-text">数据通路带宽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E5%AE%B9%E9%87%8F"><span class="toc-number">3.3.</span> <span class="toc-text">主存容量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E9%80%9F%E5%BA%A6"><span class="toc-number">3.4.</span> <span class="toc-text">运算速度</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图 | DS"/></a><div class="content"><a class="title" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS">图 | DS</a><time datetime="2024-01-26T01:31:06.000Z" title="发表于 2024-01-26 09:31:06">2024-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树 | DS"/></a><div class="content"><a class="title" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS">树 | DS</a><time datetime="2024-01-12T01:14:08.000Z" title="发表于 2024-01-12 09:14:08">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用算法模板"/></a><div class="content"><a class="title" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板">常用算法模板</a><time datetime="2024-01-11T09:50:08.000Z" title="发表于 2024-01-11 17:50:08">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="栈、队列和数组 | DS"/></a><div class="content"><a class="title" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS">栈、队列和数组 | DS</a><time datetime="2024-01-11T01:16:04.000Z" title="发表于 2024-01-11 09:16:04">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线性表 | DS"/></a><div class="content"><a class="title" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS">线性表 | DS</a><time datetime="2024-01-10T01:34:05.000Z" title="发表于 2024-01-10 09:34:05">2024-01-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">https://zerooo.top/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/01/06/CO2_%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数据的表示与运算 | CO</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/01/06/CO7_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/" title="输入输出系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">输入输出系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO2_%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97/" title="数据的表示与运算 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">数据的表示与运算 | CO</div></div></a></div><div><a href="/2024/01/06/CO6_%E6%80%BB%E7%BA%BF/" title="总线 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">总线 | CO</div></div></a></div><div><a href="/2024/01/06/CO3_%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" title="存储系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">存储系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO4_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" title="指令系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">指令系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO5_%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" title="中央处理器 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">中央处理器 | CO</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text"> 计算机发展历程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">1.1.</span> <span class="toc-text"> 计算机硬件的发展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%9B%9B%E4%BB%A3%E5%8F%98%E5%8C%96"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 计算机的四代变化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%83%E4%BB%B6%E7%9A%84%E6%9B%B4%E6%96%B0%E6%8D%A2%E4%BB%A3"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 计算机元件的更新换代</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">1.2.</span> <span class="toc-text"> 计算机软件的发展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%88%86%E7%B1%BB%E4%B8%8E%E5%8F%91%E5%B1%95%E6%96%B9%E5%90%91"><span class="toc-number">1.3.</span> <span class="toc-text"> 计算机的分类与发展方向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text"> 计算机系统层次结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">2.1.</span> <span class="toc-text"> 计算机系统的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text"> 计算机硬件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E6%9C%BA"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 冯·诺依曼机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%B0%E4%BB%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 现代计算机组织结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8A%9F%E8%83%BD%E9%83%A8%E4%BB%B6"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 计算机的功能部件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text"> 计算机软件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 系统软件和应用软件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E7%BA%A7%E5%88%AB%E7%9A%84%E8%AF%AD%E8%A8%80"><span class="toc-number">2.3.2.</span> <span class="toc-text"> 三个级别的语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%92%8C%E7%A1%AC%E4%BB%B6%E7%9A%84%E9%80%BB%E8%BE%91%E5%8A%9F%E8%83%BD%E7%AD%89%E4%BB%B7%E6%80%A7"><span class="toc-number">2.3.3.</span> <span class="toc-text"> 软件和硬件的逻辑功能等价性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">2.4.</span> <span class="toc-text"> 计算机系统的层次结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">2.5.</span> <span class="toc-text"> 计算机系统的工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%A8%8B%E5%BA%8F%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-number">2.5.1.</span> <span class="toc-text"> “存储程序”工作方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E6%BA%90%E7%A8%8B%E5%BA%8F%E5%88%B0%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="toc-number">2.5.2.</span> <span class="toc-text"> 从源程序到可执行文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.5.3.</span> <span class="toc-text"> 指令执行过程的描述</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text"> 计算机性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E9%95%BF"><span class="toc-number">3.1.</span> <span class="toc-text"> 字长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E5%B8%A6%E5%AE%BD"><span class="toc-number">3.2.</span> <span class="toc-text"> 数据通路带宽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E5%AE%B9%E9%87%8F"><span class="toc-number">3.3.</span> <span class="toc-text"> 主存容量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E9%80%9F%E5%BA%A6"><span class="toc-number">3.4.</span> <span class="toc-text"> 运算速度</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图 | DS"/></a><div class="content"><a class="title" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS">图 | DS</a><time datetime="2024-01-26T01:31:06.000Z" title="发表于 2024-01-26 09:31:06">2024-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树 | DS"/></a><div class="content"><a class="title" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS">树 | DS</a><time datetime="2024-01-12T01:14:08.000Z" title="发表于 2024-01-12 09:14:08">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用算法模板"/></a><div class="content"><a class="title" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板">常用算法模板</a><time datetime="2024-01-11T09:50:08.000Z" title="发表于 2024-01-11 17:50:08">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="栈、队列和数组 | DS"/></a><div class="content"><a class="title" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS">栈、队列和数组 | DS</a><time datetime="2024-01-11T01:16:04.000Z" title="发表于 2024-01-11 09:16:04">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线性表 | DS"/></a><div class="content"><a class="title" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS">线性表 | DS</a><time datetime="2024-01-10T01:34:05.000Z" title="发表于 2024-01-10 09:34:05">2024-01-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
