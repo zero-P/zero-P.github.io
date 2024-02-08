@@ -233,7 +233,8 @@
 <blockquote>
 <p>在简单应用中，可直接用二维数组作为图的邻接矩阵（顶点信息等均可省略）</p>
 </blockquote>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240126112513486.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240126112513486.png" width="600px"/></dev>
+
 <ul>
 <li><p>无权图：$A[i][j]=1$ 表示 ($v_i$, $v_j$) 或 &lt;$v_i$, $v_j$&gt; 在图中存在；$A[i][j]=0$ 表示 ($v_i$, $v_j$) 或 &lt;$v_i$, $v_j$&gt; 在图中不存在</p>
 <p>带权图：$A[i][j]=w_{ij}$ 表示 ($v_i$, $v_j$) 或 &lt;$v_i$, $v_j$&gt; 在图中存在且权值为 $w_{ij}$；$A[i][j]=0$ 或 $\infin$ 表示 ($v_i$, $v_j$) 或 &lt;$v_i$, $v_j$&gt; 在图中不存在</p>
@@ -258,8 +259,10 @@
 </ul>
 <h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><ul>
 <li><p>顶点表(顺) + 边表(链)</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/D6Fg6UXihZf4gca.png" width="450px"/>&lt;/dev&gt;</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/ZkFptp1mWhXjojI.png" width="390px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/D6Fg6UXihZf4gca.png" width="450px"/></dev>
+
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/ZkFptp1mWhXjojI.png" width="390px"/></dev>
+
 <p>对于有向图，边表即为出边表</p>
 </li>
 <li><p>特点</p>
@@ -277,8 +280,10 @@
 </ul>
 <h3 id="十字链表-有向图"><a href="#十字链表-有向图" class="headerlink" title="十字链表 (有向图)"></a>十字链表 (有向图)</h3><ul>
 <li><p>顶点表(顺) + 弧表(链)</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/eMSEf3flcTnGvMA.png" width="550px"/>&lt;/dev&gt;</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/mqbCTKxf4jjOWET.png" width="550px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/eMSEf3flcTnGvMA.png" width="550px"/></dev>
+
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/mqbCTKxf4jjOWET.png" width="550px"/></dev>
+
 <p>弧结点：tailvex 指示弧尾顶点编号，headvex 指示弧头顶点编号，hlink 指向弧头相同的下一条弧，tlink 指向弧尾相同的下一条弧，info 存放该弧的相关信息</p>
 <p>顶点结点：data 存放数据信息，firstin 指向以该顶点为弧头的第一个弧结点，firstout 指向以该顶点为弧尾的第一个弧结点。仍是顺序存储</p>
 </li>
@@ -289,8 +294,10 @@
 </ul>
 <h3 id="邻接多重表-无向图"><a href="#邻接多重表-无向图" class="headerlink" title="邻接多重表 (无向图)"></a>邻接多重表 (无向图)</h3><ul>
 <li><p>顶点表(顺) + 边表(链)</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230401204416658.png" width="600px"/>&lt;/dev&gt;</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/UZQujvdW4lcz2lR.png" width="550px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230401204416658.png" width="600px"/></dev>
+
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/UZQujvdW4lcz2lR.png" width="550px"/></dev>
+
 <p>边结点：ivex 和 jvex 指示该边依附的两个顶点的编号，ilink 指向下一条依附于顶点 ivex 的边，jlink 指向下一条依附于顶点 jvex 的边，info 存放该边的相关信息</p>
 <p>顶点结点：data 存储该顶点的相关信息，firstedge 指向第一条依附于该顶点的边</p>
 </li>
@@ -409,7 +416,8 @@
 <h3 id="有向无环图描述表达式"><a href="#有向无环图描述表达式" class="headerlink" title="有向无环图描述表达式"></a>有向无环图描述表达式</h3><p>DAG (Directed Acyclic Graph)</p>
 <p>利用有向无环图 DAG 描述表达式，可实现对相同子式的共享，从而节省存储空间</p>
 <p>例如表达式 $((a+b)<em>(b</em>(c+d))+(c+d)<em>e)</em>((c+d)<em>e)$，公共子式为 $(c+d)$ 和 $(c+d)</em>e$</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230921212308242.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230921212308242.png" width="600px"/></dev>
+
 <h3 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h3><ul>
 <li><p>AOV 网 (Activity On Vertex NetWork)</p>
 <p>以顶点表示活动、以弧表示活动的先后次序的无权 DAG</p>
@@ -517,7 +525,8 @@
 <p>实际上求出各顶点 $ve()$ 后就能得到关键路径（可能有多条）</p>
 <blockquote>
 <p>求关键路径还是得多练习，有些地方说不清楚，需要熟练度</p>
-<p>练手：<br><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231028174017325.png" width="650px"/>&lt;/dev&gt;</p>
+<p>练手：</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231028174017325.png" width="650px"/></dev>
 </blockquote>
 </li>
 </ul>
@@ -582,7 +591,7 @@
 <li><p>拓扑序列唯一，不能唯一确定该图</p>
 <p>拓扑序列唯一，也不能说明图中每个顶点的入度和出度最多为 1</p>
 <p>比如下面三个 DAG，它们的拓扑排序唯一且都是 ABCD</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230921221316886.png" width="400px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230921221316886.png" width="400px"/></dev>
 </li>
 <li><p>事件的最早发生时间与以该事件为始的弧的活动（若有）的最早开始时间相同</p>
 <p>事件的最迟发生时间是以该事件为尾的活动（若有）的最迟开始时间与该活动的持续时间之和</p>
@@ -605,7 +614,7 @@
 </li>
 <li><p>所有顶点事件都是关键事件并不能说明关键路径唯一</p>
 <p>如下图，所有事件都是关键事件，且除了 a 之外都是关键活动</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230923155250919.png" width="350px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230923155250919.png" width="350px"/></dev>
 </li>
 <li><p>关键路径不一定包含所有关键活动</p>
 <p>只包含关键活动的路径就是关键路径（要保证长度最大）</p>

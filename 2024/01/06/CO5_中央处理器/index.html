@@ -176,13 +176,15 @@
 <h4 id="运算器的功能"><a href="#运算器的功能" class="headerlink" title="运算器的功能"></a>运算器的功能</h4><p>数据加工处理中心</p>
 <p>运算器接收从控制器送来的命令并执行相应的动作，对数据进行加工和处理</p>
 <h3 id="CPU-的基本结构"><a href="#CPU-的基本结构" class="headerlink" title="CPU 的基本结构"></a>CPU 的基本结构</h3><p>两大部分：运算器 + 控制器</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230727173531488.png" width="400px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230727173531488.png" width="400px"/></dev>
+
 <blockquote>
 <p>也可以分为 ALU、寄存器、CU、中断系统</p>
 </blockquote>
 <h4 id="运算器的结构"><a href="#运算器的结构" class="headerlink" title="运算器的结构"></a>运算器的结构</h4><ul>
 <li><p>算术逻辑单元 ALU (Arithmetic Logic Unit)</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3398_1.png" width="350px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3398_1.png" width="350px"/></dev>
+
 <p>主要功能是进行算数/逻辑运算</p>
 </li>
 <li><p>通用寄存器组 GPRs (General Purpose Registers)</p>
@@ -191,7 +193,8 @@
 <p><strong>位数与机器字长相等</strong></p>
 <p>在大多数处理机中，有 8 ~ 32 个通用寄存器，在 RISC 结构的计算机中可超过 100 个</p>
 <p>IA-32 中有 8 个通用寄存器：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230727174613590.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230727174613590.png" width="600px"/></dev>
+
 <p>为了向后兼容，EAX、EBX、ECX、EDX 的高两位字节和低两位字节可以独立使用（E 为 Extend，表示 32 位的寄存器），而低两位字节又可分别作为两个 8 位寄存器</p>
 <p>BP/EBP 和 SP/ESP 分别是帧指针寄存器和栈指针寄存器，分别用来指向<strong>当前栈帧</strong>的底部和顶部</p>
 <p>除 EBP 和 ESP 外，其他几个寄存器的用途比较任意</p>
@@ -282,7 +285,8 @@
 <p>一个指令周期一定大于等于一个时钟周期</p>
 </li>
 <li><p>指令周期流程</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230727203222752.png" width="700px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230727203222752.png" width="700px"/></dev>
+
 <blockquote>
 <p> 取指周期和执行周期是每个指令都有的工作周期（空指令？）</p>
 <p> 取指周期：取指令 → PC + “1”（→ 指令译码）</p>
@@ -303,14 +307,14 @@
 </ul>
 <ul>
 <li><p>为区分不同的工作周期，在 CPU 内设置了 4 个标志触发器 FE、IND、EX、INT，分别对应取指(Fetch)、间址(Indirect)、执行(Execute)、中断(Interrupt) 4 个周期(Cycle)，并以“1”状态表示有效，分别由 1 → FE、1 → IND、1 → EX、1 → INT 这 4 个信号控制</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3422_1.png" width="470px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3422_1.png" width="470px"/></dev>
 </li>
 <li><p>每个指令周期内机器周期数可以不等</p>
 <p>即不同指令的指令周期可能不同</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3418_1.png" width="700px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3418_1.png" width="700px"/></dev>
 </li>
 <li><p>每个机器周期内的节拍数也可以不等</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3420_1.png" width="500px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3420_1.png" width="500px"/></dev>
 </li>
 <li><p>每个执行阶段内的机器周期数也可以不等</p>
 <p>比如，定长机器周期，一个机器周期取一个存取周期，而指令字长一般取存储字长的整数倍，若指令字长等于存储字长的 2 倍，则需要 2 次访存，因此取指周期等于机器周期的 2 倍</p>
@@ -326,7 +330,8 @@
 <h4 id="取指周期数据流"><a href="#取指周期数据流" class="headerlink" title="取指周期数据流"></a>取指周期数据流</h4><p>根据 PC 中的内容从主存中取出指令代码并存放在 IR 中</p>
 <p>不同长度的指令，其取指操作可能是不同的（访存次数可能不同）</p>
 <p>以指令字长 = 存储字长的指令为例（即取指只需访存一次）：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3432_1.png" width="500px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3432_1.png" width="500px"/></dev>
+
 <p>① ~ ③：PC 中的指令地址先送 MAR，再经地址总线送主存</p>
 <p>④ ~ ⑤：CU 发出读命令经控制总线送主存</p>
 <p>⑥ ~ ⑧：指令代码从主存经数据总线先送 MDR，再从 MDR 送入 IR</p>
@@ -335,7 +340,8 @@
 <p>若指令字长 = 存储字长，则取指周期 = 机器周期</p>
 <h4 id="间址周期数据流"><a href="#间址周期数据流" class="headerlink" title="间址周期数据流"></a>间址周期数据流</h4><p>取操作数有效地址</p>
 <p>具体的数据流向取决于寻址方式。以一次间址为例：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3426_1.png" width="480px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3426_1.png" width="480px"/></dev>
+
 <p>① ~ ③：指令中的地址码  Ad(IR/MDR) 先送 MAR，再经地址总线送主存</p>
 <p>④ ~ ⑤：CU 发出读命令经控制总线送主存</p>
 <p>⑥ ~ ⑦：操作数有效地址从主存经数据总线送 MDR</p>
@@ -346,7 +352,8 @@
 <p>不同指令的执行周期操作不同，因此没有统一的数据流向</p>
 <h4 id="中断周期数据流"><a href="#中断周期数据流" class="headerlink" title="中断周期数据流"></a>中断周期数据流</h4><p>处理中断请求</p>
 <p>假设断点只有 PC，且保存在内存栈中，栈顶指针为 SP：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3428_1.png" width="500px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3428_1.png" width="500px"/></dev>
+
 <p>① ~ ⑧ 保存断点（PC 值）</p>
 <p>​    ① ~ ③ SP 先减 “1” 再送 MAR，然后经地址总线送主存</p>
 <p>​    ④ ~ ⑤ CU 发出写命令经控制总线送主存</p>
@@ -411,7 +418,7 @@
 <p>组合电路的定时<strong>不受时钟信号的控制</strong>，所有输入信号到达后，经过一定的逻辑门延迟，输出端的值被改变，并一直保持其值不变，直到输入信号改变</p>
 <p>组合电路不含存储信号的记忆单元，输入和输出之间无反馈通路，信号是单向传输的</p>
 <p>数据通路中常用的组合逻辑元件有多路选择器 MUX、加法器 Adder、算术逻辑部件 ALU、译码器 Decoder 等</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230728155314104.png" width="900px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230728155314104.png" width="900px"/></dev>
 </li>
 <li><p>状态元件</p>
 <p>具有存储功能，输入状态<strong>在时钟控制下</strong>被写到电路中，并保持电路的输出值不变，直到下一个时钟到达</p>
@@ -425,7 +432,8 @@
 </li>
 </ul>
 <h4 id="CPU-内部单总线方式"><a href="#CPU-内部单总线方式" class="headerlink" title="CPU 内部单总线方式"></a>CPU 内部单总线方式</h4><p>将所有寄存器的输入端和输出端都连接到一条公共通路上</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3408_1.png" width="850px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3408_1.png" width="850px"/></dev>
+
 <p>结构简单，但数据传输存在较多的冲突现象。一个时钟内只允许传一个数据，性能较低</p>
 <p>CPU 中有两条或更多的总线时，构成双总线结构或多总线结构</p>
 <p>各种数据传送情的流程和控制信号：</p>
@@ -469,13 +477,16 @@
 </li>
 </ul>
 <h4 id="CPU-内部三总线方式"><a href="#CPU-内部三总线方式" class="headerlink" title="CPU 内部三总线方式"></a>CPU 内部三总线方式</h4><p>将所有寄存器的输入端和输出端都连接到多条公共通路上</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3406_1.png" width="400px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3406_1.png" width="400px"/></dev>
+
 <p>能同时在多个总线上传送不同的数据，相较单总线方式效率有所提高</p>
 <h4 id="专用数据通路方式"><a href="#专用数据通路方式" class="headerlink" title="专用数据通路方式"></a>专用数据通路方式</h4><p>根据指令执行过程中的数据和地址的流动方向安排连接线路，避免使用共享的总线</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3402_1.png" width="800px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3402_1.png" width="800px"/></dev>
+
 <p>性能较高，基本不存在数据冲突现象，但结构复杂，硬件量大，不易实现</p>
 <p>专用数据通路方式下取指周期的数据传送流程和控制信号：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3412_1.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3412_1.png" width="600px"/></dev>
+
 <p>(PC) → MAR    C0 有效</p>
 <p>(MAR) → 主存    C1 有效</p>
 <p>1 → R    控制单元向主存发送读命令</p>
@@ -493,10 +504,12 @@
 <p><strong>不能使用单总线数据通路</strong>：单总线一个时钟周期内只允许一次数据传输，无法在一个时钟周期内完成一个指令的所有数据传输</p>
 <p><strong>必须有独立的指令存储器和数据存储器</strong>：不能在一个时钟周期内对一个（单端口）存储器进行两次不同的存取（上升沿/下降沿）</p>
 <p>一个简单的单周期数据通路实现：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/1194_1.png" width="700px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/1194_1.png" width="700px"/></dev>
+
 <h2 id="控制器的功能和工作原理"><a href="#控制器的功能和工作原理" class="headerlink" title="控制器的功能和工作原理"></a>控制器的功能和工作原理</h2><h3 id="控制器的结构和功能"><a href="#控制器的结构和功能" class="headerlink" title="控制器的结构和功能"></a>控制器的结构和功能</h3><ul>
 <li><p>计算机硬件系统和控制器部件的组成</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3434_1.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3434_1.png" width="600px"/></dev>
+
 <blockquote>
 <p>上图省略了 MDR 和 MAR<br>CU(SP)/PC → MAR → 地址总线，数据总线 → MDR → IR/ALU</p>
 </blockquote>
@@ -527,7 +540,8 @@
 <li>一般用于 RISC：指令越多，设计和实现就越复杂</li>
 </ol>
 <h4 id="硬布线控制单元图"><a href="#硬布线控制单元图" class="headerlink" title="硬布线控制单元图"></a>硬布线控制单元图</h4><p>为简化 CU 逻辑，将指令译码器和节拍发生器从 CU 分离出来：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3436_1.png" width="800px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3436_1.png" width="800px"/></dev>
+
 <p>CU 的输入信号来源：</p>
 <ol>
 <li><p>经指令译码器译码产生的指令信息</p>
@@ -605,6 +619,8 @@
 <p>⑤、⑥占时较短，可安排在一个节拍</p>
 <blockquote>
 <p>⑤、⑥属于指令译码，在单独写取指周期微操作命令时可省，但在写指令周期时要体现</p>
+</blockquote>
+<blockquote>
 <p>注意这里的 ⑤ (MDR) → IR 与间址周期的 ④ (MDR) → Ad(IR) 的区别</p>
 </blockquote>
 </li>
@@ -615,7 +631,8 @@
 <p>④ T2  (MDR) → Ad(IR)</p>
 </li>
 <li><p>执行周期（视不同指令而定）</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3438_1.png" width="700px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3438_1.png" width="700px"/></dev>
+
 <p>T0、T1 基本上是用来取数/存数。因为统一用 3 个节拍，用不了就空着，什么也不做</p>
 <p>算术右移中 $AC_0 \rightarrow AC_0$ 表示 ACC 的符号位不变</p>
 </li>
@@ -634,11 +651,14 @@
 <blockquote>
 <p>若某指令有表中所列出的微操作命令，其对应的单元格内为 1</p>
 </blockquote>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3950_1.png" width="700px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3950_1.png" width="700px"/></dev>
+
 <p>I 为间址标志。在取指周期的 T2 时刻，若 I = 1 则 IND 触发器置 “1”，标志进入间址周期，否则 EX 触发器置 “1”，标志进入执行周期</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3454_1.png" width="700px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3454_1.png" width="700px"/></dev>
+
 <p>在间址周期的 T2 时刻，若 IND = 0 则 EX 触发器置 “1”，进入执行周期，否则继续间接寻址</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3452_1.png" width="572px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3452_1.png" width="572px"/></dev>
+
 <p>在执行周期的 T2 时刻，CPU 要向所有中断源发中断查询信号，若检测到有中断请求并满足响应条件，则 INT 触发器置 “1”，标志进入中断周期</p>
 <blockquote>
 <p>省略了中断周期和部分指令的执行周期</p>
@@ -648,7 +668,8 @@
 <p>FE · T1 + IND · T1(ADD + STA + LDA + JMP + BAN) + EX · T1(ADD + LDA)<br>= T1{FE + IND(ADD + STA + LDA + JMP + BAN) + EX(ADD + LDA)}</p>
 </li>
 <li><p>产生 M(MAR) → MDR 的逻辑图</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3456_1.png" width="800px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3456_1.png" width="800px"/></dev>
+
 </li>
 </ul>
 <h3 id="微程序控制器"><a href="#微程序控制器" class="headerlink" title="微程序控制器"></a>微程序控制器</h3><p>设计思想：将每条机器指令编写成一个微程序，每个微程序包含若干微指令，每条微指令对应一个或几个微操作命令。这些微程序可以存到一个控制器存储器中，用寻址用户程序机器指令的办法来寻址每个微程序中的微指令</p>
@@ -694,13 +715,15 @@
 <ul>
 <li><p>直接编码（直接控制方式）</p>
 <p>无须译码，操作控制字段的每一位代表一个微操作命令，为 “1” 时有效</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3468_1.png" width="500px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3468_1.png" width="500px"/></dev>
+
 <p>优点：简单、直观，执行速度快，操作并行性好</p>
 <p>缺点：微指令字长过长，造成控存容量极大</p>
 </li>
 <li><p>字段直接编码方式</p>
 <p>将微指令的控制字段分成若干小字段，把互斥性微命令组合在同一小字段，相容性微命令组合在不同小字段</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3470_1.png" width="350px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3470_1.png" width="350px"/></dev>
+
 <p>每个小字段独立编码，每种编码代表一个微命令，且各小字段编码含义单独定义，与其他小字段无关</p>
 <p>每各小字段的信息位不能太多，否则将增加译码线路的复杂性和译码时间</p>
 <p>一般每小字段还要留出一个状态，表示本字段不发出任何命令（通常用全 0）。因此当某字段的长度为 3 位时，最多只能表示 7 个互斥的微命令</p>
@@ -709,7 +732,8 @@
 </li>
 <li><p>字段间接编码方式/隐式编码</p>
 <p>一个字段的某些微命令需由另一个字段中的某些微命令来解释</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3472_1.png" width="300px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3472_1.png" width="300px"/></dev>
+
 <p>由于不是靠字段直接译码发出的微命令，因此称为字段间接编码，又称隐式编码</p>
 <p>优点：可进一步缩短微指令字长</p>
 <p>缺点：削弱了微指令的并行控制能力，因此通常作为字段直接编码方式的一种辅助手段</p>
@@ -732,13 +756,15 @@
 </li>
 <li><p>分支转移</p>
 <p>根据各种标志决定微指令分支转移的地址</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3474_1.png" width="350px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3474_1.png" width="350px"/></dev>
+
+
 </li>
 </ul>
 <p>  转移方式指明判别条件，转移地址指明转移成功后的去向</p>
 <ul>
 <li><p>通过测试网络形成</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3476_1.png" width="500px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3476_1.png" width="500px"/></dev>
 </li>
 <li><p>由硬件直接产生微程序入口地址</p>
 <p>公共微程序段的第一条微指令的地址可由专门的硬件电路产生</p>
@@ -748,7 +774,9 @@
 <ul>
 <li><p>水平型微指令</p>
 <p>一条微指令能定义多个可并行的微命令</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3464_1.png" width="700px"/>&lt;/dev&gt;<br>优点：微程序短，执行速度快</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3464_1.png" width="700px"/></dev>
+优点：微程序短，执行速度快
+
 <p>缺点：微指令长（矮胖），编写微程序较麻烦</p>
 <p>从编码方式看，直接编码、字段直接编码、字段间接编码和混合编码都属于水平型微指令</p>
 <blockquote>
@@ -757,7 +785,9 @@
 </li>
 <li><p>垂直型微指令</p>
 <p>采用类似机器指令操作码的方式，在微指令中设置微操作码，采用微操作码编译法，由微操作码规定微指令的功能</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3466_1.png" width="600px"/>&lt;/dev&gt;<br>一条微指令只能定义一个微命令，由微操作码字段规定具体功能</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3466_1.png" width="600px"/></dev>
+一条微指令只能定义一个微命令，由微操作码字段规定具体功能
+
 <p>优点：微指令短、简单、规整，便于编写微程序</p>
 <p>缺点：微程序长（瘦长），执行速度慢，工作效率低</p>
 </li>
@@ -777,7 +807,8 @@
 <h4 id="微程序控制器组成和工作过程"><a href="#微程序控制器组成和工作过程" class="headerlink" title="微程序控制器组成和工作过程"></a>微程序控制器组成和工作过程</h4><ul>
 <li><p>微指令控制器基本结构</p>
 <p>下图主要画出了微程序控制器比组合逻辑控制器多出的部件：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230729180717629.png" width="800px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230729180717629.png" width="800px"/></dev>
+
 <p><strong>控制存储器 CM</strong>：微程序控制器的核心部件，用于存放微程序，在 CPU 内部，用 ROM 实现（静态）</p>
 </li>
 </ul>
@@ -801,7 +832,8 @@
 </li>
 </ol>
 <p>以上是一条机器指令的执行过程（不包含间址周期和中断周期），如此周而复始，直到整个程序执行完毕</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3460_1.png" width="410px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3460_1.png" width="410px"/></dev>
+
 <p>所有指令的取指周期、间址周期、中断周期所对应的微指令序列都一样，可以共享使用</p>
 <p>顺序逻辑根据指令地址码的寻址特征位判断是否要跳过间址周期，根据中断信号判断是否进入中断周期</p>
 <p>一个微命令对应一根输出线</p>
@@ -822,7 +854,8 @@
 <p>① 取指周期：</p>
 <p>Ad(CMDR) → CMAR（每条微指令结束之后都需要将其下地址字段送 CMAR，除了微程序最后一条微指令）</p>
 <p>OP(IR) → 微地址形成部件 → CMAR（取指周期的最后一条微指令完成后，要根据指令操作码确定其执行周期微程序入口地址）</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3478_1.png" width="720px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3478_1.png" width="720px"/></dev>
+
 <p>② 执行周期：</p>
 <p>Ad(CMDR) → CMAR</p>
 <blockquote>
@@ -851,7 +884,8 @@
 <p>直接控制硬件的是毫微微指令</p>
 </li>
 </ul>
-<h3 id="硬布线-vs-微程序"><a href="#硬布线-vs-微程序" class="headerlink" title="硬布线 vs 微程序"></a>硬布线 vs 微程序</h3><p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3480_1.png" width="600px"/>&lt;/dev&gt;</p>
+<h3 id="硬布线-vs-微程序"><a href="#硬布线-vs-微程序" class="headerlink" title="硬布线 vs 微程序"></a>硬布线 vs 微程序</h3><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3480_1.png" width="600px"/></dev>
+
 <p>硬布线控制器的优点：由于控制器的速度取决于电路延迟，所以速度快</p>
 <p>硬布线控制器的缺点：由于将控制部件视为专门产生固定时序控制信号的逻辑电路，所以把用最少元件和取得最高速度作为设计目标，一旦设计完成，就不可能通过其他额外修改添加新功能</p>
 <p>微程序控制器的优点：同组合逻辑控制器相比，微程序控制器具有规整性、灵活性、可维护性等一系列优点</p>
@@ -884,14 +918,16 @@
 </li>
 <li><p>流水段的长度</p>
 <p>主要功能单元的操作时间假设如下：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3522_1.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3522_1.png" width="600px"/></dev>
+
 <p>单周期处理器中，需要延伸时钟周期至 800ps 以满足最慢的指令 LDUR</p>
 <p>而在流水线中，<strong>每个流水段都需要一个时钟周期</strong>。因此按照流水线设计原则，每个流水段长度（时钟周期）为 200ps（还应加上锁存器延时时间）</p>
 <p><strong>流水线方式并不能缩短单条指令的执行时间</strong>，但对整个程序来说，执行效率得到了大幅提高</p>
 </li>
 <li><p>指令流水线的执行方式</p>
 <p>把 $k + 1$ 条指令的取指阶段提前到第 k 条指令的译码阶段，从而将第 $k + 1$ 条指令的译码阶段与第 $k$ 条指令的执行阶段同时进行</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230730175332153.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230730175332153.png" width="600px"/></dev>
+
 <p>理想情况下，每个时钟周期都有一条指令进入流水线，每个时钟周期都有一条指令完成，每条指令的时钟周期数（即 CPI）都为 1</p>
 <p>优点：各部件的利用率明显提高</p>
 <p>缺点：硬件开销较大，控制过程也更复杂</p>
@@ -916,11 +952,12 @@
 <ol>
 <li><p>指令执行过程图</p>
 <p>主要用于分析指令执行过程以及影响流水线的因素</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3490_1.png" width="700px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3490_1.png" width="700px"/></dev>
 </li>
 <li><p>时空图</p>
 <p>主要用于分析流水线的性能</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731094550324.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731094550324.png" width="600px"/></dev>
+
 <p>空间：不同阶段所对应的不同的硬件资源</p>
 <p>装入时间：第一个任务进入流水线到输出流水线的时间</p>
 <p>排空时间：最后一个任务进入流水线到输出流水线的时间</p>
@@ -976,11 +1013,13 @@
 </ul>
 <h3 id="流水线的基本实现"><a href="#流水线的基本实现" class="headerlink" title="流水线的基本实现"></a>流水线的基本实现</h3><p>基于 MIPS ISA，字节编址，采用 32 位定长指令字</p>
 <p>MIPS 指令格式：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731130456222.png" width="560px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731130456222.png" width="560px"/></dev>
+
 <p>R 型指令为寄存器-寄存器操作，I 型为 16 位立即数操作，J 型为无条件转移指令</p>
 <p>R 型指令 31:26 操作码字段全 0，使用 5:0 funct 字段区分指令</p>
 <p>五段流水线数据通路实现概览：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731095630359.png" width="900px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731095630359.png" width="900px"/></dev>
+
 <p>虚线表示控制信号</p>
 <h4 id="所需部件"><a href="#所需部件" class="headerlink" title="所需部件"></a>所需部件</h4><p>IF 段：PC、指令存储器（只读，可视为组合逻辑）、加法器（PC + 4）、多路选择器 MUX（控制写入 PC 的值是 PC + 4 还是分支目标地址）</p>
 <p>ID 段：控制器、寄存器堆、符号扩展单元（将指令中的立即数字段符号扩展为 32 位）、多路选择器 MUX（控制写入目的寄存器编号选择 rt 还是 rd）</p>
@@ -1012,7 +1051,8 @@
 <p>PC 可视为流水寄存器：给流水线的 IF 段提供数据。但 PC 是可见体系结构状态的一部分，发生异常时其内容必须被保存下来，而流水寄存器的内容可被丢弃</p>
 </blockquote>
 <h4 id="控制信号"><a href="#控制信号" class="headerlink" title="控制信号"></a>控制信号</h4><p>主要的控制信号：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731125300861.png" width="900px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731125300861.png" width="900px"/></dev>
+
 <blockquote>
 <p>还漏了一个条件分支译码信号 Branch，由 ID 段控制器译码产生，经 ID/EX 流水寄存器传递至 EX 段，与 ALU 运算的标志 equal 信号进行逻辑与操作后，反馈到 IF 段控制多路选择器进行分支处理</p>
 </blockquote>
@@ -1025,8 +1065,10 @@
 </li>
 <li><p>计算 PC + 4，并送入多路选择器的一个输入段</p>
 </li>
-<li>多路选择器根据之前指令 EX 段传来的 BranchTaken 信号和分支地址 BranchAddr，从 BranchAddr 和 PC + 4 中选择一个送入 PC 的输入端</li>
-<li>时钟到来时将 PC + 4 和指令字锁存到 IF/ID 流水寄存器</li>
+<li><p>多路选择器根据之前指令 EX 段传来的 BranchTaken 信号和分支地址 BranchAddr，从 BranchAddr 和 PC + 4 中选择一个送入 PC 的输入端</p>
+</li>
+<li><p>时钟到来时将 PC + 4 和指令字锁存到 IF/ID 流水寄存器</p>
+</li>
 </ul>
 <p>本条指令 $I_1$ 进入 ID 段，下条指令进入 $I_2$ 进入 IF 段</p>
 <p><strong>译码/读寄存器 ID</strong></p>
@@ -1094,7 +1136,8 @@
 </li>
 </ol>
 <h4 id="数据冒险"><a href="#数据冒险" class="headerlink" title="数据冒险"></a>数据冒险</h4><p>数据冒险(data hazard) / 数据相关(data dependency)，在一个程序中，存在必须等前一条指令执行完才能执行后一条指令的情况</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3498_1.png" width="720px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3498_1.png" width="720px"/></dev>
+
 <blockquote>
 <p>图示指令格式：<br>R 型：操作码  目的寄存器,  源操作数寄存器1,  源操作数寄存器2<br>D 型：操作码  目的寄存器/要写的数据,  [基址寄存器, 偏移量]</p>
 </blockquote>
@@ -1117,24 +1160,27 @@
 <p>指令按序发射按序完成时（或者说按序流动的流水线），只可能出现 RAW 相关。在非按序流动的流水线中，RAW 相关、WAR 相关、WAW 相关都有可能发生</p>
 <blockquote>
 <p>指令发射指的是指令从译码阶段进入执行阶段</p>
+</blockquote>
+<blockquote>
 <p>读后读 RAR (Read After Read) 相关，当两条连续的指令读取相同的寄存器时会产生。这种相关不会影响流水线</p>
 </blockquote>
 <p>解决办法：</p>
 <ol>
 <li><p>数据旁路(bypassing)/前推(forwarding)技术</p>
 <p>从内部缓冲中提前获取缺失的数据，而非等到从程序员可见的寄存器或存储器中取出数据</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3500_1.png" width="720px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3500_1.png" width="720px"/></dev>
 </li>
 <li><p>把遇到数据冒险的指令及其后续指令都暂停一至几个时钟周期，直到数据冒险消失后再继续执行</p>
 <p>可分为：</p>
 <p>1）软件插入 NOP（插入空指令）</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3502_1.png" width="720px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3502_1.png" width="720px"/></dev>
+
 <p>上图中，当 AND 指令处于 ID 级（CC 3）时，将 EX、MEM 和 WB 级控制信号都为无效，可使得 AND 指令变成 nop 指令（即空操作指令，除修改 PC 外其他什么操作也不做）</p>
 <p>处于 ID 级的指令被阻塞，那处于 IF 级的指令也必须被阻塞，否则取到的指令会丢失（会覆盖 IF/ID 锁存器）。防止这两条指令继续执行的方法是：保持 PC 和 IF/ID 锁存器不变</p>
 <p>实际的效果是拉长了指令 AND 和 ORR 的时间：强迫 AND 指令和 ORR 指令在 CC 4 重复 CC 3 的操作，并延迟了最后一个 ADD 指令的取指</p>
 <p>2）硬件阻塞(stall)/气泡(bubble)</p>
 <p>为解决取数-使用型数据冒险而实施的一种阻塞。在采取旁路之前，流水线必须进行阻塞</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3504_1.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3504_1.png" width="600px"/></dev>
 </li>
 <li><p>编译优化</p>
 <p>通过编译器对数据相关的指令编译优化的方法，<strong>调整指令顺序</strong>来解决数据相关</p>
@@ -1153,7 +1199,7 @@
 </li>
 </ol>
 <p>   当预测错误时（分支指令到达 MEM 级时才能决定），流水线控制必须确保预测错误的分支后面的指令执行不会产生实际效果，已经取出并译码的指令必须丢弃（丢弃指令意味着必须将流水线 IF、ID 和 EX 级中的指令都清空），并且必须从正确的分支地址处重新启动流水线</p>
-<ol>
+<ol start="2">
 <li><p>预取转移成功和不成功两个控制流方向上的目标指令</p>
 </li>
 <li><p>加快和提前形成条件码/减少分支延迟</p>
@@ -1187,7 +1233,8 @@
 <h4 id="吞吐率-TP"><a href="#吞吐率-TP" class="headerlink" title="吞吐率 TP"></a>吞吐率 TP</h4><p>单位时间内流水线所完成的任务数量或输出结果的数量</p>
 <p>基本公式：TP = $\frac{n}{T_k}$（$n$ 是任务数，$T_k$ 是处理完 $n$ 个任务所用时间）</p>
 <p>$k$ 级流水线：</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3494_1.png" width="500px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3494_1.png" width="500px"/></dev>
+
 <p>该流水线的实际吞吐率 TP = $\frac{n}{(k+n-1)\Delta t}$，当 $n$ → ∞ 时，得最大吞吐率 $TP_{max}$ = 1/Δt</p>
 <h4 id="加速比-S"><a href="#加速比-S" class="headerlink" title="加速比 S"></a>加速比 S</h4><p>完成同样一批任务，不使用流水线所用的时间与使用流水线所用的时间之比</p>
 <p>基本公式：$S$ = $\frac{T_0}{T_k}$（$T_0$ 表示不使用流水线时，即顺序执行，所用的时间）</p>
@@ -1195,7 +1242,8 @@
 <h4 id="效率-E"><a href="#效率-E" class="headerlink" title="效率 E"></a>效率 E</h4><p>流水线的设备利用率</p>
 <p>在时空图上，流水线的效率定义为：$E$ = $\frac{完成 n 个任务占用的时空区有效面积}{n 个任务所用的时间与 k 个流水段所围成的时空区总面积}$ = $\frac{kT_k-k(k-1)\Delta t}{kT_k}$</p>
 <p>当 $n \rightarrow \infin$ 时，得最高效率为 1</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3496_1.png" width="600px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3496_1.png" width="600px"/></dev>
+
 <p>可以看出，流水线的效率包含了时间和空间两个因素</p>
 <hr>
 <p>流水段越多，指令执行不一定越快：</p>
@@ -1209,16 +1257,19 @@
 </ol>
 <p>但流水线越多并行度越高是真的</p>
 <h3 id="高级流水线技术"><a href="#高级流水线技术" class="headerlink" title="高级流水线技术"></a>高级流水线技术</h3><h4 id="超标量流水线技术"><a href="#超标量流水线技术" class="headerlink" title="超标量流水线技术"></a>超标量流水线技术</h4><p>也称动态多发射技术，每个时钟周期内可并发多条独立指令，以并行操作方式将两条或多条指令编译并执行（有一条以上的流水线）</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3508_1.png" width="450px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3508_1.png" width="450px"/></dev>
+
 <p>需配置多个功能部件，以空间换时间</p>
 <p>简单的超标量 CPU 中，指令按序发射执行。多数超标量 CPU 都<strong>结合动态流水线调度技术</strong>，通过动态分支预测等手段，指令乱序执行，以挖掘更多的指令并行性</p>
 <h4 id="超流水线技术"><a href="#超流水线技术" class="headerlink" title="超流水线技术"></a>超流水线技术</h4><p>通过提高流水线主频的方式来提升流水线性能</p>
 <p>流水线功能段划分得越多，时钟周期就越短（一个小功能段总是占一个时钟周期），指令吞吐量也就越高</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3510_1.png" width="525px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3510_1.png" width="525px"/></dev>
+
 <p>但流水线级数越多，用于流水寄存器的开销就越大，因而流水线级数是有限制的，并不是越多越好</p>
 <p>超流水线 CPU 在流水线充满后，每个时钟周期还是执行一条指令，CPI = 1，但其主频更高</p>
 <h4 id="超长指令字"><a href="#超长指令字" class="headerlink" title="超长指令字"></a>超长指令字</h4><p>也称静态多发射技术，由编译程序挖掘出指令间潜在的并行性，将多条能并行操作的指令组合成一条具有多个操作码字段的超长指令字（可达几百位）</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3512_1.png" width="475px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/3512_1.png" width="475px"/></dev>
+
 <p>需采用多个处理部件</p>
 <p>对 Cache 的容量要求更大</p>
 <h2 id="多处理器的基本概念"><a href="#多处理器的基本概念" class="headerlink" title="多处理器的基本概念"></a>多处理器的基本概念</h2><h3 id="SISD、SIMD、MIMD"><a href="#SISD、SIMD、MIMD" class="headerlink" title="SISD、SIMD、MIMD"></a>SISD、SIMD、MIMD</h3><p>基于指令流的数量和数据流的数量，将计算机体系结构分为 SISD、SIMD、MISD、MIMD 四类</p>
@@ -1227,13 +1278,15 @@
 <li><p>单指令流单数据流 SISD 结构</p>
 <p>传统的串行计算机结构</p>
 <p>通常仅包含一个处理器和存储器，处理器在一段时间内仅执行一条指令</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731210138771.png" width="400px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731210138771.png" width="400px"/></dev>
+
 <p>为提高速度，有些 SISD 计算机采用流水线 CPU 和多体交叉编址存储器</p>
 </li>
 <li><p>单指令流多数据流 SIMD 结构</p>
 <p>一个指令流同时对多个数据流进行处理，一般称为数据级并行技术</p>
 <p>通常由一个指令控制部件、多个处理单元组成</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731210350539.png" width="450px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731210350539.png" width="450px"/></dev>
+
 <p>虽然不同处理单元执行的是同一条指令，但它们处理的数据是不同的</p>
 <p>对结构类似的大量数据进行相同处理，一条指令处理很多条数据</p>
 <p>一个顺序应用程序被编译后，可能按 SISD 组织并运行于串行硬件上，也可能按 SIMD 组织并运行于并行硬件上</p>
@@ -1250,11 +1303,12 @@
 <li><p>多处理器系统</p>
 <p>多处理器系统是共享存储多处理器 SMP 系统的简称，也称共享存储 MIMD</p>
 <p>具有共享的单一地址空间，通过存取指令来访问系统中的所有存储器</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731212154488.png" width="800px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731212154488.png" width="800px"/></dev>
 </li>
 <li><p>多计算机系统</p>
 <p>多台计算机组成的分布式计算系统，通过消息传递进行数据传送</p>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731211310856.png" width="700px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731211310856.png" width="700px"/></dev>
+
 </li>
 </ol>
 </li>
@@ -1292,14 +1346,16 @@
 </blockquote>
 </li>
 </ul>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731233008561.png" width="750px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731233008561.png" width="750px"/></dev>
+
 <h3 id="多核处理器"><a href="#多核处理器" class="headerlink" title="多核处理器"></a>多核处理器</h3><p>指将多个处理单元集成到单个 CPU 中，每个处理单元称为一个核(core)</p>
 <p>每个核可以有自己的 Cache，也可以共享一个 Cache</p>
 <p>所有核通常是对称的，且共享主存储器，因此多核属于共享存储的对称多处理器</p>
 <blockquote>
 <p>因为多核 CPU 的各核心通常都是对称的，因此 2.4GHz 双核 CPU 中两个核的主频也是 2.4GHz</p>
 </blockquote>
-<p><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731233842494.png" width="350px"/>&lt;/dev&gt;</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230731233842494.png" width="350px"/></dev>
+
 <p>采用多核 CPU 可以降低计算机系统的功耗（相较于提高主频）和体积（相较于多个处理器）</p>
 <p>一般采用偶数路 CPU</p>
 <h3 id="共享内存多处理器"><a href="#共享内存多处理器" class="headerlink" title="共享内存多处理器"></a>共享内存多处理器</h3><p>具有共享的单一物理地址空间的多处理器被称为共享内存多处理器 SMP</p>
@@ -1328,7 +1384,7 @@
 <li>计算机字长 n 位，n 位 CPU，都是指数据字长</li>
 <li>主存地址位数取决于存储器字数</li>
 </ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2024/01/06/CO5_%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">https://zerooo.top/2024/01/06/CO5_%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/01/06/CO6_%E6%80%BB%E7%BA%BF/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">总线 | CO</div></div></a></div><div class="next-post pull-right"><a href="/2024/01/06/CO4_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">指令系统 | CO</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/01/06/CO7_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/" title="输入输出系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">输入输出系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" title="计算机系统概述 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">计算机系统概述 | CO</div></div></a></div><div><a href="/2024/01/06/CO2_%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97/" title="数据的表示与运算 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">数据的表示与运算 | CO</div></div></a></div><div><a href="/2024/01/06/CO6_%E6%80%BB%E7%BA%BF/" title="总线 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">总线 | CO</div></div></a></div><div><a href="/2024/01/06/CO4_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" title="指令系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">指令系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO3_%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" title="存储系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">存储系统 | CO</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU-%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">CPU 的功能和基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU-%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.</span> <span class="toc-text">CPU 的功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.1.</span> <span class="toc-text">控制器的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.2.</span> <span class="toc-text">运算器的功能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU-%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">CPU 的基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.1.</span> <span class="toc-text">运算器的结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.2.</span> <span class="toc-text">控制器的结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">指令执行过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F"><span class="toc-number">2.1.</span> <span class="toc-text">指令周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.</span> <span class="toc-text">指令周期的数据流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%96%E6%8C%87%E5%91%A8%E6%9C%9F%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.1.</span> <span class="toc-text">取指周期数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%B4%E5%9D%80%E5%91%A8%E6%9C%9F%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.2.</span> <span class="toc-text">间址周期数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E5%91%A8%E6%9C%9F%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.3.</span> <span class="toc-text">执行周期数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E5%91%A8%E6%9C%9F%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.4.</span> <span class="toc-text">中断周期数据流</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%96%B9%E6%A1%88"><span class="toc-number">2.3.</span> <span class="toc-text">指令执行方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F"><span class="toc-number">2.3.1.</span> <span class="toc-text">单指令周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F"><span class="toc-number">2.3.2.</span> <span class="toc-text">多指令周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%96%B9%E6%A1%88"><span class="toc-number">2.3.3.</span> <span class="toc-text">流水线方案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">数据通路的功能和基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">3.1.</span> <span class="toc-text">数据通路的功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">3.2.</span> <span class="toc-text">数据通路的基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E6%A6%82%E5%BF%B5"><span class="toc-number">3.2.1.</span> <span class="toc-text">补充概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-%E5%86%85%E9%83%A8%E5%8D%95%E6%80%BB%E7%BA%BF%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.2.</span> <span class="toc-text">CPU 内部单总线方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-%E5%86%85%E9%83%A8%E4%B8%89%E6%80%BB%E7%BA%BF%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.3.</span> <span class="toc-text">CPU 内部三总线方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%93%E7%94%A8%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.4.</span> <span class="toc-text">专用数据通路方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">3.3.</span> <span class="toc-text">单周期处理器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">控制器的功能和工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E5%92%8C%E5%8A%9F%E8%83%BD"><span class="toc-number">4.1.</span> <span class="toc-text">控制器的结构和功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E5%B8%83%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-number">4.2.</span> <span class="toc-text">硬布线控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AC%E5%B8%83%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%8D%95%E5%85%83%E5%9B%BE"><span class="toc-number">4.2.1.</span> <span class="toc-text">硬布线控制单元图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%BA%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">4.2.2.</span> <span class="toc-text">时序控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F"><span class="toc-number">4.2.3.</span> <span class="toc-text">CPU 控制方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.2.4.</span> <span class="toc-text">设计步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.2.5.</span> <span class="toc-text">设计实例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-number">4.3.</span> <span class="toc-text">微程序控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">4.3.1.</span> <span class="toc-text">微程序控制的基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E6%8C%87%E4%BB%A4%E7%9A%84%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F-%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F"><span class="toc-number">4.3.2.</span> <span class="toc-text">微指令的编码方式&#x2F;控制方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E6%8C%87%E4%BB%A4%E7%9A%84%E5%9C%B0%E5%9D%80%E5%BD%A2%E6%88%90%E6%96%B9%E5%BC%8F"><span class="toc-number">4.3.3.</span> <span class="toc-text">微指令的地址形成方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E6%8C%87%E4%BB%A4%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.3.4.</span> <span class="toc-text">微指令的格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%99%A8%E7%BB%84%E6%88%90%E5%92%8C%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="toc-number">4.3.5.</span> <span class="toc-text">微程序控制器组成和工作过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%8D%95%E5%85%83%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.3.6.</span> <span class="toc-text">微程序控制单元的设计步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%BE%AE%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%92%8C%E6%AF%AB%E5%BE%AE%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">4.3.7.</span> <span class="toc-text">动态微程序设计和毫微程序设计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E5%B8%83%E7%BA%BF-vs-%E5%BE%AE%E7%A8%8B%E5%BA%8F"><span class="toc-number">4.4.</span> <span class="toc-text">硬布线 vs 微程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E6%9C%BA%E5%88%B6"><span class="toc-number">5.</span> <span class="toc-text">异常和中断机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="toc-number">6.</span> <span class="toc-text">指令流水线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">6.1.</span> <span class="toc-text">指令流水线的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%9E%E7%8E%B0"><span class="toc-number">6.2.</span> <span class="toc-text">流水线的基本实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%80%E9%9C%80%E9%83%A8%E4%BB%B6"><span class="toc-number">6.2.1.</span> <span class="toc-text">所需部件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E4%BF%A1%E5%8F%B7"><span class="toc-number">6.2.2.</span> <span class="toc-text">控制信号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">6.2.3.</span> <span class="toc-text">执行过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%86%92%E9%99%A9%E4%B8%8E%E5%A4%84%E7%90%86"><span class="toc-number">6.3.</span> <span class="toc-text">流水线的冒险与处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%86%92%E9%99%A9"><span class="toc-number">6.3.1.</span> <span class="toc-text">结构冒险</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A9"><span class="toc-number">6.3.2.</span> <span class="toc-text">数据冒险</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%86%92%E9%99%A9"><span class="toc-number">6.3.3.</span> <span class="toc-text">控制冒险</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">6.4.</span> <span class="toc-text">流水线的性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%9E%E5%90%90%E7%8E%87-TP"><span class="toc-number">6.4.1.</span> <span class="toc-text">吞吐率 TP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E9%80%9F%E6%AF%94-S"><span class="toc-number">6.4.2.</span> <span class="toc-text">加速比 S</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%88%E7%8E%87-E"><span class="toc-number">6.4.3.</span> <span class="toc-text">效率 E</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF"><span class="toc-number">6.5.</span> <span class="toc-text">高级流水线技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E6%A0%87%E9%87%8F%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF"><span class="toc-number">6.5.1.</span> <span class="toc-text">超标量流水线技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF"><span class="toc-number">6.5.2.</span> <span class="toc-text">超流水线技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%95%BF%E6%8C%87%E4%BB%A4%E5%AD%97"><span class="toc-number">6.5.3.</span> <span class="toc-text">超长指令字</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">7.</span> <span class="toc-text">多处理器的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SISD%E3%80%81SIMD%E3%80%81MIMD"><span class="toc-number">7.1.</span> <span class="toc-text">SISD、SIMD、MIMD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">7.2.</span> <span class="toc-text">硬件多线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">7.3.</span> <span class="toc-text">多核处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">7.4.</span> <span class="toc-text">共享内存多处理器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0"><span class="toc-number">8.</span> <span class="toc-text">刷题笔记</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图 | DS"/></a><div class="content"><a class="title" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS">图 | DS</a><time datetime="2024-01-26T01:31:06.000Z" title="发表于 2024-01-26 09:31:06">2024-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树 | DS"/></a><div class="content"><a class="title" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS">树 | DS</a><time datetime="2024-01-12T01:14:08.000Z" title="发表于 2024-01-12 09:14:08">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用算法模板"/></a><div class="content"><a class="title" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板">常用算法模板</a><time datetime="2024-01-11T09:50:08.000Z" title="发表于 2024-01-11 17:50:08">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="栈、队列和数组 | DS"/></a><div class="content"><a class="title" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS">栈、队列和数组 | DS</a><time datetime="2024-01-11T01:16:04.000Z" title="发表于 2024-01-11 09:16:04">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线性表 | DS"/></a><div class="content"><a class="title" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS">线性表 | DS</a><time datetime="2024-01-10T01:34:05.000Z" title="发表于 2024-01-10 09:34:05">2024-01-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2024/01/06/CO5_%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">https://zerooo.top/2024/01/06/CO5_%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/01/06/CO6_%E6%80%BB%E7%BA%BF/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">总线 | CO</div></div></a></div><div class="next-post pull-right"><a href="/2024/01/06/CO4_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">指令系统 | CO</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/01/06/CO7_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F/" title="输入输出系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">输入输出系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO2_%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97/" title="数据的表示与运算 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">数据的表示与运算 | CO</div></div></a></div><div><a href="/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" title="计算机系统概述 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">计算机系统概述 | CO</div></div></a></div><div><a href="/2024/01/06/CO6_%E6%80%BB%E7%BA%BF/" title="总线 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">总线 | CO</div></div></a></div><div><a href="/2024/01/06/CO3_%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" title="存储系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">存储系统 | CO</div></div></a></div><div><a href="/2024/01/06/CO4_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" title="指令系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-06</div><div class="title">指令系统 | CO</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU-%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">CPU 的功能和基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU-%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.</span> <span class="toc-text">CPU 的功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.1.</span> <span class="toc-text">控制器的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.2.</span> <span class="toc-text">运算器的功能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU-%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">CPU 的基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.1.</span> <span class="toc-text">运算器的结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.2.</span> <span class="toc-text">控制器的结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">指令执行过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F"><span class="toc-number">2.1.</span> <span class="toc-text">指令周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.</span> <span class="toc-text">指令周期的数据流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%96%E6%8C%87%E5%91%A8%E6%9C%9F%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.1.</span> <span class="toc-text">取指周期数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%B4%E5%9D%80%E5%91%A8%E6%9C%9F%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.2.</span> <span class="toc-text">间址周期数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E5%91%A8%E6%9C%9F%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.3.</span> <span class="toc-text">执行周期数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E5%91%A8%E6%9C%9F%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-number">2.2.4.</span> <span class="toc-text">中断周期数据流</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%96%B9%E6%A1%88"><span class="toc-number">2.3.</span> <span class="toc-text">指令执行方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F"><span class="toc-number">2.3.1.</span> <span class="toc-text">单指令周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F"><span class="toc-number">2.3.2.</span> <span class="toc-text">多指令周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%96%B9%E6%A1%88"><span class="toc-number">2.3.3.</span> <span class="toc-text">流水线方案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">数据通路的功能和基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">3.1.</span> <span class="toc-text">数据通路的功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">3.2.</span> <span class="toc-text">数据通路的基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E6%A6%82%E5%BF%B5"><span class="toc-number">3.2.1.</span> <span class="toc-text">补充概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-%E5%86%85%E9%83%A8%E5%8D%95%E6%80%BB%E7%BA%BF%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.2.</span> <span class="toc-text">CPU 内部单总线方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-%E5%86%85%E9%83%A8%E4%B8%89%E6%80%BB%E7%BA%BF%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.3.</span> <span class="toc-text">CPU 内部三总线方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%93%E7%94%A8%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.4.</span> <span class="toc-text">专用数据通路方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">3.3.</span> <span class="toc-text">单周期处理器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">控制器的功能和工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E5%92%8C%E5%8A%9F%E8%83%BD"><span class="toc-number">4.1.</span> <span class="toc-text">控制器的结构和功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E5%B8%83%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-number">4.2.</span> <span class="toc-text">硬布线控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AC%E5%B8%83%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%8D%95%E5%85%83%E5%9B%BE"><span class="toc-number">4.2.1.</span> <span class="toc-text">硬布线控制单元图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%BA%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">4.2.2.</span> <span class="toc-text">时序控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F"><span class="toc-number">4.2.3.</span> <span class="toc-text">CPU 控制方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.2.4.</span> <span class="toc-text">设计步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.2.5.</span> <span class="toc-text">设计实例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-number">4.3.</span> <span class="toc-text">微程序控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">4.3.1.</span> <span class="toc-text">微程序控制的基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E6%8C%87%E4%BB%A4%E7%9A%84%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F-%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F"><span class="toc-number">4.3.2.</span> <span class="toc-text">微指令的编码方式&#x2F;控制方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E6%8C%87%E4%BB%A4%E7%9A%84%E5%9C%B0%E5%9D%80%E5%BD%A2%E6%88%90%E6%96%B9%E5%BC%8F"><span class="toc-number">4.3.3.</span> <span class="toc-text">微指令的地址形成方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E6%8C%87%E4%BB%A4%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.3.4.</span> <span class="toc-text">微指令的格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%99%A8%E7%BB%84%E6%88%90%E5%92%8C%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="toc-number">4.3.5.</span> <span class="toc-text">微程序控制器组成和工作过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E5%8D%95%E5%85%83%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.3.6.</span> <span class="toc-text">微程序控制单元的设计步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%BE%AE%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%92%8C%E6%AF%AB%E5%BE%AE%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">4.3.7.</span> <span class="toc-text">动态微程序设计和毫微程序设计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E5%B8%83%E7%BA%BF-vs-%E5%BE%AE%E7%A8%8B%E5%BA%8F"><span class="toc-number">4.4.</span> <span class="toc-text">硬布线 vs 微程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E6%9C%BA%E5%88%B6"><span class="toc-number">5.</span> <span class="toc-text">异常和中断机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="toc-number">6.</span> <span class="toc-text">指令流水线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">6.1.</span> <span class="toc-text">指令流水线的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%9E%E7%8E%B0"><span class="toc-number">6.2.</span> <span class="toc-text">流水线的基本实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%80%E9%9C%80%E9%83%A8%E4%BB%B6"><span class="toc-number">6.2.1.</span> <span class="toc-text">所需部件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E4%BF%A1%E5%8F%B7"><span class="toc-number">6.2.2.</span> <span class="toc-text">控制信号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">6.2.3.</span> <span class="toc-text">执行过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%86%92%E9%99%A9%E4%B8%8E%E5%A4%84%E7%90%86"><span class="toc-number">6.3.</span> <span class="toc-text">流水线的冒险与处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%86%92%E9%99%A9"><span class="toc-number">6.3.1.</span> <span class="toc-text">结构冒险</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%86%92%E9%99%A9"><span class="toc-number">6.3.2.</span> <span class="toc-text">数据冒险</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%86%92%E9%99%A9"><span class="toc-number">6.3.3.</span> <span class="toc-text">控制冒险</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">6.4.</span> <span class="toc-text">流水线的性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%9E%E5%90%90%E7%8E%87-TP"><span class="toc-number">6.4.1.</span> <span class="toc-text">吞吐率 TP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E9%80%9F%E6%AF%94-S"><span class="toc-number">6.4.2.</span> <span class="toc-text">加速比 S</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%88%E7%8E%87-E"><span class="toc-number">6.4.3.</span> <span class="toc-text">效率 E</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF"><span class="toc-number">6.5.</span> <span class="toc-text">高级流水线技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E6%A0%87%E9%87%8F%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF"><span class="toc-number">6.5.1.</span> <span class="toc-text">超标量流水线技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80%E6%9C%AF"><span class="toc-number">6.5.2.</span> <span class="toc-text">超流水线技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%95%BF%E6%8C%87%E4%BB%A4%E5%AD%97"><span class="toc-number">6.5.3.</span> <span class="toc-text">超长指令字</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">7.</span> <span class="toc-text">多处理器的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SISD%E3%80%81SIMD%E3%80%81MIMD"><span class="toc-number">7.1.</span> <span class="toc-text">SISD、SIMD、MIMD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">7.2.</span> <span class="toc-text">硬件多线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">7.3.</span> <span class="toc-text">多核处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">7.4.</span> <span class="toc-text">共享内存多处理器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0"><span class="toc-number">8.</span> <span class="toc-text">刷题笔记</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图 | DS"/></a><div class="content"><a class="title" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS">图 | DS</a><time datetime="2024-01-26T01:31:06.000Z" title="发表于 2024-01-26 09:31:06">2024-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树 | DS"/></a><div class="content"><a class="title" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS">树 | DS</a><time datetime="2024-01-12T01:14:08.000Z" title="发表于 2024-01-12 09:14:08">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用算法模板"/></a><div class="content"><a class="title" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板">常用算法模板</a><time datetime="2024-01-11T09:50:08.000Z" title="发表于 2024-01-11 17:50:08">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="栈、队列和数组 | DS"/></a><div class="content"><a class="title" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS">栈、队列和数组 | DS</a><time datetime="2024-01-11T01:16:04.000Z" title="发表于 2024-01-11 09:16:04">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线性表 | DS"/></a><div class="content"><a class="title" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS">线性表 | DS</a><time datetime="2024-01-10T01:34:05.000Z" title="发表于 2024-01-10 09:34:05">2024-01-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
