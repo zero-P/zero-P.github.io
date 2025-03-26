@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>拓展 | CO | ZERO</title><meta name="keywords" content="计算机组成原理"><meta name="author" content="zero"><meta name="copyright" content="zero"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="逻辑运算相关逻辑运算符&amp;：按位与    |：按位或    ^：按位异或 &amp;&amp;：逻辑与    ||：逻辑或    !：逻辑非 逻辑表达式   逻辑门电路符号   CPU 架构名词x86 指 Intel 8086 处理器及其后续版本的架构系列。 最初是 16 位处理器，后来也包括了 32 位和 64 位版本。 x86 处理器均向下兼容。 Intel 为防止竞争对手的 x86 兼">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>拓展 | CO | ZERO</title><meta name="keywords" content="计算机组成原理"><meta name="author" content="zero"><meta name="copyright" content="zero"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="逻辑运算相关  逻辑运算符 &amp;：按位与    |：按位或    ^：按位异或 &amp;&amp;：逻辑与    ||：逻辑或    !：逻辑非  逻辑表达式   逻辑门电路符号   CPU 架构名词 x86 指 Intel 8086 处理器及其后续版本的架构系列。 最初是 16 位处理器，后来也包括了 32 位和 64 位版本。 x86 处理器均向下兼容。 Intel 为防止竞争对手的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拓展 | CO">
 <meta property="og:url" content="https://zerooo.top/2025/03/26/%E6%8B%93%E5%B1%95-CO/index.html">
 <meta property="og:site_name" content="ZERO">
-<meta property="og:description" content="逻辑运算相关逻辑运算符&amp;：按位与    |：按位或    ^：按位异或 &amp;&amp;：逻辑与    ||：逻辑或    !：逻辑非 逻辑表达式   逻辑门电路符号   CPU 架构名词x86 指 Intel 8086 处理器及其后续版本的架构系列。 最初是 16 位处理器，后来也包括了 32 位和 64 位版本。 x86 处理器均向下兼容。 Intel 为防止竞争对手的 x86 兼">
+<meta property="og:description" content="逻辑运算相关  逻辑运算符 &amp;：按位与    |：按位或    ^：按位异或 &amp;&amp;：逻辑与    ||：逻辑或    !：逻辑非  逻辑表达式   逻辑门电路符号   CPU 架构名词 x86 指 Intel 8086 处理器及其后续版本的架构系列。 最初是 16 位处理器，后来也包括了 32 位和 64 位版本。 x86 处理器均向下兼容。 Intel 为防止竞争对手的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg">
 <meta property="article:published_time" content="2025-03-26T09:17:39.000Z">
@@ -151,15 +151,16 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">拓展 | CO</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:17:39.000Z" title="发表于 2025-03-26 17:17:39">2025-03-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:21:09.284Z" title="更新于 2025-03-26 17:21:09">2025-03-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="拓展 | CO"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="逻辑运算相关"><a href="#逻辑运算相关" class="headerlink" title="逻辑运算相关"></a>逻辑运算相关</h2><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p><code>&amp;</code>：按位与    <code>|</code>：按位或    <code>^</code>：按位异或</p>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">拓展 | CO</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:17:39.000Z" title="发表于 2025-03-26 17:17:39">2025-03-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:21:09.284Z" title="更新于 2025-03-26 17:21:09">2025-03-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="拓展 | CO"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="逻辑运算相关"><a class="markdownIt-Anchor" href="#逻辑运算相关"></a> 逻辑运算相关</h2>
+<h3 id="逻辑运算符"><a class="markdownIt-Anchor" href="#逻辑运算符"></a> 逻辑运算符</h3>
+<p><code>&amp;</code>：按位与    <code>|</code>：按位或    <code>^</code>：按位异或</p>
 <p><code>&amp;&amp;</code>：逻辑与    <code>||</code>：逻辑或    <code>!</code>：逻辑非</p>
-<h3 id="逻辑表达式"><a href="#逻辑表达式" class="headerlink" title="逻辑表达式"></a>逻辑表达式</h3><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/262255016732985iouytre.png" width="700px"/></dev>
-
-
-<h3 id="逻辑门电路符号"><a href="#逻辑门电路符号" class="headerlink" title="逻辑门电路符号"></a>逻辑门电路符号</h3><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/duiosvrw1234zxpoci.png" width="800px"/></dev>
-
-
-<h2 id="CPU-架构名词"><a href="#CPU-架构名词" class="headerlink" title="CPU 架构名词"></a>CPU 架构名词</h2><p><strong><u>x86</u></strong></p>
+<h3 id="逻辑表达式"><a class="markdownIt-Anchor" href="#逻辑表达式"></a> 逻辑表达式</h3>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/262255016732985iouytre.png" width="700px"/></dev>
+<h3 id="逻辑门电路符号"><a class="markdownIt-Anchor" href="#逻辑门电路符号"></a> 逻辑门电路符号</h3>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/duiosvrw1234zxpoci.png" width="800px"/></dev>
+<h2 id="cpu-架构名词"><a class="markdownIt-Anchor" href="#cpu-架构名词"></a> CPU 架构名词</h2>
+<p><strong><u>x86</u></strong></p>
 <p>指 Intel 8086 处理器及其后续版本的架构系列。</p>
 <p>最初是 16 位处理器，后来也包括了 32 位和 64 位版本。</p>
 <p>x86 处理器均向下兼容。</p>
@@ -175,17 +176,22 @@
 <p><strong><u>IA-64</u></strong></p>
 <p>一种设计完全不同于 x86 架构的 64 位处理器架构，主要用于高性能计算和企业级服务器。</p>
 <p>不兼容 x86-64，更别说 IA-32。被 AMD 抢先发布 x86-64 就是因为 Intel 当时重心放在对 64 位需求更加强劲的企业服务器和高性能计算机市场上。</p>
-<h2 id="IA-32、Linux-基础知识点补充"><a href="#IA-32、Linux-基础知识点补充" class="headerlink" title="IA-32、Linux 基础知识点补充"></a>IA-32、Linux 基础知识点补充</h2><h3 id="特权级的检查"><a href="#特权级的检查" class="headerlink" title="特权级的检查"></a>特权级的检查</h3><p><strong><u>访问门时的特权级检查</u></strong></p>
+<h2 id="ia-32-linux-基础知识点补充"><a class="markdownIt-Anchor" href="#ia-32-linux-基础知识点补充"></a> IA-32、Linux 基础知识点补充</h2>
+<h3 id="特权级的检查"><a class="markdownIt-Anchor" href="#特权级的检查"></a> 特权级的检查</h3>
+<p><strong><u>访问门时的特权级检查</u></strong></p>
 <p>访问门时，CPL ≤ DPL[门] &amp;&amp; CPL ≥ DPL[段]：</p>
 <ul>
-<li><p>对于受访者为数据段</p>
+<li>
+<p>对于受访者为数据段</p>
 <p>只有访问者的权限大于等于该数据段 DPL 表示的最低权限才能够继续访问（数值上 CPL ≤ 数据段的 DPL）。</p>
 </li>
-<li><p>对于受访者为非一致性代码段</p>
+<li>
+<p>对于受访者为非一致性代码段</p>
 <p>只有访问者的权限等于该代码段 DPL 表示的最低权限才能够继续访问，即只能平级访问，任何权限大于或小于它的访问者都将被 CPU 拒之门外。</p>
 <p>“受访者为代码段” 实际是指 CPU 从访问者所在的代码段转移到该代码段去执行，而 “访问” 非一致性代码段除了会转移去执行它外，会将 CPL 用该代码段的 DPL 替换。但是除了从中断处理过程返回外，任何时候 CPU 都不允许从高特权级转移到低特权级，因为 CPU 没有理由自降等级后再去做某事（为了助记，可以简单理解为低特权级能做的高特权级也能做，高特权级不需要找低特权级帮忙）。所以访问非一致性代码段只能平级访问。</p>
 </li>
-<li><p>对于受访者为一致性代码段</p>
+<li>
+<p>对于受访者为一致性代码段</p>
 <p>只有访问者的权限小于等于该 DPL 表示的最低权限才能够继续访问（数值上 CPL ≥ 一致性代码段的 DPL）。</p>
 <p>一致性代码段又称为依从代码段，其一大特点就是转移后的特权级不会用自己的 DPL 替换，而是保持转移前的低特权级，这就是它称为 “一致、依从” 的原因。所以尽管看上去在低特权级可以访问高特权级有点倒反天罡，实际上并没有提升特权级，只是可以跑到特权级更高的代码段中去执行指令。</p>
 </li>
@@ -193,13 +199,12 @@
 <p><u><strong>访问段时的特权级检查</strong></u></p>
 <p>访问段时，MAX(CPL, RPL) ≤ DPL[段]。访问者任何时候都不允许访问比自己特权更高的资源，无论受访资源时数据还是代码。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240827175630733.png" width="600px"/></dev>
-
-
 <p>选择子中的 RPL 会不会被用户进程伪造？一般情况下，选择子都是由操作系统提供的。比如说在平坦模型下，整个 4GB 内存是一个段，操作系统为所有用户进程构建了两个用户级的 RPL 为 3 的选择子，分别指向 4GB 的用户数据段和 4GB 的用户代码段。因为用户程序在自己的虚拟地址空间中运行，各用户进程的虚拟地址不冲突，所以各用户进程共用这两个选择子就够了，也就是说各用户进程在申请系统服务时无需提供选择子。如果需要提交选择子作为参数，为安全起见，操作系统会把选择子中的 RPL 改为用户进程的 CPL，而用户进程的 CPL 不可能伪造，它起始是由操作系统在加载用户程序时赋予的，记录在 CS 段寄存器中的低 2 位，就是 RPL 的位置，而 CS 寄存器只能通过 <code>call</code>、<code>jmp</code>、<code>ret</code>、<code>int</code>、<code>sysenter</code> 等指令修改。</p>
-<h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p>IA-32 处理器主要有两种工作模式：实地址模式、保护模式。</p>
+<h3 id="工作模式"><a class="markdownIt-Anchor" href="#工作模式"></a> 工作模式</h3>
+<p>IA-32 处理器主要有两种工作模式：实地址模式、保护模式。</p>
 <p><strong><u>实地址模式</u></strong></p>
 <p>实地址模式是为与 8086/8088 兼容而设置的，在加电或复位时处于这一模式。此模式下的存储管理、中断控制以及应用程序运行环境等都与 8086/8088 相同。</p>
-<p>其最大寻址空间为 1MB，32 条地址线中的 $A_{31}$<del>$A_{20}$ 不起作用。存储管理采用分段方式，每段的最大地址空间为 64KB，物理地址由段地址乘以 16 加上偏移地址构成，其中段地址位于段寄存器中，偏移地址用来指定段内一个存储单元。例如，当前指令地址为 (CS) &lt;&lt; 4 + (IP)，其中 CS (Code Segment) 为代码段寄存器，用于存放当前代码段地址，IP 寄存器中存放的是当前指令在代码段内的偏移地址。内存区 00000H</del>003FFH 存放中断向量表，共存放 256 个中断向量，采用 8086/8088 的中断类型和中断处理方式。</p>
+<p>其最大寻址空间为 1MB，32 条地址线中的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>31</mn></msub></mrow><annotation encoding="application/x-tex">A_{31}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>~<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>20</mn></msub></mrow><annotation encoding="application/x-tex">A_{20}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 不起作用。存储管理采用分段方式，每段的最大地址空间为 64KB，物理地址由段地址乘以 16 加上偏移地址构成，其中段地址位于段寄存器中，偏移地址用来指定段内一个存储单元。例如，当前指令地址为 (CS) &lt;&lt; 4 + (IP)，其中 CS (Code Segment) 为代码段寄存器，用于存放当前代码段地址，IP 寄存器中存放的是当前指令在代码段内的偏移地址。内存区 00000H~003FFH 存放中断向量表，共存放 256 个中断向量，采用 8086/8088 的中断类型和中断处理方式。</p>
 <p><u><strong>保护模式</strong></u></p>
 <p>保护模式的引入是为了实现在多任务方式下对不同任务使用的虚拟存储空间进行完全的隔离，以保证不同任务之间不会相互破坏各自的代码和数据。保护模式是 80286 以上微处理器最常用的工作模式。系统启动后总是先进入实地址模式，对系统进行初始化，然后转入保护模式进行操作。在保护模式下，处理器采用虚拟存储器管理方式。</p>
 <p>IA-32 采用段页式虚拟存储管理方式，CPU 首先通过分段方式得到线性地址 LA，再通过分页方式实现从线性地址到物理地址的转换。</p>
@@ -209,12 +214,11 @@
 <blockquote>
 <p>Linux 中，无论是进程还是线程，到了内核里，统一都叫任务 Task。</p>
 </blockquote>
-<h3 id="地址转换相关"><a href="#地址转换相关" class="headerlink" title="地址转换相关"></a>地址转换相关</h3><p>在保护模式下，IA-32 采用段页式虚拟存储管理方式，存储空间采用逻辑地址、线性地址和物理地址来进行描述。</p>
+<h3 id="地址转换相关"><a class="markdownIt-Anchor" href="#地址转换相关"></a> 地址转换相关</h3>
+<p>在保护模式下，IA-32 采用段页式虚拟存储管理方式，存储空间采用逻辑地址、线性地址和物理地址来进行描述。</p>
 <p>IA-32 中的虚拟地址由 48 位组成，包含 16 位的段选择符和 32 位的段内偏移量（即有效地址）。为了便于多用户、多任务下的存储管理，IA-32 采用在分段基础上的分页机制。分段过程实现将逻辑地址转换为线性地址，分页过程再实现将线性地址转换为物理地址。</p>
 <p><strong><u>段选择符/段选择子</u></strong></p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240823172603475.png" width="180px"/></dev>
-
-
 <p>TI 表示段选择符选择哪一个段描述符表，TI = 0 表示选择全局描述符表 GDT，TI = 1 表示选择局部描述符表 LDT。</p>
 <p>RPL 用来定义段选择符的特权等级，若 RPL = 00 则为第 0 级（内核态），若 RPL = 11 则为第 3 级（用户态）。</p>
 <p>高 13 位的索引值用来确定当前使用的段描述符在描述符表中的位置，表示是其中的第几个段表项。</p>
@@ -227,8 +231,6 @@
 </ul>
 <p>一个段描述符占用 8 个字节，包括 32 位的基地址、20 位的限界限及一些特征位。段描述符的一般格式如下：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240823174844710.png" width="600px"/></dev>
-
-
 <p>G 表示粒度大小，G = 1 说明段以页（4KB）为基本单位，G = 0 则段以字节为基本单位。</p>
 <p>D = 0 表示地址和数据为 16 位宽，D = 1 表示地址和数据为 32 位宽。</p>
 <p>P 说明段是否已在主存中。P = 1 表示存在，P = 0 表示不存在。Linux 总是把 P 置 1，因为它从来不会把一个段交换到磁盘上而是以页为单位进行交换。</p>
@@ -239,8 +241,6 @@
 <p>AVL 可以由操作系统定义使用。Linux 忽略该字段。</p>
 <p>四种门描述符格式如下：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240829232026618.png" width="800px"/></dev>
-
-
 <p><b><u>段描述符表</u></b></p>
 <p>段描述符表实际上就是分段方式下的段表，由段描述符组成。</p>
 <p>主要有三种类型：全局描述符表 GDT、局部描述符表 LDT、中断描述符表 IDT。</p>
@@ -252,107 +252,116 @@
 <p><strong><u>用户不可见寄存器</u></strong></p>
 <p>为了支持 IA-32 的分段机制，除了提供 6 个段寄存器外，还提供了多个用户进程不可直接访问的内部寄存器，包括描述符 cache、任务寄存器 TR、局部描述符表寄存器 LDTR、全局描述符表寄存器 GDTR 和中断描述符表寄存器 IDTR。</p>
 <ul>
-<li><p>描述符 cache</p>
+<li>
+<p>描述符 cache</p>
 <p>一组用来存放当前段描述符信息的高速缓存，每当段寄存器装入新的段选择符时，处理器将段选择符指定的一个段描述符中部分信息装人相应的描述符 cache 中。这样，在进行逻辑地址到线性地址的转换过程中，MMU 就直接用对应描述符 cache 中保存的段地址来形成线性地址 LA，而不必每次都去主存访问段表，从而大大节省访问存储器的时间（类似 TLB）。</p>
 </li>
-<li><p>全局描述符表寄存器 GDTR（48 位）</p>
+<li>
+<p>全局描述符表寄存器 GDTR（48 位）</p>
 <p>高 32 位存放 GDT 首地址，低 16 位存放限界（最大字节数）。</p>
 </li>
-<li><p>中断描述符表寄存器 IDTR（48 位）</p>
+<li>
+<p>中断描述符表寄存器 IDTR（48 位）</p>
 <p>高 32 位存放 IDT 首地址，低 16 位存放限界（最大字节数）。</p>
 </li>
 </ul>
 <blockquote>
-<p>GDT 和 IDT 的最大长度可达 $2^{16}$B = 64KB，每个段描述符占 8B，因此 GDT 和 IDT 最多可有 $2^{13}$ 个表项，对应段选择符中高 13 位的索引值。</p>
+<p>GDT 和 IDT 的最大长度可达 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>16</mn></msup></mrow><annotation encoding="application/x-tex">2^{16}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span>B = 64KB，每个段描述符占 8B，因此 GDT 和 IDT 最多可有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>13</mn></msup></mrow><annotation encoding="application/x-tex">2^{13}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span> 个表项，对应段选择符中高 13 位的索引值。</p>
 </blockquote>
 <ul>
-<li><p>局部描述符表寄存器 LDTR（16 位）</p>
+<li>
+<p>局部描述符表寄存器 LDTR（16 位）</p>
 <p>存放局部描述符表 LDT 的段选择子（LDT 需要在 GDT 中注册）。通过该选择符可把 GDT 中的 LDT 描述符中的部分信息（包括 LDT 首地址、LDT 界限和访问权限等）装入 LDT 描述符 cache 中，从而使 CPU 可以快速访问 LDT。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240823210601547.png" width="500px"/></dev>
-
-
+<p>选择子的高 13 位表示可索引的描述符范围，因此一个任务最多可定义 8192 个内存段，如果任务是用 LDT 来实现的话，最多可同时创建 8192 个任务。</p>
 </li>
-</ul>
-<p>  选择子的高 13 位表示可索引的描述符范围，因此一个任务最多可定义 8192 个内存段，如果任务是用 LDT 来实现的话，最多可同时创建 8192 个任务。</p>
-<ul>
-<li><p>任务寄存器 TR（16 位）</p>
+<li>
+<p>任务寄存器 TR（16 位）</p>
 <p>存放任务状态段 TSS 的段选择子。通过该选择符可把 GDT 中的 TSS 描述符中的部分信息（包括 TSS 首地址、TSS 界限和访问权限等）装入 TSS 描述符 cache 中，从而可以方便地对任务的状态信息进行访问。</p>
 </li>
 </ul>
 <p><u><strong>指令地址转换大致过程（段页式）</strong></u></p>
 <ul>
-<li><p>第一阶段（分段机制：逻辑地址 → 线性地址）</p>
+<li>
+<p>第一阶段（分段机制：逻辑地址 → 线性地址）</p>
 <p>CS + GDTR 可知当前任务代码段在内存中的段基址，代码段基址 + EIP 指针便形成了线性地址。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240910162907662.png" width="500px"/></dev>
 </li>
-<li><p>第二阶段（分页机制：线性地址 → 物理地址）</p>
+<li>
+<p>第二阶段（分页机制：线性地址 → 物理地址）</p>
 <p>CR3 寄存器保存了当前任务顶级页表在内存中的物理地址。</p>
 </li>
 </ul>
-<h3 id="Linux-中的-PCB"><a href="#Linux-中的-PCB" class="headerlink" title="Linux 中的 PCB"></a>Linux 中的 PCB</h3><p><u><strong>task_struct</strong></u></p>
+<h3 id="linux-中的-pcb"><a class="markdownIt-Anchor" href="#linux-中的-pcb"></a> Linux 中的 PCB</h3>
+<p><u><strong>task_struct</strong></u></p>
 <p>进程控制块 PCB 有时也被称作进程描述符，Linux 内核中进程描述符对应的数据结构为 <code>task_struct</code>。</p>
 <p><code>task_struct</code> 成员很多，包括进程标识、进程状态、进程内核栈指针、进程调度信息、亲缘进程指针、文件描述符、内存描述符（表示进程的地址空间）、I/O 调度信息、进程通信机制等等，内容符合 PCB 的定义。</p>
 <p><strong><u>thread_info</u></strong></p>
 <p>实际上 <code>task_struct</code> 存储的是通用的 PCB 信息。因为 Linux 内核是支持不同体系的，但是不同的体系结构可能进程需要存储的信息不尽相同，这就需要将体系结构相关的部分和无关的部分进行分离，Linux 中使用 <code>thread_info</code> 存储体系架构有关的进程信息，可视为对 <code>task_struct</code> 结构的补充。该结构的定义因不同的处理器而不同，大多数系统上该结构的内容类似于下列代码：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240824104614795.png" width="600px"/></dev>
-
-
-<p>注意里面的 <code>thread_info.flags</code> 与标志寄存器 flags 内容不同，<em><em>进程的请求调度标志 </em></em><code>TIF_NEED_RESCHED</code> 就在其中（表示该进程应该被抢占，需要调用 schedule 函数进行调度），而其他大部分标志是特定于硬件的，几乎不会使用；</p>
+<p>注意里面的 <code>thread_info.flags</code> 与标志寄存器 flags 内容不同，**进程的请求调度标志 **<code>TIF_NEED_RESCHED</code> 就在其中（表示该进程应该被抢占，需要调用 schedule 函数进行调度），而其他大部分标志是特定于硬件的，几乎不会使用；</p>
 <p><code>CPU</code> 说明了正在执行该进程的 CPU 数目；</p>
-<p><code>preempt_count</code> 指示进程当前是否可以被抢占； </p>
+<p><code>preempt_count</code> 指示进程当前是否可以被抢占；</p>
 <p><code>addr_limit</code> 指定进程可以使用的虚拟地址的上限（对内核线程没用）；</p>
 <p><code>restart_block</code> 用于实现信号机制。</p>
 <p><strong><u>task_struct、thread_info 和内核栈的布局</u></strong></p>
 <p>根据 <code>CONFIG_THREAD_INFO_IN_TASK</code> 的存在与否，<code>task_struct</code>、<code>thread_info</code> 、内核栈三者在内核中存在两种布局：</p>
 <ol>
-<li><p><code>thread_info</code> 结构在内核栈中（<code>CONFIG_THREAD_INFO_IN_TASK</code>= N 时）</p>
+<li>
+<p><code>thread_info</code> 结构在内核栈中（<code>CONFIG_THREAD_INFO_IN_TASK</code>= N 时）</p>
 <p><code>thread_info</code> 和栈 <code>stack</code> 在一个联合体 <code>thread_union</code> 内，共享一块内存：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/dsfhjkweduikhwegh.jpg" width="600px"/></dev>
-
-
+<p>进程描述符 <code>task_struct</code> 中的成员 <code>void *stack</code> 指向内核栈。不同的是，在 ARM 中，<code>thread_info</code> 结构体有成员 <code>struct task_struct *task</code> 指向进程描述符 <code>task_struct</code>，而 x86 中没有（x86 早期内核 3.x 版本中有，后续版本被删除）。</p>
 </li>
-</ol>
-<p>   进程描述符 <code>task_struct</code> 中的成员 <code>void *stack</code> 指向内核栈。不同的是，在 ARM 中，<code>thread_info</code> 结构体有成员 <code>struct task_struct *task</code> 指向进程描述符 <code>task_struct</code>，而 x86 中没有（x86 早期内核 3.x 版本中有，后续版本被删除）。</p>
-<ol start="2">
-<li><p><code>thread_info</code> 结构在 <code>task_struct</code> 中（<code>CONFIG_THREAD_INFO_IN_TASK</code>= Y 时）</p>
+<li>
+<p><code>thread_info</code> 结构在 <code>task_struct</code> 中（<code>CONFIG_THREAD_INFO_IN_TASK</code>= Y 时）</p>
 <p>此时 <code>thread_info</code> 是 <code>task_struct</code> 的第一个成员。<code>thread_union</code> 中只有栈，即栈和 <code>thread_info</code> 结构不再共享一块内存：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/sdfjkhsdviu8989.jpg" width="600px"/></dev>
-
 </li>
 </ol>
 <p>应当注意，<code>task_struct.stack</code> 指针，是指向栈区域内存基地址，即 <code>thread_union.stack</code> 数组基地址，既不是栈顶也不是栈底，栈顶存在寄存器 esp 中，栈底是 <code>task_struct.stack</code> + <code>THREAD_SIZE</code>。</p>
-<h2 id="异常、中断、系统调用"><a href="#异常、中断、系统调用" class="headerlink" title="异常、中断、系统调用"></a>异常、中断、系统调用</h2><h3 id="IA-32-中异常和中断的处理"><a href="#IA-32-中异常和中断的处理" class="headerlink" title="IA-32 中异常和中断的处理"></a>IA-32 中异常和中断的处理</h3><p>以下描述的情形是处理器在保护模式下运行的情况（操作系统内核已被初始化）。</p>
+<h2 id="异常-中断-系统调用"><a class="markdownIt-Anchor" href="#异常-中断-系统调用"></a> 异常、中断、系统调用</h2>
+<h3 id="ia-32-中异常和中断的处理"><a class="markdownIt-Anchor" href="#ia-32-中异常和中断的处理"></a> IA-32 中异常和中断的处理</h3>
+<p>以下描述的情形是处理器在保护模式下运行的情况（操作系统内核已被初始化）。</p>
 <p><strong><u>异常和中断的检测</u></strong></p>
 <p>在每条指令执行过程会根据执行情况判定是否发生了某种内部异常事件，在每条指令执行结束时判定是否发生了内部中断。若检测到有异常或中断发生，则进入异常和中断响应阶段。</p>
 <p><strong><u>异常和中断的响应</u></strong></p>
 <p>在此期间 CPU 的控制逻辑完成以下工作：</p>
 <ol>
-<li><p>确定检测到的异常/中断类型号 i，从 IDTR 指向的 IDT 中取出第 i 个表项 IDTi。</p>
+<li>
+<p>确定检测到的异常/中断类型号 i，从 IDTR 指向的 IDT 中取出第 i 个表项 IDTi。</p>
 </li>
-<li><p>根据 IDTi 中的段选择子，从 GDTR 指向的 GDT 中取出相应的段描述符，得到对应异常处理程序或中断服务程序所在段的 DPL、基地址等信息。</p>
+<li>
+<p>根据 IDTi 中的段选择子，从 GDTR 指向的 GDT 中取出相应的段描述符，得到对应异常处理程序或中断服务程序所在段的 DPL、基地址等信息。</p>
 <p>Linux 下内核代码段的 DPL 为 0，基地址为 0。</p>
 <blockquote>
 <p>Linux 为了使得它能够移植到绝大多数流行的处理器平台，简化了段页式虚拟存储管理。因为 RISC 体系结构对分段的支持非常有限，所以 Linux 仅使用了 IA-32 架构中的分页机制，而对于分段机制，则通过初始化时将所有段描述符的基地址来简化其功能。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240827161415327.png" width="700px"/></dev>
 </blockquote>
 </li>
-<li><p>将当前特权级 CPL（CS 寄存器最低两位）与段描述符中的 DPL 比较。若 CPL 小于 DPL，则产生 13 号异常 #GP（一般性保护错）。</p>
+<li>
+<p>将当前特权级 CPL（CS 寄存器最低两位）与段描述符中的 DPL 比较。若 CPL 小于 DPL，则产生 13 号异常 #GP（一般性保护错）。</p>
 <p>Linux 中，内核代码段的 DPL 总是 0，因此不会发生 CPL 小于 DPL 的情况。</p>
 <p>对于编程异常（陷阱指令引起），还需进一步做以下检查：若 IDTi 门描述符中的 DPL 小于 CPL，则产生 13 号异常。这个检查主要是为了防止恶意应用程序通过 <code>int n</code> 指令模拟非法异常和中断以进入内核态执行非法的破坏性操作。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240827170038155.png" width="230px"/></dev>
 </li>
-<li><p>检查是否发生了特权级变化，即 CPL 是否与相应段描述符中的 DPL 不同。如果是的话，就需要从用户态切换至内核态，以使用内核对应的栈。通过以下步骤完成栈的切换：</p>
+<li>
+<p>检查是否发生了特权级变化，即 CPL 是否与相应段描述符中的 DPL 不同。如果是的话，就需要从用户态切换至内核态，以使用内核对应的栈。通过以下步骤完成栈的切换：</p>
 <p>① 读 TR 寄存器，以访问正在运行进程的 TSS 段；</p>
 <p>② 将 TSS 段中保存的内核栈的段选择子 <code>ss0</code> 和栈指针 <code>esp0</code> 分别装入寄存器 SS 和 ESP，然后在内核栈中保存原来的用户栈的 SS 和 ESP。</p>
 <p>显然用户栈的 SS 和 ESP 需要先临时保存在某个地方（Linux 存放在 per-CPU 变量中），以防被内核栈的段选择子和栈指针覆盖而找不到。</p>
 </li>
-<li><p>如果发生的是故障，则将发生故障的指令的逻辑地址写入 CS 和 EIP，以保证故障处理后能回到发生故障的指令执行。</p>
+<li>
+<p>如果发生的是故障，则将发生故障的指令的逻辑地址写入 CS 和 EIP，以保证故障处理后能回到发生故障的指令执行。</p>
 </li>
-<li><p>在当前栈中保存 EFLAGS、CS 和 EIP 寄存器的内容。若是中断门，则将 EFLAGS 寄存器中的 IF 清 0（关中断）。</p>
+<li>
+<p>在当前栈中保存 EFLAGS、CS 和 EIP 寄存器的内容。若是中断门，则将 EFLAGS 寄存器中的 IF 清 0（关中断）。</p>
 </li>
-<li><p>如果异常产生了一个硬件出错码，则将其保存在内核栈中。</p>
+<li>
+<p>如果异常产生了一个硬件出错码，则将其保存在内核栈中。</p>
 </li>
-<li><p>将 IDTi 中的段选择符装入 CS，IDTi 中的偏移地址装入 EIP，它们是异常处理程序或中断服务程序第一条指令的逻辑地址。</p>
+<li>
+<p>将 IDTi 中的段选择符装入 CS，IDTi 中的偏移地址装入 EIP，它们是异常处理程序或中断服务程序第一条指令的逻辑地址。</p>
 </li>
 </ol>
 <p>这样，从下一个时钟开始，就执行异常处理程序或中断服务程序的第一条指令。</p>
@@ -360,13 +369,17 @@
 <p>在异常处理程序或中断服务程序中，处理完异常或中断后，通过执行最后一条指令 IRET（即中断返回指令）回到原被中断的进程继续执行。</p>
 <p>CPU 在执行 <code>IRET</code> 指令的过程中完成以下工作：</p>
 <ol>
-<li><p>从内核栈中弹出 EIP、CS 和 EFLAGS，恢复断点和程序状态。</p>
+<li>
+<p>从内核栈中弹出 EIP、CS 和 EFLAGS，恢复断点和程序状态。</p>
 </li>
-<li><p>检查当前异常或中断处理程序的 CPL 是否等于 CS 中最低两位（即将此时 CS 选择子对应代码段的 DPL 和选择子中的 RPL 比较），若是，则说明异常或中断响应前后都处于一个特权级，<code>IRET</code> 指令完成操作；否则，再继续完成下一步工作。</p>
+<li>
+<p>检查当前异常或中断处理程序的 CPL 是否等于 CS 中最低两位（即将此时 CS 选择子对应代码段的 DPL 和选择子中的 RPL 比较），若是，则说明异常或中断响应前后都处于一个特权级，<code>IRET</code> 指令完成操作；否则，再继续完成下一步工作。</p>
 </li>
-<li><p>从内核栈中弹出 SS 和 ESP，以恢复到异常或中断响应前的特权级进程所使用的栈。</p>
+<li>
+<p>从内核栈中弹出 SS 和 ESP，以恢复到异常或中断响应前的特权级进程所使用的栈。</p>
 </li>
-<li><p>检查 DS、ES、FS 和 GS 段寄存器的内容，若其中有某个寄存器的段选择子对应段的 DPL 小于 CPL，则将该寄存器清 0 这是为了防止恶意应用程序（CPL = 3）利用内核以前使用过的段寄存器（DPL = 0）来访问内核空间地址。</p>
+<li>
+<p>检查 DS、ES、FS 和 GS 段寄存器的内容，若其中有某个寄存器的段选择子对应段的 DPL 小于 CPL，则将该寄存器清 0 这是为了防止恶意应用程序（CPL = 3）利用内核以前使用过的段寄存器（DPL = 0）来访问内核空间地址。</p>
 <p>因为处理器的特权级检查只发生在往段寄存器中加载选择子的时候，检查通过后，再从该段中进行后续数据访问时就不需要再进行特权检查了（每次访问都检查太低效）。而 DS、ES、FS 和 GS 段寄存器之前的工作中不会被更新，故处理器在这里选择清 0（GDT 中第 0 个描述符不可用，称为哑描述符，为了防止选择子未初始化而设置。0 值选择子在 GDT 中检索到哑描述符时会引发处理器的异常）。</p>
 <blockquote>
 <p>与 GDT 不同的是 LDT 中的第 0 个段描述符是可用的。因为要从 LDT 中选择段描述符时，选择子的 TI 位必须为 1，这就确保了选择子只有经过显式地初始化后才能从 LDT 中检索描述符，不存在忘记初始化的情况。</p>
@@ -376,55 +389,62 @@
 <p>显然，执行完 <code>IRET</code> 指令后，CPU 自然回到原来发生异常或中断的进程继续执行。</p>
 <p><strong><u>IA-32 的异常/中断类型</u></strong></p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240828104403414.png" width="800px"/></dev>
-
-
-<h3 id="Linux-对异常和中断的处理"><a href="#Linux-对异常和中断的处理" class="headerlink" title="Linux 对异常和中断的处理"></a>Linux 对异常和中断的处理</h3><p>CPU 负责对异常和中断的检测与响应，操作系统负责初始化 IDT 以及编制好异常处理程序或中断服务程序。</p>
+<h3 id="linux-对异常和中断的处理"><a class="markdownIt-Anchor" href="#linux-对异常和中断的处理"></a> Linux 对异常和中断的处理</h3>
+<p>CPU 负责对异常和中断的检测与响应，操作系统负责初始化 IDT 以及编制好异常处理程序或中断服务程序。</p>
 <p><u><strong>IDT 的初始化</strong></u></p>
 <p>IA-32 提供了三种包含在 IDT 中的门描述符：中断门、陷阱门和任务门。Linux 运用 IA-32 提供的三种门描述符格式，构造了以下 5 种类型的门描述符：</p>
 <ol>
-<li><p>中断门（DPL = 0，TYPE = 1110B）</p>
+<li>
+<p>中断门（DPL = 0，TYPE = 1110B）</p>
 <p>所有 Linux 中断服务程序都通过中断门激活。</p>
 </li>
-<li><p>系统中断门（DPL = 3，TYPE = 1110B）</p>
+<li>
+<p>系统中断门（DPL = 3，TYPE = 1110B）</p>
 <p>Linux 使用系统中断门激活 3 号中断（即断点）的异常处理程序，对应指令 <code>int3</code>。因为 DPL 为 3，故任何情况下 CPL ≤ DPL，所以用户态下可以使用 <code>int3</code> 指令。</p>
 </li>
-<li><p>系统门（DPL = 3，TYPE = 1111B）</p>
+<li>
+<p>系统门（DPL = 3，TYPE = 1111B）</p>
 <p>Linux 使用系统门激活三个陷阱型异常处理程序，它们的中断类型号是 4、5 和 128，分别对应指令 <code>into</code>、<code>bound</code> 和 <code>int 0x80</code>。因为 DPL 为 3，故任何情况下 CPL ≤ DPL，所以在用户态下可以使用这三条指令。</p>
 </li>
-<li><p>陷阱门（DPL = 0，TYPE = 1111B）</p>
+<li>
+<p>陷阱门（DPL = 0，TYPE = 1111B）</p>
 <p>Linux 使用陷阱门阻止用户程序使用 <code>int n</code>（n ≠ 128 或 3）指令模拟非法异常来陷入内核态运行。因为编程异常需要进一步检查门的 DPL 是否小于 CPL，若是的话，该指令将无法通过陷阱门，而出现 13 号异常#GP（通用保护错）。这里将 DPL 设为 0，那么在执行用户程序中的 <code>int n</code>（n ≠ 128 或 3）指令将会引发#GP 异常，从而阻止非法 <code>int n</code> 指令的执行。</p>
 </li>
-<li><p>任务门（DPL = 0，TYPE = 0101B）</p>
+<li>
+<p>任务门（DPL = 0，TYPE = 0101B）</p>
 <p>Linux 中对 8 号中断（双重故障）用任务门激活。</p>
 </li>
 </ol>
 <p>系统初始化时，Linux 完成对 GDT、GDTR、IDT 和 IDTR 等的设置，这样以后一旦发生异常或中断，则 CPU 可以通过异常或中断响应机制调出异常或中断处理程序执行。</p>
 <p>Linux 对异常和中断的处理有不同的考虑。</p>
-<h4 id="对异常的处理"><a href="#对异常的处理" class="headerlink" title="对异常的处理"></a>对异常的处理</h4><p>对于 IA-32 产生的部分异常，Linux 都解释为一种出错条件。当硬件检测到异常发生后，硬件通过异常响应机制调出对应的异常处理程序（IA-32 对中断和异常的处理实际就是响应机制）。</p>
+<h4 id="对异常的处理"><a class="markdownIt-Anchor" href="#对异常的处理"></a> 对异常的处理</h4>
+<p>对于 IA-32 产生的部分异常，Linux 都解释为一种出错条件。当硬件检测到异常发生后，硬件通过异常响应机制调出对应的异常处理程序（IA-32 对中断和异常的处理实际就是响应机制）。</p>
 <p><strong><u>异常处理程序的结构</u></strong></p>
 <p>所有异常处理程序的结构是一致的，都可以划分成以下三个部分：</p>
 <ol>
-<li><p>准备阶段</p>
+<li>
+<p>准备阶段</p>
 <p>在内核栈中保存各寄存器的内容（即现场信息），这部分大多用汇编语言程序实现（宏 <code>SAVE_ALL</code>）。</p>
 </li>
-<li><p>处理阶段</p>
+<li>
+<p>处理阶段</p>
 <p>采用 C 函数（异常处理函数）进行具体的异常处理。</p>
 <p>大部分异常处理函数会把硬件出错码和类型号保存在发生异常的当前进程的描述符中（PCB），然后向当前进程发送一个对应的信号。异常处理结束时，内核将检查是否发送过某种信号给当前进程。若没有发送，则继续第 3 步；若发送过信号，则强制当前进程接收信号，而异常处理结束。当前进程接收到一个信号后，若有对应的<u>信号处理程序</u>，则转到信号处理程序执行，执行结束后，返回到当前进程的逻辑控制流的断点处继续执行；若没有对应的信号处理程序，则调用内核的 <code>abort</code> 例程终止当前进程。</p>
 <p>程序员可自行定义信号处理函数来替换系统默认的信号处理程序。</p>
 </li>
-<li><p>恢复阶段</p>
+<li>
+<p>恢复阶段</p>
 <p>恢复保存在内核栈中的各个寄存器的内容，切换到用户态并返回到当前进程的逻辑控制流的断点处继续执行。</p>
 </li>
 </ol>
-<p>Linux 采用向发生异常的进程发送信号的机制实现异常处理，其主要出发点是尽量缩短在内核态的处理时间，尽可能把异常处理过程放在用户态下的信号处理程序中进行。用信号处理程序来处理异常，使得用户进程有机会捕捉并自定义异常处理方法。实际上，各种高级编程语言（如 C++）中的运行时环境的异常处理机制就是基于信号处理来实现的<span class="github-emoji" alias="open_mouth" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62e.png?v8">&#x1f62e;</span>。如果异常全部由内核来处理，那么高级编程语言的异常处理机制就无法实现。</p>
+<p>Linux 采用向发生异常的进程发送信号的机制实现异常处理，其主要出发点是尽量缩短在内核态的处理时间，尽可能把异常处理过程放在用户态下的信号处理程序中进行。用信号处理程序来处理异常，使得用户进程有机会捕捉并自定义异常处理方法。实际上，各种高级编程语言（如 C++）中的运行时环境的异常处理机制就是基于信号处理来实现的<span class="github-emoji" alias="open_mouth" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62e.png?v8">😮</span>。如果异常全部由内核来处理，那么高级编程语言的异常处理机制就无法实现。</p>
 <p><strong><u>Linux 中异常对应的信号名和处理程序名</u></strong></p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240828104512842.png" width="800px"/></dev>
-
-
 <p>例如，如果某个进程执行了一条带有非法操作码的指令，CPU 就产生一个 6 号异常#UD，在对应的异常处理程序中，向当前进程发送一个 SIGILL 信号，以通知当前进程执行相应的信号处理程序或终止当前进程的运行。</p>
 <p>所有对存储器的非法引用所对应的信号都是 SIGSEGV，所有与协处理器和浮点运算相关的异常，其对应的信号都是 SIGFPE，在 Linux 中，除法错（除数为 0 或带符号整数除法结果无法表示）也归类为浮点异常。1 号（单步跟踪）和 3 号（断点）的信号都是 SIGTRAP，因而都转到一个专门的用于程序调试的信号处理程序去执行。</p>
 <p>并不是所有异常处理都只是发送一个信号到发送到异常的进程。例如，对于 14 号页故障异常#PF，在页故障处理程序中，需要判断是否是访问越级（如用户态下访问内核空间）、访问越权（如修改只读区的信息）或访问越界（如访问了无效存储区）等。如果发生了这些无法恢复的故障，页故障处理程序发送 SIGSEGV 信号给发生页故障异常的进程；如果没有发生无法恢复的故障而只是所需内容不在主存（缺页异常），则页故障处理程序负责把所缺失页面从硬盘装入主存，然后返回到发生缺页故障的指令继续执行。</p>
-<h4 id="对中断的处理"><a href="#对中断的处理" class="headerlink" title="对中断的处理"></a>对中断的处理</h4><p>对于大部分异常，Linux 只是给引起异常的当前进程发送一个信号就结束异常处理，这种情况下，具体的异常处理要等到当前进程接收到信号并转到信号处理程序才能进行，而且大部分情况下，异常对应的信号处理结果就是显示异常信息并终止当前进程。</p>
+<h4 id="对中断的处理"><a class="markdownIt-Anchor" href="#对中断的处理"></a> 对中断的处理</h4>
+<p>对于大部分异常，Linux 只是给引起异常的当前进程发送一个信号就结束异常处理，这种情况下，具体的异常处理要等到当前进程接收到信号并转到信号处理程序才能进行，而且大部分情况下，异常对应的信号处理结果就是显示异常信息并终止当前进程。</p>
 <p>显然，这种方式不适合中断的处理。因为中断事件的发生与正在执行的当前进程很可能没有关系，因而将一个信号发给当前进程是没有意义的。</p>
 <p><u><strong>Linux 中处理的中断的类型</strong></u></p>
 <ul>
@@ -434,28 +454,30 @@
 </ul>
 <p>后两种中断的情况超出袁书的范围。</p>
 <p><strong><u>I/O 中断与 PIC</u></strong></p>
-<p>对于 I/O 中断，每个能够发出中断请求的外部设备控制器都有一条 IRQ 线，所有外设的 IRQ 线都会连接到一个可编程中断控制器 PIC (Programmable Interrupt Controller) 中对应的 IRQ 引脚上。PIC 中每个 IRQ 引脚都有一个编号，如 IRQ0、IRQ1、…、IRQi，这里编号 i 就是 IRQ 的值。Intel 处理器共支持 256 个中断，而单个 PIC 引脚有限，如较流行的 PIC 芯片 Intel 8259A 芯片，单个 8259A 芯片只有 8 个中断信号请求线：IRQ0~IRQ7，这显然是不够的，所以通常采用级联方式串联多个 8259A 芯片。级联时只能有一片 8259A 芯片为主片 master，其余的均为从片 slave。来自从片的中断只能传递给主片，再由主片向上提供给 CPU，也就是说只有主片才会向 CPU 发送 INT 中断信号。$n$ 片 8259A 通过级联可支持 7n+1 个中断源（级联一片要占用一个 IRQ 接口），最多可级联 9 个，也就是最多支持 64 个中断。</p>
+<p>对于 I/O 中断，每个能够发出中断请求的外部设备控制器都有一条 IRQ 线，所有外设的 IRQ 线都会连接到一个可编程中断控制器 PIC (Programmable Interrupt Controller) 中对应的 IRQ 引脚上。PIC 中每个 IRQ 引脚都有一个编号，如 IRQ0、IRQ1、…、IRQi，这里编号 i 就是 IRQ 的值。Intel 处理器共支持 256 个中断，而单个 PIC 引脚有限，如较流行的 PIC 芯片 Intel 8259A 芯片，单个 8259A 芯片只有 8 个中断信号请求线：IRQ0~IRQ7，这显然是不够的，所以通常采用级联方式串联多个 8259A 芯片。级联时只能有一片 8259A 芯片为主片 master，其余的均为从片 slave。来自从片的中断只能传递给主片，再由主片向上提供给 CPU，也就是说只有主片才会向 CPU 发送 INT 中断信号。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 片 8259A 通过级联可支持 7n+1 个中断源（级联一片要占用一个 IRQ 接口），最多可级联 9 个，也就是最多支持 64 个中断。</p>
 <p>PIC 需要对所有外设发来的 IRQ 请求按照有限级进行排队，如果至少有一个 IRQ 线有请求且未被屏蔽，则 PIC 向 CPU 的 INTR 引脚发中断请求。CPU 每执行完一条指令后都会查询 INTR 引脚，若发现有中断请求，则进入中断响应过程，调出中断服务程序执行。</p>
 <p><strong><u>中断服务程序的结构</u></strong></p>
 <p>所有中断服务程序的结构类似，都可划分为以下三个阶段：</p>
 <ol>
-<li><p>准备阶段</p>
+<li>
+<p>准备阶段</p>
 <p>在内核栈中保存各寄存器的内容以及所请求 IRQ 的值等（宏 <code>SAVE_ALL</code>），并给发出中断请求信号的 PIC 回送应答信息，允许其发送新的中断请求信号。因为在响应中断的过程中，CPU 已经禁止了 PIC 发送中断请求的功能。</p>
 </li>
-<li><p>处理阶段</p>
+<li>
+<p>处理阶段</p>
 <p>执行 IRQ 对应的中断服务例程。</p>
 </li>
-<li><p>恢复阶段</p>
+<li>
+<p>恢复阶段</p>
 <p>恢复保存在内核栈中的各个寄存器的内容，切换到用户态并返回到当前进程的逻辑控制流的断点处继续执行。</p>
 </li>
 </ol>
-<h3 id="IA-32-Linux-的系统调用"><a href="#IA-32-Linux-的系统调用" class="headerlink" title="IA-32 + Linux 的系统调用"></a>IA-32 + Linux 的系统调用</h3><p>系统调用是一种特殊的 “异常事件”，是操作系统为用户提供服务的一种手段。</p>
+<h3 id="ia-32-linux-的系统调用"><a class="markdownIt-Anchor" href="#ia-32-linux-的系统调用"></a> IA-32 + Linux 的系统调用</h3>
+<p>系统调用是一种特殊的 “异常事件”，是操作系统为用户提供服务的一种手段。</p>
 <p><u><strong>Linux 系统调用的类型</strong></u></p>
 <p>Linux 提供了几百种系统调用，主要分为以下几类：进程控制、文件操作、文件系统操作、系统控制、内存管理、网络管理、用户管理和进程通信。</p>
 <p>系统调用号用整数表示，它用来确定系统调用跳转表中的偏移量。跳转表中的每个表项给出相应系统调用对应的系统调用服务例程的首地址。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240828115029028.png" width="700px"/></dev>
-
-
 <p><strong><u>封装函数</u></strong></p>
 <p>内核实现的系统调用是以一个软中断的形式（即陷阱指令，如 <code>int 0x80</code>）来提供的，如果高级语言编写的用户程序直接用陷阱指令来调用系统调用，则会很麻烦，因此需要将系统调用封装成用户程序能直接调用的函数，如 <code>exit()</code>、<code>read()</code> 和 <code>open()</code>，这些都是标准 C 库中系统调用对应的封装函数。在用 C 语言编写的用户程序中，只要用 #include 命令嵌入相应的头文件，就可以直接使用这些函数来调出操作系统内核中相应的系统调用服务例程，以完成与 I/O、文件操作以及进程管理等相关的操作。这里将系统调用及对应的封装函数称为系统级函数。</p>
 <p>从 C 语言编程者角度来看，系统级函数在形式上与普通的应用编程接口 API 以及普通的 C 语言函数没有差别。但实际上它们在机器级代码的具体实现上是不同的。例如，在 IA-32 + Linux 中，普通函数（包括 API）使用 <code>CALL</code> 指令来实现过程调用，而系统调用则使用陷阱指令（如 <code>int 0x80</code> 或 <code>sysenter</code>）来实现。对于过程调用，执行 <code>CALL</code> 指令前后，处理器一直在用户态下执行指令，所执行的指令是受限的，所能访问的存储空间也是受限的；而对于系统调用，一旦执行了发出系统调用的陷阱指令，处理器就从用户态转到内核态下运行，此时，CPU 可以执行特权指令并访问内核空间。</p>
@@ -463,16 +485,18 @@
 <p>在 Linux 系统中，系统调用所用的参数通过寄存器传递，而不是像过程调用那样用栈来传递，因此在封装函数对应的机器级代码中，将使用<strong>传送指令</strong>把系统调用所需要的参数传送到相应的寄存器，按照惯例，系统调用号存放在 EAX 中，传递参数的寄存器顺序依次为：EAX（调用号）、EBX、ECX、EDX、ESI、EDI 和 EBP，除调用号外，最多 6 个参数。若参数个数超出寄存器个数，则将参数块所在存储区的首址放在寄存器中传递。</p>
 <p>封装函数对应的机器级代码有一个统一的结构：总是若干条传送指令后跟上一条陷阱指令。传送指令用来传递系统调用所用的参数，陷阱指令（如 <code>int 0x80</code>）用来陷入内核进行处理。例如，若用户程序希望将字符串 “hello, world!\n” 中的 14 个字符显示在标准输出设备文件 stdout 上，则可以调用系统调用 write(1, “hello, world!\n”, 14)，它的封装函数用以下机器级代码（用汇编指令表示）实现：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">movl $4, %eax       #调用号为4,送EAX</span><br><span class="line">movl $1, %ebx       #标准输出设备stdout的文件描述符为1.送EBX</span><br><span class="line">movl $string, %ecx  #字符串&quot;he11o, world!n&quot;的首地址等于string的值,送ECX</span><br><span class="line">movl $14, %edx      #字符串的长度为14,送EDX</span><br><span class="line">int $0x80           #系统调用</span><br></pre></td></tr></table></figure>
-
 <p><strong><u>系统调用处理程序 system_call</u></strong></p>
 <p>在 Linux 中，有一个系统调用的统一入口，即系统调用处理程序 <code>system_call</code> 的首地址，所以 CPU 执行指令 <code>int 0x80</code> 后，便转到 <code>system_call</code> 的第一条指令开始执行。</p>
 <p><code>system_call</code> 的结构：</p>
 <ol>
-<li><p>与 Linux 其他异常处理程序和中断服务程序一样，首先使用宏 <code>SAVE_ALL</code> 在内核栈中保存各寄存器的内容。</p>
+<li>
+<p>与 Linux 其他异常处理程序和中断服务程序一样，首先使用宏 <code>SAVE_ALL</code> 在内核栈中保存各寄存器的内容。</p>
 </li>
-<li><p>根据调用号跳转到当前系统调用对应的系统调用服务例程去执行。</p>
+<li>
+<p>根据调用号跳转到当前系统调用对应的系统调用服务例程去执行。</p>
 </li>
-<li><p>恢复保存在内核栈中的各个寄存器的内容，切换到用户态，返回到 <code>int 0x80</code> 指令后面一条指令继续执行。</p>
+<li>
+<p>恢复保存在内核栈中的各个寄存器的内容，切换到用户态，返回到 <code>int 0x80</code> 指令后面一条指令继续执行。</p>
 <p>返回值在 EAX 中，为整数值，若是正数或 0 表示成功，负数表示出错码。</p>
 </li>
 </ol>
@@ -502,50 +526,41 @@
 <p>首先，将处理机状态由用户态转为系统态；之后，由硬件和内核程序进行系统调用的一般性处理，即首先保护被中断进程的 CPU 环境，将处理机状态字 PSW、程序计数器 PC、通用寄存器、用户栈指针、系统调用号等压入内核栈；然后，将用户定义的参数传送到指定的地址并保存起来。</p>
 <p>其次，分析系统调用类型，利用系统调用号查找系统调用入口表，找到相应的系统调用处理子程序的入口地址而转去执行它。</p>
 <p>最后，在系统调用处理子程序执行完后，应恢复被中断的或设置新进程的 CPU 现场，然后返回被中断进程或新进程，继续往下执行。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/cca327c2ed1167c3bf417575713a5a87.png" width="600px"/></dev>
-
-
-<h2 id="任务切换"><a href="#任务切换" class="headerlink" title="任务切换"></a>任务切换</h2><h3 id="x86-原生支持的任务切换方式"><a href="#x86-原生支持的任务切换方式" class="headerlink" title="x86 原生支持的任务切换方式"></a>x86 原生支持的任务切换方式</h3><p><strong><u>任务状态段 TSS</u></strong></p>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h3>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/cca327c2ed1167c3bf417575713a5a87.png" width="600px"/></dev>
+<h2 id="任务切换"><a class="markdownIt-Anchor" href="#任务切换"></a> 任务切换</h2>
+<h3 id="x86-原生支持的任务切换方式"><a class="markdownIt-Anchor" href="#x86-原生支持的任务切换方式"></a> x86 原生支持的任务切换方式</h3>
+<p><strong><u>任务状态段 TSS</u></strong></p>
 <p>TSS 是 x86 的特性，原本是用来配合处理器在硬件上原生支持多任务的数据结构。Intel 建议给每个任务 “关联” 一个 TSS，用其保存任务的最新状态。</p>
 <p>TSS 由程序员 “提供”，由 CPU 来 “维护”。“提供” 就是指 TSS 是程序员为任务单独定义的一个结构体变量，“维护” 是指 CPU 自动用此结构体变量保存任务的状态（处理器上下文）和自动从此结构体变量中载入任务的状态。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240825170906916.png" width="400px"/></dev>
-
-
 <p>TSS 记录了三种特权级栈的段选择子和偏移量/栈顶指针。由于正常情况下，特权级由低向高转移在先，由高到低返回在后，当处理器由低到高特权级转移时，它会自动把当时低特权级的栈地址（SS 和 ESP）压入转移后的高特权级所在的栈中，所以 TSS 就没有记录最低特权级 3 的栈地址。对于 Linux，只使用了特权级 0 和特权级 3 作为系统态和用户态，因此在模式转换过程中也就只使用了 TSS 中的 ss0 和 esp0（内核栈指针）。</p>
 <p><strong><u>TSS 描述符和任务寄存器 TR</u></strong></p>
 <p>TSS 和其他段一样，本质上是一片存储数据的内存区域，因此也需要用描述符结构来 “描述” 它，即 TSS 描述符。TSS 描述符也要在 GDT 中注册，这样才能 “找到它”。TSS 描述符结构如下：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240829215833084.png" width="500px"/></dev>
-
-
 <p>寄存器 TR (Task Register) 保存当前运行任务的 TSS 描述符选择子。</p>
 <p><strong><u>任务门描述符</u></strong></p>
 <p>任务门属于系统段，任务门描述符位于 IDT 中，包含 TSS 选择子。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240829232137936.png" width="500px"/></dev>
-
-
 <p>在该方式下，任务切换中保存和恢复上下文的动作由 CPU 通过 TSS 完成。但其效率不高，所以现在大多数操作系统（Linux 2.2.0 以后）已经不用 TSS 做硬切换了，而是通过软件指令进行软切换。</p>
 <p><strong><u>CPU 原生支持的任务切换方式</u></strong></p>
 <p>共有两种方式：</p>
 <ol>
-<li><p>通过 “中断 + 任务门” 进行任务切换</p>
+<li>
+<p>通过 “中断 + 任务门” 进行任务切换</p>
 <p>当中断发生时，处理器通过中断向量号在 IDT 中找到描述符后，通过分析描述符中字段 S 和字段 TYPE 的组合判断描述符的类型：若发现中断对应的描述符是中断门描述符，则转而去执行中断门描述符中指定的中断服务程序。在中断服务程序的最后，通过 <code>iretd</code> 指令回到被中断任务的中断前的代码处；若发现中断对应的描述符是任务门描述符，则从该任务门描述符中取出任务的 TSS 选择子，开始进行任务切换。</p>
 <p>步骤如下，比较繁琐：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240830092513865.png" width="600px"/></dev>
-
-
+<p>可以发现，<code>iretd</code> 指令（32位下，<code>iretd</code> 等价于 <code>iretd</code>）除了可以从中断返回当前任务的中断代码处之外，若当前任务是被嵌套调用时，它会调用自己 TSS 中 “上一个任务的 TSS 指针” 的任务，也就是返回到上一个任务。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240830093351461.png" width="400px"/></dev>
 </li>
-</ol>
-<p>   可以发现，<code>iretd</code> 指令（32位下，<code>iretd</code> 等价于 <code>iretd</code>）除了可以从中断返回当前任务的中断代码处之外，若当前任务是被嵌套调用时，它会调用自己 TSS 中 “上一个任务的 TSS 指针” 的任务，也就是返回到上一个任务。</p>
-   <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240830093351461.png" width="400px"/></dev>
-
-<ol start="2">
-<li><p><code>call</code> / <code>jmp</code> 指令 + TSS 选择子或任务门选择子</p>
+<li>
+<p><code>call</code> / <code>jmp</code> 指令 + TSS 选择子或任务门选择子</p>
 <p>任务门描述符除了可以在 IDT 中注册，还可以在 GDT 和 LDT 中注册。</p>
 <p>只要包括 TSS 选择子的对象都可以作为任务切换的操作数。</p>
 <p><code>call</code> 是有去有回的指令，<code>jmp</code> 是一去不回的指令，它们在调用新任务时的区别也在于此。</p>
 <p>任务切换步骤依然繁琐：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240830094118452.png" width="600px"/></dev>
-
 </li>
 </ol>
 <p><u><strong>TSS 使用现状</strong></u></p>
@@ -554,22 +569,27 @@
 <p>CPU 要求使用 TSS 这是是硬指标，Linux 也得遵守，不过为了 “应付” 这一指标， Linux 只为每个 CPU 创建一个 TSS，在各个 CPU 上的所有任务共用共享同一个 TSS，各 CPU 的 TR 寄存器保存各 CPU 上的 TSS，在用 <code>ltr</code> 指令加载 TSS 选择子到 TR 寄存器后，该 TR 寄存器永远指向同一个 TSS，之后再也不会重新加载 TSS。在进程切换时，只需要把 TSS 中的 <code>ss0</code> 及 <code>esp0</code> 更新为新任务的内核栈的段地址及栈指针。</p>
 <p>Linux 在 TSS 中只初始化了 <code>ss0</code>、<code>esp0</code> 和 I/O 位图字段，除此之外 TSS 便没用了，不再做保存和恢复任务状态之用。目前，我们使用 TSS 唯一的理由是为 0 特权级的任务提供栈（即内核栈），使用内核栈来保存和恢复任务状态。</p>
 <p>另外，Linux 中任务切换也不使用 <code>call</code> 和 <code>jmp</code> 指令，这也避免了任务切换的低效。</p>
-<h3 id="IA-32-Linux-的任务切换"><a href="#IA-32-Linux-的任务切换" class="headerlink" title="IA-32 + Linux 的任务切换"></a>IA-32 + Linux 的任务切换</h3><p><strong><u>由时间片到引发的任务调度与切换</u></strong></p>
+<h3 id="ia-32-linux-的任务切换"><a class="markdownIt-Anchor" href="#ia-32-linux-的任务切换"></a> IA-32 + Linux 的任务切换</h3>
+<p><strong><u>由时间片到引发的任务调度与切换</u></strong></p>
 <p>一、被切换任务的执行流</p>
 <ol>
-<li><p>发生时钟中断，进入中断响应阶段</p>
+<li>
+<p>发生时钟中断，进入中断响应阶段</p>
 <p>用户态切换为内核态 → 用户栈切换为内核栈 → 将用户栈段选择子、用户栈指针、断点和程序状态字压栈 →  EFLAGS 寄存器中的 IF 清 0（关中断）→ 将 IDT 中第 32（20H）个表项的段选择子和偏移地址分别装入 CS 和 EIP，开始时钟中断处理程序的执行。</p>
 </li>
-<li><p>执行时钟中断处理程序</p>
+<li>
+<p>执行时钟中断处理程序</p>
 <p>首先保存现场以及所请求 IRQ 的值（IRQ0），再转去执行 IRQ0 对应的时钟中断服务例程。</p>
 </li>
-<li><p>执行时钟中断服务例程</p>
+<li>
+<p>执行时钟中断服务例程</p>
 <p>包括但不限于：</p>
 <p>① 更新此任务占用的 CPU 时间（+1）；</p>
 <p>② 更新系统运行时间（+1）；</p>
 <p>③ 若当前任务的时间片用完，则调用 <code>schedule</code> 函数，否则将当前任务的时间片 -1。</p>
 </li>
-<li><p>返回时钟中断处理程序</p>
+<li>
+<p>返回时钟中断处理程序</p>
 <p>恢复保存在内核栈中的各个寄存器的内容，切换到用户态并返回到当前任务的逻辑控制流的断点处继续执行。</p>
 </li>
 </ol>
@@ -581,47 +601,58 @@
 <p><code>schedule</code> 函数主要内容就是读写就绪队列，因此它不需要参数。另外 <code>schedule</code> 函数依旧属于时钟中断处理程序（同一过程，同一层执行流），没有发生过程调用，因此也不需要保存上下文。</p>
 <p>三、<code>context_switch</code> 函数执行流</p>
 <ol>
-<li><p>切换任务虚拟地址空间（用户空间部分），即重新加载页表 PGD（修改 cr3 寄存器）。</p>
+<li>
+<p>切换任务虚拟地址空间（用户空间部分），即重新加载页表 PGD（修改 cr3 寄存器）。</p>
 </li>
-<li><p>调用 <code>switch_to</code> 宏切换进程的内核栈。</p>
+<li>
+<p>调用 <code>switch_to</code> 宏切换进程的内核栈。</p>
 <p>需要三个参数：旧任务 PCB 指针 <code>prev</code> 、新任务 PCB 指针 <code>next</code> 、上一个任务 PCB 指针 <code>last</code>。</p>
 <p>形式为 <code>switch_to(prev, next, last)</code>，其中 <code>prev</code> 和 <code>next</code> 为输入参数，<code>last</code> 为输出参数。后面会解释为什么需要三个参数。</p>
 </li>
-<li><p>调用 <code>finish_task_switch</code> 函数完成一些清理工作。</p>
+<li>
+<p>调用 <code>finish_task_switch</code> 函数完成一些清理工作。</p>
 </li>
 </ol>
 <p>四、<code>switch_to</code> 宏执行流</p>
 <ol>
-<li><p>保存被调用者保存寄存器 EBX、ESI、EDI 到当前内核栈（旧任务内核栈）。</p>
+<li>
+<p>保存被调用者保存寄存器 EBX、ESI、EDI 到当前内核栈（旧任务内核栈）。</p>
 <p><code>switch_to</code> 宏是不同于时钟中断处理程序的另一过程（不同层的执行流），因此根据 ABI 调用约定需要保存上述寄存器。</p>
 </li>
-<li><p>保存 EFLAGS 到当前内核栈（旧任务内核栈）。</p>
+<li>
+<p>保存 EFLAGS 到当前内核栈（旧任务内核栈）。</p>
 </li>
-<li><p>保存 EBP 到当前内核栈（旧任务内核栈）。</p>
+<li>
+<p>保存 EBP 到当前内核栈（旧任务内核栈）。</p>
 </li>
-<li><p>将使用栈从当前任务的内核栈切换到新任务的内核栈。</p>
+<li>
+<p>将使用栈从当前任务的内核栈切换到新任务的内核栈。</p>
 <p>先将当前任务内核栈栈指针（即当前 ESP 寄存器内容）保存到旧任务 PCB（<code>prev-&gt;thread.esp</code>）中，再将新任务内核栈指针从新任务 PCB 中（<code>next-&gt;thread.esp</code>）取出装入 ESP 寄存器。</p>
 </li>
-<li><p>把标号为 1 的指令地址保存到旧任务 PCB（<code>prev-&gt;thread.eip</code>）中，当此任务下次被 <code>switch_to</code> 回来时，会从这条指令开始执行（即手工设置返回地址）。</p>
+<li>
+<p>把标号为 1 的指令地址保存到旧任务 PCB（<code>prev-&gt;thread.eip</code>）中，当此任务下次被 <code>switch_to</code> 回来时，会从这条指令开始执行（即手工设置返回地址）。</p>
 </li>
-<li><p>将新任务 PCB 中保存的 IP 值（<code>next-&gt;thread.eip</code>）压入当前内核栈（新任务内核栈）。</p>
+<li>
+<p>将新任务 PCB 中保存的 IP 值（<code>next-&gt;thread.eip</code>）压入当前内核栈（新任务内核栈）。</p>
 <p>这里如果新任务之前也被 <code>switch_to</code> 出去过，那么此时栈顶就是标号 1 的指令地址；如果新任务之前尚未执行过（只是被创建），那么此时栈顶的值是函数 <code>ret_ftom_fork</code> 的地址。</p>
 </li>
-<li><p><code>jmp</code> 到 <code>__switch_to</code> 函数</p>
+<li>
+<p><code>jmp</code> 到 <code>__switch_to</code> 函数</p>
 <p><code>__switch_to</code> 函数主要工作有：</p>
 <p>① 从新任务 PCB（<code>next-&gt;thread</code>）中取出内核栈指针 <code>esp0</code> 和  I/O 操作权限位图 <code>io_bitmap</code> 去更新新任务 TSS 对应字段；</p>
 <p>② 保存恢复部分寄存器上下文。恢复内容的寄存器有：浮点寄存器、调试寄存器（挂起前有使用过的话）以及两个段寄存器 FS 和 GS，内容均来自新任务的 PCB（<code>next-&gt;thread</code>）。其中 FS 和 GS 需要先保存到旧任务 PCB（<code>prev-&gt;thread.fs</code> 和 <code>prev-&gt;thread.gs</code>）中。</p>
 <p>③ 根据此时栈顶的返回地址继续执行。如果新任务是新创建的还没执行过的任务，则不会再回到 <code>__switch_to</code> 函数，而是转去执行  <code>ret_ftom_fork</code>  函数，该函数是新任务在其初始地址空间中第一个执行的函数；如果新任务是运行过的，但是执行了 <code>__switch_to</code> 函数被切换了的，则回到标号 1 的指令地址去执行，即 <code>jmp __switch_to;</code> 的下一个指令，刚好续上了新任务当初被切换出去的执行流。两种情况对应两种返回地址，这就是为什么不用 <code>call</code> 而是用 <code>jmp</code> 调用 <code>__switch_to</code> 的原因。</p>
 <p><code>__switch_to</code> 函数的调用不同于一般的函数调用，它从寄存器 EAX 和 EDX 取参数 <code>prev</code> 和 <code>next</code>，而不像大多数函数一样从栈中取参数。</p>
 </li>
-<li><p>从新任务内核栈中恢复 EBP、EFLAGS、EBX、ESI、EDI、EFLAGS。</p>
+<li>
+<p>从新任务内核栈中恢复 EBP、EFLAGS、EBX、ESI、EDI、EFLAGS。</p>
 <p>这些寄存器映像也是新任务在之前某次执行 <code>switch_to</code> 时，在被换下处理器前保存的。</p>
 </li>
 </ol>
-<p><span class="github-emoji" alias="rice_cracker" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f358.png?v8">&#x1f358;</span>为什么 <code>switch_to</code> 需要三个参数？</p>
+<p><span class="github-emoji" alias="rice_cracker" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f358.png?v8">🍘</span>为什么 <code>switch_to</code> 需要三个参数？</p>
 <p>对于同一个 <code>switch_to</code> 宏的一次执行过程而言，可视为由两个任务共同完成的一个完整的执行流，即 <code>switch_to</code> 宏是由旧任务调用，在新任务结束，这样看只涉及两个任务。但对于某个任务 A 对 <code>switch_to</code> 宏的一次调用过程而言，实际上是不同时间的两个执行流：前半部分是 A 作为旧任务切换出去的执行流，后半部分是 A 作为新任务切换回来的执行流。为方便讨论，现设定调度顺序为 A → B → … → C → A，前半部分对应 A → B，后半部分对应 C → A。所以涉及到三个任务 A、B、C。两部分实际上是 <code>switch_to</code> 宏的两次执行过程执行流，对应两次任务切换。</p>
 <p><code>__switch_to</code> 函数的返回是前半部分和后半部分的分界。<code>__switch_to</code> 函数的返回值是 <code>prev</code> 指针，保存在 EAX 寄存器中。当 A 再次被调度执行（C → A）时，它想回到自己上次被切换出去（A → B）的断点处，继续执行 <code>__switch_to</code> 函数的后半部分（即从标号 1 的指令开始），恢复完寄存器上下文后，再调用 <code>finish_task_switch</code> 函数完成一些清理工作。清理工作需要用到这次任务切换（C → A）中的旧任务即 C 的 PCB 指针，切换前局部变量 <code>prev</code> 是保存的 C 的 PCB 指针没错，但任务切换已经把内核栈和寄存器上下文都切换了，而局部变量是根据 EBP 寄存器和内核栈去索引的，所以切换后的局部变量 <code>prev</code> 实际是 A 自己的 PCB 指针。所以 Linux 在切换前（<code>switch_to</code> 宏前半部分的最后，即 <code>__switch_to</code> 函数的返回），将 <code>prev</code> 作为 <code>__switch_to</code> 函数的返回值放入 EAX，这样 C 的 PCB 指针就会在随着寄存器上下文的保存与恢复而传递过来。由于 <code>__switch_to</code> 函数是由  <code>switch_to</code>  调用的，而 EAX 是  <code>switch_to</code>  值是用来保存输出参数 <code>last</code>，所以 <code>switch_to(prev, next, last)</code> 等价于 <code>prev = last = switch_to(prev, next)</code> 。</p>
-<p><span class="github-emoji" alias="seedling" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png?v8">&#x1f331;</span>上述流程中上下文的保护工作分为两部分：</p>
+<p><span class="github-emoji" alias="seedling" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png?v8">🌱</span>上述流程中上下文的保护工作分为两部分：</p>
 <ul>
 <li>第一部分是 CPU 和中断处理程序保存断点、程序状态字和用户态现场信息，用于恢复中断前的状态；</li>
 <li>第二部分是 <code>switch_to</code> 函数在被调用时保存的 EFLAGS、EBP、EBX、ESI、EDI 信息，用于任务切换后恢复执行中断处理程序中的后续代码。</li>
@@ -629,7 +660,7 @@
 <p>这两次上下文的保护也正对应整个执行流的两次改变。为了将来能够恢复到本层执行流继续执行，必须在改变发生前将本层执行流的上下文保护好，因此执行流改变了几层就要做几次上下文保护。</p>
 <p>在抢占式内核中，利用中断来实现上下文切换是一个非常理想的机制。中断发生时，中断会强制 CPU 把控制权交给操作系统，也就相当于一次上下文切换。这样不仅可以减少程序出错的后果，而且提高切换的效率。</p>
 <p><strong><u>其他情况下的任务调度与切换</u></strong></p>
-<p>从 <code>schedule</code> 函数开始的执行顺序是一样的，即 <code>schedule()</code>→ <code>context_switch()</code> → <code>switch_to</code> 宏 → <code>__switch_to()</code>。</p>
+<p>从 <code>schedule</code> 函数开始的执行顺序是一样的，即 <code>schedule() </code>→ <code>context_switch()</code> → <code>switch_to</code> 宏 → <code>__switch_to()</code>。</p>
 <p>任务调度和切换都是通过执行 <code>schedule</code> 函数实现的。所以所谓的 “其他情况下的任务调度与切换” 关键在于何时/何种条件下会被何种程序/函数调用 <code>schedule</code> 函数（由时间片到引发的任务调度与切换是在时钟中断触发的时钟中断服务例程中更新当前任务的时间片时发现时间片用尽后调用了 <code>schedule</code> 函数）。首先可以确认一点，<code>schedule</code> 函数的调用和执行，或者说任务切换，只会发生在内核态，因此在即将进行任务切换前（即将调用 <code>schedule</code> 函数时），用户态进程使用的所有寄存器内容都已保存在内核栈/中断栈上。</p>
 <p>处理器总处于以下三种状态之一：</p>
 <ul>
@@ -640,15 +671,19 @@
 <p>调度器 schedule 并不仅由时间中断处理程序来调用，它还有被其他函数调用的情况，比如函数 thread_block。</p>
 <p>其他必定会调用 <code>schedule</code> 函数的情况：</p>
 <ul>
-<li><p>当前任务状态由运行态变为非可执行状态</p>
+<li>
+<p>当前任务状态由运行态变为非可执行状态</p>
 <p>主动调用相关库函数将自己终止、睡眠、阻塞时，这些库函数会去调用相关系统调用进行处理，而这些相关的系统调用服务例程内部一定会去调用 <code>schedule</code> 函数。</p>
 </li>
-<li><p>进程从中断/异常/系统调用处理程序返回到用户态前，检查当前任务是否置上了请求调度标志（<code>task_struct.thread_info.flags</code> 中的 <code>TIF_NEED_RESCHED</code>），被置上了就转去调用  <code>schedule</code> 函数而非回到当前进程的用户态继续执行。因为模式切换有开销，既然还在内核态，就该把在内核态该处理的事处理完。</p>
+<li>
+<p>进程从中断/异常/系统调用处理程序返回到用户态前，检查当前任务是否置上了请求调度标志（<code>task_struct.thread_info.flags</code> 中的 <code>TIF_NEED_RESCHED</code>），被置上了就转去调用  <code>schedule</code> 函数而非回到当前进程的用户态继续执行。因为模式切换有开销，既然还在内核态，就该把在内核态该处理的事处理完。</p>
 </li>
-<li><p>……</p>
+<li>
+<p>……</p>
 </li>
 </ul>
-<h2 id="锁存器、触发器和寄存器"><a href="#锁存器、触发器和寄存器" class="headerlink" title="锁存器、触发器和寄存器"></a>锁存器、触发器和寄存器</h2><p><strong><u>锁存器</u></strong></p>
+<h2 id="锁存器-触发器和寄存器"><a class="markdownIt-Anchor" href="#锁存器-触发器和寄存器"></a> 锁存器、触发器和寄存器</h2>
+<p><strong><u>锁存器</u></strong></p>
 <p>对脉冲电平敏感，在时钟脉冲的电平作用下改变状态。</p>
 <p>锁存器是电平触发的存储单元，数据存储的动作取决于输入时钟（或者使能）信号的电平值，当锁存器处于使能状态时，输出才会随着数据输入发生变化。</p>
 <p><strong><u>触发器 FF (Flip-Flop)</u></strong></p>
@@ -665,18 +700,24 @@
 <p>由锁存器或触发器构成，由 N 个锁存器或触发器可以构成 N 位寄存器。</p>
 <p>寄存器的应用：</p>
 <ol>
-<li><p>可以完成数据的并串、串并转换。</p>
+<li>
+<p>可以完成数据的并串、串并转换。</p>
 </li>
-<li><p>可以用做显示数据锁存器。</p>
+<li>
+<p>可以用做显示数据锁存器。</p>
 <p>许多设备需要显示计数器的记数值，以8421BCD码记数，以七段显示器显示，如果记数速度较高，人眼则无法辨认迅速变化的显示字符。在计数器和译码器之间加入一个锁存器，控制数据的显示时间是常用的方法。</p>
 </li>
-<li><p>用作缓冲器。</p>
+<li>
+<p>用作缓冲器。</p>
 </li>
-<li><p>组成计数器。</p>
+<li>
+<p>组成计数器。</p>
 <p>移位寄存器可以组成移位型计数器，如环形或扭环形计数器。</p>
 </li>
 </ol>
-<h2 id="Linux-内存管理"><a href="#Linux-内存管理" class="headerlink" title="Linux 内存管理"></a>Linux 内存管理</h2><h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>页表寄存器 CR3 中保存的是进程顶级页表的物理地址，<code>task_struct.pgdir</code> 是顶级页表的虚拟地址，在调度切换到某进程时，会将该进程的 <code>task_struct.pgdir</code> 转换成物理地址再加载到 CR3 中。</p>
+<h2 id="linux-内存管理"><a class="markdownIt-Anchor" href="#linux-内存管理"></a> Linux 内存管理</h2>
+<h3 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h3>
+<p>页表寄存器 CR3 中保存的是进程顶级页表的物理地址，<code>task_struct.pgdir</code> 是顶级页表的虚拟地址，在调度切换到某进程时，会将该进程的 <code>task_struct.pgdir</code> 转换成物理地址再加载到 CR3 中。</p>
 <p><strong><u>页表相关数据结构</u></strong></p>
 <ul>
 <li>PGD (Page Global Directory)：页全局目录表，即顶级页表，每个进程有且仅有一个，PCB 保存其虚拟地址，页表寄存器保存其物理地址。</li>
@@ -686,105 +727,111 @@
 </ul>
 <p><strong><u>逻辑地址、有效地址、线性地址、虚拟地址、物理地址</u></strong></p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240831180750276.png" width="600px"/></dev>
-
-
 <ul>
-<li><p>有效地址（<u>段内偏移</u>）（实模式/保护模式）</p>
+<li>
+<p>有效地址（<u>段内偏移</u>）（实模式/保护模式）</p>
 <p>无论在实模式下或是保护模式下，段内偏移地址又称为有效地址，是程序员可见的地址。</p>
 </li>
-<li><p>逻辑地址（<u>段选择子 : 段内偏移</u>）（保护模式）</p>
+<li>
+<p>逻辑地址（<u>段选择子 : 段内偏移</u>）（保护模式）</p>
 <p>段选择子位于段寄存器，段内偏移/有效地址位于 EIP。</p>
 </li>
-<li><p>线性地址（<u>段基址 : 段内偏移</u>）（保护模式）</p>
+<li>
+<p>线性地址（<u>段基址 : 段内偏移</u>）（保护模式）</p>
 <p>保护模式下，段基址需要根据段选择子和段描述符表得到。</p>
 <p>若没有开启分页功能，线性地址就被当作物理地址使用，可直接访问内存。</p>
-<p>实模式下，<u>段基址 &lt;&lt; 4 : 段内偏移</u> 即是物理地址。 </p>
+<p>实模式下，<u>段基址 &lt;&lt; 4 : 段内偏移</u> 即是物理地址。</p>
 </li>
-<li><p>虚拟地址（<u>页目录索引 : 页表索引 : 页内偏移</u>）（保护模式）</p>
+<li>
+<p>虚拟地址（<u>页目录索引 : 页表索引 : 页内偏移</u>）（保护模式）</p>
 <p>若开启了分页功能，线性地址又可叫做虚拟地址，即虚拟地址和线性地址在分页机制下是一回事。</p>
 <p><u>页目录索引 : 页表索引 : 页内偏移</u> 对应二级页表机制，一级或其他多级页表机制有不同的划分方式。</p>
 </li>
-<li><p>物理地址（页框号 : 页内偏移）</p>
+<li>
+<p>物理地址（页框号 : 页内偏移）</p>
 <p>即真实的内存地址。</p>
 </li>
 </ul>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240831181208698.png" width="600px"/></dev>
-
-
-<h3 id="内核地址空间"><a href="#内核地址空间" class="headerlink" title="内核地址空间"></a>内核地址空间</h3><p>在 32 位的系统上，内核占有从第 3GB ~ 第 4GB 的线性地址空间，共 1GB 大小。</p>
+<h3 id="内核地址空间"><a class="markdownIt-Anchor" href="#内核地址空间"></a> 内核地址空间</h3>
+<p>在 32 位的系统上，内核占有从第 3GB ~ 第 4GB 的线性地址空间，共 1GB 大小。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/811006-20181124234713306-231485775.png" width="600px"/></dev>
-
-
 <p>如果物理内存小于 1G 的空间，通常内核把物理内存与其地址空间做了线性映射，也就是一一映射，这样可以提高访问速度。但是当物理内存超过 1G 时，线性访问机制就不够用了，因为只能有 1G 的内存可以被映射，剩余的物理内存无法被内核管理（用户进程最多只可以访问 3G 物理内存，而内核进程可以访问所有物理内存），所以为了解决这一问题，Linux 把内核地址分为线性区和非线性区两部分，线性区规定最大为 896M，剩下的 128M 为非线性区。从而，线性区映射的物理内存称为<u>低端内存</u>，剩下的物理内存称为<u>高端内存</u>。与线性区不同，非线性区不会提前进行内存映射，而是在使用时动态映射。</p>
 <p><strong><u>直接映射区</u></strong></p>
 <p>这块 896M 大小的虚拟内存会直接映射到 0~896M 这块 896M 大小的物理内存上，即这块区域中的虚拟内存地址直接减去 0xC000 0000 (3G) 就得到了物理内存地址。</p>
 <p>在这段 896M 大小的物理内存中，前 1M 已经在系统启动的时候被系统占用，1M 之后的物理内存存放的是内核代码段、数据段、BSS 段（这些信息起初存放在 ELF 格式的二进制文件中，在系统启动的时候被加载进内存）。</p>
 <p>当我们使用 fork 系统调用创建进程的时候，内核会创建一系列进程相关的描述符，比如进程的核心数据结构 <code>task_struct</code>、进程的内存空间描述符 <code>mm_struct</code>，以及虚拟内存区域描述符 <code>vm_area_struct</code> 等。这些进程相关的数据结构会存放在物理内存前 896M 的这段区域中，当然也会被直接映射至内核态虚拟内存空间中的 3G~3G+896m 这段直接映射区域中。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/d945d22667c4ea56dbd2f19677306a91-20230309234037651.jpg" width="700px"/></dev>
-
-
 <p>内核栈也是分配在直接映射区。当进程被创建完毕之后，在内核运行的过程中，会涉及内核栈的分配，内核会为每个进程分配一个固定大小的内核栈（一般是两个页大小，依赖具体的体系结构），每个进程的整个调用链必须放在自己的内核栈中。</p>
 <p>直接映射区的前 16M 专门让内核用来为 DMA 分配内存，其映射的 16M 大小的物理内存区域称为 ZONE_DMA；直接映射区中剩下的部分（16M~895M）映射的物理内存称为 ZONE_NORMAL，即这块区域包含的是正常的页框，使用没有任何限制；物理内存 896M 以上的区域被内核划分为 ZONE_HIGHMEM 区域，称为高端内存。注意这里的 ZONE_DMA、ZONE_NORMAL 和 ZONE_HIGHMEM 是内核针对物理内存区域的划分。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/1cf5fc48692826d8446638bbc5dd0e0b.jpg" width="700px"/></dev>
-
-
 <p><strong><u>高端内存的映射</u></strong></p>
 <p>IA-32 的内核虚拟内存空间除去直接映射区只剩下 128M，而物理内存中大小以 G 为单位的 ZONE_HIGHMEM 区域就只能采用动态映射的方式映射到 128M 大小的内核虚拟内存空间中，也就是说只能动态的一部分一部分的分批映射，先映射正在使用的这部分，使用完毕解除映射，接着映射其他部分。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/0d19dc439390c46612e31ee973f8314588.jpg" width="800px"/></dev>
-
-
 <ul>
-<li><p>vmalloc 动态映射区</p>
+<li>
+<p>vmalloc 动态映射区</p>
 <p>和用户态进程使用 malloc 申请内存一样，在这块动态映射区内核是使用 <code>vmalloc</code> 进行内存分配。由于动态映射的原因，<strong>vmalloc 分配的内存在虚拟内存上是连续的，但物理内存是不连续的</strong>。通过页表来建立物理内存与虚拟内存之间的映射关系，从而可以将不连续的物理内存映射到连续的虚拟内存上。</p>
 </li>
-<li><p>永久映射区</p>
+<li>
+<p>永久映射区</p>
 <p>在内核的这段虚拟地址空间中允许建立与物理高端内存的长期映射关系。比如内核通过 <code>alloc_pages</code> 函数在物理内存的高端内存中申请获取到的物理内存页，这些物理内存页可以通过调用 kmap 映射到永久映射区中。</p>
 </li>
-<li><p>固定映射区</p>
+<li>
+<p>固定映射区</p>
 <p>这块区域中的每个地址项都服务于特定的用途。 比如：在内核的启动过程中，有些模块需要使用虚拟内存并映射到指定的物理地址上，而且这些模块也没有办法等待完整的内存管理模块初始化之后再进行地址映射。因此，内核固定分配了一些虚拟地址，这些地址有固定的用途，使用该地址的模块在初始化的时候，将这些固定分配的虚拟地址映射到指定的物理地址上去。</p>
 </li>
-<li><p>临时映射区</p>
-<p>在内核有的场景里，需要内核临时映射物理区域，以便可以访问这些物理区域，待访问完毕之后再将解除临时映射。临时映射的存在不仅解决了需要临时访问某些硬件资源的场景，而且可以节省内存开销。 </p>
+<li>
+<p>临时映射区</p>
+<p>在内核有的场景里，需要内核临时映射物理区域，以便可以访问这些物理区域，待访问完毕之后再将解除临时映射。临时映射的存在不仅解决了需要临时访问某些硬件资源的场景，而且可以节省内存开销。</p>
 </li>
 </ul>
-<h2 id="中断系统中的触发器"><a href="#中断系统中的触发器" class="headerlink" title="中断系统中的触发器"></a>中断系统中的触发器</h2><ul>
-<li><p>中断请求触发器 INTR</p>
+<h2 id="中断系统中的触发器"><a class="markdownIt-Anchor" href="#中断系统中的触发器"></a> 中断系统中的触发器</h2>
+<ul>
+<li>
+<p>中断请求触发器 INTR</p>
 <p>用来登记中断源发出的随机性中断请求信号，以便为 CPU 查询中断及中断排队判优线路提供稳定的中断请求信号</p>
 </li>
-<li><p>允许中断触发器 EINT</p>
+<li>
+<p>允许中断触发器 EINT</p>
 <p>CPU 中的中断总开关。当 EINT = 1时，表示允许中断（开中断），当 EINT = 0 时，表示禁止中断（关中断）。其状态可由开中断指令、关中断指令、中断隐指令等设置</p>
 </li>
-<li><p>中断标记触发器 INT</p>
+<li>
+<p>中断标记触发器 INT</p>
 <p>控制器时序系统中周期状态分配电路的一部分，表示中断周期标记。当 INT = 1 时，进入中断周期，执行中断隐指令的操作</p>
 </li>
-<li><p>中断屏蔽触发器 IM</p>
+<li>
+<p>中断屏蔽触发器 IM</p>
 <p>是 CPU 是否受理中断或批准中断的标志。IM 标志为“0”时，CPU 可以受理外界的中断请求，反之，IM 标志为“1”时，CPU 不受理外界的中断</p>
 </li>
 </ul>
-<h2 id="指令系统的一种分类"><a href="#指令系统的一种分类" class="headerlink" title="指令系统的一种分类"></a>指令系统的一种分类</h2><p>根据指令使用数据的方式，指令系统可分为堆栈型、累加器型和寄存器型。寄存器型又可以进一步分为寄存器-寄存器型和寄存器-存储器型</p>
+<h2 id="指令系统的一种分类"><a class="markdownIt-Anchor" href="#指令系统的一种分类"></a> 指令系统的一种分类</h2>
+<p>根据指令使用数据的方式，指令系统可分为堆栈型、累加器型和寄存器型。寄存器型又可以进一步分为寄存器-寄存器型和寄存器-存储器型</p>
 <ul>
-<li><p>堆栈型</p>
+<li>
+<p>堆栈型</p>
 <p>堆栈型指令又称零地址指令，其操作数都在栈顶，在运算指令中不需要指定操作数，默认对栈顶数据进行运算并将结果压回栈顶</p>
 </li>
-<li><p>累加器型</p>
+<li>
+<p>累加器型</p>
 <p>累加器型指令又称单地址指令，包含一个隐含操作数——累加器，另一个操作数在指令中指定，结果写回累加器中</p>
 </li>
-<li><p>寄存器-存储器型</p>
+<li>
+<p>寄存器-存储器型</p>
 <p>在这种类型的指令系统中，每个操作数都由指令显式指定，操作数为寄存器和内存单元</p>
 </li>
-<li><p>寄存器-寄存器型</p>
+<li>
+<p>寄存器-寄存器型</p>
 <p>在这种类型的指令系统中，每个操作数也由指令显式指定，但除了访存指令外的其他指令的操作数都只能是寄存器</p>
 </li>
 </ul>
 <p>下表给出了四种类型的指令系统中执行 C = A + B 的指令序列，其中 A、B、C 为不同的内存地址，R1、R2 等为通用寄存器</p>
 <div align=center><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231110093640346.png" width="450px"/></dev>
-
-
-<h2 id="北桥与南桥"><a href="#北桥与南桥" class="headerlink" title="北桥与南桥"></a>北桥与南桥</h2><p><a target="_blank" rel="noopener" href="https://news.mydrivers.com/1/931/931503.htm">主板北桥芯片为何消失了？南桥消失了也不奇怪</a></p>
-<h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p>曾经，北桥芯片和南桥芯片组成一个 “芯片组”，是计算机中各个组成部分相互连接和通信的枢纽。主板上所有的存储器控制功能和 I/O 控制功能几乎都集成在芯片组内，它既实现了总线的功能，又提供了各种 I/O 接口及相关的控制功能。</p>
+<h2 id="北桥与南桥"><a class="markdownIt-Anchor" href="#北桥与南桥"></a> 北桥与南桥</h2>
+<p><a target="_blank" rel="noopener" href="https://news.mydrivers.com/1/931/931503.htm">主板北桥芯片为何消失了？南桥消失了也不奇怪</a></p>
+<h3 id="历史"><a class="markdownIt-Anchor" href="#历史"></a> 历史</h3>
+<p>曾经，北桥芯片和南桥芯片组成一个 “芯片组”，是计算机中各个组成部分相互连接和通信的枢纽。主板上所有的存储器控制功能和 I/O 控制功能几乎都集成在芯片组内，它既实现了总线的功能，又提供了各种 I/O 接口及相关的控制功能。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/v36471131bbfba92cd0c8ee9f5a618013r.png" width="450px"/></dev>
-
-
 <p><strong><u>北桥</u></strong></p>
 <p>负责与 CPU 通信，并且连接高速设备（内存/显卡）以及与南桥通信。</p>
 <p>北桥是一个主存控制器集线器(Memory Controller Hub, MCH)芯片，本质上是一个 DMA 控制器，因此可通过 MCH 芯片，直接访问主存和显卡中的显存。</p>
@@ -792,27 +839,34 @@
 <p>负责与低速设备（硬盘/USB 设备）通信，时钟/BIOS/系统管理/旧式设备控制，以及与北桥通信。</p>
 <p>南桥是一个 I/O 控制器集线器 ICH (I/O Controller Hub)芯片，其中可以继承 USB 控制器、磁盘控制器、以太网控制器等各种外设控制器，也可以通过南桥芯片引出若干主板扩展槽，用以接插一些 I/O 控制卡。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240629155624469.png" width="500px"/></dev>
-
-
-<h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><h2 id="计算机中的频率"><a href="#计算机中的频率" class="headerlink" title="计算机中的频率"></a>计算机中的频率</h2><p><u><strong>CPU 主频</strong></u></p>
+<h3 id="现状"><a class="markdownIt-Anchor" href="#现状"></a> 现状</h3>
+<h2 id="计算机中的频率"><a class="markdownIt-Anchor" href="#计算机中的频率"></a> 计算机中的频率</h2>
+<p><u><strong>CPU 主频</strong></u></p>
 <p>即 CPU 时钟频率。</p>
 <p><strong><u>CPU 外频</u></strong></p>
 <p>通常指系统总线的工作频率。</p>
 <p><u><strong>CPU 倍频</strong></u></p>
-<h2 id="USB"><a href="#USB" class="headerlink" title="USB"></a>USB</h2><p>通用串行总线 USB (Universal Serial Bus)，是连接计算机与设备的一种序列总线标准，也是一种输入输出(I/O)连接端口的技术规范。</p>
-<h3 id="产生背景"><a href="#产生背景" class="headerlink" title="产生背景"></a>产生背景</h3><p>多媒体电脑刚问世时，外接式设备的传输接口各不相同，如打印机只能接并行端口、调制解调器只能接 RS-232、鼠标键盘只能接 PS/2 等。繁杂的接口系统，加上必须安装驱动程序并重启才能使用的限制，都会造成用户的困扰。因此，创造出一个统一且支持易插拔的外接式传输接口，便成为无可避免的趋势，USB应运而生。</p>
-<h3 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h3><ul>
-<li><p>USB-C</p>
+<h2 id="usb"><a class="markdownIt-Anchor" href="#usb"></a> USB</h2>
+<p>通用串行总线 USB (Universal Serial Bus)，是连接计算机与设备的一种序列总线标准，也是一种输入输出(I/O)连接端口的技术规范。</p>
+<h3 id="产生背景"><a class="markdownIt-Anchor" href="#产生背景"></a> 产生背景</h3>
+<p>多媒体电脑刚问世时，外接式设备的传输接口各不相同，如打印机只能接并行端口、调制解调器只能接 RS-232、鼠标键盘只能接 PS/2 等。繁杂的接口系统，加上必须安装驱动程序并重启才能使用的限制，都会造成用户的困扰。因此，创造出一个统一且支持易插拔的外接式传输接口，便成为无可避免的趋势，USB应运而生。</p>
+<h3 id="相关概念"><a class="markdownIt-Anchor" href="#相关概念"></a> 相关概念</h3>
+<ul>
+<li>
+<p>USB-C</p>
 <p>即 USB Type-C。</p>
 </li>
-<li><p>USB-IF</p>
+<li>
+<p>USB-IF</p>
 </li>
-<li><p>Thunderbolt</p>
+<li>
+<p>Thunderbolt</p>
 <p>Thunderbolt 又称“雷电技术”，苹果中国译为“雷雳”，是由英特尔和苹果联合推出的一种高速数据传输和视频协议，目的在于当作电脑与其他设备之间的通用总线。</p>
 <p>详见 Thunderbolt 一节。</p>
 </li>
 </ul>
-<h3 id="USB-版本"><a href="#USB-版本" class="headerlink" title="USB 版本"></a>USB 版本</h3><p><strong><u>USB 1.0</u></strong></p>
+<h3 id="usb-版本"><a class="markdownIt-Anchor" href="#usb-版本"></a> USB 版本</h3>
+<p><strong><u>USB 1.0</u></strong></p>
 <p>1996 年 1 月发布，数据传输速率为 1.5Mbit/s (Low-Speed) 和 12Mbit/s (Full-Speed)。</p>
 <p>无预测及通过检测功能，Full-Speed 也难以达成，仅极少数出现在市场上。</p>
 <p><strong><u>USB 1.1</u></strong></p>
@@ -837,15 +891,19 @@
 <p>Thunderbolt 1 和 Thunderbolt 2 使用 Mini DP 接口，Thunderbolt 3 开始使用 Type-C 接口。</p>
 <p><strong><u>USB4 V2.0</u></strong></p>
 <p>2022 年 9 月发布，传输速率可达 80 Gbps。</p>
-<h2 id="Thunderbolt"><a href="#Thunderbolt" class="headerlink" title="Thunderbolt"></a>Thunderbolt</h2><p>Thunderbolt 又称“雷电技术”，苹果中国译为“雷雳”（可能是为了避免与 Lightning 闪电接口弄混），是由英特尔和苹果联合推出的一种高速数据传输和视频协议，目的在于当作电脑与其他设备之间的通用总线。</p>
-<h3 id="Thunderbolt-版本"><a href="#Thunderbolt-版本" class="headerlink" title="Thunderbolt 版本"></a>Thunderbolt 版本</h3><p><strong><u>第一版 Thunderbolt</u></strong></p>
+<h2 id="thunderbolt"><a class="markdownIt-Anchor" href="#thunderbolt"></a> Thunderbolt</h2>
+<p>Thunderbolt 又称“雷电技术”，苹果中国译为“雷雳”（可能是为了避免与 Lightning 闪电接口弄混），是由英特尔和苹果联合推出的一种高速数据传输和视频协议，目的在于当作电脑与其他设备之间的通用总线。</p>
+<h3 id="thunderbolt-版本"><a class="markdownIt-Anchor" href="#thunderbolt-版本"></a> Thunderbolt 版本</h3>
+<p><strong><u>第一版 Thunderbolt</u></strong></p>
 <p>2011 年发表，数据传输速率达 10Gbps，使用 mini-DP 接口。</p>
 <p>采用两种通信协议 ，包括用在资料传输的 PCI Express ，以及用在显示的 DisplayPort。</p>
 <p>只有当时的苹果笔记本和极小部分主板使用。</p>
 <p><strong><u>第二版 Thunderbolt 2</u></strong></p>
 <p>2013 年发表，数据传输速率达 20Gbps，使用 mini-DP 接口。</p>
 <p>Thunderbolt 1 和 2 在当时的主要用途是外接高分辨率显示器（从采用 mini DP 接口就能看出）</p>
-<h2 id="CPU-命名"><a href="#CPU-命名" class="headerlink" title="CPU 命名"></a>CPU 命名</h2><h3 id="Intel"><a href="#Intel" class="headerlink" title="Intel"></a>Intel</h3><p>以 intel Core i7-13700K 为例，intel 为品牌名，Core 为产品线名，i7 为型号名，13 为代数，700 为子型号，K 为尾缀。</p>
+<h2 id="cpu-命名"><a class="markdownIt-Anchor" href="#cpu-命名"></a> CPU 命名</h2>
+<h3 id="intel"><a class="markdownIt-Anchor" href="#intel"></a> Intel</h3>
+<p>以 intel Core i7-13700K 为例，intel 为品牌名，Core 为产品线名，i7 为型号名，13 为代数，700 为子型号，K 为尾缀。</p>
 <p><strong><u>产品线名</u></strong></p>
 <p>赛扬 Celeron：低端</p>
 <p>奔腾 Pentium：入门</p>
@@ -886,7 +944,8 @@
 <p>G：Graphic，集成 VEGA 显卡。G + 数字的组合中，数字越大，核显性能越强。</p>
 <p>Q：Quad，4 颗物理核心。</p>
 <p>M：PGA 封装，可更换的移动版 CPU。</p>
-<h3 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h3><p>只介绍 ZEN 架构的消费级 Ryzen 系列的命名。</p>
+<h3 id="amd"><a class="markdownIt-Anchor" href="#amd"></a> AMD</h3>
+<p>只介绍 ZEN 架构的消费级 Ryzen 系列的命名。</p>
 <p>以 AMD Ryzen7 7700 X 为例，AMD 为品牌名，Ryzen7 为产品线及定位，7 为代数，700 为子型号，X 为尾缀。</p>
 <p><strong><u>产品线及定位（型号）</u></strong></p>
 <p>Ryzen3（入门）、Ryzen5（中端）、Ryzen7（高端）、Ryzen9（旗舰），通常也会被简写为 R3、R5、R7、R9。</p>
@@ -897,8 +956,6 @@
 <p>数值越高定位越高，第二位数同样也有更细微的子型号划分。</p>
 <p>通常型号和子型号的对应关系为：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240627164528070.png" width="300px"/></dev>
-
-
 <p><strong><u>尾缀</u></strong></p>
 <p>AMD 台式机 CPU 全系都是不锁倍频的设计。</p>
 <p>X：频率更高。</p>
@@ -913,22 +970,26 @@
 <p>HS：标准功耗。</p>
 <p>H：标准功耗。</p>
 <p>HX：桌面端移植的核心。</p>
-<hr>
+<hr />
 <p>在 7 代之前，锐龙实际命名相当混乱</p>
-<h2 id="DDR"><a href="#DDR" class="headerlink" title="DDR"></a>DDR</h2><h3 id="DDR-SDRAM-芯片技术"><a href="#DDR-SDRAM-芯片技术" class="headerlink" title="DDR SDRAM 芯片技术"></a>DDR SDRAM 芯片技术</h3><p>DDR (Double Data Rate) 核心技术点就在于双沿传输和预取 Prefetch。</p>
+<h2 id="ddr"><a class="markdownIt-Anchor" href="#ddr"></a> DDR</h2>
+<h3 id="ddr-sdram-芯片技术"><a class="markdownIt-Anchor" href="#ddr-sdram-芯片技术"></a> DDR SDRAM 芯片技术</h3>
+<p>DDR (Double Data Rate) 核心技术点就在于双沿传输和预取 Prefetch。</p>
 <p>双沿传输即利用存储器总线上时钟信号的上升沿和下降沿进行两次传送，以实现一个时钟内传送两次数据的功能。</p>
 <p>预取，顾名思义就是预先存取数据，也就是说在 I/O 控制器发出请求之前，存储单元已经事先准备好了 2/4/8 位数据。简单来说这就是把并行传输的数据转换为串行数据流。</p>
 <p>DDR1 是两位预取（有公司更贴切地称之为 2n Prefetch，n 代表芯片位宽，即两倍位宽预取），在一个时钟周期中，同时将相邻列地址的存储单元的数据一起取出来放入芯片内部 I/O 缓冲。如此，再结合双沿传输，就可在存储阵列频率不变的情况下，数据传输率达到了 SDRAM 的两倍。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/iouuioewr8943.jpg" width="450px"/></dev>
-
-
 <p>通过上表就能非常直观的看出，近年来内存的频率虽然在成倍增长，可实际上真正存储单元的频率一直在 133MHz - 200MHz 之间徘徊，这是因为电容的刷新频率受制于制造工艺而很难取得突破。而每一代 DDR 的推出，都能够以较低的存储单元频率，实现更大的带宽，并且为将来频率和带宽的提升留下了一定的空间。</p>
 <p>虽然存储单元的频率一直都没变，但内存颗粒的 I/O 频率却一直在增长（配合预取位数的增长），再加上 DDR 均采用双沿传输，因此内存的数据传输率可以达到核心频率的 8 倍之多。</p>
-<h3 id="DDR2-SDRAM-芯片技术"><a href="#DDR2-SDRAM-芯片技术" class="headerlink" title="DDR2 SDRAM 芯片技术"></a>DDR2 SDRAM 芯片技术</h3><p>DDR2 在 DDR1 的基础上，数据预取位数从 2bit 扩充至 4bit，此时双沿传输已经无法充分利用 4bit 的预取，因此 I/O 控制器频率（存储器总线上的时钟频率）必须加倍，如此等效频率达到核心频率的 4 倍。</p>
-<h3 id="DDR3-SDRAM-芯片技术"><a href="#DDR3-SDRAM-芯片技术" class="headerlink" title="DDR3 SDRAM 芯片技术"></a>DDR3 SDRAM 芯片技术</h3><p>DDR3 芯片内部 I/O 缓冲可以进行 8 位预取，同理，I/O 频率需要在 DDR2 的基础上再次翻倍，如此等效频率达到核心频率的 8 倍。</p>
-<hr>
+<h3 id="ddr2-sdram-芯片技术"><a class="markdownIt-Anchor" href="#ddr2-sdram-芯片技术"></a> DDR2 SDRAM 芯片技术</h3>
+<p>DDR2 在 DDR1 的基础上，数据预取位数从 2bit 扩充至 4bit，此时双沿传输已经无法充分利用 4bit 的预取，因此 I/O 控制器频率（存储器总线上的时钟频率）必须加倍，如此等效频率达到核心频率的 4 倍。</p>
+<h3 id="ddr3-sdram-芯片技术"><a class="markdownIt-Anchor" href="#ddr3-sdram-芯片技术"></a> DDR3 SDRAM 芯片技术</h3>
+<p>DDR3 芯片内部 I/O 缓冲可以进行 8 位预取，同理，I/O 频率需要在 DDR2 的基础上再次翻倍，如此等效频率达到核心频率的 8 倍。</p>
+<hr />
 <p>综上可以看出，DDR1/2/3 的发展是围绕着数据预取而进行的，同时也给 I/O 控制器造成了不小的压力，虽然存储单元的工作频率保持不变，但 I/O 频率以级数增长，我们可以看到 DDR3 的 I/O 频率已逼近 1GHz 大关，此时 I/O 频率成为了新的瓶颈。</p>
-<h2 id="PCIe"><a href="#PCIe" class="headerlink" title="PCIe"></a>PCIe</h2><h2 id="分辨率相关"><a href="#分辨率相关" class="headerlink" title="分辨率相关"></a>分辨率相关</h2><p><strong><u>像素</u></strong></p>
+<h2 id="pcie"><a class="markdownIt-Anchor" href="#pcie"></a> PCIe</h2>
+<h2 id="分辨率相关"><a class="markdownIt-Anchor" href="#分辨率相关"></a> 分辨率相关</h2>
+<p><strong><u>像素</u></strong></p>
 <p>影像显示的基本单位。</p>
 <p>译自英文 “pixel”，pix 是英语单词 picture 的常用简写，加上英语单词 “元素” element，就得到 pixel，故“像素”表示“画像元素”之意，有时亦被称为 pel（picture element)。</p>
 <p>一个像素通常被视为影像的最小的完整取样。每个像素不是一个点或者一个方块，而是一个抽象的取样。仔细处理的话，一幅影像中的像素可以在任何尺度上看起来都不像分离的点或者方块；但是在很多情况下，它们采用点或者方块显示。</p>
@@ -953,7 +1014,8 @@
 <p>PPI 和 DPI 经常都会出现混用现象，但它们所用的领域也存在区别。从技术角度说，“像素” 只存在于电脑显示领域，而 “点” 只出现于打印或印刷领域。</p>
 </blockquote>
 <blockquote>
-<p>Windows 系统的 DPI 为什么默认为 96 ？<br>早期电脑屏幕的 PPI 与当时流行的点阵打印机的 DPI 相同，都为 72，也就是说，图片在屏幕上显示的尺寸与其打印出来的尺寸相同，所见即所得。但在实际生活中，人眼到屏幕的距离通常要比纸张更远，所以同样的图像或字体会显得更小，为了解决这个问题，微软非常机智地把系统默认的 DPI 提高到了 96，从而让图像和文本显示得更大，提升了可读性，后续的 Windows 软件也都以这个标准进行设计。</p>
+<p>Windows 系统的 DPI 为什么默认为 96 ？<br />
+早期电脑屏幕的 PPI 与当时流行的点阵打印机的 DPI 相同，都为 72，也就是说，图片在屏幕上显示的尺寸与其打印出来的尺寸相同，所见即所得。但在实际生活中，人眼到屏幕的距离通常要比纸张更远，所以同样的图像或字体会显得更小，为了解决这个问题，微软非常机智地把系统默认的 DPI 提高到了 96，从而让图像和文本显示得更大，提升了可读性，后续的 Windows 软件也都以这个标准进行设计。</p>
 </blockquote>
 <p><strong><u>影像在不同 PPI 显示器屏幕上的显示问题</u></strong></p>
 <p>在系统 DPI 一致的情况下，显示器屏幕的 PPI 越高，同一图片的显示尺寸显然就越小。如果想要图片的尺寸恢复到原本的尺寸，就需要放大该图片（废话），也就是提高其分辨率，即占用更多的像素点。根据缩放的比例不同，常用的缩放算法有两种：双线性插值（非整数缩放）和邻近像素采样（整数缩放）。</p>
@@ -963,19 +1025,17 @@
 </ul>
 <p>Windows 使用 DPI 96 为 100% 基准，定义了不同 DPI 对应不同的缩放比例：DPI 96 (100%)、DPI 120 (125%)、DPI 144 (150%)、DPI 192 (200%)。有些软件（比如微信）对于不同的 DPI 都做了适配，在所有的缩放比例下都能保持清晰，但有些软件只适配了默认的 96 DPI（比如傻鸟百度网盘个人版，纯纯恶心个人用户，23 年 5 月个人版才适配高 DPI 屏），此时桌面窗口管理器就会先使用 96 DPI 渲染窗口，再使用算法进行放大。非整数放大使用插值算法，整数放大则使用临近像素采样算法。不过可以在应用属性中来指定该应用的缩放策略：</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240628225754744.png" width="750px"/></dev>
-
-
 <p>选择“系统”意味着使用前面说的算法；选择“应用程序”意味着让软件自行选择缩放模式，例如原神启动器会直接关闭缩放，用原始的 96 DPI 点对点渲染在屏幕上，这样虽然保留了原始的清晰度，但在高 PPI 显示器屏幕上的 UI 就会非常小；选择“系统(增强)”，系统就会采用 GDI 缩放策略，GDI 策略的做法是先用整数倍来渲染 UI 中的矢量文本和图片，然后再压缩到实际的缩放比例，以减小矢量文本和图像的失真，但不是所有的元素都适用 GDI 策略缩放，有时会出现错位或清晰度不变的情况。</p>
 <p>挑选电脑显示器屏幕时，能避免缩放的发生最好，即屏幕 PPI 接近 96。如果想要追求高分辨率同时显示器尺寸不能太大，那就尽量避免非整数倍缩放（避免模糊）。</p>
 <p>由于人眼的分辨率是有极限的，在特定距离下，屏幕 PPI 超过一个值时视觉的差别就不再明显了，此时屏幕已具备足够高的像素密度而使得肉眼无法分辨其中单独的像素点。这就是苹果提出的 Retina 视网膜屏幕概念。根据苹果给出的视网膜设计标准的公式，可以计算出不同使用距离对应的视网膜 PPI，例如 60cm 对应的视网膜 PPI 为 146。当然 PPI 越高带来的视觉体验也会越好。iPhone 15 全系的屏幕 PPI 为 460，Studio Display 的 PPI 为 218，M3 MBP 显示屏 PPI 为 254。</p>
-<h2 id="基于总线的互连结构"><a href="#基于总线的互连结构" class="headerlink" title="基于总线的互连结构"></a>基于总线的互连结构</h2><p>下图给出了一个传统的基于总线互连的计算机系统结构示意图，在其互连结构中，除了 CPU、主存储器以及各种接插在主板扩展槽上的 I/O 控制卡（如声卡、视频卡）外，还有北桥芯片和南桥芯片。这两块超大规模集成电路芯片组成一个 “芯片组”，是计算机中各个组成部分相互连接和通信的枢纽。主板上所有的存储器控制功能和 I/O 控制功能几乎都集成在芯片组内，它既实现了总线的功能，又提供了各种 I/O 接口及相关的控制功能。其中，北桥是一个主存控制器集线器 MCH (Memory Controller Hub) 芯片，本质上是一个 DMA 控制器，因此，可通过 MCH 芯片，直接访问主存和显卡中的显存。南桥是一个 I/O 控制器集线器 ICH (I/O Controller Hub) 芯片，其中可以集成 USB 控制器、磁盘控制器、以太网络控制器等各种外设控制器，也可以通过南桥芯片引出若干主板扩展槽，用以接插一些 I/O 控制卡。</p>
+<h2 id="基于总线的互连结构"><a class="markdownIt-Anchor" href="#基于总线的互连结构"></a> 基于总线的互连结构</h2>
+<p>下图给出了一个传统的基于总线互连的计算机系统结构示意图，在其互连结构中，除了 CPU、主存储器以及各种接插在主板扩展槽上的 I/O 控制卡（如声卡、视频卡）外，还有北桥芯片和南桥芯片。这两块超大规模集成电路芯片组成一个 “芯片组”，是计算机中各个组成部分相互连接和通信的枢纽。主板上所有的存储器控制功能和 I/O 控制功能几乎都集成在芯片组内，它既实现了总线的功能，又提供了各种 I/O 接口及相关的控制功能。其中，北桥是一个主存控制器集线器 MCH (Memory Controller Hub) 芯片，本质上是一个 DMA 控制器，因此，可通过 MCH 芯片，直接访问主存和显卡中的显存。南桥是一个 I/O 控制器集线器 ICH (I/O Controller Hub) 芯片，其中可以集成 USB 控制器、磁盘控制器、以太网络控制器等各种外设控制器，也可以通过南桥芯片引出若干主板扩展槽，用以接插一些 I/O 控制卡。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20241019155307325.png" width="600px"/></dev>
-
-
 <p>如图所示，CPU 与主存之间由处理器总线（也称为前端总线）和存储器总线相连，各类 I/O 设备通过相应的设备控制器（例如，USB 控制器、显示适配卡、磁盘控制器）连接到 I/O 总线上，而 I/O 总线通过芯片组与主存和 CPU 连接。</p>
 <p>传统上，总线分为处理器-存储器总线和 I/O 总线。处理器-存储器总线比较短，通常是高速总线。有的系统将处理器总线和存储器总线分开，中间通过北桥芯片（桥接器）连接，CPU 芯片通过 CPU 插座插在处理器总线上，内存条通过内存条插槽插在存储器总线上。</p>
 <p>下面对处理器总线、存储器总线和 I/O 总线进行简单说明。</p>
-<h3 id="处理器总线"><a href="#处理器总线" class="headerlink" title="处理器总线"></a>处理器总线</h3><p>国内教材中系统总线通常指连接 CPU、存储器和各种 I/O 模块等主要部件的总线统称，而 Intel 公司推出的芯片组中，对系统总线赋予了特定的含义，特指 CPU 连接到北桥芯片的总线，也称为处理器总线或前端总线 FSB (Front Side Bus)。</p>
+<h3 id="处理器总线"><a class="markdownIt-Anchor" href="#处理器总线"></a> 处理器总线</h3>
+<p>国内教材中系统总线通常指连接 CPU、存储器和各种 I/O 模块等主要部件的总线统称，而 Intel 公司推出的芯片组中，对系统总线赋予了特定的含义，特指 CPU 连接到北桥芯片的总线，也称为处理器总线或前端总线 FSB (Front Side Bus)。</p>
 <p><strong><u>FSB 总线</u></strong></p>
 <p>早期的 Intel 微处理器的处理器总线称为前端总线 FSB (FrontSide Bus)，它是主板上最快的总线，主要用于处理器与北桥芯片进行信息交换。</p>
 <p>FSB 的传输速率单位实际上是 MT/s，表示每秒传输多少兆次。通常所说的总线传输速率单位 MHz 是习惯上的说法，实质是时钟频率单位。早期的 FSB 每个时钟周期传送一次数据，因此时钟频率与数据传输速率一致。但是，从 PentiumPro 开始，FSB 采用 quad pumped 技术在每个总线时钟周期内传 4 次数据，也就是说总线的数据传输速率等于总线时钟频率的 4 倍，若时钟频率为 333MHz，则数据传输速率为 1333MT/s，即 1.333CT/s，但习惯上称 1333MHz。若前端总线的工作频率为 1333MHz（实际时钟频率为 333MHz），总线宽度为 64 位，则总线带宽为 10.66GB/s。对于多 CPU 芯片的多处理器系统则多个 CPU 芯片通过一个 FSB 进行互连，也即多个处理器共享一个 FSB。</p>
@@ -985,22 +1045,21 @@
 <p>IOH 也是从传统意义上的北桥剥离出来，作为 CPU（MCH）与 ICH 连接起来的桥梁，通过 QPI 总线与 CPU 相连，下方使用 DMI 总线连接南桥 ICH 芯片。</p>
 </blockquote>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20241019162706221.png" width="600px"/></dev>
-
-
 <p>上图给出了 Intel Core i7 中核与核之间、核与主存控制器之间以及各级 cache 之间的互连结构。从图中可以看出，一个 Core i7 处理器中有 4 个 CPU 核(core)，每两个核之间都用 QPI 总线互连，并且每个核还有一条 QPI 总线可以与 IOH 芯片互连。处理器支持三通道 DDR3 SDRAM 内存条插槽，因此，处理器中包含 3 个内存控制器，并有 3 个并行传输的存储器总线，也意味着有 3 组内存条插槽。</p>
 <p>QPI 总线是一种基于包传输的串行高速点对点连接协议，采用差分信号与专门的时钟信号进行传输。QPI 总线有 20 条数据线，发送方（TX）和接收方（RX）有各自的时钟信号，每个时钟周期传输两次。一个 QPI 数据包包含 80 位，需要两个时钟周期即 4 次传输，才能完成整个数据包的传送。在每次传输的 20 位数据中，有 16 位是有效数据，其余 4 位用于循环冗余校验，以提高系统的可靠性。由于 QPI 是双向的，在发送的同时也可以接收另一端传输来的数据，这样，每个 QPI 总线的带宽计算公式为：每秒传输次数 x 每次传输的有效数据 x 2。</p>
 <p>QPI 总线的速度单位通常为 GT/s，若 QPI 的时钟频率为 2.4GHz，则速度为 4.8GT/s，表示每秒传输 4.8G 次数据，并称该 QPI 频率为 4.8GT/S。因此，QPI 频率为 4.8GT/s 的总带宽为 4.8GT/s × 2B × 2 = 19.2GB/s。QPI 频率为 6.4GT/s 的总带宽为 6.4GT/s × 2B × 2 = 25.6GB/s。</p>
-<h3 id="存储器总线"><a href="#存储器总线" class="headerlink" title="存储器总线"></a>存储器总线</h3><p>早期的存储器总线由北桥芯片控制，处理器通过北桥芯片和主存储器、图形卡（显卡）以及南桥芯片进行互连。Core i7 以后的处理器芯片中集成了内存控制器，因而，存储器总线直接连接到处理器。</p>
+<h3 id="存储器总线"><a class="markdownIt-Anchor" href="#存储器总线"></a> 存储器总线</h3>
+<p>早期的存储器总线由北桥芯片控制，处理器通过北桥芯片和主存储器、图形卡（显卡）以及南桥芯片进行互连。Core i7 以后的处理器芯片中集成了内存控制器，因而，存储器总线直接连接到处理器。</p>
 <p>根据芯片组设计时确定的所能处理的主存类型的不同，存储器总线有不同的运行速度。如上图所示的计算机中，存储器总线宽度为 64 位，每秒传输 1333M 次，总线带宽为 1333M x 64/8 = 10.66 (GB/s)，因而 3 个通道的总带宽为 32GB/s，与此配套的内存条型号为 DDR3-1333。</p>
-<h3 id="I-O-总线"><a href="#I-O-总线" class="headerlink" title="I/O 总线"></a>I/O 总线</h3><p>I/O 总线用于为系统中的各种 I/O 设备提供输入/输出通路，在物理上通常是主板上的一些 I/O 扩展槽。早期的第一代 I/O 总线有 XT 总线、ISA 总线、EISA 总线、VESA 总线，这些 I/O 总线早已经被淘汰；第二代  I/O 总线包括 PCI、AGP、PCI-X；第三代 I/O 总线包括 PCI-Express。</p>
+<h3 id="io-总线"><a class="markdownIt-Anchor" href="#io-总线"></a> I/O 总线</h3>
+<p>I/O 总线用于为系统中的各种 I/O 设备提供输入/输出通路，在物理上通常是主板上的一些 I/O 扩展槽。早期的第一代 I/O 总线有 XT 总线、ISA 总线、EISA 总线、VESA 总线，这些 I/O 总线早已经被淘汰；第二代  I/O 总线包括 PCI、AGP、PCI-X；第三代 I/O 总线包括 PCI-Express。</p>
 <p>将北桥芯片功能集成到 CPU 芯片后，主板上的芯片组不再是传统的三芯片结构（CPU + 北桥 + 南桥）。根据不同的组合有多种主板芯片组结构，有的是双芯片结构（CPU + PCH），有的是三芯片结构（CPU + IOH + ICH)。其中，双芯片结构中的 PCH (PlatformController Hub) 芯片除了包含原来南桥（ICH）的 I/O 控制器集线器的功能外，还集成了以前北桥中的图形显示控制单元管理引擎 ME (Management Engine) 单元，另外还包括 NVRAM (Non-Vola-tile Random Access Memory) 控制单元等。也就是说，PCH 比以前南桥的功能要复杂得多。</p>
-<h3 id="示例：CPU-IOH-ICH-三芯片结构"><a href="#示例：CPU-IOH-ICH-三芯片结构" class="headerlink" title="示例：CPU+IOH+ICH 三芯片结构"></a>示例：CPU+IOH+ICH 三芯片结构</h3><p>下图给出了一个基于 Intel Core i7 系列三芯片结构的单处理器计算机系统互连示意图。图中 Core i7 处理器芯片直接与三通道 DDR3 SDRAM 主存储器连接，并提供一个带宽为 25.6GB/s 的 QPI 总线，与基于 X58 芯片组的 IOH 芯片相连。图中每个通道的存储器总线带宽为 64/8 × 533 × 2 = 8.5 (GB/s)，所配内存条速度为 533MHz × 2 = 1066MT/s。 </p>
+<h3 id="示例cpuiohich-三芯片结构"><a class="markdownIt-Anchor" href="#示例cpuiohich-三芯片结构"></a> 示例：CPU+IOH+ICH 三芯片结构</h3>
+<p>下图给出了一个基于 Intel Core i7 系列三芯片结构的单处理器计算机系统互连示意图。图中 Core i7 处理器芯片直接与三通道 DDR3 SDRAM 主存储器连接，并提供一个带宽为 25.6GB/s 的 QPI 总线，与基于 X58 芯片组的 IOH 芯片相连。图中每个通道的存储器总线带宽为 64/8 × 533 × 2 = 8.5 (GB/s)，所配内存条速度为 533MHz × 2 = 1066MT/s。</p>
 <div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20241022172915111.png" width="600px"/></dev>
-
-
 <p>图中，IOH 的重要功能是提供对 PCI-Express 2.0 的支持，最多可支持 36 条 PCI-Express 2.0 通路，可以配置为一个或两个 PCI-Express2.0 ×16 的链路，或者 4 个 PCI-Express 2.0 ×8 的链路，或者其他的组合，如 8 个 PCI-Express 2.0 ×4 的链路等。这些 PCI-Express 链路可以支持多个图形显示卡。</p>
 <p>IOH 与 ICH 芯片（ICH10 或 ICH10R）通过 DMI (Direct Media Interface) 总线连接。DMI 采用点对点的连接方式，时钟频率为100MHz，因为上行与下行各有 1GB/s 的数据传输率，因比总带宽达到 2GB/s。ICH 芯片中集成了相对慢速的外设 I/O 接口。若采用 ICH10R 芯片，则还支持 RAID 功能，即 ICH10R 芯片中还包含 RAID 控 制器，所支持的 RAID 等级有 SATA RAID 0、RAID 1、RAID 5、RAID 10 等。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2025/03/26/%E6%8B%93%E5%B1%95-CO/">https://zerooo.top/2025/03/26/%E6%8B%93%E5%B1%95-CO/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">拓展 | OS</div></div></a></div><div class="next-post pull-right"><a href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">输入输出系统 | CO</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2025/03/26/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F-CO/" title="存储系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">存储系统 | CO</div></div></a></div><div><a href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">中央处理器 | CO</div></div></a></div><div><a href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">总线 | CO</div></div></a></div><div><a href="/2025/03/26/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97-CO/" title="数据的表示和运算 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">数据的表示和运算 | CO</div></div></a></div><div><a href="/2025/03/26/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F-CO/" title="指令系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">指令系统 | CO</div></div></a></div><div><a href="/2025/03/26/%E7%BB%AA%E8%AE%BA-CO/" title="绪论 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">绪论 | CO</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3"><span class="toc-number">1.</span> <span class="toc-text">逻辑运算相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.</span> <span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">逻辑表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF%E7%AC%A6%E5%8F%B7"><span class="toc-number">1.3.</span> <span class="toc-text">逻辑门电路符号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU-%E6%9E%B6%E6%9E%84%E5%90%8D%E8%AF%8D"><span class="toc-number">2.</span> <span class="toc-text">CPU 架构名词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IA-32%E3%80%81Linux-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85"><span class="toc-number">3.</span> <span class="toc-text">IA-32、Linux 基础知识点补充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%9D%83%E7%BA%A7%E7%9A%84%E6%A3%80%E6%9F%A5"><span class="toc-number">3.1.</span> <span class="toc-text">特权级的检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">工作模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%E7%9B%B8%E5%85%B3"><span class="toc-number">3.3.</span> <span class="toc-text">地址转换相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-%E4%B8%AD%E7%9A%84-PCB"><span class="toc-number">3.4.</span> <span class="toc-text">Linux 中的 PCB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E3%80%81%E4%B8%AD%E6%96%AD%E3%80%81%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">异常、中断、系统调用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IA-32-%E4%B8%AD%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.1.</span> <span class="toc-text">IA-32 中异常和中断的处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-%E5%AF%B9%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.2.</span> <span class="toc-text">Linux 对异常和中断的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.2.1.</span> <span class="toc-text">对异常的处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E4%B8%AD%E6%96%AD%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.2.2.</span> <span class="toc-text">对中断的处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IA-32-Linux-%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text">IA-32 + Linux 的系统调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.4.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%87%E6%8D%A2"><span class="toc-number">5.</span> <span class="toc-text">任务切换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#x86-%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%87%E6%8D%A2%E6%96%B9%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text">x86 原生支持的任务切换方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IA-32-Linux-%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%87%E6%8D%A2"><span class="toc-number">5.2.</span> <span class="toc-text">IA-32 + Linux 的任务切换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%81%E5%AD%98%E5%99%A8%E3%80%81%E8%A7%A6%E5%8F%91%E5%99%A8%E5%92%8C%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">锁存器、触发器和寄存器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-number">7.</span> <span class="toc-text">Linux 内存管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">7.1.</span> <span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E6%A0%B8%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="toc-number">7.2.</span> <span class="toc-text">内核地址空间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">8.</span> <span class="toc-text">中断系统中的触发器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%80%E7%A7%8D%E5%88%86%E7%B1%BB"><span class="toc-number">9.</span> <span class="toc-text">指令系统的一种分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%97%E6%A1%A5%E4%B8%8E%E5%8D%97%E6%A1%A5"><span class="toc-number">10.</span> <span class="toc-text">北桥与南桥</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2"><span class="toc-number">10.1.</span> <span class="toc-text">历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E7%8A%B6"><span class="toc-number">10.2.</span> <span class="toc-text">现状</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E9%A2%91%E7%8E%87"><span class="toc-number">11.</span> <span class="toc-text">计算机中的频率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USB"><span class="toc-number">12.</span> <span class="toc-text">USB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E8%83%8C%E6%99%AF"><span class="toc-number">12.1.</span> <span class="toc-text">产生背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-number">12.2.</span> <span class="toc-text">相关概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB-%E7%89%88%E6%9C%AC"><span class="toc-number">12.3.</span> <span class="toc-text">USB 版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thunderbolt"><span class="toc-number">13.</span> <span class="toc-text">Thunderbolt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Thunderbolt-%E7%89%88%E6%9C%AC"><span class="toc-number">13.1.</span> <span class="toc-text">Thunderbolt 版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU-%E5%91%BD%E5%90%8D"><span class="toc-number">14.</span> <span class="toc-text">CPU 命名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Intel"><span class="toc-number">14.1.</span> <span class="toc-text">Intel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AMD"><span class="toc-number">14.2.</span> <span class="toc-text">AMD</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DDR"><span class="toc-number">15.</span> <span class="toc-text">DDR</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DDR-SDRAM-%E8%8A%AF%E7%89%87%E6%8A%80%E6%9C%AF"><span class="toc-number">15.1.</span> <span class="toc-text">DDR SDRAM 芯片技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DDR2-SDRAM-%E8%8A%AF%E7%89%87%E6%8A%80%E6%9C%AF"><span class="toc-number">15.2.</span> <span class="toc-text">DDR2 SDRAM 芯片技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DDR3-SDRAM-%E8%8A%AF%E7%89%87%E6%8A%80%E6%9C%AF"><span class="toc-number">15.3.</span> <span class="toc-text">DDR3 SDRAM 芯片技术</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCIe"><span class="toc-number">16.</span> <span class="toc-text">PCIe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E8%BE%A8%E7%8E%87%E7%9B%B8%E5%85%B3"><span class="toc-number">17.</span> <span class="toc-text">分辨率相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%80%BB%E7%BA%BF%E7%9A%84%E4%BA%92%E8%BF%9E%E7%BB%93%E6%9E%84"><span class="toc-number">18.</span> <span class="toc-text">基于总线的互连结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%99%A8%E6%80%BB%E7%BA%BF"><span class="toc-number">18.1.</span> <span class="toc-text">处理器总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%80%BB%E7%BA%BF"><span class="toc-number">18.2.</span> <span class="toc-text">存储器总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I-O-%E6%80%BB%E7%BA%BF"><span class="toc-number">18.3.</span> <span class="toc-text">I&#x2F;O 总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%9ACPU-IOH-ICH-%E4%B8%89%E8%8A%AF%E7%89%87%E7%BB%93%E6%9E%84"><span class="toc-number">18.4.</span> <span class="toc-text">示例：CPU+IOH+ICH 三芯片结构</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | OS"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS">拓展 | OS</a><time datetime="2025-03-26T09:17:47.000Z" title="发表于 2025-03-26 17:17:47">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO">拓展 | CO</a><time datetime="2025-03-26T09:17:39.000Z" title="发表于 2025-03-26 17:17:39">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="输入输出系统 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO">输入输出系统 | CO</a><time datetime="2025-03-26T09:17:27.000Z" title="发表于 2025-03-26 17:17:27">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="总线 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO">总线 | CO</a><time datetime="2025-03-26T09:17:18.000Z" title="发表于 2025-03-26 17:17:18">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中央处理器 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO">中央处理器 | CO</a><time datetime="2025-03-26T09:17:10.000Z" title="发表于 2025-03-26 17:17:10">2025-03-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2025/03/26/%E6%8B%93%E5%B1%95-CO/">https://zerooo.top/2025/03/26/%E6%8B%93%E5%B1%95-CO/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">拓展 | OS</div></div></a></div><div class="next-post pull-right"><a href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">输入输出系统 | CO</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">中央处理器 | CO</div></div></a></div><div><a href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">总线 | CO</div></div></a></div><div><a href="/2025/03/26/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F-CO/" title="存储系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">存储系统 | CO</div></div></a></div><div><a href="/2025/03/26/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F-CO/" title="指令系统 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">指令系统 | CO</div></div></a></div><div><a href="/2025/03/26/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97-CO/" title="数据的表示和运算 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">数据的表示和运算 | CO</div></div></a></div><div><a href="/2025/03/26/%E7%BB%AA%E8%AE%BA-CO/" title="绪论 | CO"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">绪论 | CO</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3"><span class="toc-number">1.</span> <span class="toc-text"> 逻辑运算相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.</span> <span class="toc-text"> 逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text"> 逻辑表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF%E7%AC%A6%E5%8F%B7"><span class="toc-number">1.3.</span> <span class="toc-text"> 逻辑门电路符号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cpu-%E6%9E%B6%E6%9E%84%E5%90%8D%E8%AF%8D"><span class="toc-number">2.</span> <span class="toc-text"> CPU 架构名词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ia-32-linux-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85"><span class="toc-number">3.</span> <span class="toc-text"> IA-32、Linux 基础知识点补充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%9D%83%E7%BA%A7%E7%9A%84%E6%A3%80%E6%9F%A5"><span class="toc-number">3.1.</span> <span class="toc-text"> 特权级的检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text"> 工作模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%E7%9B%B8%E5%85%B3"><span class="toc-number">3.3.</span> <span class="toc-text"> 地址转换相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E4%B8%AD%E7%9A%84-pcb"><span class="toc-number">3.4.</span> <span class="toc-text"> Linux 中的 PCB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8-%E4%B8%AD%E6%96%AD-%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text"> 异常、中断、系统调用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ia-32-%E4%B8%AD%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.1.</span> <span class="toc-text"> IA-32 中异常和中断的处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E5%AF%B9%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.2.</span> <span class="toc-text"> Linux 对异常和中断的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.2.1.</span> <span class="toc-text"> 对异常的处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E4%B8%AD%E6%96%AD%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.2.2.</span> <span class="toc-text"> 对中断的处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ia-32-linux-%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text"> IA-32 + Linux 的系统调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.4.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%87%E6%8D%A2"><span class="toc-number">5.</span> <span class="toc-text"> 任务切换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#x86-%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%87%E6%8D%A2%E6%96%B9%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text"> x86 原生支持的任务切换方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ia-32-linux-%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%87%E6%8D%A2"><span class="toc-number">5.2.</span> <span class="toc-text"> IA-32 + Linux 的任务切换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%81%E5%AD%98%E5%99%A8-%E8%A7%A6%E5%8F%91%E5%99%A8%E5%92%8C%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text"> 锁存器、触发器和寄存器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-number">7.</span> <span class="toc-text"> Linux 内存管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">7.1.</span> <span class="toc-text"> 基础知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E6%A0%B8%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="toc-number">7.2.</span> <span class="toc-text"> 内核地址空间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">8.</span> <span class="toc-text"> 中断系统中的触发器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%80%E7%A7%8D%E5%88%86%E7%B1%BB"><span class="toc-number">9.</span> <span class="toc-text"> 指令系统的一种分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%97%E6%A1%A5%E4%B8%8E%E5%8D%97%E6%A1%A5"><span class="toc-number">10.</span> <span class="toc-text"> 北桥与南桥</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2"><span class="toc-number">10.1.</span> <span class="toc-text"> 历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E7%8A%B6"><span class="toc-number">10.2.</span> <span class="toc-text"> 现状</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E9%A2%91%E7%8E%87"><span class="toc-number">11.</span> <span class="toc-text"> 计算机中的频率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usb"><span class="toc-number">12.</span> <span class="toc-text"> USB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E8%83%8C%E6%99%AF"><span class="toc-number">12.1.</span> <span class="toc-text"> 产生背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-number">12.2.</span> <span class="toc-text"> 相关概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#usb-%E7%89%88%E6%9C%AC"><span class="toc-number">12.3.</span> <span class="toc-text"> USB 版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#thunderbolt"><span class="toc-number">13.</span> <span class="toc-text"> Thunderbolt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#thunderbolt-%E7%89%88%E6%9C%AC"><span class="toc-number">13.1.</span> <span class="toc-text"> Thunderbolt 版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cpu-%E5%91%BD%E5%90%8D"><span class="toc-number">14.</span> <span class="toc-text"> CPU 命名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#intel"><span class="toc-number">14.1.</span> <span class="toc-text"> Intel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#amd"><span class="toc-number">14.2.</span> <span class="toc-text"> AMD</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ddr"><span class="toc-number">15.</span> <span class="toc-text"> DDR</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ddr-sdram-%E8%8A%AF%E7%89%87%E6%8A%80%E6%9C%AF"><span class="toc-number">15.1.</span> <span class="toc-text"> DDR SDRAM 芯片技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ddr2-sdram-%E8%8A%AF%E7%89%87%E6%8A%80%E6%9C%AF"><span class="toc-number">15.2.</span> <span class="toc-text"> DDR2 SDRAM 芯片技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ddr3-sdram-%E8%8A%AF%E7%89%87%E6%8A%80%E6%9C%AF"><span class="toc-number">15.3.</span> <span class="toc-text"> DDR3 SDRAM 芯片技术</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcie"><span class="toc-number">16.</span> <span class="toc-text"> PCIe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E8%BE%A8%E7%8E%87%E7%9B%B8%E5%85%B3"><span class="toc-number">17.</span> <span class="toc-text"> 分辨率相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%80%BB%E7%BA%BF%E7%9A%84%E4%BA%92%E8%BF%9E%E7%BB%93%E6%9E%84"><span class="toc-number">18.</span> <span class="toc-text"> 基于总线的互连结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%99%A8%E6%80%BB%E7%BA%BF"><span class="toc-number">18.1.</span> <span class="toc-text"> 处理器总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%80%BB%E7%BA%BF"><span class="toc-number">18.2.</span> <span class="toc-text"> 存储器总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#io-%E6%80%BB%E7%BA%BF"><span class="toc-number">18.3.</span> <span class="toc-text"> I&#x2F;O 总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8Bcpuiohich-%E4%B8%89%E8%8A%AF%E7%89%87%E7%BB%93%E6%9E%84"><span class="toc-number">18.4.</span> <span class="toc-text"> 示例：CPU+IOH+ICH 三芯片结构</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-OS/" title="内存管理 | OS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="内存管理 | OS"/></a><div class="content"><a class="title" href="/2025/03/26/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-OS/" title="内存管理 | OS">内存管理 | OS</a><time datetime="2025-03-26T09:35:50.000Z" title="发表于 2025-03-26 17:35:50">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | OS"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS">拓展 | OS</a><time datetime="2025-03-26T09:17:47.000Z" title="发表于 2025-03-26 17:17:47">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO">拓展 | CO</a><time datetime="2025-03-26T09:17:39.000Z" title="发表于 2025-03-26 17:17:39">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="输入输出系统 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO">输入输出系统 | CO</a><time datetime="2025-03-26T09:17:27.000Z" title="发表于 2025-03-26 17:17:27">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="总线 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO">总线 | CO</a><time datetime="2025-03-26T09:17:18.000Z" title="发表于 2025-03-26 17:17:18">2025-03-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
