@@ -1,0 +1,691 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>图 | DS | ZERO</title><meta name="keywords" content="数据结构"><meta name="author" content="zero"><meta name="copyright" content="zero"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="基本概念图的定义 图 G 由顶点的有限非空​集 V 和边集 E 组成 → G &#x3D; (V, E)。 线性表可以是空表，树可以是空树，但图不可以是空图（边集可空，顶点集一定非空&amp;#x26a0;）。 |V| 表示 G 中顶点 vertex 的个数，|E| 表示 G 中边 edge 的条数。 有向图 每条边都有方向。 无向图 每条边都没有方向。 边&#x2F;无向边 无向图中的边，是顶点的无序对，记为 ($v_i$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图 | DS">
+<meta property="og:url" content="https://zerooo.top/2025/03/26/%E5%9B%BE-DS/index.html">
+<meta property="og:site_name" content="ZERO">
+<meta property="og:description" content="基本概念图的定义 图 G 由顶点的有限非空​集 V 和边集 E 组成 → G &#x3D; (V, E)。 线性表可以是空表，树可以是空树，但图不可以是空图（边集可空，顶点集一定非空&amp;#x26a0;）。 |V| 表示 G 中顶点 vertex 的个数，|E| 表示 G 中边 edge 的条数。 有向图 每条边都有方向。 无向图 每条边都没有方向。 边&#x2F;无向边 无向图中的边，是顶点的无序对，记为 ($v_i$">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg">
+<meta property="article:published_time" content="2025-03-26T09:14:58.000Z">
+<meta property="article:modified_time" content="2025-03-26T09:23:41.821Z">
+<meta property="article:author" content="zero">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg"><link rel="shortcut icon" href="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/favicon.png"><link rel="canonical" href="https://zerooo.top/2025/03/26/%E5%9B%BE-DS/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '图 | DS',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-26 17:23:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/catalog.css?1"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">图 | DS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:14:58.000Z" title="发表于 2025-03-26 17:14:58">2025-03-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:23:41.821Z" title="更新于 2025-03-26 17:23:41">2025-03-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="图 | DS"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><u><strong>图的定义</strong></u></p>
+<p>图 G 由顶点的有限<strong>非空</strong>​集 V 和边集 E 组成 → G = (V, E)。</p>
+<p>线性表可以是空表，树可以是空树，但图不可以是空图（边集可空，顶点集一定非空<span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>）。</p>
+<p>|V| 表示 G 中顶点 vertex 的个数，|E| 表示 G 中边 edge 的条数。</p>
+<p><u><strong>有向图</strong></u></p>
+<p>每条边都有方向。</p>
+<p><u><strong>无向图</strong></u></p>
+<p>每条边都没有方向。</p>
+<p><strong><u>边/无向边</u></strong></p>
+<p>无向图中的边，是顶点的无序对，记为 ($v_i$, $v_j$)，等价于有向图中 &lt;$v_i$, $v_j$&gt; 和 &lt;$v_j$, $v_i$&gt; 两条边。</p>
+<p>可以说 $v_i$ 和 $v_j$ 互为邻接点。</p>
+<p>边 ($v_i$, $v_j$) 依附于 $v_i$ 和 $v_j$，或称边 ($v_i$, $v_j$) 和 $v_i$、$v_j$ 相关联。</p>
+<p><strong><u>弧/有向边</u></strong></p>
+<p>有向图中的边，是顶点的有序对，记为 &lt;$v_i$, $v_j$&gt;，$v_j$ 为弧头，$v_i$ 为弧尾。</p>
+<p>&lt;$v_i$, $v_j$&gt; 称从 $v_i$ 到 $v_j$ 的弧，也称 $v_i$ 邻接到 $v_j$。</p>
+<p><strong><u>度</u></strong></p>
+<p>度 TD($v$)：依附于顶点 $v$ 的边/弧的条数。</p>
+<p>入度 ID($v$)：有向图中指向顶点 $v$ 的边的条数。</p>
+<p>出度 OD($v$)：有向图中由顶点 $v$ 发出的边的条数。</p>
+<p>有向图中顶点 $v$ 的度等于其入度和出度之和，即 TD($v$) = ID($v$) + OD($v$)。</p>
+<p>无向图的全部顶点的度的和等于边数的 2 倍（因为每条边与两个顶点相关联）。</p>
+<p>有向图的全部顶点的入度之和 = 出度之和 = 边数。</p>
+<p><u><strong>简单图</strong></u></p>
+<p>不存在重复边（平行边）+ 不存在顶点到自身的边（自循环）。</p>
+<p><strong><u>多重图</u></strong></p>
+<p>存在平行边或自循环。</p>
+<p>数据结构中仅讨论简单图。</p>
+<p><strong><u>完全图/有向完全图</u></strong></p>
+<p>无向完全图：具有 $\frac{n(n-1)}{2}$ 条边的无向图（任意两顶点间都存在边）。</p>
+<p>有向完全图：具有 $n(n-1)$ 条边的有向图（任意两顶点间都存在方向相反的两条弧）。</p>
+<p><u><strong>子图</strong></u></p>
+<p>子图的点集和边集是父图点集和边集的子集（必要条件）。</p>
+<p>但并非父图点集和边集的任何子集都能构成子图，因为这样的子集可能不是图。</p>
+<p><u><strong>生成子图</strong></u></p>
+<p>子图的点集和父图的点集相同，这样的子图称为父图的生成子图。</p>
+<p><strong><u>连通</u></strong></p>
+<p>连通：两顶点间有路径存在，则称这两顶点连通。</p>
+<p>强连通：两顶点间双向连通，则称这两顶点强连通。</p>
+<blockquote>
+<p><span class="github-emoji" alias="monkey" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f412.png?v8">&#x1f412;</span>一般在无向图中讨论连通性，在有向图中讨论强连通性。</p>
+<p>也可认为，一个连通的有向图分为强连通的和非强连通的。</p>
+</blockquote>
+<p>连通图：任意两顶点连通，则称为连通图，否则称为非连通图。</p>
+<p>强连通图：任意两顶点强连通，则称为强连通图，否则称为非强连通图。</p>
+<p>连通分量：即极大连通子图（连通 + 点和边尽可能多）。</p>
+<p>强连通分量：即极大强连通子图（强连通 + 点和弧尽可能多）。</p>
+<blockquote>
+<p>非连通图边最多的情况：由 $n-1$ 个顶点构成无向完全图，另一个顶点孤立。</p>
+<p>强连通图边最少的情况：$n$ 条弧构成一个环路。</p>
+</blockquote>
+<p>单个顶点也可单独构成一个连通/强连通分量（前提是其余顶点都和它不连通/强连通）。</p>
+<p><strong><u>生成树</u></strong></p>
+<p>包含图中<strong>全部顶点</strong>的一个<strong>极小连通子图</strong>（全部顶点 + 连通 + 边尽可能少）。</p>
+<blockquote>
+<p>一般生成树是针对无向连通图。任何无向连通图都有一棵或多棵生成树。</p>
+</blockquote>
+<p>若图中顶点数为 $n$，则它的生成树含有 $n-1$ 条边。</p>
+<p>对生成树而言，若砍去一条边，则会变成非连通图；若加上一条边，则会形成一个回路。</p>
+<p>若具有 $n$ 个顶点的图是一个环，则它有 $n$ 棵生成树。</p>
+<p><strong><u>生成森林</u></strong></p>
+<p>非连通图的各连通分量的生成树构成了该非连通图的生成树林。</p>
+<p><u><strong>有向树</strong></u></p>
+<p>一个顶点的入度为 0、其余顶点的入度均为 1 的有向图。</p>
+<p><u><strong>权</strong></u></p>
+<p>每条边都可以标上具有某种意义的数值，该数值称为该边的权值。</p>
+<p><strong><u>网</u></strong></p>
+<p>即带权图。</p>
+<p><u><strong>路径</strong></u></p>
+<p>顶点 $v_p$ 到顶点 $v_q$ 之间的一条路径是指顶点序列 $v_p$，$v_{i1}$，…，$v_{i2}$，$v_{im}$，$v_q$。</p>
+<p>关联的边也可理解为路径的构成要素，此时路径定义为由顶点和相邻顶点序偶构成的边所形成的序列。</p>
+<p>路径长度：路径上边的数目。</p>
+<p><u><strong>距离</strong></u></p>
+<p>顶点 $u$ 到顶点 $v$ 的距离是 $u$ 到 $v$ 的最短路径（若存在）的长度。</p>
+<p>若 $u$ 到 $v$ 不存在路径，则记该距离为 ∞。</p>
+<p><u><strong>回路/环</strong></u></p>
+<p>第一个顶点和最后一个顶点相同的路径。</p>
+<p><u><strong>简单路径</strong></u></p>
+<p>顶点不重复出现（顶点只经过一次）。</p>
+<p><strong><u>简单回路</u></strong></p>
+<p>除首尾顶点外其余顶点不重复出现。</p>
+<p><u><strong>稠密图、稀疏图</strong></u></p>
+<p>依据边数的多少。</p>
+<p>一般 |E|＜|V|log|V| 时可视为稀疏图。</p>
+<h2 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p>用一个一维数组存储图中顶点的信息，用一个二维数组存储图中边的信息（即各顶点之间的邻接关系）。存储顶点之间邻接关系的二维数组称为邻接矩阵。顶点数为 $n$ 的图的邻接矩阵是 $n$​​ 阶方阵。</p>
+<blockquote>
+<p>在简单应用中，可直接用二维数组作为图的邻接矩阵（顶点信息等均可省略）。</p>
+</blockquote>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240126112513486.png" width="600px"/></dev>
+
+
+<p><u><strong>无权图的邻接矩阵</strong></u></p>
+<p>$A[i][j]=1$ 表示 ($v_i$, $v_j$) 或 &lt;$v_i$, $v_j$&gt; 在图中存在；$A[i][j]=0$ 表示 ($v_i$, $v_j$) 或 &lt;$v_i$, $v_j$&gt; 在图中不存在。</p>
+<p><strong><u>带权图的邻接矩阵</u></strong></p>
+<p>$A[i][j]=w_{ij}$ 表示 ($v_i$, $v_j$) 或 &lt;$v_i$, $v_j$&gt; 在图中存在且权值为 $w_{ij}$；$A[i][j]=0$ 或 $\infin$ 表示 ($v_i$, $v_j$) 或 &lt;$v_i$, $v_j$&gt; 在图中不存在。</p>
+<p><strong><u>无向图的邻接矩阵</u></strong></p>
+<p>对称且唯一（对规模特大的邻接矩阵可采用压缩存储。试题若无特别说明，默认上下三角都存储）。</p>
+<p>第 $i$ 行<strong>或</strong>第 $i$ 列的非零或非 $\infin$ 元素的个数为顶点 $i$ 的度（非零或非 $\infin$ 元素的个数为总边数的两倍）。</p>
+<p><strong><u>有向图的邻接矩阵</u></strong></p>
+<p>非零或非 $\infin$ 元素的个数为总边数。</p>
+<p>第 $i$ 行非零或非 $\infin$ 元素的个数为顶点 $i$ 的出度，第 $i$ 列非零或非 $\infin$ 元素的个数为顶点 $i$ 的入度。</p>
+<p><strong><u>邻接矩阵的优缺点及适用场景</u></strong></p>
+<ul>
+<li><p>优点：容易确定图中任意两点之间是否有边相连。</p>
+</li>
+<li><p>缺点：要确定图中有多少条边则必须按行、按列对每个元素进行检测，耗时久；稀疏图显然要浪费大量的存储空间，空间复杂度为 $O(|V|^2)$。</p>
+</li>
+<li><p>适用：稠密图。</p>
+</li>
+</ul>
+<p><strong><u>邻接矩阵的数学特性</u></strong></p>
+<p>设图 $G$ 的邻接矩阵为 $A$，$A^n$ 的元素 $A^n[i][j]$ 等于由顶点 $i$ 到顶点 $j$ 的长度为 $n$ 的路径的数目（离散数学）。</p>
+<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>顶点表(顺) + 边表(链)：</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240817112436824.png" width="500px"/></dev>
+
+
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/D6Fg6UXihZf4gca.png" width="450px"/></dev>
+
+
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/ZkFptp1mWhXjojI.png" width="390px"/></dev>
+
+
+<p>对于有向图，边表即为出边表。</p>
+<p><strong><u>特点</u></strong></p>
+<ul>
+<li>给定一顶点，很容易找到它的所有邻边。</li>
+<li>若要确定给定两个顶点间是否存在边，在邻接矩阵中可以立刻查到，而在邻接表中则需要在相应结点对应的边表中查找另一结点，效率较低。</li>
+<li>表示不唯一：每个顶点对应的单链表中各边结点链接次序可以是任意的，它取决于建立邻接表的算法及边的输入次序。</li>
+<li>无向图邻接表求给定顶点的度以及有向图邻接表求给定顶点的出度和出边容易，但有向图求该顶点的入度和入边需要遍历全部的邻接表，统计邻接点 <code>adjvex</code> 域为该顶点的边表结点个数（也可采用逆邻接表，就反过来）。</li>
+</ul>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>无向图：$O(|V|+2|E|)$（边会存两次）。</p>
+<p>有向图：$O(|V|+|E|)$。</p>
+<p><strong><u>适用</u></strong></p>
+<p>稀疏图（极大地节省存储空间）。</p>
+<h3 id="十字链表（有向图）"><a href="#十字链表（有向图）" class="headerlink" title="十字链表（有向图）"></a>十字链表（有向图）</h3><p>顶点表(顺) + 弧表(链)：</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/eMSEf3flcTnGvMA.png" width="550px"/></dev>
+
+
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/mqbCTKxf4jjOWET.png" width="550px"/></dev>
+
+
+<p><strong><u>弧结点</u></strong></p>
+<p><code>tailvex</code> 域指示弧尾顶点编号，<code>headvex</code> 域指示弧头顶点编号，<code>hlink</code> 域指向弧头相同的下一条弧，<code>tlink</code> 域指向弧尾相同的下一条弧，<code>info</code> 域存放该弧的相关信息（可省）。</p>
+<p><strong><u>顶点结点</u></strong></p>
+<p><code>data</code> 域存放数据信息，<code>firstin</code> 域指向以该顶点为弧头的第一个弧结点，<code>firstout</code> 域指向以该顶点为弧尾的第一个弧结点。</p>
+<p>仍是顺序存储。</p>
+<p><strong><u>十字链表的特点</u></strong></p>
+<ul>
+<li><p>出边、入边容易找，出度、入度容易求。</p>
+</li>
+<li><p>表示不唯一，但一个十字链表表示唯一确定一个图。</p>
+</li>
+</ul>
+<h3 id="邻接多重表（无向图）"><a href="#邻接多重表（无向图）" class="headerlink" title="邻接多重表（无向图）"></a>邻接多重表（无向图）</h3><p>顶点表(顺) + 边表(链)：</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230401204416658.png" width="600px"/></dev>
+
+
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/UZQujvdW4lcz2lR.png" width="550px"/></dev>
+
+
+<p><strong><u>边结点</u></strong><br><code>ivex</code> 域和 <code>jvex</code> 域指示该边依附的两个顶点的编号，<code>ilink</code> 域指向下一条依附于顶点 ivex 的边，<code>jlink</code> 域指向下一条依附于顶点 jvex 的边，<code>info</code> 域存放该边的相关信息（可省）。</p>
+<p><strong><u>顶点结点</u></strong></p>
+<p><code>data</code> 存储该顶点的相关信息，<code>firstedge</code> 指向第一条依附于该顶点的边。</p>
+<p><strong><u>邻接多重表的特点</u></strong></p>
+<p>无向图的邻接多重表表示和邻接表表示的差别仅在于，同一条边在邻接表中用两个结点表示，而在邻接多重表中只有一个结点。</p>
+<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><p>从某一顶点出发，按照某种搜索方法沿着图中的边，对所有顶点访问一次且仅访问一次。</p>
+<h3 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h3><p>图的广度优先搜索遍历算法 BFS (Breadth-First-Search) 是二叉树的层次遍历算法的扩展。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>$O(|V|)$</p>
+<p>邻接表和邻接矩阵都需借助一个辅助队列，每个顶点均需入队一次。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>邻接表：$O(|V|+|E|)$</p>
+<p>邻接矩阵：$O(|V^2|)$</p>
+<p><strong><u>BFS 算法求解单源最短路径问题</u></strong></p>
+<p>因为 BFS 总是按照距离由近到远来遍历图中每个顶点。</p>
+<p>只适合求非带权图或边权值相等的图的单源最短路径。</p>
+<p><u><strong>广度优先生成树</strong></u></p>
+<p>同一个图的邻接矩阵存储表示是唯一的，所以其广度优先生成树也是唯一的；但因为邻接表存储表示不唯一，所以其广度优先生成树也是不唯一的。</p>
+<p>连通图遍历产生树，非连通图遍历产生森林。</p>
+<p>对于生成树来说，若砍去它的一条边，则会使生成树变成非连通图；若给它增加一条边，则会形成图中的一条回路。</p>
+<h3 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h3><p>类似树的先序遍历。当不能再继续向下访问时，依次退回到最近被访问的顶点。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>$O(|V|)$</p>
+<p>DFS 算法是一个递归算法，需要借助一个递归工作栈。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>邻接表：$O(|V|+|E|)$</p>
+<p>邻接矩阵：$O(|V^2|)$</p>
+<p><strong><u>深度优先生成树</u></strong></p>
+<p>与 BFS 类似，基于邻接表存储的深度优先生成树是不唯一的。</p>
+<h3 id="图的遍历与图的连通性"><a href="#图的遍历与图的连通性" class="headerlink" title="图的遍历与图的连通性"></a>图的遍历与图的连通性</h3><p>图的遍历算法可以用来判断图的连通性。</p>
+<p>对于无向图来说：</p>
+<ul>
+<li>若无向图是连通的，则从任意一个顶点从出发，仅需一次遍历就能够访问图中的所有顶点。</li>
+<li>若无向图是非连通的，则从某一个顶点出发，一次遍历只能访问到该顶点所在连通分量的所有顶点。</li>
+<li><code>BFSTraverse()</code> 或 <code>DFSTraverse()</code> 调用 <code>BFS()</code> 或 <code>DFS()</code> 的次数等于该图的连通分量数。</li>
+<li>连通图遍历产生树，非连通图遍历产生森林。</li>
+</ul>
+<p>对于有向图来说：</p>
+<ul>
+<li><p>若从初始顶点到图中的每个顶点都有路径，则能够访问到图中的所有顶点，否则不能访问到所有顶点。</p>
+</li>
+<li><p>调用 <code>BFS()</code> 或 <code>DFS()</code> 的次数并不等于连通分量数或强连通分量数。</p>
+<p>连通但非强连通的有向图一次调用 <code>BFS()</code> 或 <code>DFS()</code> 也可能无法访问到所有顶点。</p>
+<p>能确定的是，需要多次调用 <code>BFS()</code> 或 <code>DFS()</code> 才能访问到所有顶点的有向图一定是非强连通的。</p>
+</li>
+</ul>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="最小生成树-MST"><a href="#最小生成树-MST" class="headerlink" title="最小生成树 MST"></a>最小生成树 MST</h3><p><strong>带权连通无向图</strong>的生成树中，边的权值之和最小的那棵生成树称为该图的最小生成（代价）树 MST (Minimum-Spanning-Tree)。</p>
+<p><strong><u>MST 的性质</u></strong></p>
+<ol>
+<li><p>MST（树形）可能不唯一。</p>
+<p>当图中各边权值互不相等时，其 MST 是唯一的。</p>
+<p>若无向连通图本身是一棵树时（边数 = 顶点数 - 1），则该图的 MST 就是它本身。</p>
+</li>
+<li><p>MST 的边的权值之和唯一且是最小的。</p>
+</li>
+<li><p>MST 的边数为顶点数减 1。</p>
+</li>
+</ol>
+<p>Prim 算法和 Kruskal 算法都是基于贪心算法策略的构造 MST 的算法。</p>
+<p><strong><u>Prim 算法</u></strong></p>
+<ul>
+<li>思路：从某一顶点开始扩展，每次选择离当前生成树距离最近的顶点并入。</li>
+<li>时间复杂度：$O(|V^2|)$</li>
+<li>适用：边稠密图</li>
+</ul>
+<p><u><strong>Kruskal 算法</strong></u></p>
+<ul>
+<li><p>思路：按权值递增次序选择 “合适” 的边来构造，直至所有顶点都在一个连通分量上。</p>
+<p>“合适” 指该边依附的两个顶点分别落在不同的连通分量上。</p>
+</li>
+<li><p>时间复杂度</p>
+<p>使用堆存放边，每次选择最小权值的边需要 $O(\log_{2}|E|)$ 的时间。</p>
+<p>每次使用并查集来快速判断两个顶点是否属于一个集合所需的时间为 $O|\alpha(V)|$，可视为常数。</p>
+<p>最坏情况下需要对 |E| 条边各扫描一次。</p>
+<p>综上，算法的时间复杂度为 $O(|E|log_{2}|E|)$。</p>
+</li>
+<li><p>适用：边稀疏而顶点较多的图。</p>
+</li>
+</ul>
+<blockquote>
+<p>TODO 看不懂：由于生成树 T 中的所有边可视为一个等价类，因此每次添加新的边的过程类似于求解等价类的过程，由此可以采用并查集的结构来描述 T，从而构造 T 的时间复杂度为 $O(|E|log_{2}|E|)$。</p>
+</blockquote>
+<h3 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h3><p>使用 BFS 求解单源最短路径只是对无权图或权值相等的带权图而言。</p>
+<p>求解带权图最短路径的算法通常依赖一种性质：两点间的最短路径也包含了路径上其他顶点间的最短路径。</p>
+<p>求最短路径允许图有环（Floyd 算法不允许有带负边的环），并且有向图和无向图都适用。</p>
+<p><strong><u>Dijkstra 算法</u></strong></p>
+<p>求单源最短路径（某一顶点到其他各顶点的最短路径）。</p>
+<ul>
+<li><p>思路</p>
+<p>设两个顶点集合 S、T，S 存放已找到最短路径的顶点，T 存放剩余顶点（初始 S 中只包括源点）。</p>
+<p>不断从 T 选取与源点路径最近的顶点并入 S，每并入一个都要更新源点到剩余顶点最短路径长度值（以并入的新顶点与源点最短路径为基础计算） 。</p>
+</li>
+<li><p>时间复杂度</p>
+<p>邻接矩阵、邻接表：$O(|V^2|)$</p>
+</li>
+<li><p>不适用：带有负权值边的图（因为已并入 S 的点的最短路径无法更新）。</p>
+</li>
+<li><p>在构造的过程中设置了三个辅助数组：</p>
+<p>① <code>final[]</code>：标记各顶点是否已找到最短路径，即是否已并入集合 S。</p>
+<p>② <code>dist[]</code>：记录从源点到其他各顶点当前的最短路径长度。</p>
+<p>③ <code>path[]</code>：<code>path[i]</code> 表示从源点到顶点 <code>i</code> 之间最短路径的前驱结点。在算法结束时，可根据其值追溯得到完整的最短路径。</p>
+<p>考题只要求求最短路径长度时就不用记录中间顶点。</p>
+</li>
+<li><p>也可以求任意两个顶点间的最短路径。</p>
+<p>寻找从源点到某个特定顶点的最短路径，和求解源点到其他所有顶点的最短路径一样复杂，时间复杂度也为 $O(|V^2|)$。</p>
+</li>
+</ul>
+<p><strong><u>Floyd 算法</u></strong></p>
+<p>求所有顶点间的最短路径。</p>
+<ul>
+<li><p>思路</p>
+<p>设有 $n$ 个顶点 $v_0$、$v_1$、…、$v_{n-1}$，以 $n$ 阶方阵 $A$ 记录两顶点间的最短路径长度。</p>
+<p>共有 $n+1$ 个方阵序列 $A^{-1}$、$A^{0}$、…、$A^{n-1}$，其中 $A^{-1}$ 记录初始状态各顶点间的最短路径长度，此后依次尝试在原路径加入 $v_0$、$v_1$ … 作为中间顶点，若能减少路径长度，则以此作为当前最短路径，并在方阵中更新最短路径长度。加入 $v_i$ 更新最短路径后得到方阵 $A^{i}$，经过 $n$ 次迭代后所得到的 $A^{(n-1)}$ 便保存了任意一对顶点间的最短路径长度。</p>
+<p>$A^{k}[i][j]=min(A^{k-1}[i][j], A^{k-1}[i][k]+A^{k-1}[k][j])$</p>
+<p>显然，主对角线始终为 0。另外计算 $A^{i}$ 即加入 $v_i$ 时，第 $i$ 行和第 $i$ 列也不用动。</p>
+</li>
+<li><p>时间复杂度：$O(|V^3|)$。</p>
+<p>不过由于其代码很紧凑，且不包含其他复杂的数据结构，因此隐含的常数系数是很小的，即使对于中等规模的输入来说，它仍然是有效的。</p>
+</li>
+<li><p>不适用：允许图中带有负权值的边，但不允许有包含负权值边的环。</p>
+</li>
+<li><p>也可用单源最短路径算法来解决每对顶点之间的最短路径问题：</p>
+<p>轮流将每个顶点最为源点，并且在所有边权值均非负时，运行一次 Dijkstra 算法。</p>
+<p>其算法复杂度为 $|V|·O(|V^2|)=O(|V^3|)$。</p>
+</li>
+</ul>
+<h3 id="有向无环图"><a href="#有向无环图" class="headerlink" title="有向无环图"></a>有向无环图</h3><p>有向无环图 DAG (Directed Acyclic Graph)，简称 DAG 图。</p>
+<p>利用有向无环图 DAG 描述表达式，可实现对相同子式的共享，从而节省存储空间。</p>
+<p>在表达式的 DAG 图表示中，不可能出现重复的操作数顶点。</p>
+<p>例如表达式 $((a+b)<em>(b</em>(c+d))+(c+d)<em>e)</em>((c+d)<em>e)$，公共子式为 $(c+d)$ 和 $(c+d)</em>e$。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230921212308242.png" width="600px"/></dev>
+
+
+<h3 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h3><p><strong><u>AOV 网</u></strong></p>
+<p>以顶点表示活动、以弧表示活动的先后次序的无权 DAG，称之为 <u>顶点表示活动的网络</u> (Activity On Vertex NetWork)，简称 AOV 网。</p>
+<p><strong><u>拓扑排序</u></strong></p>
+<p>由一个 DAG 的顶点组成的序列，当且仅当满足下列条件时，称为该图的一个拓扑排序：</p>
+<ol>
+<li>每个顶点出现且只出现一次。</li>
+<li>若顶点 A 在序列中排在顶点 B 的前面，则在图中不存在从顶点 B 到顶点 A 的路径。</li>
+</ol>
+<p>或定义为：拓扑排序是对 DAG 的顶点的一种排序，它使得若存在一条从顶点 A 到顶点 B 的路径，则在排序中顶点 B 出现在顶点 A 的后面。</p>
+<p><strong><u>对 AOV 网进行拓扑排序的常用算法思路</u></strong></p>
+<ol>
+<li><p>从 AOV 网中选择一个没有前驱的顶点并输出。</p>
+</li>
+<li><p>从网中删除该顶点和所有以它为起点的有向边。</p>
+</li>
+<li><p>重复前两步，直到当前 AOV 网为空或当前网中不存在无前驱的顶点为止。</p>
+<p>后一种情况说明有向图中必然存在环。</p>
+</li>
+</ol>
+<p>入度为 0 的顶点，说明没有前驱活动或前驱活动都已完成，则工程可以从这个顶点所代表的活动开始或继续。</p>
+<p><strong><u>拓扑排序的算法时间复杂度</u></strong></p>
+<p>因为输出每个顶点的同时还要删除以它为起点的边，所以：</p>
+<p>邻接表 $O(|V|+|E|)$，邻接矩阵 $O(|V|^2)$。</p>
+<p><strong><u>拓扑序列的存在性</u></strong></p>
+<p>不存在拓扑排序$\iff$图中存在顶点数大于 1 的回路/环（存在拓扑序列$\iff$无环）</p>
+<p>邻接矩阵为三角矩阵（且对角元全为零）$\rightarrow$ 无环</p>
+<p>每个 AOV 网都有一个或多个拓扑排序序列：若存在有多个直接后继的顶点，则拓扑排序的结果通常不唯一；若各个顶点已经排在一个线性有序的序列中，每个顶点有唯一的前驱后继关系，则拓扑排序的结果唯一。</p>
+<p><strong><u>拓扑序列的唯一性</u></strong></p>
+<p>充要条件：每次输出顶点时，检测入度为 0 的顶点始终唯一。</p>
+<p>充分非必要条件：AOV 网的各顶点为线性序列。</p>
+<p><strong><u>利用 DFS 实现拓扑排序</u></strong></p>
+<p>用 DFS 算法遍历一个有向无环图，并在 DFS 算法退栈返回时输出相应的顶点，则输出的顶点序列是逆拓扑有序。在此基础上，可以在遍历结束后将序列反转得到拓扑有序序列；也可以设置一个计时器，在退栈返回时不选择输出，而是对各顶点计时（记录结束时间）。遍历结束后按结束时间从大到小排序，即可得到拓扑序列。</p>
+<p><strong><u>逆拓扑排序</u></strong></p>
+<ol>
+<li><p>从 AOV 网中选择一个无后继（出度为 0）的顶点并输出。</p>
+</li>
+<li><p>从网中删除该顶点和所有所有以它为终点的有向边。</p>
+</li>
+<li><p>重复前两步，直到当前 AOV 网为空。</p>
+</li>
+</ol>
+<p><strong><u>利用 BFS 实现拓扑排序</u></strong></p>
+<p>没错，BFS 也可用来实现拓扑排序。有同学就有疑问了，拓扑排序可以检测环，BFS 可以实现拓扑排序，那 BFS 岂不是也可以检测环了？答案是否定的，因为用 BFS 实现拓扑排序的前提是，使用的图是 DAG。</p>
+<p>TODO：实现思路。</p>
+<h3 id="关键路径"><a href="#关键路径" class="headerlink" title="关键路径"></a>关键路径</h3><p><strong><u>AOE 网</u></strong> </p>
+<p>以顶点表示事件，以有向边表示活动，以边的权值代表完成该活动开销的带权 DAG，称之为 <u>边表示活动的网络</u> (Activity On Edge Network)，简称 AOE 网。</p>
+<p><strong><u>AOE 网的性质</u></strong></p>
+<ul>
+<li>只有在某顶点所代表的事件发生后，从该顶点出发的各有向边所代表的活动才能开始。</li>
+<li>只有在进入某顶点的各有向边所代表的活动都已结束时，该顶点所代表的事件才能发生。</li>
+</ul>
+<p><strong><u>源点与汇点</u></strong></p>
+<p>在 AOE 网中仅有一个入度为 0 的顶点，称为开始顶点（源点），代表整个工程的开始。</p>
+<p>网中也仅存一个出度为 0 的顶点，称为结束顶点（汇点），表示整个工程的结束。</p>
+<p>在 AOE 网中，有些活动是可以并行进行的。从源点到汇点的有向路径可能有多条，并且这些路径长度可能不同。完成不同路径上的活动所需时间虽然不同，但是只有所有路径上的活动都已完成，整个工程才算结束。</p>
+<p><strong><u>关键路径与关键活动</u></strong></p>
+<p>关键路径：从源点到汇点的所有路径中，具有<strong>最大</strong>路径长度的路径。</p>
+<p>关键活动：关键路径上的所有活动。</p>
+<p>完成整个工程的最短时间 = 关键路径的长度。</p>
+<p>通过加快关键活动来缩短整个工程的工期。但也不能任意缩短关键活动，因为一旦缩短到一定的程度，该关键活动就可能变成非关键活动。</p>
+<p>关键路径不一定唯一，且对于有几条关键路径的网，只加快部分关键路径并不能缩短整个工期，只有加快所有关键路径才能达到缩短工期的目的。</p>
+<p><strong><u>事件 $v_k$ 的最早发生时间 $v_e(k)$</u></strong></p>
+<p>从源点到 $v_k$ 的<strong>最长</strong>路径长度。</p>
+<p>决定了所有从 $v_k$ 开始的活动能够开工的最早时间。</p>
+<p>可按 $v_e(源点)=0$、$v_e(k)=max(v_e(j)+weight(v_j, v_k))$ 从前往后进行递推计算。其中 $v_j$ 为 $v_k$ 的任意前驱，$weight(v_j, v_k)$ 为 &lt;$v_j$, $v_k$&gt; 的权值。</p>
+<p>可在求拓扑排序的过程基础上求解。</p>
+<p><strong><u>事件 $v_k$ 的最迟发生时间 $v_l(k)$</u></strong></p>
+<p>在不推迟整个工程完成的前提下，即保证它的后继事件 $v_j$ 在其最迟发生时间 $v_l(j)$ 能够发生时，该事件最迟必须发生的时间。</p>
+<p>可按 $v_l(汇点)=v_e(汇点)$、$v_l(k)=min(v_l(j)-weight(v_k, v_j)$ 从后往前进行递推计算。其中 $v_j$ 为 $v_k$ 的任意后继。</p>
+<p>可在求逆拓扑排序的过程基础上求解。</p>
+<p><strong><u>活动 $a_i$ 的最早发生时间 $e(i)$</u></strong></p>
+<p>该活动弧的起点事件的最早发生时间。</p>
+<p><strong><u>活动 $a_i$ 的最迟发生时间 $l(i)$</u></strong></p>
+<p>该活动弧的终点事件的最迟发生时间与该活动所需时间之差。</p>
+<p><strong><u>活动 $a_i$ 完成的时间余量 $d(i)$</u></strong></p>
+<p>在不增加完成整个工程所需总时间的情况下，活动 $a_i$ 可以拖延的时间</p>
+<p>$d(i)=l(i)-e(i)$</p>
+<p>若一个活动的时间余量为 0，说明该活动必须如期完成，否则就会拖延整个工程的进度。</p>
+<p>$l(i)-e(i)=0$ 即 $l(i)=e(i)$ 的活动就是关键活动。</p>
+<p><strong><u>求关键路径的一般步骤</u></strong></p>
+<ol>
+<li><p>从源点出发，令 $v_e(源点)=0$，按拓扑排序求其余顶点的 $v_e()$</p>
+</li>
+<li><p>从汇点出发，令 $v_l(汇点)=v_e(汇点)$，按逆拓扑排序求其余顶点的 $v_l()$</p>
+</li>
+<li><p>根据各顶点事件的 $v_e()$ 求所有弧活动的 $e()$，根据各顶点事件的 $v_l()$ 求所有弧活动的 $l()$。</p>
+</li>
+<li><p>求 AOE 网中所有活动的 $d()$，找出所有 $d()=0$ 的活动构成关键路径。</p>
+<p>这里求关键路径要满足：路径上的所有活动都是关键活动，即 $d()=0$ 的活动，并且路径长度等于最大路径长，即 $v_l(汇点)$ 或 $v_e(汇点)$。</p>
+<p><span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>特别注意：路径上所有活动都是关键活动 ≠ 此路径是关键路径。</p>
+</li>
+</ol>
+<p>实际上求出各顶点事件 $ve()$ 后就能得到关键路径（可能有多条）。</p>
+<p>求关键路径还是得多练习，有些地方说不清楚，需要一定熟练度。下题用来练手：</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231028174017325.png" width="650px"/></dev>
+
+
+<h2 id="刷题笔记"><a href="#刷题笔记" class="headerlink" title="刷题笔记"></a>刷题笔记</h2><ul>
+<li><p>单个顶点也可单独构成一个连通/强连通分量（前提是其余顶点都和它不连通/强连通）。</p>
+</li>
+<li><p>若一个具有 $n$ 个顶点、$e$ 条边的无向图是一个森林，则该森林中必有 $n - e$ 棵树。</p>
+</li>
+<li><p>只有邻接矩阵的表示唯一。  </p>
+</li>
+<li><p>BFS/DFS 序列、广度/深度优先生成树的唯一性</p>
+<p>邻接矩阵：唯一（因为同一个图的邻接矩阵存储表示唯一）</p>
+<p>邻接表：不唯一（因为同一个图的邻接表存储表示不唯一）</p>
+</li>
+<li><p>如何对无环有向图中的顶点重新编号，使得该图的邻接矩阵中所有 1 都集中到对角线以上？</p>
+<p>方式一：</p>
+<p>1）按各顶点的出度进行排序。出度最大的顶点编号为 1，出度最小的顶点编号为 $n$（设共 $n$ 个顶点）。</p>
+<p>2）只要存在弧 &lt;$i$, $j$&gt;，就把顶点 $i$ 编号在顶点 $j$ 之前。</p>
+<p>方式二：采用拓扑排序并依次编号。</p>
+</li>
+<li><p>建立无向图邻接表的时间复杂度为 O($n+e$)。</p>
+</li>
+<li><p>练一下只根据邻接表（即不画图）写出的 BFS 和 DFS 序列（P232 选择08）</p>
+<p>不画图即按算法思路走，可以节省画图时间；画图比较直观，不容易错，但也要结合邻接表的边表结点顺序</p>
+</li>
+<li><p>根据邻接表画出深度优先生成树和广度优先生成树（P211 综合01）。</p>
+<p>画不画图跟上一条一样。建议第一遍做不画图，第二遍检查时画图（有时间的话哈哈哈）。</p>
+</li>
+<li><p>DFS 可实现拓扑排序，可判断图中是否存在回路。</p>
+<p>若将输出顶点信息的语句移到退出递归前，则输出的顶点序列是逆拓扑排序。</p>
+</li>
+<li><p>MST 一定唯一的两种情况：① 图中各边的权值互不相等；② 图本身是一棵树</p>
+<p>图中存在权值相同的边，其 MST <strong>可能</strong>不唯一。</p>
+</li>
+<li><p>讨论拓扑排序和关键路径的前提是：DAG（有向 + 无环）。</p>
+<p>只讨论拓扑排序时使用的是 AOV 网，无权。</p>
+<p>讨论关键路径使用的是 AOE 网，有权，且应连通。</p>
+</li>
+<li><p>可以判断是否有环/回路</p>
+<ol>
+<li><p>DFS</p>
+<p>无向图：在深度优先遍历过程中遇到了回边，则必定存在环。</p>
+<p>有向图：在深度优先遍历过程中遇到了回边，不一定存在环，这条回边可能是指向深度优先生成森林中另一棵生成树。但若从某个顶点 u 出发，在 <code>DFS(u)</code> 结束之前发现一条从顶点 v 到 u 的边，由于 v 在生成树上是 u 的子孙，则图中必定存在包含 u 和 v 的环。</p>
+</li>
+<li><p>拓扑排序</p>
+<p>存在无法找到下一个可以加入拓扑序列的顶点，则说明此图存在回路（顶点数目大于 1 的强连通分量）。</p>
+</li>
+<li><p>求关键路径</p>
+<p>求关键路径的算法本身无法判断是否有环。</p>
+<p>判断是否有环是求关键路径的第一步——拓扑排序。</p>
+</li>
+</ol>
+</li>
+<li><p>求两个顶点的最短路径上经过的顶点序列</p>
+<p>选择题可以直接把选项的路径长度都求出来，选最短的就行。</p>
+<p>不然就跟着迪杰斯特拉或者弗洛伊德算法走一遍。</p>
+</li>
+<li><p>图的邻接矩阵为三角矩阵且对角元全为零 $\rightarrow$ 无环 ↔ 拓扑排序存在</p>
+<p>图的邻接矩阵为三角矩阵且对角元全为零，并且对角线以上/以下全为 1（不为 0）$\rightarrow$ 拓扑序列存在且唯一</p>
+<p>具有有序的拓扑排序序列 $\rightarrow$ 图的邻接矩阵为三角矩阵且对角元全为零</p>
+<p>对有向图中的顶点进行适当的编号，使其邻接矩阵为三角矩阵且主对角元全为零的充分必要条件是，该有向图可以进行拓扑排序。</p>
+</li>
+<li><p>拓扑序列唯一，不能唯一确定该图</p>
+<p>拓扑序列唯一，也不能说明图中每个顶点的入度和出度最多为 1</p>
+<p>比如下面三个 DAG，它们的拓扑排序唯一且都是 ABCD</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230921221316886.png" width="400px"/></dev>
+</li>
+<li><p>若有向图的拓扑有序序列唯一，则图中入度为 0 和出度为 0 的顶点都仅有 1 个。</p>
+<p>若入度为 0 的顶点不唯一，则这些顶点均可作为拓扑序列的起点；若出度为 0 的顶点不唯一，则这些顶点均可作为拓扑序列的终点。</p>
+</li>
+<li><p>破圈法求解最小生成树</p>
+<p>任取一圈，去掉圈上权值最大的边。反复执行这一步骤，直到没有圈为止</p>
+</li>
+<li><p>求有向图的强连通分量的数目</p>
+<ol>
+<li><p><strong>每个顶点自身都是一个强连通分量</strong></p>
+<p>所以含有 $n$ 个顶点的有向图至少有 $n$ 个强连通分量</p>
+</li>
+<li><p>当某个顶点只有出弧而没有入弧时，其他顶点无法到达这个顶点，不可能与其他顶点和边构成强连通分量</p>
+<p>所以直接删除该顶点及所有与之为尾的弧（即该顶点的所有出弧）</p>
+</li>
+</ol>
+</li>
+<li><p>关键路径上活动的时间延长多少，整个工程的时间也就随之延长多少。</p>
+<p>缩短所有关键路径上共有的任意一个关键活动的持续时间可缩短关键路径长度。</p>
+</li>
+<li><p>所有顶点事件都是关键事件并不能说明关键路径唯一。</p>
+<p>如下图，所有事件都是关键事件，且除了 a 之外都是关键活动。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20230923155250919.png" width="350px"/></dev>
+</li>
+<li><p>关键路径不一定包含所有关键活动。</p>
+<p>只包含关键活动的路径且<strong>保证长度最大</strong>就是关键路径。</p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2025/03/26/%E5%9B%BE-DS/">https://zerooo.top/2025/03/26/%E5%9B%BE-DS/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/03/26/%E6%9F%A5%E6%89%BE-DS/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">查找 | DS</div></div></a></div><div class="next-post pull-right"><a href="/2025/03/26/%E6%A0%91-DS/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">树 | DS</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2025/03/26/%E4%B8%B2-DS/" title="串 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">串 | DS</div></div></a></div><div><a href="/2025/03/26/%E6%8E%92%E5%BA%8F-DS/" title="排序 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">排序 | DS</div></div></a></div><div><a href="/2025/03/26/%E6%9F%A5%E6%89%BE-DS/" title="查找 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">查找 | DS</div></div></a></div><div><a href="/2025/03/26/%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84-DS/" title="栈、队列和数组 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">栈、队列和数组 | DS</div></div></a></div><div><a href="/2025/03/26/%E7%BA%BF%E6%80%A7%E8%A1%A8-DS/" title="线性表 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">线性表 | DS</div></div></a></div><div><a href="/2025/03/26/%E6%A0%91-DS/" title="树 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">树 | DS</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5"><span class="toc-number">2.1.</span> <span class="toc-text">邻接矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%BB%E6%8E%A5%E8%A1%A8"><span class="toc-number">2.2.</span> <span class="toc-text">邻接表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%AD%97%E9%93%BE%E8%A1%A8%EF%BC%88%E6%9C%89%E5%90%91%E5%9B%BE%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">十字链表（有向图）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%BB%E6%8E%A5%E5%A4%9A%E9%87%8D%E8%A1%A8%EF%BC%88%E6%97%A0%E5%90%91%E5%9B%BE%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">邻接多重表（无向图）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%8D%E5%8E%86"><span class="toc-number">3.</span> <span class="toc-text">遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BFS"><span class="toc-number">3.1.</span> <span class="toc-text">BFS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DFS"><span class="toc-number">3.2.</span> <span class="toc-text">DFS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86%E4%B8%8E%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="toc-number">3.3.</span> <span class="toc-text">图的遍历与图的连通性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-MST"><span class="toc-number">4.1.</span> <span class="toc-text">最小生成树 MST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84"><span class="toc-number">4.2.</span> <span class="toc-text">最短路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE"><span class="toc-number">4.3.</span> <span class="toc-text">有向无环图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F"><span class="toc-number">4.4.</span> <span class="toc-text">拓扑排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.</span> <span class="toc-text">关键路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0"><span class="toc-number">5.</span> <span class="toc-text">刷题笔记</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | OS"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS">拓展 | OS</a><time datetime="2025-03-26T09:17:47.000Z" title="发表于 2025-03-26 17:17:47">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO">拓展 | CO</a><time datetime="2025-03-26T09:17:39.000Z" title="发表于 2025-03-26 17:17:39">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="输入输出系统 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO">输入输出系统 | CO</a><time datetime="2025-03-26T09:17:27.000Z" title="发表于 2025-03-26 17:17:27">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="总线 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO">总线 | CO</a><time datetime="2025-03-26T09:17:18.000Z" title="发表于 2025-03-26 17:17:18">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中央处理器 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO">中央处理器 | CO</a><time datetime="2025-03-26T09:17:10.000Z" title="发表于 2025-03-26 17:17:10">2025-03-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><script src="/js/catalog.js?1"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

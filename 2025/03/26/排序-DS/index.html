@@ -1,0 +1,535 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>排序 | DS | ZERO</title><meta name="keywords" content="数据结构"><meta name="author" content="zero"><meta name="copyright" content="zero"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="基本概念排序算法的稳定性 指经过排序后，能使关键字相同的元素保持原顺序中的相对位置不变。 稳定性是对算法性质的描述，并不能衡量一个算法的优劣。 若待排序表中的关键字不允许重复，则排序结果是唯一的，那么选择排序算法时的稳定与否就无关重要。 对同一线性表使用不同的排序方法进行排序，得到的排序结果可能不同（除非每个关键字唯一）。 排序算法的分类 在排序过程中，根据数据元素是否完全在内存中，可将排序算法分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序 | DS">
+<meta property="og:url" content="https://zerooo.top/2025/03/26/%E6%8E%92%E5%BA%8F-DS/index.html">
+<meta property="og:site_name" content="ZERO">
+<meta property="og:description" content="基本概念排序算法的稳定性 指经过排序后，能使关键字相同的元素保持原顺序中的相对位置不变。 稳定性是对算法性质的描述，并不能衡量一个算法的优劣。 若待排序表中的关键字不允许重复，则排序结果是唯一的，那么选择排序算法时的稳定与否就无关重要。 对同一线性表使用不同的排序方法进行排序，得到的排序结果可能不同（除非每个关键字唯一）。 排序算法的分类 在排序过程中，根据数据元素是否完全在内存中，可将排序算法分">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg">
+<meta property="article:published_time" content="2025-03-26T09:15:17.000Z">
+<meta property="article:modified_time" content="2025-03-26T09:24:01.376Z">
+<meta property="article:author" content="zero">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg"><link rel="shortcut icon" href="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/favicon.png"><link rel="canonical" href="https://zerooo.top/2025/03/26/%E6%8E%92%E5%BA%8F-DS/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '排序 | DS',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-26 17:24:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/catalog.css?1"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">排序 | DS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:15:17.000Z" title="发表于 2025-03-26 17:15:17">2025-03-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:24:01.376Z" title="更新于 2025-03-26 17:24:01">2025-03-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="排序 | DS"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong><u>排序算法的稳定性</u></strong></p>
+<p>指经过排序后，能使关键字相同的元素保持原顺序中的相对位置不变。</p>
+<p>稳定性是对算法性质的描述，并不能衡量一个算法的优劣。</p>
+<p>若待排序表中的关键字不允许重复，则排序结果是唯一的，那么选择排序算法时的稳定与否就无关重要。</p>
+<p>对同一线性表使用不同的排序方法进行排序，得到的排序结果可能不同（除非每个关键字唯一）。</p>
+<p><u><strong>排序算法的分类</strong></u></p>
+<p>在排序过程中，根据数据元素是否完全在内存中，可将排序算法分为两类：</p>
+<ol>
+<li><p>内部排序</p>
+<p>指排序期间元素全部存放在内存中的排序。</p>
+</li>
+<li><p>外部排序</p>
+<p>指排序期间元素无法全部同时存放在内存中，必须在排序的过程中根据要求不断地在内、外存之间移动的排序。</p>
+</li>
+</ol>
+<p><strong><u>内部排序的比较与移动</u></strong></p>
+<p>一般情况下，内部排序算法在执行过程中基本要进行两种操作：比较、移动。通过比较两个关键字的大小，确定对应元素的前后关系，然后通过移动元素以达到有序。</p>
+<p>移动的方式分为两种：插入、交换。插入排序属于插入，交换排序、选择排序属于交换。交换往往使得算法不稳定（除冒泡），插入则不会（除希尔）。</p>
+<p>插入会使得插入点及其后序全部元素后移一位；而交换则是每交换一次需要元素移动 3 次，因为需要借助中间变量。不过堆排序除外，输出堆顶后重新调整的移动次数在不超过树高的前提下，还与当前序列排列有关。</p>
+<p>内部排序算法的时间复杂度一般是由比较和移动的次数决定的。</p>
+<blockquote>
+<p>归并排序不基于移动（插入、交换），基数排序不基于比较和移动。</p>
+</blockquote>
+<p><strong><u>内部排序的比较次数</u></strong></p>
+<p>对任意 $n$ 个关键字排序的比较次数至少为 $\lceil \log_2(n!) \rceil$</p>
+<p>对于任意序列进行基于比较的排序，求至少的比较次数应考虑最坏情况</p>
+<p>在基于比较的排序方法中，每次比较两个关键字后，仅出现两种可能的转移。假设整个排序过程至少需要 $t$ 次比较，则显然会有 $2^t$ 种情况。由于 $n$ 个记录共有 $n!$ 种不同的排列，因而必须有 $n!$ 种不同的比较路径，于是有 $2^t \geq n!$，即 $t \geq \log_2(n!)$。</p>
+<p>可以利用一棵二叉树来描述比较判定过程，由此可以证明：当文件的 $n$ 个关键字随机分布时，任何借助于 “比较” 的排序算法，至少需要 $O(n \log_2n)$ 的时间。</p>
+<p><strong><u>内部排序用到的存储结构</u></strong></p>
+<p>利用到随机存取特性的排序算法只适用于顺序存储的线性表（折半插入、希尔、快排、堆）。</p>
+<p>而未利用到随机存取特性的排序算法同样亦适用于链表（直接插入、冒泡、简单选择、归并）。</p>
+<h2 id="内部排序"><a href="#内部排序" class="headerlink" title="内部排序"></a>内部排序</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>共同特点：在最后一趟排序前，待排序列没有任何一个关键字到达其终点。</p>
+<h4 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h4><p>排序过程：</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231005155234345.png" width="360px"/></dev>
+
+
+<ol>
+<li>查找出 <code>L(i)</code> 在 <code>L[1…i-1]</code> 中的插入位置 <code>k</code>；</li>
+<li>将 <code>L[k…i-1]</code> 中的所有元素依次后移一个位置；</li>
+<li>将 <code>L(i)</code> 复制到 <code>L(k)</code>。</li>
+</ol>
+<h4 id="折半插入排序"><a href="#折半插入排序" class="headerlink" title="折半插入排序"></a>折半插入排序</h4><p>相较于直接插入排序的边比较边移动元素，折半插入排序将比较和移动操作分离，如此在查找有序子表时可以使用折半查找来提高查找效率。确定待插入位置后，就可统一地向后移动元素。</p>
+<p>相较于直接插入排序仅减少了元素的比较次数，而元素的移动次数并未改变<span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>。</p>
+<h4 id="希尔排序-缩小增量排序"><a href="#希尔排序-缩小增量排序" class="headerlink" title="希尔排序/缩小增量排序"></a>希尔排序/缩小增量排序</h4><p>直接插入排序更适用于基本有序的排序表和数据量不大的排序表。希尔排序正是基于这两点对直接插入排序进行改进而得来的。</p>
+<p><strong><u>基本思想</u></strong></p>
+<p>把相隔某个 “增量” 的记录组成一个子表 <code>L[i,i+d,i+2d, …,i+kd]</code>，对数据量不大的各个子表分别进行直接插入排序，当整个表中的元素已呈“基本有序”时，再对全体记录进行一次直接插入排序</p>
+<p><strong><u>排序过程</u></strong></p>
+<p>先取一个小于 $n$ 的步长 $d_1$，这样表中的全部记录分成了 $d_1$ 组（$d_1 \leq n/2$ 时为 $d_1$ 组），在各组内进行直接插入排序；然后取第二个步长 $d_2 &lt; d_1$，重复上述过程，直到所取到的 $d_t=1$，即所有记录已放在同一组，再进行直接插入排序。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>时间复杂度依赖于增量序列的函数，而目前尚未求得一个最好的增量序列，所以其时间复杂度分析比较困难。</p>
+<p>当 $n$ 在某个特定范围时，希尔排序的时间复杂度约为 $O(n^{1.3})$。在最坏情况下时间复杂度为  $O(n^{2})$。</p>
+<p>当相同关键字的记录被划分到不同的子表时，可能会改变它们之间的相对次序，因此希尔排序是一种不稳定的排序方法。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>O(1)。</p>
+<h3 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h3><p>所谓交换，是指根据序列中两个元素关键字的比较结果来对换这两个记录在序列中的位置。</p>
+<h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><p><strong><u>基本思想</u></strong></p>
+<p>从后往前（或从前往后）两两比较相邻元素的值，若为逆序（即 <code>A[i-1] &gt; A[i]</code>），则交换它们，直到序列比较完。我们称它为第一趟冒泡，结果是将最小的元素交换到待排序列的第一个位置（或将最大的元素交换到待排序列的最后一个位置），关键字最小的元素如同气泡一般逐渐往上 “漂浮” 直至 “水面”（或关键字最大的元素如石头一般下沉至水底）。下一趟冒泡时，前一趟确定的最小（或最大）元素不再参与比较，每趟冒泡的结果是把序列中的最小（或最大）元素放到了序列中的最终位置……这样最多做 $n-1$ 趟冒泡就能把所有元素排好序。</p>
+<p>若在某趟没有发生交换，便跳出循环，此时全部元素已有序。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>当初始序列有序时，比较次数为 $n-1$，移动次数为 0，从而最好时间复杂度为 $O(n)$。</p>
+<p>当初始序列逆序时，需要进行 $n-1$ 趟排序，第 $i$ 趟排序要进行 $n-i$ 次关键字的比较，每次比较后都必须移动 3 次来交换元素位置，故这种情况下比较次数为 $\sum_{i=1}^{n-1}(n-i)=\frac{n(n-1)}{2}$，移动次数为 $\sum_{i=1}^{n-1} 3(n-i)=\frac{3 n(n-1)}{2}$，从而最坏和平均时间复杂度都为 $O(n^2)$。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>O(1)。</p>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><p><strong><u>基本思想</u></strong></p>
+<p>基于分治法、枢轴/基准 pivot（通常取首元素）、递归。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>与划分是否对称有关，最坏情况发生在两个区域分别包含 $n-1$ 个元素和 0 个元素时，这种最大限度的不对称性若发生在每层递归上，即对应于初始排序表基本有序或基本逆序时，就得到最坏情况下的时间复杂度 $O(n^2)$。</p>
+<p>在最理想状态下，即 <code>partition()</code> 能做到最平衡的划分，得到的两个子问题的大小都不可能大于 $n/2$，在这种情况下，快速排序的运行速度将大大提升，此时时间复杂度为 $O(n\log_2n)$。</p>
+<p>快速排序平均情况下的运行时间与其最佳情况下的运行时间很接近，而不是接近其最坏情况下的运行时间。<strong>快速排序是所有内部排序算法中平均性能最优的排序算法</strong>。</p>
+<p>有很多方法可以提高算法的效率：一种方法是尽量选取一个可以将数据中分的枢轴元素，如从序列的头尾及中间选取三个元素，再取这三个元素的中间值作为最终的枢轴元素；或者随机的从当前表中选取枢轴元素，这样做可使得最坏情况在实际排序中几乎不会发生。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>由于快排是递归的，因此需要借助一个递归工作栈来保存每层递归调用的必要信息。</p>
+<p>递归工作栈容量与递归调用的最大深度一致。最好 $O(\log_2n)$；最坏 $O(n)$，因为要进行 $n-1$ 次递归调用；平均 $O(\log_2n)$。</p>
+<p><strong><u>稳定性</u></strong></p>
+<p>快排不稳定：在划分算法中，若右端区间有两个关键字相同且均小于基准值的记录，则在交换到左端区间后，它们的相对位置会发生变化。如：3 2 <em><u>2</u></em> → <em><u>2</u></em> 2 3。</p>
+<p><strong><u>适用性</u></strong></p>
+<p>仅适用于顺序存储的线性表。</p>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>每一趟（如第 $i$ 趟）在后面 $n-i-1$ 个待排序元素中选取关键字最小的元素，作为有序子序列的第 $i$ 个元素，直到第 $n-1$ 趟做完，待排序元素只剩下一个，就不用再选。</p>
+<h4 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h4><p><u><strong>基本思想</strong></u></p>
+<p>假设排序表为 <code>L[1…n]</code>，第 $i$ 趟排序从 <code>L[i…n]</code> 中选择关键字最小的元素与 <code>L(i)</code> 交换，每一趟排序可以确定一个元素的最终位置，这样经过 $n-1$ 趟排序就可使得整个排序表有序。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>移动次数：元素移动的操作次数很少，不会超过 $3(n-1)$ 次，最好的情况是移动 0 次，此时对应的表已经有序。</p>
+<p>比较次数：元素间比较的次数与序列的初始状态无关，始终是 $n(n-1)/2$。</p>
+<p>因此时间复杂度始终是 $O(n^2)$。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>O(1)。</p>
+<p><strong><u>稳定性</u></strong></p>
+<p>不稳定：在第 $i$ 趟找到最小元素后，和第 $i$ 个元素交换，可能会导致第 $i$ 个元素与其含有相同关键字元素的相对位置发生改变。如：<em><u>2</u></em> 2 1 → 1 2 <em><u>2</u></em>。</p>
+<h4 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h4><p><strong><u>堆的定义</u></strong></p>
+<p>$n$ 个关键字序列 <code>L[1…n]</code> 称为堆，当前仅当该序列满足：</p>
+<p>① <code>L(i)</code> $\geq$ <code>L(2i)</code> 且 <code>L(i)</code> $\geq$ <code>L(2i+1)</code> 或</p>
+<p>② <code>L(i)</code> $\leq$ <code>L(2i)</code> 且 <code>L(i)</code> $\leq$ <code>L(2i+1)</code>（$1 \leq i \leq \lfloor n/2 \rfloor$）</p>
+<p>满足 ① 的堆称为大根堆/大顶堆，满足 ② 的堆称为小根堆/小顶堆</p>
+<p>可将堆视为一棵<strong>完全二叉树</strong><span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>，大根堆的最大元素存放在根结点，且其任意一个非根结点的值小于等于其双亲结点值。小根堆则刚好相反。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231005213858928.png" width="400px"/></dev>
+
+
+<p><strong><u>堆排序思路</u></strong></p>
+<p>首先将存放在 <code>L[1…n]</code> 中的 $n$ 个元素建成初始堆，由于堆本身的特点（以大顶堆为例），堆顶元素就是最大值。输出堆顶元素后，通常将堆底元素送入堆顶，再从堆顶元素向下调整使其保持大顶堆的性质，再输出堆顶元素。如此重复，直到堆中只剩一个元素为止。</p>
+<ul>
+<li><p>如何将无序序列构造成初始堆？</p>
+<p>$n$ 个结点的完全二叉树，从以第 $\lfloor n/2 \rfloor$ 个结点为根的子树开始筛选，使该子树成为堆（对于大根堆，若子树根结点的关键字小于左右孩子中关键字较大者，则交换），之后向前依次对各结点（$\lfloor n/2 \rfloor -1$ ~ $1$）为根的子树进行筛选。交换可能会破坏下一级的堆，需继续采用上述方法构造下一级的堆，直到以该结点为根的子树构成堆为止。反复利用上述调整堆的方法建堆，直到根结点。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231005220246812.png" width="600px"/></dev>
+</li>
+<li><p>输出堆顶元素后，如何将剩余元素调整成新堆？</p>
+<p>输出堆顶元素后，将堆的最后一个元素与堆顶元素交换，此时堆的性质被破坏，需要向下进行筛选。</p>
+<p>和构造初始堆的向下筛选的算法是同一个，需要<strong>子结点间先比较</strong><span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>，选择出最大子结点（大根堆）再和父结点比较。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231005220508714.png" width="500px"/></dev>
+</li>
+<li><p>堆的插入与上浮</p>
+<p>把新结点放到堆的末端，再对这个新结点向上调整。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231005222138275.png" width="650px"/></dev>
+
+
+</li>
+</ul>
+<p>  一次上浮，子结点间不需要比较，<strong>只需和父结点比较</strong><span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>。最多和所有的父节点交换，共 $h-1$ 次，时间复杂度 $O(\log_2n)$。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>建堆时间为 $O(n)$，之后有 $n-1$ 次向下调整操作，每次调整的时间复杂度为 $O(h)$，故在最好、最坏、平均情况下，堆排序的时间复杂度为 $O(n\log_2n)$。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>O(1)。</p>
+<p><strong><u>稳定性</u></strong></p>
+<p>不稳定：进行筛选时，有可能把后面相同关键字的元素调整到前面。</p>
+<p>如初始序列 1 <em><u>2</u></em> 2，构造初始大根堆 <em><u>2</u></em> 1 2，最终排序序列 1 2 <em><u>2</u></em>。</p>
+<p><strong><u>适用性</u></strong></p>
+<p>堆排序适合关键字较多的情况。</p>
+<p>如在 1 亿个数中选出前 100 个最大值，首先用一个大小为 100 的数组，读入前 100 个数，建立小顶堆，而后依次读入余下的数，若小于堆顶则舍弃，否则用该数取代堆顶并重新调整堆，待数据读取完毕，堆中 100 个数即为所求。</p>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p><strong><u>归并</u></strong>：将两个或两个以上的有序表合并成一个新的有序表。</p>
+<h4 id="二路归并排序"><a href="#二路归并排序" class="headerlink" title="二路归并排序"></a>二路归并排序</h4><p><strong><u>基本思想</u></strong></p>
+<p><code>merge()</code> 的功能是将前后相邻的两个有序表归并为一个有序表。</p>
+<p>一趟归并排序的操作是，调用 $\lceil \frac{n}{2h} \rceil$ 次算法 <code>merge()</code>，将 <code>L[1…n]</code> 中前后相邻且长度为 $h$ 的有序段进行两两归并，得到前后相邻、长度为 $2h$ 的有序段。整个归并排序需要进行 $\lceil \log_2n \rceil$ 趟（$k$ 路归并则为 $\lceil \log_kn \rceil$ 趟）。</p>
+<p>递归形式的二路归并算法是基于分治的。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>每趟归并的时间复杂度为 $O(n)$，共需进行 $\lceil \log_2n \rceil$ 趟，故时间复杂度为 $O(n \log_2n)$。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>需要一个与待排序表同等大小的辅助数组，故空间复杂度为 $O(n)$。</p>
+<p><strong><u>稳定性</u></strong></p>
+<p><code>merge()</code> 操作不会改变相同关键字记录的相对次序，因此二路归并算法是一种稳定的排序算法。</p>
+<p><strong><u>适用性</u></strong></p>
+<p>适用于顺序存储和链式存储的线性表。</p>
+<p><strong><u>评价</u></strong></p>
+<p>从单个记录起进行两两归并的排序算法并不值得提倡，通常可以将它和直接插入排序结合在一起使用：先利用直接插入排序求得较长的有序子文件，然后两两归并。</p>
+<p>直接插入排序是稳定的，因此改进后的归并排序仍是稳定的。</p>
+<h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p><strong><u>基本思想</u></strong></p>
+<p>一种借助多关键字排序的思想对单逻辑关键字进行排序的方法，它不基于比较和移动进行排序，而基于关键字各位的大小进行排序。</p>
+<p>假设长度为 $n$ 的线性表中每个结点 $a_j$ 的关键字由 $d$ 元组（$k_j^{d-1},k_j^{d-2},…,k_j^1,k_j^0$）组成，满足 $0 \leqslant k_j^i \leqslant r-1$（$0 \leqslant j&lt;n$，$0 \leqslant i \leqslant d-1$）。其中 $k_j^{d-1}$ 为最主位关键字，$k_j^0$ 为最次位关键字。</p>
+<p>为实现多关键字排序， 通常有两种方法：</p>
+<ol>
+<li><p><u>最高位优先 (MSD) 法</u>：按关键字位权重递减依次逐层划分成若干更小的子序列，最后将所有子序列依次连接成一个有序序列。</p>
+</li>
+<li><p><u>最低位优先 (LSD) 法</u>：按关键字位权重递增依次进行排序，最后形成一个有序序列。</p>
+</li>
+</ol>
+<p>以 $r$ 为基数的最低位优先基数排序的过程：</p>
+<p>在排序过程中, 使用 $r$ 个队列 $Q_0,Q_1,…,Q_{r-1}$。对 $i=0,1,…, d-1$ 依次做一次 “分配” 和 “收集”（其实是一次稳定的排序过程）。</p>
+<ol>
+<li>分配：开始时把 $Q_0,Q_1,…,Q_{r-1}$ 各个队列置成空队列，然后依次考察线性表中的每个结点 $a_j$（$j=0,1,…,n-1$）。若 $a_j$ 的关键字 $k_j^i=k$，就把 $a_j$ 放进 $Q_k$ 队列。</li>
+<li>收集：把 $Q_0,Q_1,…,Q_{r-1}$ 各个队列中的结点依次首尾相接，得到新的结点序列，从而组成新的线性表。</li>
+</ol>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>一趟分配需要 $O(n)$，一趟收集需要 $O(r)$，共需进行 $d$ 趟分配和收集，故时间复杂度为 $O(d(n+r))$，与序列的初始状态无关。</p>
+<p><strong><u>空间复杂度</u></strong></p>
+<p>一趟排序需要 $r$ 个队列（$r$ 个队头指针和 $r$ 个队尾指针），每趟排序重复使用，故空间复杂度为 $O(r)$。</p>
+<p><strong><u>稳定性</u></strong></p>
+<p>对于基数排序而言，很重要的一点就是按位排序时必须是稳定的。因此，这也保证了基数排序的稳定性。</p>
+<p><strong><u>适用性</u></strong></p>
+<p>虽然基数排序具有线性增长的时间复杂度，但由于在常规编程中，基数排序的线性时间开销实际上并不比快排的时间开销小很多，并且由于基数排序基于的关键字抽取算法受到操作系统和排序元素的影响，其适应性远不如普通的进行比较和交换操作的排序方法。因此在实际工作中，常规的高效排序算法如快排的应用要比基数排序广泛得多。</p>
+<p>基数排序适用于顺序存储和链式存储的线性表。</p>
+<h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序*"></a>计数排序*</h3><p><strong><u>基本思想</u></strong></p>
+<p>对每个待排序元素 x，统计小于 x 的元素个数，利用该信息就可确定 x 的最终位置。例如，若有 8 个元素小于 x，则 x 就排在第 9 号位置上。当有几个元素相同时，该排序方案还需做一定的优化。</p>
+<p>计数排序也是一种不基于比较的排序算法。</p>
+<p>在计数排序算法的实现中，假设输入是一个数组 <code>A[n]</code>，序列长度为 $n$，我们还需要两个数组：<code>B[n]</code> 存放输出的排序序列，<code>C[k]</code> 存储计数值。用输入数组 A 中的元素作为数组 C 的下标，例如对于数组 A 中的元素 <code>x</code>，<code>C[x]</code> 保存的是小于等于 <code>x</code> 的元素个数。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20240904215621059.png" width="800px"/></dev>
+
+
+<p><strong><u>空间复杂度</u></strong></p>
+<p>计数排序是一种<strong>用空间换时间</strong>的做法。输出数组的长度为 n，辅助的计数数组长度为 k，空间复杂度为 O(n+k)。</p>
+<p>若不把输出数组视为辅助空间，则空间复杂度为 O(k)。</p>
+<p>k 取决于待排序元素的最大值。</p>
+<p><strong><u>时间复杂度</u></strong></p>
+<p>初始化计数数组 C 遍历了两次计数数组 C 和一次输入数组 A；最后遍历一次输入数组 A，根据计数数组 A 对应值将元素放在输出数组 B 的正确位置上。故共遍历了两次计数数组 C 和两次输入数组 A，总时间复杂度为 O(n+k)。</p>
+<p>当 k = O(n) 时，计数排序的时间复杂度为 O(n)；但当 k ＞O(nlogn) 时，其效率反而不如一些基于比较的排序（如快排、堆排序等）。</p>
+<p><strong><u>稳定性</u></strong></p>
+<p>最后从后往前遍历输入数组，相同元素在输出数组中的相对位置不会改变，因此计数排序是一种稳定的排序算法。</p>
+<p><strong><u>适用性</u></strong></p>
+<p>适用于顺序存储线性表。</p>
+<p>适用于序列中的元素是整数且元素范围（0 ~ k-1）不能太大，否则会造成辅助空间（计数数组）的浪费。</p>
+<h2 id="外部排序"><a href="#外部排序" class="headerlink" title="外部排序"></a>外部排序</h2><p>外部排序和内部排序最主要的区别是是否涉及内存、外存的数据交换。</p>
+<h3 id="外部排序的方法"><a href="#外部排序的方法" class="headerlink" title="外部排序的方法"></a>外部排序的方法</h3><p><strong><u>外部排序的两个阶段</u></strong></p>
+<ol>
+<li><p>根据内部缓冲区大小，将外存上的文件分成若干长度为 $l$ 的子文件，依次读入内存并利用内部排序的方法对它们进行排序，并将排序后得到的有序子文件重新写回外存。</p>
+<p>这些有序子文件称为归并段或顺段。</p>
+</li>
+<li><p>对这些归并段进行逐趟内部归并，使归并段逐渐由小到大，直到得到整个有序文件为止。</p>
+</li>
+</ol>
+<p><strong><u>外部排序过程</u></strong></p>
+<p>例如，待排序文件含有 2000 个记录，每个磁盘块可容纳 125 个记录。</p>
+<p>首先经过 8 次内部排序得到 8 个初始归并段（长度 250 记录），再对这些初始归并段进行二路内部归并。</p>
+<p>可以把内存工作区<strong>等分</strong><span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>成三个缓冲区，其中两个为输入缓冲区，一个为输出缓冲区。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231007205542316.png" width="600px"/></dev>
+
+
+<p>二路归并流程：</p>
+<p>1）从磁盘上的两个输入归并段 R1 和 R2 中分别读入一块放在内存输入缓冲区 1 和输入缓冲区 2。然后在内存中进行二路归并，归并后的对象顺序存放在输出缓冲区中。</p>
+<p>2）若输出缓冲区中对象存满，则将其顺序写到磁盘上的输出归并段 R1‘ 中；若某个输入缓冲区中的对象取空，则从磁盘上对应的输入归并段中再读入下一块，继续参加归并。如此继续，直到两个输入归并段中的对象全部读入内存并都归并完成为止。</p>
+<p>3）当 R1 和 R2 归并完后，再归并 R3 和 R4、R5 和 R6、R7 和 R8。自此完成第一趟归并。</p>
+<p>4）把第一趟归并的结果 R1’ 和 R2’、R3’ 和 R4’ 两两归并，完成第二趟归并。</p>
+<p>5）把第二趟归并的结果 R1‘’ 和 R2’’ 两两归并，完成第三趟归并，得到最终的有序文件。</p>
+<p><strong><u>磁盘读写次数</u></strong></p>
+<p>内部排序：8 次内部排序生成 8 个初始归并段，磁盘读写 32 次（读写各 16 次）。</p>
+<p>内部归并：$\log_28=3$ 趟内部归并，每趟磁盘读写 32 次（读写各 16 次）。</p>
+<p>磁盘读写总次数：$32+32 \times 3=128$ 次。</p>
+<blockquote>
+<p>磁盘的读/写以磁盘块为单位。</p>
+</blockquote>
+<p><u><strong>外部排序总时间</strong></u></p>
+<p>外部排序总时间 = 内部排序所需时间 + 内部归并所需时间 + 外存信息读写时间。</p>
+<p>外存信息读写时间远大于内部排序和内部归并所需时间，因此应着力减少 I/O 次数。</p>
+<p><strong><u>如何减少磁盘 I/O 次数</u></strong></p>
+<p>磁盘读写总次数 = 内部归并的趟数 $S \times$ 每趟归并进行磁盘 I/O 的次数 $+$ 内部排序进行磁盘 I/O 的次数。</p>
+<p>而每趟归并进行磁盘 I/O 的次数和内部排序进行磁盘 I/O 的次数是固定的，等于 $\frac{文件大小}{磁盘块大小} \times 2$（内存允许的前提下），故减少磁盘 I/O 次数的途径为减少内部归并趟数 $S$。</p>
+<p><strong><u>如何减少内部归并趟数</u></strong></p>
+<p>对 $r$ 个初始归并段进行 $k$ 路归并，归并趟数 $S=\lceil \log_kr \rceil$，因此可以通过：</p>
+<ol>
+<li>增大归并路数 $k$</li>
+<li>减少初始归并段数量 $r$ → 产生更长的初始归并段 → 采用<strong>置换-选择排序</strong>生成初始归并段</li>
+</ol>
+<p>两种方式减少归并趟数 $S$。</p>
+<p>增大归并路数 $k$ 的消极影响：</p>
+<ol>
+<li><p>增加每趟内部归并的时间</p>
+<p>对于 $k$ 路归并，每得到归并后的有序段中的一个记录，都要进行 $k-1$ 次比较，显然为得到含 $u$ 个记录的归并段需进行 $(u-1)(k-1)$ 次比较（最坏情况）。由此，对含有 $n$ 个记录的文件进行外排时，在内部归并进行的总的比较次数为 $S(k-1)(n-1)=\lceil \log_kr \rceil (n-1)(k-1)=\lceil \frac{\log_2r}{log_2k} \rceil(k-1)(n-1)$</p>
+<p>由于 $\frac{k-1}{\log_2k}$ 随 $k$ 的增长而增长，则内部归并时间亦随 $k$ 的增长而增长，这将抵消由于增大 $k$ 而减少外存信息读写时间所得效益。</p>
+<p>解决方案：在进行 $k$ 路归并时利用<strong>败者树</strong>，可使总的比较次数与 $k$ 无关。</p>
+</li>
+<li><p>磁盘 I/O 次数增加</p>
+<p>归并路数 $k$ 增加，相应地输入缓冲区数量增加，而内存工作区空间大小一定，势必要减少每个输入缓冲区的容量，减少到一定程度后，内部归并过程中磁盘 I/O 次数就开始增加（一个输入缓冲区放不下一个磁盘块，原本只需交换一次的信息数量现在需要多次），所以当 $k$ 值过大时，虽然归并趟数会减少，但读写外存的次数仍会增加。</p>
+</li>
+</ol>
+<h3 id="多路平衡归并与败者树"><a href="#多路平衡归并与败者树" class="headerlink" title="多路平衡归并与败者树"></a>多路平衡归并与败者树</h3><p>败者树是树形选择排序的一种变体，可视为一棵<strong>完全二叉树</strong><span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>。</p>
+<p>$k$ 个叶结点分别存放 $k$ 个归并段在归并过程中当前参加比较的记录，内部结点用来记忆左右孩子结点中的 “败者”，而让 “胜者” 继续往上比较，一直到根结点。假设小者为胜，则根结点的双亲指向的数为最小数。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231007215254227.png" width="600px"/></dev>
+
+
+<p>在选得最小关键字的记录之后，只要修改对应叶结点中的值，改为同一归并段中的下一个记录的关键字，然后从该结点向上和双亲结点所指的关键字进行比较，败者留在该双亲结点，胜者继续向上直至树根的双亲</p>
+<p>为防止在归并过程中某个归并段变空，可在每个归并段中附加一个关键字为最大值的记录，当选出的 “冠军” 记录的关键字为最大值时，表明此次归并已完成。</p>
+<p>败者树的初始化：所有的内部结点都指向一个含最小关键字的叶结点，然后从各个叶结点出发调整内部结点为新的败者即可。</p>
+<p>因 $k$ 路归并的败者树深度为 $\lceil log_2k \rceil$ + 1，因此 $k$ 个记录中选择最小关键字，最多需要 $\lceil \log_2k \rceil$ 次，所以总的比较次数为 $S(n-1)\lceil \log_2k \rceil=\lceil \log_kr \rceil(n-1)\lceil \log_2k \rceil=(n-1) \lceil \log_2r \rceil$。可见，使用败者树后，内部归并的比较与 $k$ 无关了，因此，只要<strong>内存空间允许</strong><span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>，增大归并路数 $k$ 将有效地减少归并树的高度（归并趟数），从而减少 I/O 次数，提高外部排序的速度。​</p>
+<h3 id="置换-选择排序"><a href="#置换-选择排序" class="headerlink" title="置换-选择排序"></a>置换-选择排序</h3><p>前面说过，除了增大归并路数 $k$ 能够减少内部归并趟数外，减少初始归并段数量 $r$ 也能减少内部归并趟数。初始归并段数量减少意味着初始归并段更长，而采用内部排序得到的各个初始归并段长度都相同（除最后一段），它依赖于内部排序时可用内存工作区的大小。因此必须探索新的方法来产生更长的初始归并段，这就是本节要讨论的置换-选择算法。</p>
+<p>置换-选择排序是在树形选择排序的基础上得来的，它的特点是：在整个排序的过程中（得到所有初始归并段），最小或最大关键字的选择和输入、输出交叉或平行进行。</p>
+<p>设初始待排文件为 <code>FI</code>，初始归并段输出文件为 <code>FO</code>，内存工作区为 <code>WA</code>，<code>FO</code> 和 <code>WA</code> 的初始状态为空，<code>WA</code> 可容纳 $w$ 个记录。置换-选择算法的步骤如下：</p>
+<p>1）从 <code>FI</code> 输入 $w$ 个记录到工作区 <code>WA</code>。</p>
+<p>2）从 <code>WA</code> 中选出其中关键字取最小值的记录，记为 <code>MINIMAX</code> 记录。</p>
+<p>3）将 <code>MINIMAX</code> 记录输出到 <code>FO</code> 中去。</p>
+<p>4）若 <code>FI</code> 不空，则从 <code>FI</code> 输入下一个记录到 <code>WA</code> 中。</p>
+<p>5）从 <code>WA</code> 中所有关键字比 <code>MINIMAX</code> 记录的关键字大的记录中选出最小关键字记录，作为新的 <code>MINIMAX</code> 记录。</p>
+<p>6）重复 3）~ 5），直至在 WA 中选不出新的 <code>MINIMAX</code> 记录为止，由此得到一个初始归并段，输出一个归并段的结束标志到 <code>FO</code> 中去。</p>
+<p>7）重复 2）~ 6），直至 <code>WA</code> 为空。由此得到全部初始归并段。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231007225543266.png" width="600px"/></dev>
+
+
+<p>在 <code>WA</code> 中选择 <code>MINIMAX</code> 记录的过程利用败者树实现（了解即可）：</p>
+<p>1）内存工作区中的记录作为败者树的外部结点，而败者树中根结点的双亲结点指示工作区中关键字最小的记录。</p>
+<p>2）为每个记录附设一个所在归并段的序号，在进行关键字的比较时，先比较段号，段号小者为胜；段号相同的则关键字小者为胜。</p>
+<p>3）败者树的建立可从设工作区中所有记录的段号均为零开始，然后从 FI 逐个输入 $w$ 个记录到工作区时，自下而上调整败者树，由于这些记录的段号为 1，则它们对于 0 段的记录而言均为败者，从而逐个填充到败者树的各结点中去。</p>
+<h3 id="最佳归并树"><a href="#最佳归并树" class="headerlink" title="最佳归并树"></a>最佳归并树</h3><p>文件经过置换-选择排序后，得到的是长度不等的初始归并段。下面讨论如何组织长度不等的初始归并段顺序，使得 I/O 次数最少。</p>
+<div align=left><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/ungee/image-20231007231621144.png" width="600px"/></dev>
+
+
+<p>归并树中，各叶结点表示一个初始归并段，权值表示归并段长度（即记录数），叶结点到根的路径长度表示其参加归并的趟数，各非叶结点代表归并成的新归并段，根结点表示最终生成的归并段。树的带权路径长度 WPL 为归并过程中总外存读或写的次数（假设每个记录占一个物理块），故 I/O 次数 = 2 × WPL。</p>
+<p>显然归并方案不同，所得归并树亦不同，WPL 亦不同。对 $r$ 个长度不等的初始归并段构造一棵 $k$ 叉哈夫曼树作为归并树（WPL 最小），便可使在进行外部归并时磁盘 I/O 次数最少，这棵归并树便称作最佳归并树。</p>
+<p>实现 $k$ 路平衡归并的最佳归并树可能需要添加若干长度为 0 的虚段（$k&gt;2$）。详见第五章哈夫曼树一节。</p>
+<h2 id="刷题总结"><a href="#刷题总结" class="headerlink" title="刷题总结"></a>刷题总结</h2><ul>
+<li><p>快排</p>
+<p>速度最快：枢轴均分</p>
+<p>速度最慢：有序</p>
+<p>每趟比较次数：长度大于 1 的子表关键字总数 - 长度大于 1 的子表数</p>
+<p>移动次数：按算法走一遍</p>
+<p>每趟排序都会将至少一个元素（枢轴）放置到其最终的位置上（对尚未确定最终位置的所有元素进行一遍处理称为一 “趟”），每趟有几个子表就有几个枢轴会被放置到最终位置上。</p>
+</li>
+<li><p>冒泡</p>
+<p>不要以为每趟冒泡只是最小/大关键字冒泡，实际上遍历过程中遇到逆序对就会发生交换。</p>
+<p>最少趟数：通常在每趟排序的过程中会判断是否产生新的逆序对，若不会产生，则说明本趟的序列已经全局有序。这种方式下最后一趟是无交换的排序，计算最少趟数时默认要加上。</p>
+</li>
+<li><p>堆排序</p>
+<p>建立初始堆：O(n)，不超过 4n。</p>
+<p>自顶向下调整一次/删除一个结点后调整：O($log_2n$)，子结点要先比较一次以选出最小/大的结点再跟父结点比较<span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>。</p>
+<p>取得第 k 个最小/大元素之前的排序所花时间为：O($klog_2n$)，总时间为 4n + O($klog_2n$)。</p>
+<p>插入一个结点后上浮调整：O($log_2n$)，子结点之间不需要比较，上浮一层只需跟父结点比较一次<span class="github-emoji" alias="warning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">&#x26a0;</span>。</p>
+</li>
+<li><p>在基于比较的排序算法中，只有冒泡、选择（简单选择、堆）每趟都确定一个最小的元素，每趟最左生成全局有序子表（升序），而插入、快排、归并只有在将元素全部排完序后才能得到前 k 个最小的元素序列。</p>
+<p>选出 k 个最小元素耗时：堆（4n + $klog_2n$）、冒泡（kn）、简单选择（kn），当 k ≥ 5 时，可以得出堆排序最优。</p>
+</li>
+<li><p>堆是棵完全二叉树，从根结点到任意叶结点的路径都是有序的。</p>
+<p>既是堆又是二叉排序树的非空二叉树只能是：① 只有根结点；② 只有两个结点的左斜单支树。</p>
+</li>
+<li><p>问时间复杂度默认为最坏。</p>
+</li>
+<li><p>多关键字排序，优先级低的先排，且从第二个使用的排序算法开始就需要是稳定的，不然会打乱前面的排序。</p>
+</li>
+<li><p>关键字为实数时可以使用基数排序<span class="github-emoji" alias="x" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">&#x274c;</span></p>
+<p>基数不能对浮点数进行排序。</p>
+</li>
+<li><p>堆的定义是递归的，故小(大)根堆的次小(大)值一定在根的下一层</p>
+<p>小(大)根堆最大(小)值一定在叶结点，即范围为 $\lfloor n/2\rfloor+1$ ~ $n$</p>
+</li>
+<li><p>快排是最通用的高效内部排序算法。</p>
+</li>
+<li><p>将两个各有 N 个元素的有序表合并成一个有序表，最少的比较次数是 N，最多的比较次数是 2N - 1。</p>
+<p>将两个各有 M、N 个元素的有序表合并成一个有序表，最少的比较次数是 min(M, N)，最多的比较次数是 M + N - 1。</p>
+<p>将两个各有 M、N 个元素的有序表合并成一个有序表，当一个表为空时，另一个表剩余元素数为 x（x ≥ 1），比较次数为 M + N - x。</p>
+</li>
+<li><p>可以并行执行：快排、堆、归并。</p>
+</li>
+<li><p>交换排序、选择排序属于交换，其中一般简单选择交换次数最少。</p>
+</li>
+<li><p>在做 $m$ 路平衡归并排序的过程中，为实现输入/内部归并/输出的并行处理，需要设置 2$m$ 个输入缓冲区和 2 个输出缓冲区。</p>
+<p>一般同步处理时，需要 $m$ 个输入缓冲区和 1 个输出缓冲区。</p>
+</li>
+<li><p>败者树是一棵完全二叉树。无论是几路归并，它都是二叉。</p>
+<p>败者树 = 多路平衡归并。</p>
+<p>$m$ 路平衡最佳归并树（败者树 + 最佳归并树），表面是严格 $m$ 叉，“放大” 每个分支结点及其孩子结点，实际是完全二叉。</p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zero</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zerooo.top/2025/03/26/%E6%8E%92%E5%BA%8F-DS/">https://zerooo.top/2025/03/26/%E6%8E%92%E5%BA%8F-DS/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zerooo.top" target="_blank">ZERO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/03/26/%E7%BB%AA%E8%AE%BA-OS/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">绪论 | OS</div></div></a></div><div class="next-post pull-right"><a href="/2025/03/26/%E6%9F%A5%E6%89%BE-DS/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">查找 | DS</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2025/03/26/%E4%B8%B2-DS/" title="串 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">串 | DS</div></div></a></div><div><a href="/2025/03/26/%E5%9B%BE-DS/" title="图 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">图 | DS</div></div></a></div><div><a href="/2025/03/26/%E6%9F%A5%E6%89%BE-DS/" title="查找 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">查找 | DS</div></div></a></div><div><a href="/2025/03/26/%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84-DS/" title="栈、队列和数组 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">栈、队列和数组 | DS</div></div></a></div><div><a href="/2025/03/26/%E7%BA%BF%E6%80%A7%E8%A1%A8-DS/" title="线性表 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">线性表 | DS</div></div></a></div><div><a href="/2025/03/26/%E6%A0%91-DS/" title="树 | DS"><img class="cover" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-26</div><div class="title">树 | DS</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F"><span class="toc-number">2.</span> <span class="toc-text">内部排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-number">2.1.</span> <span class="toc-text">插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-number">2.1.1.</span> <span class="toc-text">直接插入排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%98%E5%8D%8A%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-number">2.1.2.</span> <span class="toc-text">折半插入排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F-%E7%BC%A9%E5%B0%8F%E5%A2%9E%E9%87%8F%E6%8E%92%E5%BA%8F"><span class="toc-number">2.1.3.</span> <span class="toc-text">希尔排序&#x2F;缩小增量排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F"><span class="toc-number">2.2.</span> <span class="toc-text">交换排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">2.2.1.</span> <span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-number">2.2.2.</span> <span class="toc-text">快速排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">2.3.</span> <span class="toc-text">选择排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">2.3.1.</span> <span class="toc-text">简单选择排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F"><span class="toc-number">2.3.2.</span> <span class="toc-text">堆排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-number">2.4.</span> <span class="toc-text">归并排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E8%B7%AF%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-number">2.4.1.</span> <span class="toc-text">二路归并排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-number">2.5.</span> <span class="toc-text">基数排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-number">2.6.</span> <span class="toc-text">计数排序*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E6%8E%92%E5%BA%8F"><span class="toc-number">3.</span> <span class="toc-text">外部排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E6%8E%92%E5%BA%8F%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">外部排序的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%B7%AF%E5%B9%B3%E8%A1%A1%E5%BD%92%E5%B9%B6%E4%B8%8E%E8%B4%A5%E8%80%85%E6%A0%91"><span class="toc-number">3.2.</span> <span class="toc-text">多路平衡归并与败者树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%AE%E6%8D%A2-%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">3.3.</span> <span class="toc-text">置换-选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BD%B3%E5%BD%92%E5%B9%B6%E6%A0%91"><span class="toc-number">3.4.</span> <span class="toc-text">最佳归并树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E9%A2%98%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">刷题总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | OS"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS">拓展 | OS</a><time datetime="2025-03-26T09:17:47.000Z" title="发表于 2025-03-26 17:17:47">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO">拓展 | CO</a><time datetime="2025-03-26T09:17:39.000Z" title="发表于 2025-03-26 17:17:39">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="输入输出系统 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO">输入输出系统 | CO</a><time datetime="2025-03-26T09:17:27.000Z" title="发表于 2025-03-26 17:17:27">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="总线 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO">总线 | CO</a><time datetime="2025-03-26T09:17:18.000Z" title="发表于 2025-03-26 17:17:18">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中央处理器 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO">中央处理器 | CO</a><time datetime="2025-03-26T09:17:10.000Z" title="发表于 2025-03-26 17:17:10">2025-03-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><script src="/js/catalog.js?1"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -55,7 +55,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-07-25 23:25:16'
+  postUpdate: '2025-03-26 17:26:09'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -148,282 +148,199 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/zero.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">ZERO</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2024/03/10/OS3_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="内存管理 | OS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="内存管理 | OS"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/03/10/OS3_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="内存管理 | OS">内存管理 | OS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-10T06:39:58.000Z" title="发表于 2024-03-10 14:39:58">2024-03-10</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-20T02:37:36.289Z" title="更新于 2024-03-20 10:37:36">2024-03-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></span></div><div class="content">内存管理概念引入多道程序的并发执行后，进程之间共享的不仅仅是处理机，还有主存储器。然而，共享主存会形成一些特殊的挑战。若不对内存进行管理，则易导致内存数据的混乱，以至于限制进程的并发执行。因此，为了更好地支持多道程序并发执行，必须进行内存管理
-基本原理和要求
-内存管理
-操作系统对内存的划分和动态分配
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/zero.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZERO</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">ZERO</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | OS"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS">拓展 | OS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:17:47.000Z" title="发表于 2025-03-26 17:17:47">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:24:13.521Z" title="更新于 2025-03-26 17:24:13">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></span></div><div class="content">
+协处理器
+一种协助中央处理器完成其无法执行，或执行效率、效果低下的处理工作而开发和应用之处理器
+这种中央处理器无法执行的工作有很多，比如设备间的信号传输、接入设备的管理等；而执行效率、效果低下的有图形处理、声频处理等
+主要分类：各类处理芯片（如GPU、声频处理芯片等）、接口控制芯片（如SATA接口控制芯片）、桥接芯片
+由于现在的计算机中，整数运算器与浮点运算器已经集成在一起，因此浮点处理器已经不算是辅助处理器。而内建于 CPU 中的协处理器，同样不算是辅助处理器，除非它是独立存在
 
-内存管理目的 
-
-方便用户
-提高内存利用率
-
-
-内存管理主要功能
-内存空间的分配与回收
-地址转换（逻辑 → 物理）
-内存空间的扩充（逻辑上） 
-内存共享（受控访问）
-存储保护
-
-将用户程序变为可在内存中执行的程序的步骤
+内存管理部件 MMU
 
 
-
-编译
-由编译程序(compiler)对用户源程序进行编译，形成若干个目标模块(object module)
-
-链接
-由链接程序(linker)将编译后形成的一组目标模块以及它们所需要的库函数链接在一起，形成一个完整的装入模块(load module)
-
-装入
-由装入程序(loader)将装入模块装入内存
+常见文件系统从 Windows 2000 之后的 Windows 默认文件系统为 NTFS；RHEL/CentOS 从 RHEL/CentOS 7 开始默认使用 XFS 文件系统；FAT32 和 exFAT 是目前 USB 闪存盘比较常用的文件系统。
+Linux 支持各种各样的文件系统格式，如 ext 系列、FAT、NTFS 等。
+FAT、FAT16、FAT32
+FAT 是最早、最简单的文件系统之一。FAT 即文件分配表。FAT16 和 FAT32 都是 FAT 文件管理系统，二 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO">拓展 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:17:39.000Z" title="发表于 2025-03-26 17:17:39">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:21:09.284Z" title="更新于 2025-03-26 17:21:09">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">逻辑运算相关逻辑运算符&amp;：按位与    |：按位或    ^：按位异或
+&amp;&amp;：逻辑与    ||：逻辑或    !：逻辑非
+逻辑表达式
 
 
-
-目标文件
-目标文件有三种形式：
-
-可重定位目标文件
-包含二进制代码和数据，其形式可以在编译时与其他可重定位目标文件合并起来，创建一个可执行目标文件
-
-可执行目 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图 | DS"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS">图 | DS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-26T01:31:06.000Z" title="发表于 2024-01-26 09:31:06">2024-01-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-26T03:44:51.616Z" title="更新于 2024-01-26 11:44:51">2024-01-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content">基本概念
-图 G 由顶点的有限非空集 V 和边集 E 组成 → G = (V, E)
-线性表可以是空表，树可以是空树，但图不可以是空图（边集可空，顶点集一定非空）
-|V| 表示 G 中顶点 vertex 的个数，|E| 表示 G 中边 edge 的条数
-
-有向图：每条边都有方向
-无向图：每条边都没有方向
-
-弧/有向边
-有向图中的边，是顶点的有序对，记为 &lt;$v_i$, $v_j$&gt;，$v_j$ 为弧头，$v_i$ 为弧尾
-&lt;$v_i$, $v_j$&gt; 称从 $v_i$ 到 $v_j$ 的弧，也称 $v_i$ 邻接到 $v_j$
-
-无向图中，边是顶点的无序对，记为 ($v_i$, $v_j$)，等价于有向图中 &lt;$v_i$, $v_j$&gt; 和 &lt;$v_j$, $v_i$&gt; 两条边
-可以说 $v_i$ 和 $v_j$ 互为邻接点
-边 ($v_i$, $v_j$) 依附于 $v_i$ 和 $v_j$，或称边 ($v_i$, $v_j$) 和 $v_i$、$v_j$ 相关联
-
-度 TD($v$)：无向图中依附于顶点 $v$ 的边的条数
-入度 ID ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树 | DS"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS">树 | DS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-12T01:14:08.000Z" title="发表于 2024-01-12 09:14:08">2024-01-12</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-23T08:02:54.387Z" title="更新于 2024-01-23 16:02:54">2024-01-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content">树概念
-定义
-  唯一根结点与若干棵互不相交的子树组成（每一棵子树又是一棵树，递归定义）
-  是一种非线性的数据结构
-  属于分层结构
-
-特点
-  根结点无前驱，其他所有结点有且只有一个前驱
-  所有结点可以有零个或多个后继
-
-基本术语
-  空树、结点的度（结点的孩子个数）、树的度（树中结点的最大度数）、叶子/终端结点（度为 0）、分支/非终端结点（度大于 0）、内部结点、孩子、双亲、兄弟、祖先、子孙、层次（根结点为第 1 层）、树的高度/深度（树中结点的最大层数）、结点深度（自顶向下逐层累加）、结点高度（自底向上逐层累加）、堂兄弟（双亲在同一层）、有序树（各子树左右有序，不能互换）、无序树、路径（结点序列）、路径长度（路径上所经过的边的个数）、丰满树/理想平衡树（除最底层外其他层都是满的）、森林（若干棵互不相交的树的集合）
-
-分支有向（双亲指向孩子），路径只能自顶向下，故同一双亲的两个孩子之间不存在路径
+逻辑门电路符号
 
 
-“路径长度”
-  结点的路径长度：根到该结点经过的边数  树的路径长度：所有结点的路径长度之和  结点的带权路径长度：该结点路径长度与其权值的乘积  树的带权路径长度 WPL：所 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用算法模板"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板">常用算法模板</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-11T09:50:08.000Z" title="发表于 2024-01-11 17:50:08">2024-01-11</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-22T13:35:19.599Z" title="更新于 2024-01-22 21:35:19">2024-01-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">日常学习</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">二分法左闭右闭 [left, right]
-1234567891011121314public int search(int[] nums, int target) &#123;    int l = 0, r = nums.length - 1;    while (l &lt;= r) &#123;        int mid = l + (r - l) / 2;        if (nums[mid] == target) &#123;            return mid;        &#125; else if (nums[mid] &lt; target) &#123;            l = mid + 1;        &#125; else &#123;            r = mid - 1;        &#125;    &#125;    return -1;&#125;
+CPU 架构名词x86
+指 Intel 8086 处理器及其后续版本的架构系列。
+最初是 16 位处理器，后来也包括了 32 位和 64 位版本。
+x86 处理器均向下兼容。
+Intel 为防止竞争对手的 x86 兼容处理器产品用相近的命名方式，并与它们作出区分，80486 以后不再采用 80( )86 的命名方式，本应被命名为 80586 或 i586 结构的处理器被命名为 Pentium，也被称为 P5 架构。
+实际上在 80486 以后 Intel 推出的绝大数 CPU 也都是 x86 架构，并且使用 x86 架构的处理器制造商远非 Intel 一家，目前出售的的品牌或组装的 PC 很少不是 x86 CPU 的。可以说 x86 架构就是桌面级 CPU 的标准。不过虽说都是 x86 的，也只能说明使用的指令集是兼容 8086 的，除 8086 指令集之外的指令的支持情况就不一样，且指令的实现显然也是各 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="输入输出系统 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO">输入输出系统 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:17:27.000Z" title="发表于 2025-03-26 17:17:27">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:22:40.777Z" title="更新于 2025-03-26 17:22:40">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">I/O 系统基本概念*输入/输出系统外部设备
+包括输入/输出设备及通过输入输出接口才能访问的外存储设备。
+接口
+在各个外设与主机之间传输数据时进行各种协调工作的逻辑部件。
+协调包括传输过程中速度的匹配、电平和格式转换等。
+输入设备
+用于向计算机系统输入命令和文本、数据等信息的部件。
+键盘和鼠标是最基本的输入设备。
+输出设备
+用于将计算机系统中的信息输出到计算机外部进行显示、交换等的部件。
+显示器和打印机是最基本的输出设备。
+外存设备
+除计算机内存及 CPU 缓存等以外的存储器，如硬磁盘、光盘等。
+I/O 系统组成
+一般来说，I/O 系统由 I/O 软件和 I/O 硬件两部分构成：
 
-1234567891011121314int search(vector&lt;int&gt;&amp; nums, int target) &#123;   ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="栈、队列和数组 | DS"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS">栈、队列和数组 | DS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-11T01:16:04.000Z" title="发表于 2024-01-11 09:16:04">2024-01-11</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-11T09:12:12.096Z" title="更新于 2024-01-11 17:12:12">2024-01-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content">栈概念栈的数学性质：出栈排列数目（$n$ 个不同元素以某种顺序依次进栈，并可在任意时刻出栈）满足函数 $Catalan()$：$N=\frac{1}{n+1}C^n_{2n}$
-栈的基本操作：初始化、判空、进栈 push、出栈 pop、读栈顶、销毁
-顺序存储结构顺序栈、共享栈（两个顺序栈共享存储空间）
+I/O 软件：包括驱动程序、用户程序、管理程序、升级补丁等。通常采用 I/O 指令和通道指令实现 CPU 和 I/O 设备的信息交换。
+I/O 硬件：包括外部设备、设备控制器和接口（I/O 接口）、I/O 总线等。通过设备控制器控制 I/O 设备的具体动作；通过 I/O 接口与主机（总线）相连。
+
+I/O 接口
+I/O 接口 = I/O 控制器 = 设备控制器。
+以前的 I/O 接口（芯片）会被集成在南桥芯 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="总线 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO">总线 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:17:18.000Z" title="发表于 2025-03-26 17:17:18">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:22:33.123Z" title="更新于 2025-03-26 17:22:33">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">总线概述早期计算机的各部件之间是通过单独的连线互连的，这种方式称为分散连接。但是，随着 IO 设备的种类和数量越来越多，为了更好地解决 IO 设备和主机之间连接的灵活性，计算机的结构从分散连接发展为总线连接。为了进一步简化设计，又提出了各类总线标准。
+总线基本概念总线定义
+一组能为多个部件分时共享的公共信息传送线路。
+分时和共享是总线的两个特点：
+
+分时：同一时刻只允许有一个部件向总线发送信息，若系统中有多个部件，则它们只能分时地向总线发送信息。
+
+共享：总线上可以挂接多个部件，各个部件之间互相交换的信息都可通过这组线路分时共享。在某一时刻只允许有一个部件向总线发送信息，但多个部件可同时从总线上接收相同的信息。
 
 
-采用共享栈的好处：节省存储空间，降低发生上溢的可能
-链式存储结构链栈
+总线设备
+总线上所连接的设备，按其对总线有无控制功能可分为主设备和从设备两种：
+
+主设备：获得总线控制权的设备。
+
+从设备：被主设备访问的设备。只能响应从主设备发来的各种总线命令。
 
 
-代码实现顺序栈1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465/* 顺序栈 */#define MaxSize 50typedef struct &#123;    ElemType data[maxSize];    int top;&#125; SqStack;/** * 初始化 */void initStack(SqStack &amp;st) &#123;   st.top = -1;&#125;/** * 判栈 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线性表 | DS"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/10/DS2_%E7%BA%BF%E6%80%A7%E8%A1%A8/" title="线性表 | DS">线性表 | DS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-10T01:34:05.000Z" title="发表于 2024-01-10 09:34:05">2024-01-10</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-10T08:59:01.201Z" title="更新于 2024-01-10 16:59:01">2024-01-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content">定义和基本操作
-线性表
-具有相同数据类型的 $n$ 个数据元素的有限序列（$n \geq 0$）
-空表：表长 $n$ 为 0
+同一时刻只能有一个主设备控制总线的传输操作，可以有一个或多个从设备从总线接收数据。
+总线特性
 
-线性表逻辑特性
-只有一个表头元素
-只有一个表尾元素
-表头无前驱、表尾无后继
-除表头表尾，每个元素只有一个直接前驱和一个直接后继
+机械特性：尺寸、形状、管脚数、排列顺序。
 
-线性表特点
-表中元素的个数有限
-表中元素具有逻辑上的顺序性，在序列中各个元素有其先后次序
-表中元素都是数据元素。每个元素都是单个元素
-表中元素的数据类型都相同，这意味着每个元素都占有相同大小的存储空间
-表中元素具有抽象性。即讨论元素间一对一的逻辑关系，而不考虑元素究竟表示的内容
+电气特性：传输方向和有效的电平范围。
 
-线性表基本操作
-初始化、求表长、判空、插入、删除、按值查找、按位查找、打印、销毁
+功能特性： ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中央处理器 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO">中央处理器 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:17:10.000Z" title="发表于 2025-03-26 17:17:10">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:22:21.684Z" title="更新于 2025-03-26 17:22:21">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">CPU 的功能和基本结构CPU 的功能
+指令控制
+完成取指令、分析指令、执行指令的操作，即程序的顺序控制。
+
+操作控制
+一条指令的功能往往是由若干操作信号的组合来实现的。
+CPU 管理并产生由内存取出的每条指令的操作信号，把各种操作信号送往相应的部件，从而控制这些部件按指令的要求进行动作。
+
+时间控制
+严格控制各种操作信号的出现时间、持续时间及出现的时间顺序。
+
+数据加工
+对数据进行算术和逻辑运算。
+
+中断处理
+对计算机运行过程中出现的异常情况和中断请求进行处理。
 
 
-存储结构
+控制器的功能整个系统的指挥中枢。
+负责协调并控制计算机各部件执行程序的指令序列，包括取指令、分析指令、执行指令（基本功能是执行指令，执行指令就是发出有关操作控制信号）。
+在控制器的控制下，运算器、存储器和输入/输出设备等功能部件构成一个有机的整体，根据指令的要求指挥全机协调工作。
+运算器的功能数据加工处理中心。
+运算器接收从控制器送来的命令并执行相应的动作，对数据进行加工和处理（算术运算/逻辑运算/条件测试）。
+CPU 的基本结构CPU 主要由 运算器 和 控制器 两大部分组成。
 
-顺序表示
-顺序表
-线性表的顺序存储
 
-顺序表特点
-1）表中元素的逻辑顺序与其物理顺序相同
-2）随机访问
-每个数据元素的存储位置都和线性表的起始位置相差一个和该数据元素的位序成正比的常数
-通过首地址和元素序号可在时间 O(1) 内找到指定的元素
-通常用高级程序设计语言中的数组来描述线性表的顺序存储结构
-线性表中元素的位序从 1 开始，数组中元素下标从 0 开始
- ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2024/01/09/DS1_%E7%BB%AA%E8%AE%BA/" title="绪论 | DS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="绪论 | DS"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/09/DS1_%E7%BB%AA%E8%AE%BA/" title="绪论 | DS">绪论 | DS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-09T02:17:07.000Z" title="发表于 2024-01-09 10:17:07">2024-01-09</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-08T08:52:09.916Z" title="更新于 2024-03-08 16:52:09">2024-03-08</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content">数据结构的基本概念
-数据
-信息的载体，是描述客观事物属性的数、字符以及所有能输入到计算机中并被计算机程序识别和处理的符号的集合
-例如：整数、实数、字符串
 
-数据元素
-数据的基本单位，通常作为一个整体进行考虑和处理
-例如：一本书的目录信息
+CPU 结构的其他分法：
 
-数据项/数据域
-构成数据元素的不可分割的最小单位
-例如：书目信息的每一项
+数据通 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2025/03/26/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F-CO/" title="指令系统 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="指令系统 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F-CO/" title="指令系统 | CO">指令系统 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:17:02.000Z" title="发表于 2025-03-26 17:17:02">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:22:12.279Z" title="更新于 2025-03-26 17:22:12">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">指令系统机器指令
+简称指令，是指示计算机执行某种操作的命令。
+是计算机运行的最小功能单位。
+指令集体系结构 ISA
+ISA 完整定义了软件和硬件之间的接口。
+ISA 是软件和硬件之间接口的一个完整定义，包含了基本数据类型、指令集、寄存器、寻址模式、存储体系、中断和异常处理及外部 I/O。
+ISA 规定了执行每条指令时所需要的操作码、操作数、寻址方式等信息，以及指令的功能和效果。
+ISA 规定的内容主要包括：
 
-数据对象
-性质相同的数据元素的集合，是数据的一个子集
-例如，整数数据对象是集合 N = {0, ±1, ±2, ……}
+指令格式，指令寻址方式，操作类型，以及每种操作对应的操作数的相应规定。
+操作数的类型，操作数寻址方式，以及是按大端方式还是按小端方式存放。
+程序可访问的寄存器编号、个数和位数，存储空间的大小和编址方式。
+指令执行过程的控制方式等，包括程序计数器、条件码定义等。
 
-数据类型
-一个值的集合和定义在此集合上的一组操作的总称
-分为：
-1）原子类型：其值不可再分的数据类型
-2）结构类型：其值可以再分解为若干成分（分量）的数据类型
-3）抽象数据类型：抽象数据组织及与之相关的操作
-
-抽象数据类型 ADT (Abstract Data Type)
-可以看作一些数据对象以及附加在这些数据对象上的操作的集合
-重在对功能的描述而不关心具体的实现
-
-数据结构
-相互之间存在一种或多种特定关系的数据元素的集合
-二元组 (D, S) 表示：D 是数据元素的有限集，S 是 D 上关系的有限集
-三要素：逻辑结构、存储结构/物理结构/映像、数据的运算 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2024/01/06/CO3_%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" title="存储系统 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="存储系统 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/06/CO3_%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" title="存储系统 | CO">存储系统 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-06T01:36:15.000Z" title="发表于 2024-01-06 09:36:15">2024-01-06</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-16T14:08:35.451Z" title="更新于 2024-03-16 22:08:35">2024-03-16</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">存储器概述存储器的分类按在计算机中的作用（层次）分类
-主存储器/主存/内存储器/内存
-用来存放计算机运行期间所需的程序和数据
-CPU 可直接随机地对其进行访问，也可以和高速缓冲存储器(Cache)及辅助存储器交换数据
-特点：容量较小、存取速度较快、每位的价格较高
-
-辅助存储器/辅存/外存储器/外存
-用来存放当前暂时不用的程序和数据，以及一些需要永久保存的信息
-辅存的内容需要调入主存后才能被 CPU 访问
-特点：容量大、存取速度较慢、单位成本低
-
+ISA 规定了机器级程序的格式，机器语言或汇编语言程序员必须对机器的 ISA 非常熟悉。
+高级语言抽象层太高，隐藏了许多机器级程序的细节，使得高级语言程序员不能很好地利用与机器结构相关的一些优化方法来提升程序的性能。若程序员对 ISA 和底层硬件实现细节有充分的了解，则可以更好地编址高性能程序。
+指令系统 / 指令集
+一 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2025/03/26/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F-CO/" title="存储系统 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="存储系统 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F-CO/" title="存储系统 | CO">存储系统 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:16:51.000Z" title="发表于 2025-03-26 17:16:51">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:21:45.627Z" title="更新于 2025-03-26 17:21:45">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">存储器概述存储器的分类按在计算机中的作用（层次）分类主存储器 / 主存 / 内存储器 / 内存
+用来存放计算机运行期间所需的程序和数据。
+CPU 可直接随机地对其进行访问，也可以和高速缓冲存储器(Cache)及辅助存储器交换数据。
+特点：容量较小、存取速度较快、每位的价格较高。
+辅助存储器 / 辅存 / 外存储器 / 外存
+用来存放当前暂时不用的程序和数据，以及一些需要永久保存的信息。
+辅存的内容需要调入主存后才能被 CPU 访问。
+特点：容量大、存取速度较慢、单位成本低。
 高速缓冲存储器 Cache
-位于 CPU 和主存之间，用来存放当前 CPU 经常使用的指令和数据，以便 CPU 能高速地访问它们
-存取速度可与 CPU 的速度相匹配
-特点：存储容量小、价格高，现代计算机通常将它们制作在 CPU 中
-
-
-按存储介质分类
-磁表面存储器（磁盘、磁带）
-
-磁芯存储器
-
+位于 CPU 和主存之间，用来存放当前 CPU 经常使用的指令和数据，以便 CPU 能高速地访问它们。
+特点：存取速度可与 CPU 的速度相匹配、存储容量小、价格高。
+现代计算机通常将它们制作在 CPU 中。
+按存储介质分类磁芯存储器
+磁表面存储器
+磁盘、磁带。
 半导体存储器
 
-MOS 型半导体存储器（读写速度慢、集成度高、功耗小）
-SRAM、DRAM、非易失型 MOS 存储器（ROM）
+MOS 型半导体存储器
+金属氧化物半导体 MOS (Metal Oxide Semiconductor)。
+SRAM、DRAM、非易失型 MOS 存储器（ROM）。
+读写速度慢、集成度高、功耗小。
 
-双极型半导体存储器（读写速度快、集成度低、功耗大）
+双极型半导体 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2025/03/26/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97-CO/" title="数据的表示和运算 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据的表示和运算 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97-CO/" title="数据的表示和运算 | CO">数据的表示和运算 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:16:42.000Z" title="发表于 2025-03-26 17:16:42">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:21:36.011Z" title="更新于 2025-03-26 17:21:36">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">数制与编码进位计数制及其相互转换计算机内部信息使用二进制编码的原因
+
+二进制只有两种状态，使用有两个稳定状态的物理器件就可以表示二进制数的每一位，制造成本比较低。
+二进制位 1 和 0 正好与逻辑值 “真” 和 “假” 对应，为计算机实现逻辑运算和程序中的逻辑判断提供了便利条件。
+二进制的编码和运算规则都很简单，通过逻辑门电路能方便地实现算术运算。
+
+进位计数法
+
+基数
+每个数位所用到的不同数码的个数。每个数位计满基数就向高位进位。
+例如，十进制的基数为 10（0~9），逢十进一。
+
+位权
+每个数码所表示的数值等于该数码本身乘以一个与它所在数位有关的常数，这个常数称为位权。
+$r$ 进制第 $i$ 位的权为 $r^i$（$i$ 从右往左、以 0 为始）。
 
 
+一个 $r$ 进制数（$K_nK_{n-1}…K_0K_{-1}…K_{-m}$）的数值大小就是它的各位数码按权相加，表示为：
+$K_nr^n+K_{n-1}+…+K_0r^0+K_{-1}r^{-1}+…+K_{-m}r^{-m}=\sum^{-m}_{i=n}K_ir^i$
+常用进制
+二进制(binary)，前缀 0b/0B， ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2025/03/26/%E7%BB%AA%E8%AE%BA-CO/" title="绪论 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="绪论 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E7%BB%AA%E8%AE%BA-CO/" title="绪论 | CO">绪论 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:16:30.000Z" title="发表于 2025-03-26 17:16:30">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:21:23.063Z" title="更新于 2025-03-26 17:21:23">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">计算机发展历程*本节内容已从大纲删除
+计算机硬件的发展计算机的四代变化第一代计算机 —— 电子管时代（1946—1957）
+逻辑元件：电子管。
+主存：延迟线/磁鼓，容量极小。
+编程语言：机器语言。
+运算速度：较低，一般只有几千次到几万次每秒。
+体积庞大，成本高。
+第二代计算机 —— 晶体管时代（1958—1964）
+逻辑元件：晶体管。
+主存：磁芯存储器。
+编程语言：开始出现高级语言，如 FORTRAN。
+软件：有了操作系统的雏形。
+运算速度：提升到几万次到几十万次每秒。
+第三代计算机 —— 中小规模集成电路时代（1965—1971）
+逻辑元件：中小规模集成电路。
+存储器：半导体存储器开始取代磁芯存储器。
+编程语言：高级语言发展迅速。
+软件：操作系统进一步发展，开始有了分时操作系统。
+第四代计算机 —— 超大规模集成电路时代（1972—至今）
+逻辑元件：大规模集成电路和超大规模集成电路，产生了微处理器。
+诸如并行、流水线、高速缓存和虚拟存储器等概念用在了这代计算机中。
 
-光存储器（光盘）
-
-
-按存取方式分类
-随机存储器 RAM (Ran ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" title="计算机系统概述 | CO">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机系统概述 | CO"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/06/CO1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" title="计算机系统概述 | CO">计算机系统概述 | CO</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-06T01:32:52.000Z" title="发表于 2024-01-06 09:32:52">2024-01-06</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-04T08:36:59.833Z" title="更新于 2024-05-04 16:36:59">2024-05-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span></div><div class="content">计算机发展历程本节内容已从大纲删除
-计算机硬件的发展计算机的四代变化
-第一代计算机 —— 电子管时代
-逻辑元件采用电子管
-使用机器语言进行编程
-主存使用延迟线或磁鼓存储信息，容量极小
-体积庞大，成本高
-运算速度较低，一般只有几千次到几万次每秒
-
-第二代计算机 —— 晶体管时代
-逻辑元件采用晶体管
-软件开始使用高级语言，如 FORTRAN，有了操作系统的雏形
-主存使用磁芯存储器
-运算速度提升到几万次到几十万次每秒
-
-第三代计算机 —— 中小规模集成电路时代
-逻辑元件采用中小规模集成电路
-高级语言发展迅速，操作系统也进一步发展，开始有了分时操作系统
-半导体存储器开始取代磁芯存储器
-
-第四代计算机 —— 超大规模集成电路时代
-逻辑元件采用大规模集成电路和超大规模集成电路，产生了微处理器
-诸如并行、流水线、高速缓存和虚拟存储器等概念用在了这代计算机中
+1~4 代都采用冯·诺依曼体系结构（控制器、存储器、运算器、输入输出设备）。
 
 第五代计算机 —— 智能计算机
-具备人工智能
-运算速度极快
-软件系统能够处理知识信息
-神经网络计算机是智能计算机的重要代表
-
-第六代计算机 —— 生物计算机与量子计算机
-未来计算机发展的方向和趋势
-
-
-
-1~4 代都采用冯·诺依曼体系结构（控制 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/01/08/OS2_%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="进程管理 | OS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="进程管理 | OS"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/08/OS2_%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="进程管理 | OS">进程管理 | OS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-08T02:30:24.000Z" title="发表于 2022-01-08 10:30:24">2022-01-08</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-26T07:44:50.113Z" title="更新于 2024-03-26 15:44:50">2024-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/408/">408</a></span></div><div class="content">进程与线程进程的概念和特征
-程序顺序执行的特征
-
-顺序性
-严格按序
-
-封闭性
-程序一旦开始运行，其结果不受外界因素影响
-程序运行时独占各种资源，这些资源的状态（除初始状态外）只有本程序才能改变
-
-可再现性
-只要初始条件和执行环境相同
-
-
-
-程序并发执行的特征
-
-间断
-程序间相互制约关系导致走走停停
-
-失去封闭性
-资源是共享的
-
-不可再现性
-失去封闭性导致的
-
-
-
-引入进程的目的
-更好地使多道程序并发执行，提高资源利用率和系统吞吐量，实现操作系统最基本的两个特性（并发性和共享性）
-
-进程概念 —— “动态的” “过程性的”
-  程序的一次执行过程
-  一个程序及其数据在处理机上顺序执行时所发生的活动
-  具有独立功能的程序在一个数据集合上运行的过程，它是系统进行资源分配和调度的一个独立单位
-
-进程映像/进程实体（组成）
-
-程序段
-
-相关数据段
-原始数据、中间数据、结果数据
-
-进程控制块 PCB (Process Control Block) 
-进程存在的唯一标志
-常驻内存，系统通过控制 PCB 来控制进程
-当进程被创建时，系统为它申请和构造一个相应的 PCB
-撤销进程，实际上是撤销进程的 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/03/10/OS3_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="内存管理 | OS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="内存管理 | OS"/></a><div class="content"><a class="title" href="/2024/03/10/OS3_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="内存管理 | OS">内存管理 | OS</a><time datetime="2024-03-10T06:39:58.000Z" title="发表于 2024-03-10 14:39:58">2024-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图 | DS"/></a><div class="content"><a class="title" href="/2024/01/26/DS6_%E5%9B%BE/" title="图 | DS">图 | DS</a><time datetime="2024-01-26T01:31:06.000Z" title="发表于 2024-01-26 09:31:06">2024-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树 | DS"/></a><div class="content"><a class="title" href="/2024/01/12/DS5_%E6%A0%91/" title="树 | DS">树 | DS</a><time datetime="2024-01-12T01:14:08.000Z" title="发表于 2024-01-12 09:14:08">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用算法模板"/></a><div class="content"><a class="title" href="/2024/01/11/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" title="常用算法模板">常用算法模板</a><time datetime="2024-01-11T09:50:08.000Z" title="发表于 2024-01-11 17:50:08">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="栈、队列和数组 | DS"/></a><div class="content"><a class="title" href="/2024/01/11/DS3_%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E6%95%B0%E7%BB%84/" title="栈、队列和数组 | DS">栈、队列和数组 | DS</a><time datetime="2024-01-11T01:16:04.000Z" title="发表于 2024-01-11 09:16:04">2024-01-11</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+具备人 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%AE%A1%E7%90%86-OS/" title="输入输出管理 | OS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="输入输出管理 | OS"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%AE%A1%E7%90%86-OS/" title="输入输出管理 | OS">输入输出管理 | OS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-26T09:16:12.000Z" title="发表于 2025-03-26 17:16:12">2025-03-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-26T09:20:03.477Z" title="更新于 2025-03-26 17:20:03">2025-03-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%80%83%E7%A0%94408/">考研408</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></span></div><div class="content"></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic-zerooo.oss-cn-beijing.aliyuncs.com/article/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero</div><div class="author-info__description">一些记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-P" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerooop@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | OS"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-OS/" title="拓展 | OS">拓展 | OS</a><time datetime="2025-03-26T09:17:47.000Z" title="发表于 2025-03-26 17:17:47">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拓展 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%8B%93%E5%B1%95-CO/" title="拓展 | CO">拓展 | CO</a><time datetime="2025-03-26T09:17:39.000Z" title="发表于 2025-03-26 17:17:39">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="输入输出系统 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F-CO/" title="输入输出系统 | CO">输入输出系统 | CO</a><time datetime="2025-03-26T09:17:27.000Z" title="发表于 2025-03-26 17:17:27">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="总线 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E6%80%BB%E7%BA%BF-CO/" title="总线 | CO">总线 | CO</a><time datetime="2025-03-26T09:17:18.000Z" title="发表于 2025-03-26 17:17:18">2025-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO"><img src="https://cdn.jsdelivr.net/gh/zero-P/blog-pic@master/img/sunny.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中央处理器 | CO"/></a><div class="content"><a class="title" href="/2025/03/26/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8-CO/" title="中央处理器 | CO">中央处理器 | CO</a><time datetime="2025-03-26T09:17:10.000Z" title="发表于 2025-03-26 17:17:10">2025-03-26</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">日常学习</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%80%83%E7%A0%94408/"><span class="card-category-list-name">考研408</span><span class="card-category-list-count">8</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.45em; color: rgb(9, 138, 77)">数据结构</a><a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.15em; color: rgb(47, 99, 199)">算法</a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 1.3em; color: rgb(77, 145, 40)">计算机组成原理</a><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 1.15em; color: rgb(72, 102, 107)">操作系统</a><a href="/tags/408/" style="font-size: 1.15em; color: rgb(8, 126, 39)">408</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-07-25T15:25:15.897Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%80%83%E7%A0%94408/"><span class="card-category-list-name">考研408</span><span class="card-category-list-count">21</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.45em; color: rgb(60, 199, 182)">数据结构</a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 1.45em; color: rgb(74, 150, 110)">计算机组成原理</a><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 1.15em; color: rgb(200, 105, 93)">操作系统</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><span class="card-archive-list-count">21</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-26T09:26:09.339Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By zero</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
